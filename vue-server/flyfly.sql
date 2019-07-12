@@ -272,20 +272,20 @@ CREATE TABLE fly_six_film(
     details VARCHAR(128),
     href VARCHAR(128)
 );
-INSERT INTO fly_six_film VALUES(NULL,'img/six/211441329168.jpg',"微电影",'../img/six/xona68DfpWQ0FwjsEMb_217926654951_hd_hq.mp4',"【遇见菲林】就是你想要的feel","三亚 三亚湾 康年酒店",NULL);
-INSERT INTO fly_six_film VALUES(NULL,'img/six/211445067653.jpg',"微电影",'../img/six/7zy0nBM2fs9jsswDqA9@@hdregop.mp4',"【遇见菲林】遇见香格里拉","香格里拉 白水台 帐篷酒店",NULL);
-INSERT INTO fly_six_film VALUES(NULL,'img/six/062018312127.jpg',"微电影",'../img/six/R1dGudjWF72ik3rUk0f_230062738686_sd_hq.mp4',"【遇见菲林】设计部","武汉 设计部",NULL);
-INSERT INTO fly_six_film VALUES(NULL,'img/six/062007083212.png',"微电影",'../img/six/v3k7gPy6cPHyoiE5C1K_223644734294_hd_hq.mp4',"【遇见菲林】独特的你","丽江 喜洲 古镇",NULL);
-INSERT INTO fly_six_film VALUES(NULL,'img/six/061913428585.jpg',"微电影",'../img/six/kjhxdfxSS8vjm3efrAc@@sd_hq.mp4',"【遇见菲林】草原牧歌","青海 草原",NULL);
-INSERT INTO fly_six_film VALUES(NULL,'img/six/191019387036.png',"微电影",'../img/six/VOiicslHUEelf65S0m2@@hd.mp4',"【遇见菲林】遇见三亚","三亚 遇见菲林三亚店",NULL);
-INSERT INTO fly_six_film VALUES(NULL,'img/six/191102169762.png',"影像花絮",'../img/six/NK0jHFkl5zh6ShetHng_220618214063_sd_hq.mp4',"【遇见菲林】遇见青海湖","青海 青海湖",NULL);
-INSERT INTO fly_six_film VALUES(NULL,'img/six/191053278354.png',"影像花絮",'../img/six/70fPZSOYJMeI9BlPqHc_215174456820_hd_hq.mp4',"【遇见菲林】巅峰之恋","丽江 雪山山顶",NULL);
-INSERT INTO fly_six_film VALUES(NULL,'img/six/191046443177.jpg',"影像花絮",'../img/six/PDaTWpHsHjSchLmY3DU@@hd_hq.mp4',"【遇见菲林】遇见ins风","丽江 玉湖 新基地",NULL);
-INSERT INTO fly_six_film VALUES(NULL,'img/six/191035198613.png',"影像花絮",'../img/six/IclbTIa0i5DvwqdDBzu@@hd_hq.mp4',"【遇见菲林】爱在雪山","丽江 雪山山顶",NULL);
-INSERT INTO fly_six_film VALUES(NULL,'img/six/191038166293.png',"影像花絮",'../img/six/PeHAdi21vjqd1QJys6j@@hdregop.mp4',"【遇见菲林】论婚纱照拍摄过程","三亚 三亚湾",NULL);
-INSERT INTO fly_six_film VALUES(NULL,'img/six/191042099134.jpg',"影像花絮",'../img/six/SL142P45XTvmWU9Hurc_216475101645_sd_hq.mp4',"【遇见菲林】爱要有你才完美","三亚 呆呆岛",NULL);
-INSERT INTO fly_six_film VALUES(NULL,'img/six/191049388324.png',"影像花絮",'../img/six/laVu70ZYji8H5ya8vwY@@hd_hq.mp4',"【遇见菲林】浪花一朵朵","三亚 天涯海角",NULL);
-INSERT INTO fly_six_film VALUES(NULL,'img/six/191059005316.png',"影像花絮",'../img/six/IpodNtGK0YAnoMbQ9vO@@hd.mp4',"【遇见菲林】为你写诗","三亚 天涯海角",NULL);
+INSERT INTO fly_six_film VALUES(NULL,'img/six/211441329168.jpg',"微电影",'img/six/xona68DfpWQ0FwjsEMb_217926654951_hd_hq.mp4',"【遇见菲林】就是你想要的feel","三亚 三亚湾 康年酒店",NULL);
+INSERT INTO fly_six_film VALUES(NULL,'img/six/211445067653.jpg',"微电影",'img/six/7zy0nBM2fs9jsswDqA9@@hdregop.mp4',"【遇见菲林】遇见香格里拉","香格里拉 白水台 帐篷酒店",NULL);
+INSERT INTO fly_six_film VALUES(NULL,'img/six/062018312127.jpg',"微电影",'img/six/R1dGudjWF72ik3rUk0f_230062738686_sd_hq.mp4',"【遇见菲林】设计部","武汉 设计部",NULL);
+INSERT INTO fly_six_film VALUES(NULL,'img/six/062007083212.png',"微电影",'img/six/v3k7gPy6cPHyoiE5C1K_223644734294_hd_hq.mp4',"【遇见菲林】独特的你","丽江 喜洲 古镇",NULL);
+INSERT INTO fly_six_film VALUES(NULL,'img/six/061913428585.jpg',"微电影",'img/six/kjhxdfxSS8vjm3efrAc@@sd_hq.mp4',"【遇见菲林】草原牧歌","青海 草原",NULL);
+INSERT INTO fly_six_film VALUES(NULL,'img/six/191019387036.png',"微电影",'img/six/VOiicslHUEelf65S0m2@@hd.mp4',"【遇见菲林】遇见三亚","三亚 遇见菲林三亚店",NULL);
+INSERT INTO fly_six_film VALUES(NULL,'img/six/191102169762.png',"影像花絮",'img/six/NK0jHFkl5zh6ShetHng_220618214063_sd_hq.mp4',"【遇见菲林】遇见青海湖","青海 青海湖",NULL);
+INSERT INTO fly_six_film VALUES(NULL,'img/six/191053278354.png',"影像花絮",'img/six/70fPZSOYJMeI9BlPqHc_215174456820_hd_hq.mp4',"【遇见菲林】巅峰之恋","丽江 雪山山顶",NULL);
+INSERT INTO fly_six_film VALUES(NULL,'img/six/191046443177.jpg',"影像花絮",'img/six/PDaTWpHsHjSchLmY3DU@@hd_hq.mp4',"【遇见菲林】遇见ins风","丽江 玉湖 新基地",NULL);
+INSERT INTO fly_six_film VALUES(NULL,'img/six/191035198613.png',"影像花絮",'img/six/IclbTIa0i5DvwqdDBzu@@hd_hq.mp4',"【遇见菲林】爱在雪山","丽江 雪山山顶",NULL);
+INSERT INTO fly_six_film VALUES(NULL,'img/six/191038166293.png',"影像花絮",'img/six/PeHAdi21vjqd1QJys6j@@hdregop.mp4',"【遇见菲林】论婚纱照拍摄过程","三亚 三亚湾",NULL);
+INSERT INTO fly_six_film VALUES(NULL,'img/six/191042099134.jpg',"影像花絮",'img/six/SL142P45XTvmWU9Hurc_216475101645_sd_hq.mp4',"【遇见菲林】爱要有你才完美","三亚 呆呆岛",NULL);
+INSERT INTO fly_six_film VALUES(NULL,'img/six/191049388324.png',"影像花絮",'img/six/laVu70ZYji8H5ya8vwY@@hd_hq.mp4',"【遇见菲林】浪花一朵朵","三亚 天涯海角",NULL);
+INSERT INTO fly_six_film VALUES(NULL,'img/six/191059005316.png',"影像花絮",'img/six/IpodNtGK0YAnoMbQ9vO@@hd.mp4',"【遇见菲林】为你写诗","三亚 天涯海角",NULL);
 
 
 
