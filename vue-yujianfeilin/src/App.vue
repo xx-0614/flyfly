@@ -1,6 +1,7 @@
 <template>
   <div id="app">
     <!-- 引入头部组件-->
+    <my-header></my-header>
     <router-view/>
   </div>
 </template>
