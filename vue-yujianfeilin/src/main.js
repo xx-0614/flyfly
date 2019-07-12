@@ -8,8 +8,9 @@ import 'element-ui/lib/theme-chalk/index.css';
 
 Vue.use(ElementUI);
 
-//引入axios.js文件
-import axios from "./axios"
+import Myheader from './components/header'
+//将MyHeader普通对象，重新封装为全局组件
+Vue.component("my-header",Myheader)
 
 Vue.config.productionTip = false
 
