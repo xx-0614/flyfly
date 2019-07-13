@@ -3,7 +3,7 @@
         <div class="nav">
             <div class="logo">
                 <a href="#">
-                    <img src="img/index/logo.png" alt="">
+                    <img src="../assets/img/index/logo.png" alt="">
                 </a>
             </div>
             <div class="nav-bar">
@@ -226,7 +226,7 @@ export default {
     background-color:#fff;
     padding-right:30px;
     border-radius:15px;
-    display:block;
+    display:none;
 }
 .header .search .search-text{
     display:block;
