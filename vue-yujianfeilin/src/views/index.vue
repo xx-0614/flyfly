@@ -13,16 +13,14 @@ export default {
         }
     },
     created(){
-        this.load();
+        this.axios.get("index").then(result=>{
+            console.log(result)
+            this.carousel=result;
+        })
     },
     
     methods:{
-        load(){
-          this.$axios.get("http:127.0.0.1:3000/index").then(result=>{
-             console.log(result)
-            this.carousel=result;
-            })
-         }
+        
     },
 }
 </script>

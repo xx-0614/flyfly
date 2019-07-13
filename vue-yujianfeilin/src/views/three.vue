@@ -9,7 +9,7 @@
                <div class="three-text-bg"></div>
                <h4>菲林环游记</h4>
             </div>
-        </div class="threenav">  
+        </div>  
         <threetabbar></threetabbar>  
     </div>
 </template>
