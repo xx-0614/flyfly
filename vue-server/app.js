@@ -8,7 +8,7 @@ server.listen(3000);
 const cors=require("cors");
 
 server.use(cors({
-    origin:"http://127.0.0.1:8080"
+    origin:["http://127.0.0.1:8080","http://localhost:8080"]
 }))
 //使用body-parser中间件将post请求的数据格式化为对象
 server.use(bodyParser.urlencoded({
