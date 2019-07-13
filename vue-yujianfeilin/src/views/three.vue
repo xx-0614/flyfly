@@ -34,7 +34,7 @@ export default {
        height:751px;
     }
     .three-text p:first-child{
-          
+           width:
     }
     .three-bodyer{
         margin-top:50px;
