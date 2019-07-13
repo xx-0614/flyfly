@@ -100,10 +100,25 @@
                             </a>
                         </li>
                     </ul>
+                    <div class="tel">
+                        <h3>联系我们：400-837-2227</h3>
+                    </div>
                 </div>
                 <div class="footer-right">
-
+                    <div class="erweima">
+                        <div>
+                            <img src="../assets/img/index/picq1.jpg" alt="">
+                            <p>三亚官方公众号</p>
+                        </div>
+                        <div>
+                            <img src="../assets/img/index/picq2.jpg" alt="">
+                            <p>丽江官方公众号</p>
+                        </div>
+                    </div>
                 </div>
+            </div>
+            <div class="footer-copy">
+                <p>版权所有© 2012-2018 三亚遇见菲林婚纱摄影有限公司 琼ICP备15001208号-3 技术支持</p>
             </div>
         </div>
     </div>
@@ -140,9 +155,8 @@ export default {
 .footer-logo{
     float:right;
     width:362px;
-    margin-right:-32px;
+    margin-right:100px;
     overflow:hidden;
-    margin-left:20px;
 }
 .footer-nav{
     overflow:hidden;
@@ -226,6 +240,59 @@ export default {
     font-size:14px;
     color:#919191;
     margin-left:15px;
+}
+.footer-left ul li:hover span{
+    color:#fff;
+}
+.footer-left .tel h3{
+    font-size:40px;
+    color:#919191;
+    font-weight:400;
+    line-height:1.2em;
+    font-family:CenturyGothicbold;
+    margin-left:10px;
+}
+.footer-left::after{
+    content:'';
+    width:1px;
+    height:238px;
+    background-color:#414141;
+    position:absolute;
+    right:0;
+    top:0;
+}
+.footer-right{
+    float:right;
+}
+.erweima::after{
+    content:'';
+    display:block;
+    clear:both;
+}
+.footer-right .erweima{
+    padding-top:30px;
+    margin-right:50px;
+}
+.footer-right .erweima div{
+    float:left;
+    margin-left:50px;
+    text-align:center;
+}
+.footer-right .erweima p{
+    font-size:14px;
+    color:#919191;
+    line-height:1.5em;
+    overflow:hidden;
+    white-space:nowrap;
+    text-overflow:ellipsis;
+    margin:10px;
+}
+.footer-copy{
+    text-align:center;
+    font-size:14px;
+    line-height:14px;
+    color:rgb(145,145,145);
+    overflow:hidden;
 }
 </style>
 
