@@ -4,8 +4,9 @@
             <img src="../assets/img/three/ban-h1.jpg">
         </div>
         <div class="three-text">
-            <p> RECORD LOVE TOUR AROUND</p>
-            <p>菲林环游记</p>
+            <h3> RECORD LOVE TOUR AROUND</h3>
+            <div class="three-text-bg"></div>
+            <h4>菲林环游记</h4>
         </div>
         <div class="three-bodyer">
             <mt-tabbar>
@@ -33,8 +34,22 @@ export default {
        width:100%;
        height:751px;
     }
-    .three-text p:first-child{
-           width:
+    .three-text{
+        font-size:36px;
+         padding-top:70px;
+         margin-bottom:105px;
+    }
+    .three-text>h3,.three-text>h4{
+        color: #2f2f2f;
+         font-weight:400;
+        
+    }
+    .three-text-bg{
+        width:100%;
+        height:3.98px;
+        background:url("../assets/img/three/h2.png") no-repeat;
+        margin-top:22px;
+        margin-bottom:28px;
     }
     .three-bodyer{
         margin-top:50px;
