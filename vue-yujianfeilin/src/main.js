@@ -11,6 +11,8 @@ Vue.use(ElementUI);
 import Myheader from './components/header'
 //将MyHeader普通对象，重新封装为全局组件
 Vue.component("my-header",Myheader)
+import Myfooter from './components/footer'
+Vue.component("my-footer",Myfooter)
 
 Vue.config.productionTip = false
 
