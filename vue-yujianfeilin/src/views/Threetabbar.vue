@@ -2,9 +2,11 @@
   <div class="threenav">
         <el-tabs v-model="activeName" @tab-click="handleClick">
             <el-tab-pane label="全部" name="first">
-              
+              <threetab1></threetab1>
             </el-tab-pane>
-            <el-tab-pane label="三亚" name="second">配置管理</el-tab-pane>
+            <el-tab-pane label="三亚" name="second">
+              <threetab2></threetab2>
+            </el-tab-pane>
             <el-tab-pane label="丽江" name="third">角色管理</el-tab-pane>
             <el-tab-pane label="大理" name="fourth">定时任务补偿</el-tab-pane>
             <el-tab-pane label="青海" name="five">sheng</el-tab-pane>
@@ -17,16 +19,22 @@
   </div>
 </template>
 <script>
+import Threetab1 from './Threetab1.vue';
+import Threetab2 from './Threetab2.vue';
   export default {
     data() {
       return {
         activeName: 'second'
       };
     },
+    components:{
+        "threetab1":Threetab1,
+        "threetab2":Threetab2
+    },
     methods: {
       handleClick(tab, event) {
         console.log(tab, event);
-      }
+       }
     }
   };
 </script>

@@ -18,7 +18,7 @@ export default {
     
     methods:{
         load(){
-          this.$axios.get("http:127.0.0.1:3000/index").then(result=>{
+          this.axios.get("http://127.0.0.1:3000/index").then(result=>{
              console.log(result)
             this.carousel=result;
             })

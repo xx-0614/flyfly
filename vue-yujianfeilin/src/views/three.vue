@@ -10,7 +10,7 @@
                <h4>菲林环游记</h4>
             </div>
         </div class="threenav">  
-        <threetabbar></threetabbar>  
+        <threetabbar></threetabbar>     
     </div>
 </template>
 <script>
@@ -20,8 +20,19 @@ export default {
           return {}
       },
        components:{
-        "threetabbar":Threetabbar,
+        "threetabbar":Threetabbar
     },
+    methods: {
+         load(){
+          this.axios.get("http://127.0.0.1:3000/three").then(result=>{
+             console.log(result)
+            this.travel=result;
+            })
+         }
+    },
+    created(){
+        this.load();
+    }
 }
 </script>
 <style scope>
@@ -38,6 +49,10 @@ export default {
         padding-top:70px;
         margin-bottom:105px;
         text-align:center;
+        transition:all 1 linear;
+    }
+    .three-text:hover{
+         padding-top:60px;
     }
     .three-text>h3,.three-text>h4{
         color: #2f2f2f;
