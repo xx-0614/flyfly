@@ -3,6 +3,10 @@
         <div class="three-header">
             <img src="../assets/img/three/ban-h1.jpg">
         </div>
+        <div class="three-text">
+            <p> RECORD LOVE TOUR AROUND</p>
+            <p>菲林环游记</p>
+        </div>
         <div class="three-bodyer">
             <mt-tabbar>
                <mt-tab-item  class="three-border1">全部</mt-tab-item>
@@ -28,6 +32,9 @@ export default {
     .three-header>img{
        width:100%;
        height:751px;
+    }
+    .three-text p:first-child{
+          
     }
     .three-bodyer{
         margin-top:50px;
