@@ -79,12 +79,13 @@ export default {
     }
 }
 </script>
-<style scoped>
+<style>
     @import "../../assets/common.css";
     .fourtab1-header{
         width:1365px;
         height:3843.470px;
-        margin:0 auto;   
+        margin:0 auto; 
+        text-align:left;   
     }
     .fourtab1-ul{
         list-style:none;

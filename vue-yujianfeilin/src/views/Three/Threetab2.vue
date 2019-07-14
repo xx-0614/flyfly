@@ -79,12 +79,13 @@ export default {
     }
 }
 </script>
-<style scoped>
+<style>
     @import "../../assets/common.css";
     .threetab2-header{
         width:1365px;
         height:3843.470px;
-        margin:0 auto;   
+        margin:0 auto; 
+        text-align:left;   
     }
     .threetab2-ul{
         list-style:none;

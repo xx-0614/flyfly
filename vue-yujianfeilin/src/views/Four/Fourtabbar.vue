@@ -38,7 +38,7 @@ import Fourtab2 from './Fourtab2.vue';
     }
   };
 </script>
-<style scoped>
+<style >
     .fourtabbar-nav{
         text-align:center;
         width:1355px;

@@ -84,7 +84,8 @@ export default {
     .threetab1-header{
         width:1365px;
         height:3843.470px;
-        margin:0 auto;   
+        margin:0 auto; 
+        text-align:left;  
     }
     .threetab1-ul{
         list-style:none;
