@@ -5,7 +5,7 @@
               <li class="threeli">
                    <a href="#">
                        <p>
-                          <img src="../assets/img/three/291348483756.jpg">
+                          <img src="../../assets/img/three/291348483756.jpg">
                        </p>
                        <div>
                            <span>游艇旅行</span>
@@ -16,7 +16,7 @@
               <li class="threeli">
                    <a href="#">
                        <p>
-                          <img src="../assets/img/three/291348483756.jpg">
+                          <img src="../../assets/img/three/291348483756.jpg">
                        </p>
                        <div>
                            <span>游艇旅行</span>
@@ -27,7 +27,7 @@
               <li class="threeli">
                    <a href="#">
                        <p>
-                          <img src="../assets/img/three/291348483756.jpg">
+                          <img src="../../assets/img/three/291348483756.jpg">
                        </p>
                        <div>
                            <span>游艇旅行</span>
@@ -38,7 +38,7 @@
               <li class="threeli">
                    <a href="#">
                        <p>
-                          <img src="../assets/img/three/291348483756.jpg">
+                          <img src="../../assets/img/three/291348483756.jpg">
                        </p>
                        <div>
                            <span>游艇旅行</span>
@@ -49,7 +49,7 @@
               <li class="threeli">
                    <a href="#">
                        <p>
-                          <img src="../assets/img/three/291348483756.jpg">
+                          <img src="../../assets/img/three/291348483756.jpg">
                        </p>
                        <div>
                            <span>游艇旅行</span>
@@ -60,7 +60,7 @@
               <li class="threeli">
                    <a href="#">
                        <p>
-                          <img src="../assets/img/three/291348483756.jpg">
+                          <img src="../../assets/img/three/291348483756.jpg">
                        </p>
                        <div>
                            <span>游艇旅行</span>
@@ -80,7 +80,7 @@ export default {
 }
 </script>
 <style scope>
-    @import "../assets/common.css";
+    @import "../../assets/common.css";
     .three-header3{
         width:1365px;
         height:3843.470px;

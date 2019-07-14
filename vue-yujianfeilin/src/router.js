@@ -2,9 +2,9 @@ import Vue from 'vue'
 import Router from 'vue-router'
 
 import index from './views/index/index'
-import Three from  './views/Three'
-import Threetabbar from './views/Threetabbar'
-import Threetab1 from './views/Threetab1'
+import Three from  './views/Three/Three'
+import Threetabbar from './views/Three/Threetabbar'
+import Threetab1 from './views/Three/Threetab1'
 
 Vue.use(Router)
 
