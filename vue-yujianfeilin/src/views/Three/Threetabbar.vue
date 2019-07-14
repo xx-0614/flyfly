@@ -1,6 +1,6 @@
 <template>
   <div class="threenav">
-        <el-tabs v-model="activeName" @tab-click="handleClick">
+        <el-tabs v-model="activeName" >
             <el-tab-pane label="全部" name="first">
                <ul class="threetabbar-ul">
                  <threetab2  v-for="(item,i) of lijiang" :key="i"
@@ -100,9 +100,9 @@ import Threetab2 from './Threetab2.vue';
   export default {
     data() {
       return {
-        activeName: 'first',
+        activeName: 'second',
         sanya:[],
-        lijiang:[],
+        lijiang:[]
       };
     },
     components:{
@@ -110,11 +110,10 @@ import Threetab2 from './Threetab2.vue';
         "threetab2":Threetab2
     },
     methods: {
-        handleClick(tab, event) {
-                console.log(tab, event);
-              },
+       
         load(){
              this.axios.get("http://127.0.0.1:3000/three").then(result=>{
+                  this.lijiagn=result.data;
                    console.log(result)
                    var n=0;
                    var m=0;
@@ -187,6 +186,6 @@ import Threetab2 from './Threetab2.vue';
     .threetabbar-ul{
       list-style:none;
         display:flex;
-        flex-wrap:wrap;
+        flex-wrap:wrap;      
     }
 </style>
