@@ -24,7 +24,9 @@ import Threetab2 from './Threetab2.vue';
   export default {
     data() {
       return {
-        activeName: 'first'
+        activeName: 'first',
+        sanya:[],
+        lijiang:[],
       };
     },
     components:{
@@ -32,10 +34,30 @@ import Threetab2 from './Threetab2.vue';
         "threetab2":Threetab2
     },
     methods: {
-      handleClick(tab, event) {
-        console.log(tab, event);
-       }
-    }
+        handleClick(tab, event) {
+                console.log(tab, event);
+              },
+        load(){
+             this.axios.get("http://127.0.0.1:3000/three").then(result=>{
+                   console.log(result)
+                   var n=0;
+                   var m=0;
+                   for(var i=0 ;i<result.data.length;i++){                    
+                          if(result.data[i].title=="三亚"){
+                                 this.sanya[n]=result.data[i];
+                                 n++;
+                        }else 
+                          if(result.data[i].title=="丽江"){
+                                 this.lijiang[m]=result.data[i];
+                                  m++;
+                        }                                           
+                     }
+                 })
+              } ,
+    },
+     created(){
+        this.load();
+    },
   };
 </script>
 <style >
