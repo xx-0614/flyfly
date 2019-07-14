@@ -51,7 +51,7 @@ export default {
         padding-top:70px;
         margin-bottom:105px;
         text-align:center;
-        transition:all 0.3s linear;
+        transition:all .3s linear;
     }
     .three-text:hover{
          padding-top:60px;

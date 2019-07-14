@@ -7,54 +7,54 @@
                 </a>
             </div>
             <div class="nav-bar">
-                <ul class="nav-item">
-                    <li class="active"><router-link to="/">首页</router-link></li>
+                <ul class="nav-item" @click="fontWhite">
+                    <li><router-link to="/" class="active">首页</router-link></li>
                     <li>
-                        <a href="">风格系列</a>
+                        <router-link to="/Three">风格系列</router-link>
                         <ul>
                             <li>
-                                <a href="">INS系列</a>
+                                <router-link to="/Three">INS系列</router-link>
                             </li>
                             <li>
-                                <a href="">小清新系列</a>
+                                <router-link to="/Three">小清新系列</router-link>
                             </li>
                             <li>
-                                <a href="">国潮系列</a>
+                                <router-link to="/Three">国潮系列</router-link>
                             </li>
                             <li>
-                                <a href="">造型系列</a>
+                                <router-link to="/Three">造型系列</router-link>
                             </li>
                         </ul>
                     </li>
-                    <li><router-link to="/Three">最新客片</router-link></li>
-                    <li><a href="">100%客片</a></li>
-                    <li><a href="">当季特惠</a></li>
+                    <li><router-link to="/Three" >最新客片</router-link></li>
+                    <li><router-link to="/Four">100%客片</router-link></li>
+                    <li><router-link to="/Five">当季特惠</router-link></li>
                     <li>
-                        <a href="">微电影</a>
+                       <router-link to="/Three">微电影</router-link>
                         <ul>
                             <li>
-                                <a href="">微电影</a>
+                                <router-link to="/Three">微电影</router-link>
                             </li>
                             <li>
-                                <a href="">影像花絮</a>
+                                <router-link to="/Three">影像花絮</router-link>
                             </li>
                         </ul>
                     </li>
                     <li>
-                        <a href="">品牌服务</a>
+                        <router-link to="/Three">品牌服务</router-link>
                         <ul>
                             <li>
-                                <a href="">品牌介绍</a>
+                                <router-link to="/Three">品牌介绍</router-link>
                             </li>
                             <li>
-                                <a href="">服务保障</a>
+                                <router-link to="/Three">服务保障</router-link>
                             </li>
                             <li>
-                                <a href="">360°VR全景</a>
+                                <router-link to="/Three">360°VR全景</router-link>
                             </li>
                         </ul>
                     </li>
-                    <li><a href="">真实好评</a></li>
+                    <li><router-link to="/Three">真实好评</router-link></li>
                 </ul>
                 <div class="search">
                     <span></span>
@@ -71,6 +71,19 @@
 export default {
     data(){
         return {}
+    },
+    methods:{
+        fontWhite(e){
+            var ul=document.querySelector(".nav-item");
+            var a=document.querySelectorAll(".nav-item a");
+            if(e.target.nodeName=="A"){
+                console.log(1)
+                for(var i=0;i<a.length;i++){
+                    a[i].className="";
+                }
+                e.target.className="active"
+            }
+        }
     }
 }
 </script>
@@ -128,7 +141,7 @@ export default {
     position:relative;
     transition:.3s;
 }
-.header .nav-item>li.active>a{
+.header .nav-item>li>a.active{
     color:#fff;
 }
 .header .nav-item>li>a::after{
