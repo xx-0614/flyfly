@@ -27,8 +27,8 @@
                         </ul>
                     </li>
                     <li><router-link to="/Three" >最新客片</router-link></li>
-                    <li><router-link to="/Three">100%客片</router-link></li>
-                    <li><router-link to="/Three">当季特惠</router-link></li>
+                    <li><router-link to="/Four">100%客片</router-link></li>
+                    <li><router-link to="/Five">当季特惠</router-link></li>
                     <li>
                        <router-link to="/Three">微电影</router-link>
                         <ul>
