@@ -2,7 +2,13 @@
   <div class="threenav">
         <el-tabs v-model="activeName" @tab-click="handleClick">
             <el-tab-pane label="全部" name="first">
-              <threetab1></threetab1>
+              <ul class="threetabbar-ul">
+                <threetab1  v-for="(item,i) of sanya" :key="i"
+                  :imgurl="require(`../../assets/${item.img}`)"
+                  :subtitle="item.subtitle"
+                  :dates="item.dates"
+                ></threetab1>             
+              </ul>
             </el-tab-pane>
             <el-tab-pane label="三亚" name="second">
               <threetab2></threetab2>
@@ -52,15 +58,16 @@ import Threetab2 from './Threetab2.vue';
                                   m++;
                         }                                           
                      }
+                     console.log(this.sanya,this.lijiang)
                  })
               } ,
     },
-     created(){
-        this.load();
-    },
+    created(){
+         this.load();
+          },
   };
 </script>
-<style >
+<style scope>
     .threenav{
        
         width:1335px;
@@ -106,6 +113,10 @@ import Threetab2 from './Threetab2.vue';
    }
    .el-icon-arrow-right:before {
     content: "" !important;
-  }
-
+    }
+    .threetabbar-ul{
+      list-style:none;
+        display:flex;
+        flex-wrap:wrap;
+    }
 </style>
