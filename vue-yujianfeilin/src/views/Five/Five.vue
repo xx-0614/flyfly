@@ -47,7 +47,7 @@ export default {
     }
 }
 </script>
-<style scope>
+<style scoped>
     .five-content{
        text-align:center; 
     }

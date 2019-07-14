@@ -38,7 +38,7 @@ import Threetab2 from './Threetab2.vue';
     }
   };
 </script>
-<style scope>
+<style scoped>
     .threenav{
        
         width:1335px;

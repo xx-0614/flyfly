@@ -77,7 +77,6 @@ export default {
             var ul=document.querySelector(".nav-item");
             var a=document.querySelectorAll(".nav-item a");
             if(e.target.nodeName=="A"){
-                console.log(1)
                 for(var i=0;i<a.length;i++){
                     a[i].className="";
                 }

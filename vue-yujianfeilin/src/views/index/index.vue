@@ -1,10 +1,16 @@
 <template>
-    <el-carousel :interval="3000" height="750px">
-        <el-carousel-item v-for="(item) in 3" :key="item">
-        </el-carousel-item>
-    </el-carousel>
+    <div>   
+        <!--轮播图-->
+        <el-carousel :interval="3000" height="750px">
+            <el-carousel-item v-for="(item) in 3" :key="item"></el-carousel-item>
+        </el-carousel>
+        <div class="main">
+            <indexcity></indexcity>
+        </div>
+    </div>
 </template>
 <script>
+import Indexcity from "./Indexcity.vue"
 export default {
     data(){
         return {
@@ -15,6 +21,9 @@ export default {
             love_times:[],
             comment:[]
         }
+    },
+    components:{
+        "indexcity":Indexcity,
     },
     created(){
         this.axios.get("index").then(result=>{
@@ -28,7 +37,8 @@ export default {
     },
 }
 </script>
-<style>
+<style scoped>
+@import "../../assets/common.css";
 .el-carousel__item h3 {
     color: #475669;
     font-size: 18px;
