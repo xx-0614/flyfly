@@ -35,7 +35,7 @@ export default {
     }
 }
 </script>
-<style scope>
+<style scoped>
     .three-content{
        text-align:center; 
     }
@@ -45,11 +45,12 @@ export default {
     }
     .three-text{
         width:100%;
+        height:224px;
         font-size:36px;
         padding-top:70px;
         margin-bottom:105px;
         text-align:center;
-        transition:all 1 linear;
+        transition:all .3s linear;
     }
     .three-text:hover{
          padding-top:60px;
