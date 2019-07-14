@@ -70,10 +70,10 @@ export default {
     .fivetab-p{
         font-size:30px;
         color:#444;
-        
+        margin-bottom:5px;
     }
     .fivetab-span{
-        font-size:21px;
+        font-size:16px;
         color:#7a7a7a;
     }
 </style>
