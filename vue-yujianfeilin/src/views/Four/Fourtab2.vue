@@ -79,12 +79,17 @@ export default {
     }
 }
 </script>
+<<<<<<< HEAD
 <style scoped>
+=======
+<style>
+>>>>>>> 5267fc4dbb0b2e496fe567b6c708e8f68d960486
     @import "../../assets/common.css";
     .fourtab1-header{
         width:1365px;
         height:3843.470px;
-        margin:0 auto;   
+        margin:0 auto; 
+        text-align:left;   
     }
     .fourtab1-ul{
         list-style:none;

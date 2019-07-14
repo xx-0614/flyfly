@@ -17,22 +17,16 @@
 import Threetabbar from './Threetabbar.vue';
 export default {
       data(){
-          return {}
+          return {
+              travel:[]
+          }
       },
        components:{
         "threetabbar":Threetabbar
     },
-    methods: {
-         load(){
-          this.axios.get("http://127.0.0.1:3000/three").then(result=>{
-             console.log(result)
-           
-            })
-         }
+     methods: {
+         
     },
-    created(){
-        this.load();
-    }
 }
 </script>
 <style scoped>

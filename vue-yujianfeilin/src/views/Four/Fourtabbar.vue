@@ -38,7 +38,11 @@ import Fourtab2 from './Fourtab2.vue';
     }
   };
 </script>
+<<<<<<< HEAD
 <style scoped>
+=======
+<style >
+>>>>>>> 5267fc4dbb0b2e496fe567b6c708e8f68d960486
     .fourtabbar-nav{
         text-align:center;
         width:1355px;

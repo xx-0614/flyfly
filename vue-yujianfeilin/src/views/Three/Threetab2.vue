@@ -5,66 +5,11 @@
               <li class="threetab2-li">
                    <a href="#">
                        <p>
-                          <img src="../../assets/img/three/291348483756.jpg">
+                          <img :src="imgurl">
                        </p>
                        <div>
-                           <span>游艇旅行</span>
-                           <p>2019-06-29</p>
-                       </div>
-                   </a> 
-              </li>
-              <li class="threetab2-li">
-                   <a href="#">
-                       <p>
-                          <img src="../../assets/img/three/291348483756.jpg">
-                       </p>
-                       <div>
-                           <span>游艇旅行</span>
-                           <p>2019-06-29</p>
-                       </div>
-                   </a> 
-              </li>
-              <li class="threetab2-li">
-                   <a href="#">
-                       <p>
-                          <img src="../../assets/img/three/291348483756.jpg">
-                       </p>
-                       <div>
-                           <span>游艇旅行</span>
-                           <p>2019-06-29</p>
-                       </div>
-                   </a> 
-              </li>
-              <li class="threetab2-li">
-                   <a href="#">
-                       <p>
-                          <img src="../../assets/img/three/291348483756.jpg">
-                       </p>
-                       <div>
-                           <span>游艇旅行</span>
-                           <p>2019-06-29</p>
-                       </div>
-                   </a> 
-              </li>
-              <li class="threetab2-li">
-                   <a href="#">
-                       <p>
-                          <img src="../../assets/img/three/291348483756.jpg">
-                       </p>
-                       <div>
-                           <span>游艇旅行</span>
-                           <p>2019-06-29</p>
-                       </div>
-                   </a> 
-              </li>
-              <li class="threetab2-li">
-                   <a href="#">
-                       <p>
-                          <img src="../../assets/img/three/291348483756.jpg">
-                       </p>
-                       <div>
-                           <span>游艇旅行</span>
-                           <p>2019-06-29</p>
+                           <span>{{subtitle}}</span>
+                           <p>{{dates}}</p>
                        </div>
                    </a> 
               </li>
@@ -74,17 +19,25 @@
 </template>
 <script>
 export default {
+      props:{
+        imgurl:{default:""},
+        subtitle:{default:""},
+        dates:{default:""},
+    },
     data(){
         return {}
     }
 }
 </script>
+<<<<<<< HEAD
 <style scoped>
+=======
+<style>
+>>>>>>> 5267fc4dbb0b2e496fe567b6c708e8f68d960486
     @import "../../assets/common.css";
     .threetab2-header{
-        width:1365px;
-        height:3843.470px;
-        margin:0 auto;   
+        margin:0 auto; 
+        text-align:left;   
     }
     .threetab2-ul{
         list-style:none;
@@ -92,7 +45,7 @@ export default {
         flex-wrap:wrap;
     }
     .threetab2-ul>.threetab2-li{
-        width:341.25px;
+        width:333.25px;
         height:548.09px;
         margin-bottom:56px;
     }
