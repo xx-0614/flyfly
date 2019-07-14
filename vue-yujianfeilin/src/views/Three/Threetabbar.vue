@@ -2,19 +2,95 @@
   <div class="threenav">
         <el-tabs v-model="activeName" @tab-click="handleClick">
             <el-tab-pane label="全部" name="first">
-              <threetab1></threetab1>
+               <ul class="threetabbar-ul">
+                 <threetab2  v-for="(item,i) of lijiang" :key="i"
+                  :imgurl="require(`../../assets/${item.img}`)"
+                  :subtitle="item.subtitle"
+                  :dates="item.dates"
+                 ></threetab2>          
+              </ul>
             </el-tab-pane>
             <el-tab-pane label="三亚" name="second">
-              <threetab2></threetab2>
+              <ul class="threetabbar-ul">
+                <threetab1  v-for="(item,i) of sanya" :key="i"
+                  :imgurl="require(`../../assets/${item.img}`)"
+                  :subtitle="item.subtitle"
+                  :dates="item.dates"
+                ></threetab1>             
+              </ul>
             </el-tab-pane>
-            <el-tab-pane label="丽江" name="third">角色管理</el-tab-pane>
-            <el-tab-pane label="大理" name="fourth">定时任务补偿</el-tab-pane>
-            <el-tab-pane label="青海" name="five">sheng</el-tab-pane>
-            <el-tab-pane label="香格里拉" name="six">配置管理</el-tab-pane>
-            <el-tab-pane label="塞班岛" name="seven">角色管理</el-tab-pane>
-            <el-tab-pane label="巴厘岛" name="eight">定时任务补偿</el-tab-pane>
-            <el-tab-pane label="法国" name="nine">sheng</el-tab-pane>
-            <el-tab-pane label="土耳其" name="ten">配置管理</el-tab-pane>
+            <el-tab-pane label="丽江" name="third">
+               <ul class="threetabbar-ul">
+                 <threetab2  v-for="(item,i) of lijiang" :key="i"
+                  :imgurl="require(`../../assets/${item.img}`)"
+                  :subtitle="item.subtitle"
+                  :dates="item.dates"
+                 ></threetab2>
+               </ul>  
+            </el-tab-pane>
+            <el-tab-pane label="大理" name="fourth">
+              <ul class="threetabbar-ul">
+                <threetab1  v-for="(item,i) of sanya" :key="i"
+                  :imgurl="require(`../../assets/${item.img}`)"
+                  :subtitle="item.subtitle"
+                  :dates="item.dates"
+                ></threetab1>             
+              </ul>
+            </el-tab-pane>
+            <el-tab-pane label="青海" name="five">
+                <ul class="threetabbar-ul">
+                 <threetab2  v-for="(item,i) of lijiang" :key="i"
+                  :imgurl="require(`../../assets/${item.img}`)"
+                  :subtitle="item.subtitle"
+                  :dates="item.dates"
+                 ></threetab2>
+               </ul>  
+            </el-tab-pane>
+            <el-tab-pane label="香格里拉" name="six">
+              <ul class="threetabbar-ul">
+                <threetab1  v-for="(item,i) of sanya" :key="i"
+                  :imgurl="require(`../../assets/${item.img}`)"
+                  :subtitle="item.subtitle"
+                  :dates="item.dates"
+                ></threetab1>             
+              </ul>
+            </el-tab-pane>
+            <el-tab-pane label="塞班岛" name="seven">
+                <ul class="threetabbar-ul">
+                 <threetab2  v-for="(item,i) of lijiang" :key="i"
+                  :imgurl="require(`../../assets/${item.img}`)"
+                  :subtitle="item.subtitle"
+                  :dates="item.dates"
+                 ></threetab2>
+               </ul>  
+            </el-tab-pane>
+            <el-tab-pane label="巴厘岛" name="eight">
+              <ul class="threetabbar-ul">
+                <threetab1  v-for="(item,i) of sanya" :key="i"
+                  :imgurl="require(`../../assets/${item.img}`)"
+                  :subtitle="item.subtitle"
+                  :dates="item.dates"
+                ></threetab1>             
+              </ul>
+            </el-tab-pane>
+            <el-tab-pane label="法国" name="nine">
+                <ul class="threetabbar-ul">
+                 <threetab2  v-for="(item,i) of lijiang" :key="i"
+                  :imgurl="require(`../../assets/${item.img}`)"
+                  :subtitle="item.subtitle"
+                  :dates="item.dates"
+                 ></threetab2>
+               </ul>  
+            </el-tab-pane>
+            <el-tab-pane label="土耳其" name="ten">
+               <ul class="threetabbar-ul">
+                <threetab1  v-for="(item,i) of sanya" :key="i"
+                  :imgurl="require(`../../assets/${item.img}`)"
+                  :subtitle="item.subtitle"
+                  :dates="item.dates"
+                ></threetab1>             
+              </ul>
+            </el-tab-pane>
         </el-tabs>
   </div>
 </template>
@@ -24,7 +100,9 @@ import Threetab2 from './Threetab2.vue';
   export default {
     data() {
       return {
-        activeName: 'second'
+        activeName: 'first',
+        sanya:[],
+        lijiang:[],
       };
     },
     components:{
@@ -32,15 +110,38 @@ import Threetab2 from './Threetab2.vue';
         "threetab2":Threetab2
     },
     methods: {
-      handleClick(tab, event) {
-        console.log(tab, event);
-       }
-    }
+        handleClick(tab, event) {
+                console.log(tab, event);
+              },
+        load(){
+             this.axios.get("http://127.0.0.1:3000/three").then(result=>{
+                   console.log(result)
+                   var n=0;
+                   var m=0;
+                   for(var i=0 ;i<result.data.length;i++){                    
+                          if(result.data[i].title=="三亚"){
+                                 this.sanya[n]=result.data[i];
+                                 n++;
+                        }else 
+                          if(result.data[i].title=="丽江"){
+                                 this.lijiang[m]=result.data[i];
+                                  m++;
+                        }                                           
+                     }
+                     console.log(this.sanya,this.lijiang)
+                 })
+              } ,
+    },
+    created(){
+         this.load();
+          },
   };
 </script>
-<style scope>
+<style scoped>
     .threenav{
-        margin-top:120px;
+       
+        width:1335px;
+        margin:100px auto;
         text-align:center;
     }
     /*导航栏 */
@@ -77,5 +178,15 @@ import Threetab2 from './Threetab2.vue';
     .el-tabs__active-bar{
         background-color:transparent !important;
     }
-
+    .el-icon-arrow-left:before {
+    content: "" !important;
+   }
+   .el-icon-arrow-right:before {
+    content: "" !important;
+    }
+    .threetabbar-ul{
+      list-style:none;
+        display:flex;
+        flex-wrap:wrap;
+    }
 </style>

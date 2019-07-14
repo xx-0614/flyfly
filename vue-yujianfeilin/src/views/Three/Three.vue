@@ -17,39 +17,35 @@
 import Threetabbar from './Threetabbar.vue';
 export default {
       data(){
-          return {}
+          return {
+              travel:[]
+          }
       },
        components:{
         "threetabbar":Threetabbar
     },
-    methods: {
-         load(){
-          this.axios.get("http://127.0.0.1:3000/three").then(result=>{
-             console.log(result)
-           
-            })
-         }
+     methods: {
+         
     },
-    created(){
-        this.load();
-    }
 }
 </script>
-<style scope>
+<style scoped>
     .three-content{
        text-align:center; 
     }
     .three-header>img{
        width:100%;
        height:751px;
+       margin:0 auto;
     }
     .three-text{
         width:100%;
+        height:224px;
         font-size:36px;
         padding-top:70px;
         margin-bottom:105px;
         text-align:center;
-        transition:all 1 linear;
+        transition:all .3s linear;
     }
     .three-text:hover{
          padding-top:60px;
