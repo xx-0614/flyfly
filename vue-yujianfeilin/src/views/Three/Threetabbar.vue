@@ -24,7 +24,7 @@ import Threetab2 from './Threetab2.vue';
   export default {
     data() {
       return {
-        activeName: 'second'
+        activeName: 'first'
       };
     },
     components:{
@@ -40,7 +40,9 @@ import Threetab2 from './Threetab2.vue';
 </script>
 <style scope>
     .threenav{
-        margin-top:120px;
+       
+        width:1335px;
+        margin:100px auto;
         text-align:center;
     }
     /*导航栏 */
@@ -77,5 +79,11 @@ import Threetab2 from './Threetab2.vue';
     .el-tabs__active-bar{
         background-color:transparent !important;
     }
+    .el-icon-arrow-left:before {
+    content: "" !important;
+   }
+   .el-icon-arrow-right:before {
+    content: "" !important;
+  }
 
 </style>

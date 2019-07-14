@@ -250,12 +250,13 @@ CREATE TABLE fly_six_year(
     title VARCHAR(64),
     subtitle VARCHAR(128),
     dates DATE,
+    datess DATE,
     href VARCHAR(128)
 );
-INSERT INTO fly_six_year VALUES(NULL,'img/five/091405046524.jpg','六周年店庆活动5866','TIME','2019.7.9-2019.8.9',NULL);
-INSERT INTO fly_six_year VALUES(NULL,'img/five/091408327291.jpg','六周年店庆活动6866','TIME','2019.7.9-2019.8.9',NULL);
-INSERT INTO fly_six_year VALUES(NULL,'img/five/091410112362.jpg','六周年店庆活动7866','TIME','2019.7.8-2019.8.8',NULL);
-INSERT INTO fly_six_year VALUES(NULL,'img/five/091414007703.jpg','六周年店庆活动8866','TIME','2019.7.9-2019.8.9',NULL);
+INSERT INTO fly_six_year VALUES(NULL,'img/five/091405046524.jpg','六周年店庆活动5866','TIME','2019.7.9','2019.8.9',NULL);
+INSERT INTO fly_six_year VALUES(NULL,'img/five/091408327291.jpg','六周年店庆活动6866','TIME','2019.7.9','2019.8.9',NULL);
+INSERT INTO fly_six_year VALUES(NULL,'img/five/091410112362.jpg','六周年店庆活动7866','TIME','2019.7.8','2019.8.8',NULL);
+INSERT INTO fly_six_year VALUES(NULL,'img/five/091414007703.jpg','六周年店庆活动8866','TIME','2019.7.9','2019.8.9',NULL);
 
 
 

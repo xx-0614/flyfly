@@ -42,6 +42,7 @@ export default {
     .three-header>img{
        width:100%;
        height:751px;
+       margin:0 auto;
     }
     .three-text{
         width:100%;
