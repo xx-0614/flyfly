@@ -8,7 +8,7 @@
             </div>
             <div class="nav-bar">
                 <ul class="nav-item">
-                    <li class="active"><a href="">首页</a></li>
+                    <li class="active"><router-link to="/">首页</router-link></li>
                     <li>
                         <a href="">风格系列</a>
                         <ul>
@@ -26,7 +26,7 @@
                             </li>
                         </ul>
                     </li>
-                    <li><a href="">最新样片</a></li>
+                    <li><router-link to="/Three">最新客片</router-link></li>
                     <li><a href="">100%客片</a></li>
                     <li><a href="">当季特惠</a></li>
                     <li>
