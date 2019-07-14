@@ -42,14 +42,16 @@ export default {
     .three-header>img{
        width:100%;
        height:751px;
+       margin:0 auto;
     }
     .three-text{
         width:100%;
+        height:224px;
         font-size:36px;
         padding-top:70px;
         margin-bottom:105px;
         text-align:center;
-        transition:all 1 linear;
+        transition:all 0.3s linear;
     }
     .three-text:hover{
          padding-top:60px;
