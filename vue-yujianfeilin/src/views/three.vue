@@ -9,7 +9,7 @@
                <div class="three-text-bg"></div>
                <h4>菲林环游记</h4>
             </div>
-        </div class="threenav">  
+        </div>  
         <threetabbar></threetabbar>     
     </div>
 </template>
@@ -26,7 +26,7 @@ export default {
          load(){
           this.axios.get("http://127.0.0.1:3000/three").then(result=>{
              console.log(result)
-            this.travel=result;
+           
             })
          }
     },

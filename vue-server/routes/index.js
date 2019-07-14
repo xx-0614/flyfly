@@ -33,7 +33,6 @@ router.get('/',(req,res)=>{
                             pool.query("SELECT * FROM fly_comment",(err,result)=>{
                                 if(err) throw err;
                                 output.comment=result;
-                                console.log(output);
                                 res.send(output)
                             })
                         })
