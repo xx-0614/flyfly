@@ -2,6 +2,15 @@
   <div class="threenav">
         <el-tabs v-model="activeName" @tab-click="handleClick">
             <el-tab-pane label="全部" name="first">
+               <ul class="threetabbar-ul">
+                 <threetab2  v-for="(item,i) of lijiang" :key="i"
+                  :imgurl="require(`../../assets/${item.img}`)"
+                  :subtitle="item.subtitle"
+                  :dates="item.dates"
+                 ></threetab2>          
+              </ul>
+            </el-tab-pane>
+            <el-tab-pane label="三亚" name="second">
               <ul class="threetabbar-ul">
                 <threetab1  v-for="(item,i) of sanya" :key="i"
                   :imgurl="require(`../../assets/${item.img}`)"
@@ -10,17 +19,78 @@
                 ></threetab1>             
               </ul>
             </el-tab-pane>
-            <el-tab-pane label="三亚" name="second">
-              <threetab2></threetab2>
+            <el-tab-pane label="丽江" name="third">
+               <ul class="threetabbar-ul">
+                 <threetab2  v-for="(item,i) of lijiang" :key="i"
+                  :imgurl="require(`../../assets/${item.img}`)"
+                  :subtitle="item.subtitle"
+                  :dates="item.dates"
+                 ></threetab2>
+               </ul>  
             </el-tab-pane>
-            <el-tab-pane label="丽江" name="third">角色管理</el-tab-pane>
-            <el-tab-pane label="大理" name="fourth">定时任务补偿</el-tab-pane>
-            <el-tab-pane label="青海" name="five">sheng</el-tab-pane>
-            <el-tab-pane label="香格里拉" name="six">配置管理</el-tab-pane>
-            <el-tab-pane label="塞班岛" name="seven">角色管理</el-tab-pane>
-            <el-tab-pane label="巴厘岛" name="eight">定时任务补偿</el-tab-pane>
-            <el-tab-pane label="法国" name="nine">sheng</el-tab-pane>
-            <el-tab-pane label="土耳其" name="ten">配置管理</el-tab-pane>
+            <el-tab-pane label="大理" name="fourth">
+              <ul class="threetabbar-ul">
+                <threetab1  v-for="(item,i) of sanya" :key="i"
+                  :imgurl="require(`../../assets/${item.img}`)"
+                  :subtitle="item.subtitle"
+                  :dates="item.dates"
+                ></threetab1>             
+              </ul>
+            </el-tab-pane>
+            <el-tab-pane label="青海" name="five">
+                <ul class="threetabbar-ul">
+                 <threetab2  v-for="(item,i) of lijiang" :key="i"
+                  :imgurl="require(`../../assets/${item.img}`)"
+                  :subtitle="item.subtitle"
+                  :dates="item.dates"
+                 ></threetab2>
+               </ul>  
+            </el-tab-pane>
+            <el-tab-pane label="香格里拉" name="six">
+              <ul class="threetabbar-ul">
+                <threetab1  v-for="(item,i) of sanya" :key="i"
+                  :imgurl="require(`../../assets/${item.img}`)"
+                  :subtitle="item.subtitle"
+                  :dates="item.dates"
+                ></threetab1>             
+              </ul>
+            </el-tab-pane>
+            <el-tab-pane label="塞班岛" name="seven">
+                <ul class="threetabbar-ul">
+                 <threetab2  v-for="(item,i) of lijiang" :key="i"
+                  :imgurl="require(`../../assets/${item.img}`)"
+                  :subtitle="item.subtitle"
+                  :dates="item.dates"
+                 ></threetab2>
+               </ul>  
+            </el-tab-pane>
+            <el-tab-pane label="巴厘岛" name="eight">
+              <ul class="threetabbar-ul">
+                <threetab1  v-for="(item,i) of sanya" :key="i"
+                  :imgurl="require(`../../assets/${item.img}`)"
+                  :subtitle="item.subtitle"
+                  :dates="item.dates"
+                ></threetab1>             
+              </ul>
+            </el-tab-pane>
+            <el-tab-pane label="法国" name="nine">
+                <ul class="threetabbar-ul">
+                 <threetab2  v-for="(item,i) of lijiang" :key="i"
+                  :imgurl="require(`../../assets/${item.img}`)"
+                  :subtitle="item.subtitle"
+                  :dates="item.dates"
+                 ></threetab2>
+               </ul>  
+            </el-tab-pane>
+            <el-tab-pane label="土耳其" name="ten">
+               <ul class="threetabbar-ul">
+                <threetab1  v-for="(item,i) of sanya" :key="i"
+                  :imgurl="require(`../../assets/${item.img}`)"
+                  :subtitle="item.subtitle"
+                  :dates="item.dates"
+                ></threetab1>             
+              </ul>
+            </el-tab-pane>
         </el-tabs>
   </div>
 </template>
