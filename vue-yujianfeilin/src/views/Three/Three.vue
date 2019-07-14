@@ -35,7 +35,7 @@ export default {
     }
 }
 </script>
-<style scope>
+<style scoped>
     .three-content{
        text-align:center; 
     }
