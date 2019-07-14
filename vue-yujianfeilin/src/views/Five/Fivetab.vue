@@ -58,10 +58,10 @@ export default {
      .fivetab-a>img{
         width:1520px;
         height:520px;
-        transition:all .5 linear;       
+        transition:all .3s linear;       
      }
      .fivetab-a>img:hover{
-       
+       transform:scale(1.05);
      }
      .fivetab-ul>.fivetab-li a:last-child{
          padding-bottom:50px;
