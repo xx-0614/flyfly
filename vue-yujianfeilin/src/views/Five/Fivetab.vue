@@ -23,8 +23,7 @@ export default {
         subtitle:{default:""},
         dates:{default:""},
         datess:{default:""},
-        id:{default:""},
-        itemClick:{type:Function}
+      
     },
     data(){
         return {}
