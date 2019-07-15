@@ -1,11 +1,23 @@
 <template>
   <div class="fourtabbar-nav">
-        <el-tabs v-model="activeName" @tab-click="handleClick">
+        <el-tabs v-model="activeName">
             <el-tab-pane label="全部" name="first">
-              <fourtab1></fourtab1>
+                <ul class="fourtabbar-ul">
+                    <fourtab1 v-for="(item ,i) of city" :key="i"
+                        :imgurl="require(`../../assets/${item.img}`)"
+                        :subtitle="item.subtitle"
+                        :dates="item.dates"
+                    ></fourtab1>
+                </ul>
             </el-tab-pane>
             <el-tab-pane label="三亚" name="second">
-              <fourtab2></fourtab2>
+                <ul class="fourtabbar-ul">          
+                    <fourtab2 v-for="(item,i) of sanya" :key="i"
+                        :imgurl="require(`../../assets/${item.img}`)"
+                        :subtitle="item.subtitle"
+                        :dates="item.dates"
+                  ></fourtab2>
+               </ul>
             </el-tab-pane>
             <el-tab-pane label="丽江" name="third">角色管理</el-tab-pane>
             <el-tab-pane label="大理" name="fourth">定时任务补偿</el-tab-pane>
@@ -24,18 +36,41 @@ import Fourtab2 from './Fourtab2.vue';
   export default {
     data() {
       return {
-        activeName: 'first'
+        activeName: 'first',
+        city:[],
+        sanya:[],
+        lijiang:[]
       };
     },
     components:{
         "fourtab1":Fourtab1,
         "fourtab2":Fourtab2
     },
-    methods: {
-      handleClick(tab, event) {
-        console.log(tab, event);
-       }
-    }
+    methods: {        
+        load(){
+             this.axios.get("http://127.0.0.1:3000/four").then(result=>{
+                   console.log(result);
+                   this.city=result.data.slice(0,16);
+                   console.log(this.city)
+                   var n=0;
+                   var m=0;
+                   for(var i=0 ;i<result.data.length;i++){                    
+                          if(result.data[i].title=="三亚"){
+                                 this.sanya[n]=result.data[i];
+                                 n++;
+                        }else 
+                          if(result.data[i].title=="丽江"){
+                                 this.lijiang[m]=result.data[i];
+                                  m++;
+                        }                                           
+                     }
+                     console.log(this.sanya,this.lijiang)
+                 })
+              } ,
+     },
+      created(){
+         this.load();
+          },
   };
 </script>
 <style >
