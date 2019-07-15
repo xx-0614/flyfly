@@ -5,66 +5,11 @@
               <li class="fourtab1-li">
                    <a href="#">
                        <p>
-                          <img src="../../assets/img/four/070951364310.jpg">
+                          <img :src="imgurl">
                        </p>
                        <div>
-                           <span>游艇旅行</span>
-                           <p>2019-06-29</p>
-                       </div>
-                   </a> 
-              </li>
-              <li class="fourtab1-li">
-                   <a href="#">
-                       <p>
-                          <img src="../../assets/img/four/070951364310.jpg">
-                       </p>
-                       <div>
-                           <span>游艇旅行</span>
-                           <p>2019-06-29</p>
-                       </div>
-                   </a> 
-              </li>
-              <li class="fourtab1-li">
-                   <a href="#">
-                       <p>
-                          <img src="../../assets/img/four/070951364310.jpg">
-                       </p>
-                       <div>
-                           <span>游艇旅行</span>
-                           <p>2019-06-29</p>
-                       </div>
-                   </a> 
-              </li>
-              <li class="fourtab1-li">
-                   <a href="#">
-                       <p>
-                          <img src="../../assets/img/four/070951364310.jpg">
-                       </p>
-                       <div>
-                           <span>游艇旅行</span>
-                           <p>2019-06-29</p>
-                       </div>
-                   </a> 
-              </li>
-              <li class="fourtab1-li">
-                   <a href="#">
-                       <p>
-                          <img src="../../assets/img/four/070951364310.jpg">
-                       </p>
-                       <div>
-                           <span>游艇旅行</span>
-                           <p>2019-06-29</p>
-                       </div>
-                   </a> 
-              </li>
-              <li class="fourtab1-li">
-                   <a href="#">
-                       <p>
-                          <img src="../../assets/img/four/070951364310.jpg">
-                       </p>
-                       <div>
-                           <span>游艇旅行</span>
-                           <p>2019-06-29</p>
+                           <span>{{subtitle}}</span>
+                           <p>{{dates}}</p>
                        </div>
                    </a> 
               </li>
@@ -74,6 +19,11 @@
 </template>
 <script>
 export default {
+     props:{
+        imgurl:{default:""},
+        subtitle:{default:""},
+        dates:{default:""},
+    },
     data(){
         return {}
     }
