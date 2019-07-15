@@ -40,7 +40,6 @@ export default {
     methods:{
         active(e){
             var a=document.querySelectorAll(".title>ul>li a");
-            console.log(a)
             for(var i=0;i<a.length;i++){
                 if(e.target.nodeName=="A"){
                     a[i].className="";
