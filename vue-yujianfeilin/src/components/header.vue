@@ -2,9 +2,9 @@
     <div class="header">
         <div class="nav">
             <div class="logo">
-                <a href="#">
+                <router-link to="/#" class="active">
                     <img src="../assets/img/index/logo.png" alt="">
-                </a>
+                </router-link>
             </div>
             <div class="nav-bar">
                 <ul class="nav-item" @click="fontWhite">

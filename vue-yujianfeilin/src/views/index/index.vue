@@ -5,7 +5,7 @@
             <el-carousel-item v-for="(item) in 3" :key="item"></el-carousel-item>
         </el-carousel>
         <div class="main">
-            <indexcity></indexcity>
+            <indexcity :city="city"></indexcity>
         </div>
     </div>
 </template>
