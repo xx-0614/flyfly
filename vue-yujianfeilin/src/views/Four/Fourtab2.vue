@@ -79,11 +79,7 @@ export default {
     }
 }
 </script>
-<<<<<<< HEAD
-<style scoped>
-=======
 <style>
->>>>>>> 5267fc4dbb0b2e496fe567b6c708e8f68d960486
     @import "../../assets/common.css";
     .fourtab1-header{
         width:1365px;

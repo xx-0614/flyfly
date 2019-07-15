@@ -6,7 +6,7 @@
                    <router-link to="/" class="active">热拍地区</router-link>
                </li>
                <li>
-                   <router-link to="/">全部地区</router-link>
+                   <router-link to="/Three">全部地区</router-link>
                </li>
            </ul>
        </div>
