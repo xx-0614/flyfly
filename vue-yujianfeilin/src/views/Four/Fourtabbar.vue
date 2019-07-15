@@ -114,7 +114,7 @@ import Fourtab2 from './Fourtab2.vue';
         load(){
              this.axios.get("http://127.0.0.1:3000/four").then(result=>{
                    console.log(result);
-                   this.city=result.data
+                   this.city=result.data.slice(0,16);
                    console.log(this.city)
                    var n=0;
                    var m=0;

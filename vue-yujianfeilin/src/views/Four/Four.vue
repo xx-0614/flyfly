@@ -23,12 +23,6 @@ export default {
         "threetabbar":Fourtabbar
     },
     methods: {
-         load(){
-          this.axios.get("http://127.0.0.1:3000/four").then(result=>{
-             console.log(result)
-           
-            })
-         }
     },
     created(){
         this.load();
