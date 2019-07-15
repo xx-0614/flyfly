@@ -6,11 +6,13 @@
         </el-carousel>
         <div class="main">
             <indexcity :city="city"></indexcity>
+            <indexactivity :activity="activity"></indexactivity>   
         </div>
     </div>
 </template>
 <script>
 import Indexcity from "./Indexcity.vue"
+import Indexactivity from "./Indexactivity.vue"
 export default {
     data(){
         return {
@@ -24,6 +26,7 @@ export default {
     },
     components:{
         "indexcity":Indexcity,
+        "indexactivity":Indexactivity,
     },
     created(){
         this.axios.get("index").then(result=>{

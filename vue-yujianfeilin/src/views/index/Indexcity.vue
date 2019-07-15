@@ -28,86 +28,6 @@
                         </h3>
                    </router-link>
                </div>
-               <!-- <div>
-                   <router-link to="/Three" class="img_hover">
-                        <div class="pic">
-                            <img src="../../assets/img/index/picq5.jpg" alt="">
-                            <div class="cover">
-                                <span>
-                                    <i></i>
-                                </span>
-                            </div>
-                        </div>
-                        <h3>
-                            大理/Dali
-                            <p>FEELING TRAVEL PHOTO</p>
-                        </h3>
-                   </router-link>
-               </div>
-               <div>
-                   <router-link to="/Three" class="img_hover">
-                        <div class="pic">
-                            <img src="../../assets/img/index/picq5.jpg" alt="">
-                            <div class="cover">
-                            <span>
-                                <i></i>
-                            </span>
-                        </div>
-                        </div>
-                        <h3>
-                            大理/Dali
-                            <p>FEELING TRAVEL PHOTO</p>
-                        </h3>
-                   </router-link>
-               </div>
-               <div>
-                   <router-link to="/Three" class="img_hover">
-                        <div class="pic">
-                            <img src="../../assets/img/index/picq5.jpg" alt="">
-                            <div class="cover">
-                            <span>
-                                <i></i>
-                            </span>
-                        </div>
-                        </div>
-                        <h3>
-                            大理/Dali
-                            <p>FEELING TRAVEL PHOTO</p>
-                        </h3>
-                   </router-link>
-               </div>
-               <div>
-                   <router-link to="/Three" class="img_hover">
-                        <div class="pic">
-                            <img src="../../assets/img/index/picq5.jpg" alt="">
-                            <div class="cover">
-                            <span>
-                                <i></i>
-                            </span>
-                        </div>
-                        </div>
-                        <h3>
-                            大理/Dali
-                            <p>FEELING TRAVEL PHOTO</p>
-                        </h3>
-                   </router-link>
-               </div>
-               <div>
-                   <router-link to="/Three" class="img_hover">
-                        <div class="pic">
-                            <img src="../../assets/img/index/picq5.jpg" alt="">
-                            <div class="cover">
-                            <span>
-                                <i></i>
-                            </span>
-                        </div>
-                        </div>
-                        <h3>
-                            大理/Dali
-                            <p>FEELING TRAVEL PHOTO</p>
-                        </h3>
-                   </router-link>
-               </div> -->
            </div>
        </div>
     </div> 
@@ -120,7 +40,6 @@ export default {
     methods:{
         active(e){
             var a=document.querySelectorAll(".title>ul>li a");
-            console.log(a)
             for(var i=0;i<a.length;i++){
                 if(e.target.nodeName=="A"){
                     a[i].className="";
