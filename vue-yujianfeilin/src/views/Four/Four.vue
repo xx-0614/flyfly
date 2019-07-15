@@ -24,9 +24,6 @@ export default {
     },
     methods: {
     },
-    created(){
-        this.load();
-    }
 }
 </script>
 <style scoped>

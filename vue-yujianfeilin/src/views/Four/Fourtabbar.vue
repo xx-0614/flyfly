@@ -123,7 +123,8 @@ import Fourtab2 from './Fourtab2.vue';
                                  this.sanya[n]=result.data[i];
                                  n++;
                         }else 
-                          if(result.data[i].title=="丽江"){
+                          if(result.data[i]
+                          .title=="丽江"){
                                  this.lijiang[m]=result.data[i];
                                   m++;
                         }                                           
