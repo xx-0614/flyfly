@@ -31,9 +31,7 @@ export default {
 }
 </script>
 <style scoped>
-    .fivetab-content{
-      
-    }
+
     .fivetab-header{
         width:1250px;
         margin-top:120px;
