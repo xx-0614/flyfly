@@ -6,16 +6,16 @@
                    <router-link to="/" class="active">热拍地区</router-link>
                </li>
                <li>
-                   <router-link to="/">全部地区</router-link>
+                   <router-link to="/Three">全部地区</router-link>
                </li>
            </ul>
        </div>
        <div class="city-content">
            <div class="content-img">
-               <div>
+               <div v-for="(item,i) of city" :key="i"> 
                    <router-link to="/Three" class="img_hover">
                         <div class="pic">
-                            <img src="../../assets/img/index/picq5.jpg" alt="">
+                            <img :src="require(`../../assets/${item.img}`)">
                             <div class="cover">
                             <span>
                                 <i></i>
@@ -23,88 +23,8 @@
                         </div>
                         </div>
                         <h3>
-                            大理/Dali
-                            <p>FEELING TRAVEL PHOTO</p>
-                        </h3>
-                   </router-link>
-               </div>
-               <div>
-                   <router-link to="/Three" class="img_hover">
-                        <div class="pic">
-                            <img src="../../assets/img/index/picq5.jpg" alt="">
-                            <div class="cover">
-                                <span>
-                                    <i></i>
-                                </span>
-                            </div>
-                        </div>
-                        <h3>
-                            大理/Dali
-                            <p>FEELING TRAVEL PHOTO</p>
-                        </h3>
-                   </router-link>
-               </div>
-               <div>
-                   <router-link to="/Three" class="img_hover">
-                        <div class="pic">
-                            <img src="../../assets/img/index/picq5.jpg" alt="">
-                            <div class="cover">
-                            <span>
-                                <i></i>
-                            </span>
-                        </div>
-                        </div>
-                        <h3>
-                            大理/Dali
-                            <p>FEELING TRAVEL PHOTO</p>
-                        </h3>
-                   </router-link>
-               </div>
-               <div>
-                   <router-link to="/Three" class="img_hover">
-                        <div class="pic">
-                            <img src="../../assets/img/index/picq5.jpg" alt="">
-                            <div class="cover">
-                            <span>
-                                <i></i>
-                            </span>
-                        </div>
-                        </div>
-                        <h3>
-                            大理/Dali
-                            <p>FEELING TRAVEL PHOTO</p>
-                        </h3>
-                   </router-link>
-               </div>
-               <div>
-                   <router-link to="/Three" class="img_hover">
-                        <div class="pic">
-                            <img src="../../assets/img/index/picq5.jpg" alt="">
-                            <div class="cover">
-                            <span>
-                                <i></i>
-                            </span>
-                        </div>
-                        </div>
-                        <h3>
-                            大理/Dali
-                            <p>FEELING TRAVEL PHOTO</p>
-                        </h3>
-                   </router-link>
-               </div>
-               <div>
-                   <router-link to="/Three" class="img_hover">
-                        <div class="pic">
-                            <img src="../../assets/img/index/picq5.jpg" alt="">
-                            <div class="cover">
-                            <span>
-                                <i></i>
-                            </span>
-                        </div>
-                        </div>
-                        <h3>
-                            大理/Dali
-                            <p>FEELING TRAVEL PHOTO</p>
+                            {{item.title}}
+                            <p>{{item.details}}</p>
                         </h3>
                    </router-link>
                </div>
@@ -120,15 +40,15 @@ export default {
     methods:{
         active(e){
             var a=document.querySelectorAll(".title>ul>li a");
-            console.log(a)
             for(var i=0;i<a.length;i++){
                 if(e.target.nodeName=="A"){
                     a[i].className="";
                 }
                 e.target.className="active";
             }
-        }
-    }
+        },
+    },
+    props:["city"],
 }
 </script>
 <style scoped>

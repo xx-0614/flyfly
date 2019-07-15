@@ -5,12 +5,14 @@
             <el-carousel-item v-for="(item) in 3" :key="item"></el-carousel-item>
         </el-carousel>
         <div class="main">
-            <indexcity></indexcity>
+            <indexcity :city="city"></indexcity>
+            <indexactivity :activity="activity"></indexactivity>   
         </div>
     </div>
 </template>
 <script>
 import Indexcity from "./Indexcity.vue"
+import Indexactivity from "./Indexactivity.vue"
 export default {
     data(){
         return {
@@ -24,6 +26,7 @@ export default {
     },
     components:{
         "indexcity":Indexcity,
+        "indexactivity":Indexactivity,
     },
     created(){
         this.axios.get("index").then(result=>{

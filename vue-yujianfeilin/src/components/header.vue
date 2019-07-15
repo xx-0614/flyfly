@@ -2,9 +2,9 @@
     <div class="header">
         <div class="nav">
             <div class="logo">
-                <a href="#">
+                <router-link to="/#" class="active">
                     <img src="../assets/img/index/logo.png" alt="">
-                </a>
+                </router-link>
             </div>
             <div class="nav-bar">
                 <ul class="nav-item" @click="fontWhite">
@@ -57,7 +57,7 @@
                     <li><router-link to="/Three">真实好评</router-link></li>
                 </ul>
                 <div class="search">
-                    <span></span>
+                    <span  @click.stop="d_block"></span>
                     <div class="search-input">
                         <input class="search-text" type="text">
                         <input class="search-submit" type="submit" value="">
@@ -73,6 +73,7 @@ export default {
         return {}
     },
     methods:{
+        //切换导航栏按钮
         fontWhite(e){
             var ul=document.querySelector(".nav-item");
             var a=document.querySelectorAll(".nav-item a");
@@ -82,8 +83,19 @@ export default {
                 }
                 e.target.className="active"
             }
+        },
+        //输入框的显示与隐藏
+        d_block(){
+            console.log(1)
+            var input=document.querySelector(".search-input");
+            if(input.style.opacity==0){
+                input.style.opacity=1
+            }else{
+                input.style.opacity=0
+            }
+           
         }
-    }
+    },
 }
 </script>
 <style scoped>
@@ -238,7 +250,8 @@ export default {
     background-color:#fff;
     padding-right:30px;
     border-radius:15px;
-    display:none;
+    opacity:0;
+    transition:.5s;
 }
 .header .search .search-text{
     display:block;

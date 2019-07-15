@@ -11,47 +11,41 @@
                     <dl>
                         <dt>遇见菲林</dt>
                         <dd>
-                            <a href="
-                            ">当季特惠</a>
-                            <a href="
-                            ">微电影</a>
-                            <a href="
-                            ">影像花絮</a>
-                            <a href="
-                            ">品牌介绍</a>
-                            <a href="
-                            ">服务保障</a>
-                            <a href="
-                            ">真实好评</a>
+                            <a href="javascript:;">当季特惠</a>
+                            <a href="javascript:;">微电影</a>
+                            <a href="javascript:;">影像花絮</a>
+                            <a href="javascript:;">品牌介绍</a>
+                            <a href="javascript:;">服务保障</a>
+                            <a href="javascript:;">真实好评</a>
                         </dd>
                     </dl>
                     <dl>
                         <dt>风格推荐</dt>
                         <dd>
-                            <a href="">INS系列</a>
-                            <a href="">小清新系列</a>
-                            <a href="">国潮系列</a>
-                            <a href="">造星系列</a>
+                            <a href="javascript:;">INS系列</a>
+                            <a href="javascript:;">小清新系列</a>
+                            <a href="javascript:;">国潮系列</a>
+                            <a href="javascript:;">造星系列</a>
                         </dd>
                     </dl>
                     <dl>
                         <dt>客片大赏</dt>
                         <dd>
-                            <a href="">三亚/SANYA</a>
-                            <a href="">丽江/LIJIANG</a>
-                            <a href="">大理/DALI</a>
-                            <a href="">青海/QINGHAI</a>
-                            <a href="">查看更多/MORE</a>
+                            <a href="javascript:;">三亚/SANYA</a>
+                            <a href="javascript:;">丽江/LIJIANG</a>
+                            <a href="javascript:;">大理/DALI</a>
+                            <a href="javascript:;">青海/QINGHAI</a>
+                            <a href="javascript:;">查看更多/MORE</a>
                         </dd>
                     </dl>
                     <dl>
                         <dt>店面地址</dt>
                         <dd>
-                            <a href="">三亚店：金鸡岭路凤凰水城红树湾</a>
-                            <a href="">丽江店：束河古镇天域阳光</a>
-                            <a href="">大理店：大理镇学府路大院</a>
-                            <a href="">青海店：香巴拉广场</a>
-                            <a href="">查看更多</a>
+                            <a href="javascript:;">三亚店：金鸡岭路凤凰水城红树湾</a>
+                            <a href="javascript:;">丽江店：束河古镇天域阳光</a>
+                            <a href="javascript:;">大理店：大理镇学府路大院</a>
+                            <a href="javascript:;">青海店：香巴拉广场</a>
+                            <a href="javascript:;">查看更多</a>
                         </dd>
                     </dl>
                 </div>
@@ -60,7 +54,7 @@
                 <div class="footer-left">
                     <ul>
                         <li>
-                            <a href="http://www.baidu.com">
+                            <a href="javascript:;">
                                 <div>
                                     <img src="../assets/img/index/iconq3.png" alt="">
                                     <span>遇见菲林旗舰店</span>
@@ -68,7 +62,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="http://www.baidu.com">
+                            <a href="javascript:;">
                                 <div>
                                     <img src="../assets/img/index/iconq4.png" alt="">
                                     <span>青海微博</span>
@@ -76,7 +70,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="http://www.baidu.com">
+                            <a href="javascript:;">
                                 <div>
                                     <img src="../assets/img/index/iconq4.png" alt="">
                                     <span>大理微博</span>
@@ -84,7 +78,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="http://www.baidu.com">
+                            <a href="javascript:;">
                                 <div>
                                     <img src="../assets/img/index/iconq4.png" alt="">
                                     <span>三亚微博</span>
@@ -92,7 +86,7 @@
                             </a>
                         </li>
                         <li>
-                             <a href="http://www.baidu.com">
+                             <a href="javascript:;">
                                 <div>
                                     <img src="../assets/img/index/iconq4.png" alt="">
                                     <span>丽江微博</span>
@@ -164,8 +158,12 @@ export default {
 }
 .footer-nav dl{
     float:left;
+    width:120px;
     overflow:hidden;
-    margin-right:100px;
+    margin-right:50px;
+}
+.footer-nav dl:last-child{
+    width:210px;
 }
 .footer-nav dt{
     font-size:20px;

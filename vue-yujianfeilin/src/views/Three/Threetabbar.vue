@@ -1,9 +1,9 @@
 <template>
   <div class="threenav">
-        <el-tabs v-model="activeName" @tab-click="handleClick">
+        <el-tabs v-model="activeName" >
             <el-tab-pane label="全部" name="first">
                <ul class="threetabbar-ul">
-                 <threetab2  v-for="(item,i) of lijiang" :key="i"
+                 <threetab2  v-for="(item,i) of city" :key="i"
                   :imgurl="require(`../../assets/${item.img}`)"
                   :subtitle="item.subtitle"
                   :dates="item.dates"
@@ -92,6 +92,7 @@
               </ul>
             </el-tab-pane>
         </el-tabs>
+
   </div>
 </template>
 <script>
@@ -101,8 +102,9 @@ import Threetab2 from './Threetab2.vue';
     data() {
       return {
         activeName: 'first',
+        city:[],
         sanya:[],
-        lijiang:[],
+        lijiang:[]
       };
     },
     components:{
@@ -110,12 +112,12 @@ import Threetab2 from './Threetab2.vue';
         "threetab2":Threetab2
     },
     methods: {
-        handleClick(tab, event) {
-                console.log(tab, event);
-              },
+       
         load(){
              this.axios.get("http://127.0.0.1:3000/three").then(result=>{
-                   console.log(result)
+                   console.log(result);
+                   this.city=result.data.slice(0,16);
+                   console.log(this.city)
                    var n=0;
                    var m=0;
                    for(var i=0 ;i<result.data.length;i++){                    
@@ -137,7 +139,7 @@ import Threetab2 from './Threetab2.vue';
           },
   };
 </script>
-<style scoped>
+<style>
     .threenav{
        
         width:1335px;
@@ -187,6 +189,6 @@ import Threetab2 from './Threetab2.vue';
     .threetabbar-ul{
       list-style:none;
         display:flex;
-        flex-wrap:wrap;
+        flex-wrap:wrap;      
     }
 </style>

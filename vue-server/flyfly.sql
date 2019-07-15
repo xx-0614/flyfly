@@ -68,11 +68,19 @@ CREATE TABLE fly_travel(
     title VARCHAR(64),
     img VARCHAR(128),
     subtitle VARCHAR(64),
-    dates DATE
+    dates VARCHAR(64)
 );
+INSERT INTO fly_travel VALUES(NULL,'青海','img/index/131802449133.jpg',"ins晴朗",'2019-06-27');
+INSERT INTO fly_travel VALUES(NULL,'丽江','img/index/131513554850.jpg',"ins晴朗",'2019-06-27');
+INSERT INTO fly_travel VALUES(NULL,'丽江','img/index/131507219575.jpg',"ins遇见",'2019-06-29');
+INSERT INTO fly_travel VALUES(NULL,'丽江','img/index/131139002772.jpg',"ins田园牧马",'2019-06-27');
+INSERT INTO fly_travel VALUES(NULL,'丽江','img/index/131249261223.jpg',"ins婚礼",'2019-06-27');
 INSERT INTO fly_travel VALUES(NULL,'三亚','img/index/291348483756.jpg',"游艇旅行",'2019-06-29');
+INSERT INTO fly_travel VALUES(NULL,'三亚','img/index/131727072108.jpg',"洱海边",'2019-06-13');
+INSERT INTO fly_travel VALUES(NULL,'丽江','img/index/131710184314.jpg',"环海公路",'2019-06-27');
 INSERT INTO fly_travel VALUES(NULL,'三亚','img/index/131614392445.jpg',"ins雪山探险",'2019-06-27');
 INSERT INTO fly_travel VALUES(NULL,'三亚','img/index/291336153264.jpg',"告白气球",'2019-06-29');
+INSERT INTO fly_travel VALUES(NULL,'丽江','img/index/131716414304.jpg',"山顶露营",'2019-06-29');
 INSERT INTO fly_travel VALUES(NULL,'三亚','img/index/141224357613.jpg',"边走边爱",'2019-06-27');
 INSERT INTO fly_travel VALUES(NULL,'三亚','img/index/291324127446.jpg',"海上冲浪",'2019-06-29');
 INSERT INTO fly_travel VALUES(NULL,'三亚','img/index/131607014483.jpg',"ins牧马",'2019-06-27');
@@ -83,10 +91,11 @@ INSERT INTO fly_travel VALUES(NULL,'三亚','img/index/141201146851.jpg',"情定
 INSERT INTO fly_travel VALUES(NULL,'三亚','img/index/131756346475.jpg',"羊驼",'2019-06-27');
 INSERT INTO fly_travel VALUES(NULL,'三亚','img/index/131526432303.jpg',"ins陪你到丽江",'2019-06-13');
 INSERT INTO fly_travel VALUES(NULL,'三亚','img/index/131738131832.jpg',"小岛日记",'2019-06-27');
-INSERT INTO fly_travel VALUES(NULL,'三亚','img/index/131727072108.jpg',"洱海边",'2019-06-13');
+INSERT INTO fly_travel VALUES(NULL,'三亚','img/index/131249261223.jpg',"海上冲浪",'2019-06-29');
+INSERT INTO fly_travel VALUES(NULL,'三亚','img/index/131507219575.jpg',"ins牧马",'2019-06-27');
+INSERT INTO fly_travel VALUES(NULL,'丽江','img/index/131727072108.jpg',"ins清晨",'2019-06-27');
 INSERT INTO fly_travel VALUES(NULL,'丽江','img/index/131710184314.jpg',"环海公路",'2019-06-27');
 INSERT INTO fly_travel VALUES(NULL,'丽江','img/index/111312466853.jpg',"余生",'2019-06-13');
-INSERT INTO fly_travel VALUES(NULL,'丽江','img/index/131716414304.jpg',"山顶露营",'2019-06-29');
 INSERT INTO fly_travel VALUES(NULL,'丽江','img/index/131534308947.jpg',"ins绚烂",'2019-06-27');
 INSERT INTO fly_travel VALUES(NULL,'丽江','img/index/131521103820.jpg',"ins简单爱",'2019-06-29');
 INSERT INTO fly_travel VALUES(NULL,'丽江','img/index/131513554850.jpg',"ins晴朗",'2019-06-27');
@@ -94,10 +103,12 @@ INSERT INTO fly_travel VALUES(NULL,'丽江','img/index/131507219575.jpg',"ins遇
 INSERT INTO fly_travel VALUES(NULL,'丽江','img/index/131249261223.jpg',"ins婚礼",'2019-06-27');
 INSERT INTO fly_travel VALUES(NULL,'丽江','img/index/131242582882.jpg',"ins世界纪元",'2019-06-27');
 INSERT INTO fly_travel VALUES(NULL,'丽江','img/index/131236069909.jpg',"ins世外桃源",'2019-06-27');
-INSERT INTO fly_travel VALUES(NULL,'丽江','img/index/131229425045.jpg',"ins清晨",'2019-06-27');
-INSERT INTO fly_travel VALUES(NULL,'丽江','img/index/131201161212.jpg',"ins旅行",'2019-06-27');
-INSERT INTO fly_travel VALUES(NULL,'丽江','img/index/131139002772.jpg',"ins田园牧马",'2019-06-27');
-INSERT INTO fly_travel VALUES(NULL,'丽江','img/index/131415571695.jpg',"情人湖边",'2019-06-13');
+INSERT INTO fly_travel VALUES(NULL,'青海','img/index/131229425045.jpg',"ins清晨",'2019-06-27');
+INSERT INTO fly_travel VALUES(NULL,'青海','img/index/131201161212.jpg',"ins旅行",'2019-06-27');
+INSERT INTO fly_travel VALUES(NULL,'青海','img/index/131139002772.jpg',"ins田园牧马",'2019-06-27');
+INSERT INTO fly_travel VALUES(NULL,'青海','img/index/131415571695.jpg',"情人湖边",'2019-06-13');
+INSERT INTO fly_travel VALUES(NULL,'青海','img/index/131513554850.jpg',"ins晴朗",'2019-06-27');
+INSERT INTO fly_travel VALUES(NULL,'青海','img/index/131507219575.jpg',"ins遇见",'2019-06-29');
 
 
 
@@ -108,7 +119,7 @@ CREATE TABLE fly_love_times(
     title VARCHAR(64),         
     img VARCHAR(128),
     subtitle VARCHAR(64),
-    dates DATE
+    dates  VARCHAR(64)
  );
 
 INSERT INTO fly_love_times VALUES(NULL,'三亚','img/four/292252289182.jpg',"甜蜜蜜",'2019-06-29');
@@ -159,7 +170,7 @@ CREATE TABLE fly_comment(
     clove_id INT PRIMARY KEY AUTO_INCREMENT,
     img VARCHAR(128),
     title VARCHAR(64),
-    dates DATE
+    dates  VARCHAR(64)
 );
 INSERT INTO fly_comment VALUES(NULL,'img/index/021022115589.jpg',"怎么说呢，这次的婚纱之旅还是挺满意的，首先原片很美，拍出来的效果是我们想要的，其次服务挺让人舒心的。总之先好评吧！接下来坐等相册出来哦。",'2019-07-02');
 INSERT INTO fly_comment VALUES(NULL,'img/index/021023375836.jpg',"摄影师人很好，拍照的时候海给我们很多的指导，还有我的化妆师技术很棒，化的很自然，不是失真，朋友们看到都很觉得很棒，以后他们也会去你们家拍照的哈，记得给她们安排跟我一样优秀的，专业的摄影师哦。",'2019-07-02');
@@ -249,8 +260,8 @@ CREATE TABLE fly_six_year(
     img VARCHAR(128),
     title VARCHAR(64),
     subtitle VARCHAR(128),
-    dates DATE,
-    datess DATE,
+    dates  VARCHAR(64),
+    datess  VARCHAR(64),
     href VARCHAR(128)
 );
 INSERT INTO fly_six_year VALUES(NULL,'img/five/091405046524.jpg','六周年店庆活动5866','TIME','2019.7.9','2019.8.9',NULL);

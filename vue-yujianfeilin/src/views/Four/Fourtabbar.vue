@@ -1,20 +1,96 @@
 <template>
   <div class="fourtabbar-nav">
-        <el-tabs v-model="activeName" @tab-click="handleClick">
+        <el-tabs v-model="activeName">
             <el-tab-pane label="全部" name="first">
-              <fourtab1></fourtab1>
+                <ul class="fourtabbar-ul">
+                    <fourtab1 v-for="(item ,i) of city" :key="i"
+                        :imgurl="require(`../../assets/${item.img}`)"
+                        :subtitle="item.subtitle"
+                        :dates="item.dates"
+                    ></fourtab1>
+                </ul>
             </el-tab-pane>
             <el-tab-pane label="三亚" name="second">
-              <fourtab2></fourtab2>
+                <ul class="fourtabbar-ul">          
+                    <fourtab2 v-for="(item,i) of sanya" :key="i"
+                        :imgurl="require(`../../assets/${item.img}`)"
+                        :subtitle="item.subtitle"
+                        :dates="item.dates"
+                    ></fourtab2>
+               </ul>
             </el-tab-pane>
-            <el-tab-pane label="丽江" name="third">角色管理</el-tab-pane>
-            <el-tab-pane label="大理" name="fourth">定时任务补偿</el-tab-pane>
-            <el-tab-pane label="青海" name="five">sheng</el-tab-pane>
-            <el-tab-pane label="香格里拉" name="six">配置管理</el-tab-pane>
-            <el-tab-pane label="塞班岛" name="seven">角色管理</el-tab-pane>
-            <el-tab-pane label="巴厘岛" name="eight">定时任务补偿</el-tab-pane>
-            <el-tab-pane label="法国" name="nine">sheng</el-tab-pane>
-            <el-tab-pane label="土耳其" name="ten">配置管理</el-tab-pane>
+            <el-tab-pane label="丽江" name="third">
+                <ul class="fourtabbar-ul">          
+                    <fourtab2 v-for="(item,i) of lijiang" :key="i"
+                        :imgurl="require(`../../assets/${item.img}`)"
+                        :subtitle="item.subtitle"
+                        :dates="item.dates"
+                    ></fourtab2>
+               </ul>
+            </el-tab-pane>
+            <el-tab-pane label="大理" name="fourth">
+                 <ul class="fourtabbar-ul">          
+                    <fourtab2 v-for="(item,i) of sanya" :key="i"
+                        :imgurl="require(`../../assets/${item.img}`)"
+                        :subtitle="item.subtitle"
+                        :dates="item.dates"
+                    ></fourtab2>
+               </ul>
+            </el-tab-pane>
+            <el-tab-pane label="青海" name="five">
+                 <ul class="fourtabbar-ul">          
+                    <fourtab2 v-for="(item,i) of lijiang" :key="i"
+                        :imgurl="require(`../../assets/${item.img}`)"
+                        :subtitle="item.subtitle"
+                        :dates="item.dates"
+                    ></fourtab2>
+               </ul>
+            </el-tab-pane>
+            <el-tab-pane label="香格里拉" name="six">
+                 <ul class="fourtabbar-ul">          
+                    <fourtab2 v-for="(item,i) of sanya" :key="i"
+                        :imgurl="require(`../../assets/${item.img}`)"
+                        :subtitle="item.subtitle"
+                        :dates="item.dates"
+                    ></fourtab2>
+               </ul>
+            </el-tab-pane>
+            <el-tab-pane label="塞班岛" name="seven">
+                  <ul class="fourtabbar-ul">          
+                    <fourtab2 v-for="(item,i) of lijiang" :key="i"
+                        :imgurl="require(`../../assets/${item.img}`)"
+                        :subtitle="item.subtitle"
+                        :dates="item.dates"
+                    ></fourtab2>
+               </ul>
+            </el-tab-pane>
+            <el-tab-pane label="巴厘岛" name="eight">
+                <ul class="fourtabbar-ul">          
+                    <fourtab2 v-for="(item,i) of sanya" :key="i"
+                        :imgurl="require(`../../assets/${item.img}`)"
+                        :subtitle="item.subtitle"
+                        :dates="item.dates"
+                    ></fourtab2>
+               </ul>
+            </el-tab-pane>
+            <el-tab-pane label="法国" name="nine">
+                 <ul class="fourtabbar-ul">          
+                    <fourtab2 v-for="(item,i) of lijiang" :key="i"
+                        :imgurl="require(`../../assets/${item.img}`)"
+                        :subtitle="item.subtitle"
+                        :dates="item.dates"
+                    ></fourtab2>
+               </ul>
+            </el-tab-pane>
+            <el-tab-pane label="土耳其" name="ten">
+                <ul class="fourtabbar-ul">          
+                    <fourtab2 v-for="(item,i) of sanya" :key="i"
+                        :imgurl="require(`../../assets/${item.img}`)"
+                        :subtitle="item.subtitle"
+                        :dates="item.dates"
+                    ></fourtab2>
+               </ul>
+            </el-tab-pane>
         </el-tabs>
   </div>
 </template>
@@ -24,29 +100,53 @@ import Fourtab2 from './Fourtab2.vue';
   export default {
     data() {
       return {
-        activeName: 'first'
+        activeName: 'first',
+        city:[],
+        sanya:[],
+        lijiang:[]
       };
     },
     components:{
         "fourtab1":Fourtab1,
         "fourtab2":Fourtab2
     },
-    methods: {
-      handleClick(tab, event) {
-        console.log(tab, event);
-       }
-    }
+    methods: {        
+        load(){
+             this.axios.get("http://127.0.0.1:3000/four").then(result=>{
+                   console.log(result);
+                   this.city=result.data.slice(0,16);
+                   console.log(this.city)
+                   var n=0;
+                   var m=0;
+                   for(var i=0 ;i<result.data.length;i++){                    
+                          if(result.data[i].title=="三亚"){
+                                 this.sanya[n]=result.data[i];
+                                 n++;
+                        }else 
+                          if(result.data[i].title=="丽江"){
+                                 this.lijiang[m]=result.data[i];
+                                  m++;
+                        }                                           
+                     }
+                     console.log(this.sanya,this.lijiang)
+                 })
+              } ,
+     },
+      created(){
+         this.load();
+          },
   };
 </script>
-<<<<<<< HEAD
-<style scoped>
-=======
 <style >
->>>>>>> 5267fc4dbb0b2e496fe567b6c708e8f68d960486
     .fourtabbar-nav{
         text-align:center;
         width:1355px;
         margin:100px auto;     
+    }
+    .fourtabbar-ul{
+       list-style:none;
+        display:flex;
+        flex-wrap:wrap;
     }
     /*导航栏 */
     .el-tabs__nav{
