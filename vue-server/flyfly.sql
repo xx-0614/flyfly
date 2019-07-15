@@ -70,6 +70,7 @@ CREATE TABLE fly_travel(
     subtitle VARCHAR(64),
     dates DATE
 );
+INSERT INTO fly_travel VALUES(NULL,'青海','img/index/131802449133.jpg',"ins晴朗",'2019-06-27');
 INSERT INTO fly_travel VALUES(NULL,'三亚','img/index/131727072108.jpg',"洱海边",'2019-06-13');
 INSERT INTO fly_travel VALUES(NULL,'丽江','img/index/131513554850.jpg',"ins晴朗",'2019-06-27');
 INSERT INTO fly_travel VALUES(NULL,'丽江','img/index/131507219575.jpg',"ins遇见",'2019-06-29');
