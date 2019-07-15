@@ -127,8 +127,9 @@ export default {
                 }
                 e.target.className="active";
             }
-        }
-    }
+        },
+    },
+    prop:["city"]
 }
 </script>
 <style scoped>

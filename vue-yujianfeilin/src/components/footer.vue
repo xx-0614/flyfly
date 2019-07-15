@@ -164,8 +164,12 @@ export default {
 }
 .footer-nav dl{
     float:left;
+    width:120px;
     overflow:hidden;
     margin-right:100px;
+}
+.footer-nav dl:last-child{
+    width:210px;
 }
 .footer-nav dt{
     font-size:20px;
