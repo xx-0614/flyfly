@@ -68,7 +68,7 @@ CREATE TABLE fly_travel(
     title VARCHAR(64),
     img VARCHAR(128),
     subtitle VARCHAR(64),
-    dates DATE
+    dates VARCHAR(64)
 );
 INSERT INTO fly_travel VALUES(NULL,'青海','img/index/131802449133.jpg',"ins晴朗",'2019-06-27');
 INSERT INTO fly_travel VALUES(NULL,'三亚','img/index/131727072108.jpg',"洱海边",'2019-06-13');
@@ -121,7 +121,7 @@ CREATE TABLE fly_love_times(
     title VARCHAR(64),         
     img VARCHAR(128),
     subtitle VARCHAR(64),
-    dates DATE
+    dates  VARCHAR(64)
  );
 
 INSERT INTO fly_love_times VALUES(NULL,'三亚','img/four/292252289182.jpg',"甜蜜蜜",'2019-06-29');
@@ -172,7 +172,7 @@ CREATE TABLE fly_comment(
     clove_id INT PRIMARY KEY AUTO_INCREMENT,
     img VARCHAR(128),
     title VARCHAR(64),
-    dates DATE
+    dates  VARCHAR(64)
 );
 INSERT INTO fly_comment VALUES(NULL,'img/index/021022115589.jpg',"怎么说呢，这次的婚纱之旅还是挺满意的，首先原片很美，拍出来的效果是我们想要的，其次服务挺让人舒心的。总之先好评吧！接下来坐等相册出来哦。",'2019-07-02');
 INSERT INTO fly_comment VALUES(NULL,'img/index/021023375836.jpg',"摄影师人很好，拍照的时候海给我们很多的指导，还有我的化妆师技术很棒，化的很自然，不是失真，朋友们看到都很觉得很棒，以后他们也会去你们家拍照的哈，记得给她们安排跟我一样优秀的，专业的摄影师哦。",'2019-07-02');
@@ -262,8 +262,8 @@ CREATE TABLE fly_six_year(
     img VARCHAR(128),
     title VARCHAR(64),
     subtitle VARCHAR(128),
-    dates DATE,
-    datess DATE,
+    dates  VARCHAR(64),
+    datess  VARCHAR(64),
     href VARCHAR(128)
 );
 INSERT INTO fly_six_year VALUES(NULL,'img/five/091405046524.jpg','六周年店庆活动5866','TIME','2019.7.9','2019.8.9',NULL);
