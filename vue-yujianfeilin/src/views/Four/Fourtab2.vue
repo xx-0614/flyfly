@@ -32,8 +32,6 @@ export default {
 <style scoped>
     @import "../../assets/common.css";
     .fourtab1-header{
-        width:1365px;
-        height:3843.470px;
         margin:0 auto; 
         text-align:left;   
     }
@@ -43,7 +41,7 @@ export default {
         flex-wrap:wrap;
     }
     .fourtab1-ul>.fourtab1-li{
-        width:341.25px;
+        width:333.25px;
         height:548.09px;
         margin-bottom:56px;
     }
