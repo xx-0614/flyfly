@@ -12,10 +12,10 @@
        </div>
        <div class="city-content">
            <div class="content-img">
-               <div>
+               <div v-for="(item,i) of city" :key="i"> 
                    <router-link to="/Three" class="img_hover">
                         <div class="pic">
-                            <img src="../../assets/img/index/picq5.jpg" alt="">
+                            <img :src="require(`../../assets/${item.img}`)">
                             <div class="cover">
                             <span>
                                 <i></i>
@@ -23,12 +23,12 @@
                         </div>
                         </div>
                         <h3>
-                            大理/Dali
-                            <p>FEELING TRAVEL PHOTO</p>
+                            {{item.title}}
+                            <p>{{item.details}}</p>
                         </h3>
                    </router-link>
                </div>
-               <div>
+               <!-- <div>
                    <router-link to="/Three" class="img_hover">
                         <div class="pic">
                             <img src="../../assets/img/index/picq5.jpg" alt="">
@@ -107,7 +107,7 @@
                             <p>FEELING TRAVEL PHOTO</p>
                         </h3>
                    </router-link>
-               </div>
+               </div> -->
            </div>
        </div>
     </div> 
@@ -129,7 +129,7 @@ export default {
             }
         },
     },
-    prop:["city"]
+    props:["city"],
 }
 </script>
 <style scoped>
