@@ -4,10 +4,11 @@
             <ul class="fourtab1-ul">
               <li class="fourtab1-li">
                    <a href="#">
-                       <p>
+                       <div class="fourtab1-div1">
                           <img :src="imgurl">
-                       </p>
-                       <div>
+                          <div class="fourtab1-div2"></div>
+                       </div>
+                       <div class="fourtab1-div3">
                            <span>{{subtitle}}</span>
                            <p>{{dates}}</p>
                        </div>
@@ -51,7 +52,8 @@ export default {
         width:311.250px;
         height:548.094px;
     }
-    .fourtab1-ul>.fourtab1-li>a>p img{
+    .fourtab1-ul>.fourtab1-li>a>.fourtab1-div1>img{
+        position:absolute;
         width:311.25px;
         height:473.09px;
      }
@@ -64,13 +66,30 @@ export default {
     .fourtab1-ul>.fourtab1-li>a span:hover{
          color: #69cfc1;
      }
-   .fourtab1-ul>.fourtab1-li>a p{
+   .fourtab1-ul>.fourtab1-li>a>.fourtab1-div1{
        margin-bottom:10px;
-       margin-top:5px;
+       margin-top:80px;
+       position:relative;
+       width:311.25px;
+       height:473.09px;
+       overflow:hidden;
     }
-    .fourtab1-ul>.fourtab1-li>a>div>p{
+    .fourtab1-ul>.fourtab1-li>a>.fourtab1-div1:hover .fourtab1-div2{
+        top:0;
+        opacity:1;
+    }
+    .fourtab1-ul>.fourtab1-li>a>.fourtab1-div3>p{
         font-size:12px;
         color:#7a7a7a;
         padding-left:20px;
+    }
+    .fourtab1-div2{
+         position:absolute;
+        top:50%;
+        width:311.25px;
+        height:473.09px;
+        background:url(../../assets/img/three/h1.png) no-repeat;
+        opacity:0;
+       transition:all 0.3s linear;
     }
 </style>
