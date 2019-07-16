@@ -92,12 +92,13 @@
               </ul>
             </el-tab-pane>
         </el-tabs>
-
+        <threetab3></Threetab3>
   </div>
 </template>
 <script>
 import Threetab1 from './Threetab1.vue';
 import Threetab2 from './Threetab2.vue';
+import Threetab3 from './Threetab3.vue';
   export default {
     data() {
       return {
@@ -109,7 +110,8 @@ import Threetab2 from './Threetab2.vue';
     },
     components:{
         "threetab1":Threetab1,
-        "threetab2":Threetab2
+        "threetab2":Threetab2,
+        "threetab3":Threetab3
     },
     methods: {
        
