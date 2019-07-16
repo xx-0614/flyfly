@@ -6,6 +6,8 @@ import index from './views/index/index'
 import Three from  './views/Three/Three'
 import Threetabbar from './views/Three/Threetabbar'
 import Threetab1 from './views/Three/Threetab1'
+import Threetab3 from './views/Three/Threetab3'
+
 
 import Four from './views/Four/Four'
 import Fourtabbar from './views/Four/Fourtabbar'
@@ -23,10 +25,13 @@ export default new Router({
     {path:'/Three',component:Three},
     {path:'/Threetabbar',component:Threetabbar} ,
     {path:'/Threetab1',component:Threetab1} ,
+    {path:'/Threetab3',component:Threetab3},
+
 
     {path:'/Four',component:Four},
     {path:'/Fourtabbar',component:Fourtabbar},
     {path:'/Fourtab1',component:Fourtab1},
+   
 
     {path:'/Five',component:Five},
     {path:'/Fivetab',component:Fivetab},
