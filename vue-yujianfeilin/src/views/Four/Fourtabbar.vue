@@ -21,11 +21,11 @@
             </el-tab-pane>
             <el-tab-pane label="丽江" name="third">
                 <ul class="fourtabbar-ul">          
-                    <fourtab2 v-for="(item,i) of lijiang" :key="i"
+                    <fourtab1 v-for="(item,i) of lijiang" :key="i"
                         :imgurl="require(`../../assets/${item.img}`)"
                         :subtitle="item.subtitle"
                         :dates="item.dates"
-                    ></fourtab2>
+                    ></fourtab1>
                </ul>
             </el-tab-pane>
             <el-tab-pane label="大理" name="fourth">
@@ -39,11 +39,11 @@
             </el-tab-pane>
             <el-tab-pane label="青海" name="five">
                  <ul class="fourtabbar-ul">          
-                    <fourtab2 v-for="(item,i) of lijiang" :key="i"
+                    <fourtab1 v-for="(item,i) of lijiang" :key="i"
                         :imgurl="require(`../../assets/${item.img}`)"
                         :subtitle="item.subtitle"
                         :dates="item.dates"
-                    ></fourtab2>
+                    ></fourtab1>
                </ul>
             </el-tab-pane>
             <el-tab-pane label="香格里拉" name="six">
@@ -57,11 +57,11 @@
             </el-tab-pane>
             <el-tab-pane label="塞班岛" name="seven">
                   <ul class="fourtabbar-ul">          
-                    <fourtab2 v-for="(item,i) of lijiang" :key="i"
+                    <fourtab1 v-for="(item,i) of lijiang" :key="i"
                         :imgurl="require(`../../assets/${item.img}`)"
                         :subtitle="item.subtitle"
                         :dates="item.dates"
-                    ></fourtab2>
+                    ></fourtab1>
                </ul>
             </el-tab-pane>
             <el-tab-pane label="巴厘岛" name="eight">
@@ -75,11 +75,11 @@
             </el-tab-pane>
             <el-tab-pane label="法国" name="nine">
                  <ul class="fourtabbar-ul">          
-                    <fourtab2 v-for="(item,i) of lijiang" :key="i"
+                    <fourtab1 v-for="(item,i) of lijiang" :key="i"
                         :imgurl="require(`../../assets/${item.img}`)"
                         :subtitle="item.subtitle"
                         :dates="item.dates"
-                    ></fourtab2>
+                    ></fourtab1>
                </ul>
             </el-tab-pane>
             <el-tab-pane label="土耳其" name="ten">
@@ -148,6 +148,7 @@ import Fourtab2 from './Fourtab2.vue';
        list-style:none;
         display:flex;
         flex-wrap:wrap;
+        height:2486px;
     }
     /*导航栏 */
     .el-tabs__nav{
