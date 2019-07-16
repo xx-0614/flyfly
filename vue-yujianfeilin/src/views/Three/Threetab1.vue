@@ -4,10 +4,11 @@
             <ul class="threetab1-ul">
               <li class="threetab1-li" >
                    <a href="#">
-                       <p>
+                       <div class="threetab1-div1">
                           <img :src="imgurl">
-                       </p>
-                       <div>
+                          <div class="threetab1-div2"></div>
+                       </div>
+                       <div class="threetab1-div3">
                            <span>{{subtitle}}</span>
                            <p>{{dates}}</p>
                        </div>
@@ -49,11 +50,12 @@ export default {
         display:block;
         background-color:#fff;
         width:311.250px;
-        height:548.094px;
+        height:548.094px;       
     }
-    .threetab1-ul>.threetab1-li>a>p img{
+    .threetab1-ul>.threetab1-li>a>.threetab1-div1>img{
+        position:absolute;
         width:311.25px;
-        height:473.09px;
+        height:473.09px;       
      }
     .threetab1-ul>.threetab1-li>a span{
          font-size:22px;
@@ -64,13 +66,30 @@ export default {
     .threetab1-ul>.threetab1-li>a span:hover{
          color: #69cfc1;
      }
-   .threetab1-ul>.threetab1-li>a p{
+   .threetab1-ul>.threetab1-li>a>.threetab1-div1{
         margin-bottom:10px;
-        margin-top:5px; 
+        margin-top:80px;
+        width:100%; 
+        height:473.09px;
+        position:relative;
+        overflow:hidden;   
     }
-    .threetab1-ul>.threetab1-li>a>div>p{
+     .threetab1-ul>.threetab1-li>a>.threetab1-div1:hover .threetab1-div2{
+         top:0;
+         opacity:1;
+     }
+    .threetab1-ul>.threetab1-li>a>.threetab1-div3>p{
         font-size:12px;
         color:#7a7a7a;
         padding-left:20px;  
     }
+    .threetab1-div2{
+       position:absolute;
+       top:50%;
+        width:311.25px;
+        height:473.09px;
+        background:url(../../assets/img/three/h1.png) no-repeat;
+        opacity:0;
+       transition:all 0.3s linear;
+    }    
 </style>

@@ -140,8 +140,7 @@ import Threetab2 from './Threetab2.vue';
   };
 </script>
 <style>
-    .threenav{
-       
+    .threenav{      
         width:1335px;
         margin:100px auto;
         text-align:center;
@@ -187,8 +186,9 @@ import Threetab2 from './Threetab2.vue';
     content: "" !important;
     }
     .threetabbar-ul{
-      list-style:none;
+       list-style:none;
         display:flex;
-        flex-wrap:wrap;      
+        flex-wrap:wrap;
+        height:2436px;      
     }
 </style>
