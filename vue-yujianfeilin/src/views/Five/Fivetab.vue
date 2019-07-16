@@ -12,7 +12,7 @@
                   <a href="#" class="fivetab-a2">
                      <p class="fivetab-p">{{title}}</p>
                      <span class="fivetab-span">{{subtitle}} {{dates}}-{{datess}}</span>
-                     <a href="#" class="fivetab-a3">MOVE</a>
+                     <a href="#" class="fivetab-a3">MORE</a>
                   </a>
              </li>
           </ul>

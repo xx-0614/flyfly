@@ -111,9 +111,13 @@ export default {
     z-index:9;
 }
 .header .nav{
-    max-width:1540px;
-    min-width:1100px;
+    /* max-width:1540px;
+    min-width:1100px; */
     margin:0 auto;
+}
+.header .nav::before{
+    content:"";
+    display:table;
 }
 .header .logo{
     float:left;

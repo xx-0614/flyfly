@@ -5,20 +5,8 @@
             <div class="slick-slider">
                 <div class="slick-list">
                     <div class="slick-track">
-                        <div class="slick-item">
-                            <p>六周年店庆活动5866</p>
-                            <a href="javascript:;">查看更多
-                                <i></i>
-                            </a>
-                        </div>
-                        <div class="slick-item">
-                            <p>六周年店庆活动6866</p>
-                            <a href="javascript:;">查看更多
-                                <i></i>
-                            </a>
-                        </div>
-                        <div class="slick-item">
-                            <p>六周年店庆活动8866</p>
+                        <div class="slick-item" v-for="(item,i) of activity" :key="i">
+                            <p>{{item.title}}</p>
                             <a href="javascript:;">查看更多
                                 <i></i>
                             </a>
@@ -29,10 +17,26 @@
                                 <i></i>
                             </a>
                         </div>
+                        
+                        
                     </div>
                 </div>
             </div>
         </div>
+        <ul class="imgcontent" >
+            <li v-for="(item,i) of activity" :key="i">
+                <a href="javascript:;">
+                    <div class="pic">
+                        <img :src="require(`../../assets/${item.img}`)">
+                    </div>
+                    <div class="txt">
+                        <h3>{{item.title}}</h3>
+                        <p>{{item.details}}</p>
+                    </div>
+                </a>
+            </li>
+        </ul>
+        
     </div>
 </template>
 <script>
@@ -40,8 +44,9 @@ export default {
     data(){
         return {}
     },
+    props:["activity"],
     methods:{
-        // 上滚动广告
+        // 活动推广向上滚动
         scrollUp(){
             var i=0;
             setInterval(()=>{
@@ -109,7 +114,7 @@ export default {
         transition:.5s;
     }
     .slick-item{
-        width:1200px;
+        width:1080px;
         height:82px;
     }
     .slick-item p{
@@ -140,6 +145,62 @@ export default {
         transition:.3s;
     }
     .slick-item a:hover{
+        color:#69cfc1;
+    }
+    .imgcontent{
+        margin:84px 0 30px;
+        background:#fff;
+        padding:30px 20px 23px;
+        list-style: none;
+    }
+    .imgcontent li{
+        float:left;
+        width:30%;
+        padding:0 15px;
+        margin-bottom:10px;
+    }
+    .imgcontent li a{
+        display:block;
+    }
+    .imgcontent li a .pic{
+       position:relative;
+       height:0;
+       padding-top:100%;
+       overflow:hidden;
+       margin-bottom:22px;
+    }
+    .imgcontent .pic img{
+        display:block;
+        width:100%;
+        height:100%;
+        position:absolute;
+        top:0;
+        left:0;
+        transition:.5s;
+    }
+
+    
+    .txt{
+        overflow:hidden;
+        font-size:14px;
+        color:#000;
+        line-height:1.5em;
+    }
+    .txt h3{
+        font-size:18px;
+        color:#000;
+        font-weight:400;
+        line-height:1.17em;
+        margin-bottom:3px;
+        overflow:hidden;
+        white-space:nowrap;
+        text-overflow: ellipsis;
+        transition:.5s;
+    }
+    .imgcontent a:hover img{
+        transform:scale(1.1)
+    }
+    .imgcontent a:hover h3{
         color:#69cfc1;
     }
 </style>

@@ -140,7 +140,6 @@ export default {
     .city-content{
         margin:0 auto;
         padding:0 10px;
-        width:1540px;
     }
     .content-img{
         overflow:hidden;
