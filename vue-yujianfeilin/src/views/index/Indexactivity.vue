@@ -41,25 +41,27 @@ export default {
         return {}
     },
     methods:{
-        slick(){
-            let i=0;
-            
+        // 上滚动广告
+        scrollUp(){
+            var i=0;
             setInterval(()=>{
-                var div=document.querySelector(".slick-track");
-                if(i>4){
-                    div.style.transition=0;
-                    div.style.marginTop=0;
-                    i=0
-                }else{
-                    div.style.marginTop=-82*i+"px";
-                }
                 i++;
+                var div=document.querySelector(".slick-track");
+                if(i>2){
+                    setTimeout(function(){
+                        i=0;
+                        div.style.marginTop=0;
+                        div.style.transition="0s"
+                    },1000)
+                }else{
+                    div.style.transition="1s";
+                }
+                div.style.marginTop=-82*i+"px";
             },2000)
-            
         }
     },
     created(){
-        this.slick();
+        this.scrollUp();
     }
 }
 </script>
@@ -86,7 +88,7 @@ export default {
         font-size:18px;
         color:#2e2d2d;
         font-family:Heavy;
-        margin-right:84px;
+        margin-right:83px;
         overflow:hidden;
     }
     .slick-slider{
@@ -107,7 +109,7 @@ export default {
         transition:.5s;
     }
     .slick-item{
-        width:1063px;
+        width:1200px;
         height:82px;
     }
     .slick-item p{
@@ -136,6 +138,9 @@ export default {
         background-size:cover;
         margin-top:-2px;
         transition:.3s;
+    }
+    .slick-item a:hover{
+        color:#69cfc1;
     }
 </style>
 
