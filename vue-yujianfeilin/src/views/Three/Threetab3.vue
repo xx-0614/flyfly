@@ -1,17 +1,18 @@
 <template>
     <div class="threetab3-content">
+        
         <ul class="threetab3-ul" @click="open">
            <li class="threetab3-li">
-              <a href="javascript:;" class="active">1</a>
+              <a id="d1" href="javascript:;" class="active">1</a>
            </li>
            <li class="threetab3-li">
-              <a href="javascript:;">2</a>
+              <a id="d2" href="javascript:;">2</a>
            </li>
            <li class="threetab3-li">
-              <a href="#">3</a>
+              <a id="d3" href="javascript:;">3</a>
            </li>
            <li class="threetab3-li">
-              <a href="#">4</a>
+              <a id="d4" href="javascript:;">4</a>
            </li>
            <li class="threetab3-li">
               <a href="#">5</a>
@@ -30,13 +31,24 @@ export default {
     },
     methods: {
        open(e){
+            var ds=document.querySelectorAll(".threetab3-content>div div");
             var as=document.querySelectorAll(".threetab3-content>ul>li a");
-            for(var aa of as){
-                if(aa.className==""){
-                    e.target.className="active"
-                }else{
-                    aa.className="";
-                    e.target.className="active"
+            console.log(ds)
+            if(e.target.nodeName=="A"){
+                for(var aa of as){
+                    if(aa.className==""){
+                        e.target.className="active"
+                        for(var dd of ds){
+                            if(dd.id==e.target.id){
+                                dd.className=""
+                            }else{
+                                dd.className="none"
+                            }
+                        }
+                    }else{
+                        aa.className="";
+                        e.target.className="active"
+                    }
                 }
             }
         }
@@ -76,5 +88,8 @@ export default {
     }
     .active{
         background-color:#69cfc1;
+    }
+    .none{
+        display:none;
     }
 </style>
