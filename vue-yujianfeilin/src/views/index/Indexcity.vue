@@ -3,10 +3,10 @@
        <div class="title">
            <ul>
                <li>
-                   <router-link to="/" :class="bclass1" @click.native="toggle">热拍地区</router-link>
+                   <router-link to="/" :class="{active:isActive1}" @click.native="toggle">热拍地区</router-link>
                </li>
                <li>
-                   <router-link to="/" :class="bclass2" @click.native="toggle">全部地区</router-link>
+                   <router-link to="/" :class="{active:isActive2}" @click.native="toggle">全部地区</router-link>
                </li>
            </ul>
        </div>
@@ -36,19 +36,15 @@
 export default {
     data(){
         return{
-            bclass1:{
-                active:true
-            },
-            bclass2:{
-                active:false
-            }
+            isActive1:true,
+            isActive2:false
         }
     },
     methods:{
         toggle(){
             console.log(1)
-            this.bclass1.active=!this.bclass1.active;
-            this.bclass2.active=!this.bclass2.active;
+            this.isActive1=!this.isActive1;
+            this.isActive2=!this.isActive2;
         }
         //切换按钮
         // active(e){

@@ -7,14 +7,14 @@
                     <div class="slick-track">
                         <div class="slick-item" v-for="(item,i) of activity" :key="i">
                             <p>{{item.title}}</p>
-                            <a href="javascript:;">查看更多
-                                <i></i>
+                            <a href="javascript:;" @mouseover="enter" @mouseout="leave">查看更多
+                                <i :class="{active:isActive}" ></i>
                             </a>
                         </div>
                         <div class="slick-item">
                             <p>六周年店庆活动5866</p>
-                            <a href="javascript:;">查看更多
-                                <i></i>
+                            <a href="javascript:;" @mouseover="enter" @mouseout="leave">查看更多
+                                <i :class="{active:isActive}"></i>
                             </a>
                         </div>
                         
@@ -42,7 +42,10 @@
 <script>
 export default {
     data(){
-        return {}
+        return {
+            isActive:false,
+            active:false
+        }
     },
     props:["activity"],
     methods:{
@@ -64,6 +67,14 @@ export default {
                 }
                 div.style.marginTop=-82*i+"px";
             },2000)
+        },
+
+        //鼠标移入移出
+        enter(){
+            this.isActive=true;
+        },
+        leave(){
+            this.isActive=false;
         }
     },
     mounted(){
@@ -135,7 +146,7 @@ export default {
         font-family:Heavy;
         font-weight:700;
         overflow:hidden;
-        transition:.3s;
+        transition:.5s;
     }
     .slick-item a i{
         display:inline-block;
@@ -145,7 +156,10 @@ export default {
         background:url(../../assets/img/index/iconq12.png) center center no-repeat;
         background-size:cover;
         margin-top:-2px;
-        transition:.3s;
+        transition:.5s;
+    }
+    .slick-item a i.active{
+        background:url(../../assets/img/index/iconq12-1.png) center center no-repeat;
     }
     .slick-item a:hover{
         color:#69cfc1;
