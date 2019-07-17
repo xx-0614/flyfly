@@ -59,5 +59,8 @@ export default {
   div.el-carousel__item:nth-child(5){
     background:url(../../assets/img/index/091400381481.jpg);
   }
-
+  .main{
+      max-width:1540px;
+      margin:0 auto;
+  }
 </style>

@@ -46,17 +46,18 @@ export default {
     },
     props:["activity"],
     methods:{
-        // 活动推广向上滚动
+        // 字幕滚动
         scrollUp(){
             var i=0;
-            setInterval(()=>{
+            setInterval(function(){
                 i++;
                 var div=document.querySelector(".slick-track");
+                console.log(i);
                 if(i>2){
                     setTimeout(function(){
                         i=0;
                         div.style.marginTop=0;
-                        div.style.transition="0s"
+                        div.style.transition="0s" 
                     },1000)
                 }else{
                     div.style.transition="1s";
@@ -65,9 +66,13 @@ export default {
             },2000)
         }
     },
-    created(){
-        this.scrollUp();
-    }
+    mounted(){
+        window.addEventListener('load', this.scrollUp)
+    },
+    destroyed(){
+        window.removeEventListener('load', this.scrollUp);
+    },
+
 }
 </script>
 <style scoped>
@@ -75,7 +80,6 @@ export default {
         overflow:hidden;
         margin:0 auto;
         margin-bottom:100px;
-        width:1540px;
         padding:0 10px;
     }
     .title{
@@ -114,7 +118,6 @@ export default {
         transition:.5s;
     }
     .slick-item{
-        width:1080px;
         height:82px;
     }
     .slick-item p{
@@ -153,9 +156,14 @@ export default {
         padding:30px 20px 23px;
         list-style: none;
     }
+    .imgcontent::after{
+        content:"";
+        display:block;
+        clear:both;
+    }
     .imgcontent li{
         float:left;
-        width:30%;
+        width:33.3%;
         padding:0 15px;
         margin-bottom:10px;
     }

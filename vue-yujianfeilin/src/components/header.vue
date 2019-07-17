@@ -86,7 +86,6 @@ export default {
         },
         //输入框的显示与隐藏
         d_block(){
-            console.log(1)
             var input=document.querySelector(".search-input");
             if(input.style.opacity==0){
                 input.style.opacity=1

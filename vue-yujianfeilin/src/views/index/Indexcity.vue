@@ -1,12 +1,12 @@
 <template>
    <div class="city">
        <div class="title">
-           <ul @click="active">
+           <ul>
                <li>
-                   <router-link to="/" class="active">热拍地区</router-link>
+                   <router-link to="/" :class="bclass1" @click.native="toggle">热拍地区</router-link>
                </li>
                <li>
-                   <router-link to="/Three">全部地区</router-link>
+                   <router-link to="/" :class="bclass2" @click.native="toggle">全部地区</router-link>
                </li>
            </ul>
        </div>
@@ -35,18 +35,31 @@
 <script>
 export default {
     data(){
-        return{}
+        return{
+            bclass1:{
+                active:true
+            },
+            bclass2:{
+                active:false
+            }
+        }
     },
     methods:{
-        active(e){
-            var a=document.querySelectorAll(".title>ul>li a");
-            for(var i=0;i<a.length;i++){
-                if(e.target.nodeName=="A"){
-                    a[i].className="";
-                }
-                e.target.className="active";
-            }
-        },
+        toggle(){
+            console.log(1)
+            this.bclass1.active=!this.bclass1.active;
+            this.bclass2.active=!this.bclass2.active;
+        }
+        //切换按钮
+        // active(e){
+        //     var a=document.querySelectorAll(".title>ul>li a");
+        //     for(var i=0;i<a.length;i++){
+        //         if(e.target.nodeName=="A"){
+        //             a[i].className="";
+        //         }
+        //         e.target.className="active";
+        //     }
+        // },
     },
     props:["city"],
 }
@@ -54,6 +67,7 @@ export default {
 <style scoped>
     .city{
         overflow:hidden;
+        margin-top:50px;
         padding-bottom:124px;
         width:100%;
     }
@@ -157,7 +171,7 @@ export default {
     }
     .pic{
         position:relative;
-        height:300px;
+        height:340px;
     }
     .pic img{
         display:block;
