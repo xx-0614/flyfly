@@ -7,7 +7,7 @@
                   :imgurl="require(`../../assets/${item.img}`)"
                   :subtitle="item.subtitle"
                   :dates="item.dates"
-                 ></threetab2>      div
+                 ></threetab2>     
               </div>
             </el-tab-pane>
             <el-tab-pane label="三亚" name="second">
@@ -16,7 +16,7 @@
                   :imgurl="require(`../../assets/${item.img}`)"
                   :subtitle="item.subtitle"
                   :dates="item.dates"
-                ></threetab1>             
+                ></threetab1>          
               </div>
             </el-tab-pane>
             <el-tab-pane label="丽江" name="third">
@@ -132,7 +132,7 @@ import Threetab3 from './Threetab3.vue';
                                   m++;
                         }                                           
                      }
-                     console.log(this.sanya,this.lijiang)
+                     console.log(this.sanya,this.lijiang,this.sanya1,this.sanya2)
                  })
               } ,
     },
