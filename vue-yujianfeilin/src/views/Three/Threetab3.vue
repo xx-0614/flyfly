@@ -31,12 +31,14 @@ export default {
     methods: {
        open(e){
             var as=document.querySelectorAll(".threetab3-content>ul>li a");
-            for(var aa of as){
-                if(aa.className==""){
-                    e.target.className="active"
-                }else{
-                    aa.className="";
-                    e.target.className="active"
+            if(e.target.nodeName=="A"){
+                for(var aa of as){
+                    if(aa.className==""){
+                        e.target.className="active"
+                    }else{
+                        aa.className="";
+                        e.target.className="active"
+                    }
                 }
             }
         }
