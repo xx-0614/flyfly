@@ -40,30 +40,19 @@ export default {
             isActive2:false
         }
     },
+    props:["city"],
     methods:{
+        //切换按钮
         toggle(){
-            console.log(1)
             this.isActive1=!this.isActive1;
             this.isActive2=!this.isActive2;
         }
-        //切换按钮
-        // active(e){
-        //     var a=document.querySelectorAll(".title>ul>li a");
-        //     for(var i=0;i<a.length;i++){
-        //         if(e.target.nodeName=="A"){
-        //             a[i].className="";
-        //         }
-        //         e.target.className="active";
-        //     }
-        // },
     },
-    props:["city"],
 }
 </script>
 <style scoped>
     .city{
         overflow:hidden;
-        margin-top:50px;
         padding-bottom:124px;
         width:100%;
     }
@@ -148,6 +137,7 @@ export default {
         opacity:1;
     }
     .city-content{
+        max-width:1540px;
         margin:0 auto;
         padding:0 10px;
     }

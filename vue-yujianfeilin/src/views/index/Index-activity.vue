@@ -88,6 +88,7 @@ export default {
 </script>
 <style scoped>
     .activity{
+        max-width:1540px;
         overflow:hidden;
         margin:0 auto;
         margin-bottom:100px;

@@ -132,7 +132,6 @@ import Threetab3 from './Threetab3.vue';
                                   m++;
                         }                                           
                      }
-                     console.log(this.sanya,this.lijiang,this.sanya1,this.sanya2)
                  })
               } ,
     },
