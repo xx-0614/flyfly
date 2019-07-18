@@ -1,7 +1,7 @@
 <template>
     <div>
         <div class="ban">
-        <img src="../../assets/img/seven/ban-h4.jpg" alt="">
+        <img src="../../assets/img/seven/ban-h4 .jpg" alt="">
     </div>
     <div class="main">
         <div class="m-h3 hs">
@@ -131,7 +131,7 @@
                         <div class="pic"><a href="javascript:;"><img src="../../assets/img/seven/h44.jpg" alt=""></a></div>
                     </li>
                 </ul>
-                <a href="/index.php?c=article&amp;a=type&amp;tid=16" class="h-more">MORE STYLE</a>
+                <a href="javascript:;" class="h-more">MORE STYLE</a>
                 <div class="bom">
                     <img src="../../assets/img/seven/h50.jpg" alt="">
                 </div>
@@ -171,13 +171,7 @@ element.style {
     background-position: center center;
     background-repeat: no-repeat;
 }
-div {
-    display: block;
-}
-blockquote, body, dd, div, dl, dt, fieldset, form, h1, h2, h3, h4, h5, h6, input, li, ol, p, pre, td, textarea, th, ul {
-    margin: 0;
-    padding: 0;
-}
+
 .m-h3.hs .wp2{
     width:1244px;
 }
@@ -390,10 +384,6 @@ ol, ul{
     transition: .3s;
     background: url(../../assets/img/seven/h12.png) center center no-repeat;
     background-size: cover;
-}
-a {
-    text-decoration: none;
-    color: #444;
 }
 .top{
     position:relative;
