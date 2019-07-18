@@ -1,6 +1,14 @@
 <template>
     <div class="threetab3-content">
-        
+    <!--
+         <div>
+              <div id="d1">11111</div>
+              <div id="d2" class="none">22222</div>
+              <div id="d3" class="none">33333</div>
+              <div id="d4" class="none">44444</div>
+         </div>
+
+         -->
         <ul class="threetab3-ul" @click="open">
            <li class="threetab3-li">
               <a id="d1" href="javascript:;" class="active">1</a>
@@ -13,12 +21,6 @@
            </li>
            <li class="threetab3-li">
               <a id="d4" href="javascript:;">4</a>
-           </li>
-           <li class="threetab3-li">
-              <a href="#">5</a>
-           </li>
-           <li class="threetab3-li">
-              <a href="#">6</a>
            </li>
         </ul>
     </div>
