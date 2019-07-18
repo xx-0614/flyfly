@@ -7,8 +7,7 @@
         </div>
         <div class="carousel"> 
             <el-carousel	:interval="4000"	type="card"	height="400px">
-                <el-carousel-item	v-for="item	in	3"	:key="item">
-                    <h3>{{	item	}}</h3> 					
+                <el-carousel-item	v-for="item	in	6"	:key="item">
                 </el-carousel-item>
             </el-carousel>
         </div>
@@ -62,17 +61,21 @@ export default {
         background:url(../../assets/img/index/211445188656.jpg) center center no-repeat;
     }
     div.el-carousel__item:nth-child(5){
-        background:url(../../assets/img/index/062014229804.png) center center no-repeat;
+        background:url(../../assets/img/index/j-i18.jpg) center center no-repeat;
     }
+    div.el-carousel__item:nth-child(6){
+        background:url(../../assets/img/index/1562033758195958.jpg) center center no-repeat;
+    }
+    div.el-carousel__item:nth-child(7){
+        background:url(../../assets/img/index/1561438545370178.jpg) center center no-repeat;
+    }
+    div.el-carousel__item:nth-child(8){
+        background:url(../../assets/img/index/1561438552808543.jpg) center center no-repeat;
+    }
+    
+
     .carousel{
-        margin:40px;
-    }
-    .el-carousel__item h3 {
-        color: #475669;
-        font-size: 18px;
-        opacity: 0.75;
-        line-height: 300px;
-        margin: 0;
+        margin:50px;
     }
     .m-bottom{
         overflow:hidden;
