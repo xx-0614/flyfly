@@ -30,7 +30,7 @@
                     <li><router-link to="/Four">100%客片</router-link></li>
                     <li><router-link to="/Five">当季特惠</router-link></li>
                     <li>
-                       <router-link to="/Three">微电影</router-link>
+                       <router-link to="/Six">微电影</router-link>
                         <ul>
                             <li>
                                 <router-link to="/Three">微电影</router-link>
@@ -41,7 +41,7 @@
                         </ul>
                     </li>
                     <li>
-                        <router-link to="/Three">品牌服务</router-link>
+                        <router-link to="/Seven">品牌服务</router-link>
                         <ul>
                             <li>
                                 <router-link to="/Three">品牌介绍</router-link>

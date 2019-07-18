@@ -1,7 +1,7 @@
 <template>
     <div>
         <div class="ban">
-        <img src="../../assets/img/seven/ban-h4 .jpg" alt="">
+        <img src="../../assets/img/seven/ban-h4.jpg" alt="">
     </div>
     <div class="main">
         <div class="m-h3 hs">
@@ -9,10 +9,10 @@
                 <div class="wp2">
                     <div class="h20"></div>
                     <div class="m-video01">
-                        <div class="top" style="background-image:url(../../assets/img/seven/h42.jpg);">
-                            <a href="../../assets/img/six/223508580702.mp4" class="a-play"></a>
+                        <div class="top">
+                            <a href="javascript:;" class="a-play"></a>
                         </div>
-                        <video src="../../assets/img/seven/223508580702.mp4" id="video" controls=""></video>
+                        <video src="../../assets/img/seven/223508580702.mp4" id="video" controls></video>
                     </div>
                 </div>
                 <div class="txt1">
@@ -146,28 +146,14 @@ export default {
 }
 </script>
 <style scoped>
-    *{
-    margin:0;
-    padding:0;
-    outline:0;
-    box-sizing:border-box;
-}
-body {
-    color: rgb(68, 68, 68);
-    background-color: rgb(246, 246, 246);
-    min-width: 1355px;
-    font: 12px Regular, 微软雅黑, "Microsoft Yahei";
-}
 .ban{
     overflow:hidden;
-}
-element.style {
-    background-image: url(../../assets/img/seven/h42.jpg);
 }
 .m-video01 .top {
     position: relative;
     height: 646px;
     background-size: cover;
+    background-image: url(../../assets/img/seven/h42.jpg);
     background-position: center center;
     background-repeat: no-repeat;
 }
@@ -184,7 +170,7 @@ element.style {
 .m-h3.hs .txt1{
     text-align:center;
     font-size:20px;
-    font-align:center;
+    text-align:center;
     line-height:34px;
     color:#5d5d5d;
     padding-top:74px;
@@ -202,8 +188,6 @@ element.style {
 .ul-nub{
     overflow:hidden;
     margin-top:90px;
-}
-ol,ul{
     list-style:none;
 }
 .ul-nub li{
@@ -252,9 +236,6 @@ ol,ul{
     overflow:hidden;
     margin-top:60px;
     margin-bottom:156px;
-}
-ol, ul{
-    list-style:none;
 }
 .ul-hs5 li{
     display:inline-block;

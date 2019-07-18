@@ -7,11 +7,10 @@
         <div class="m-hs2 hs">
             <ul class="ul-tab">
                 <li>
-                    <a href="/index.php?c=article&amp;a=type&amp;tid=83">微电影</a>
-                    <img src="../../assets/img/six/h3.png" alt="">
+                    <router-link to="" :class="{active:isActive1}" @click.native="toggle">微电影</router-link>
                 </li>
                  <li>
-                    <a href="/index.php?c=article&amp;a=type&amp;tid=84">影像花絮</a>
+                    <router-link to="" :class="{active:isActive2}" @click.native="toggle">影像花絮</router-link>
                 </li>
             </ul>
             <div class="wp2">
@@ -139,28 +138,24 @@
 </template>
 <script>
 export default {
-    
+    data(){
+        return{
+            isActive1:true,
+            isActive2:false
+        }
+    },
+    methods:{
+        //切换按钮
+        toggle(){
+            this.isActive1=!this.isActive1;
+            this.isActive2=!this.isActive2;
+        }
+    },
 }
 </script>
 <style scoped>
-    .bd-hs{
+.bd-hs{
     padding-top:100px;
-}
-body {
-    font: 12px Regular, "Microsoft Yahei";
-    color: #444;
-    background-color: #f6f6f6;
-    min-width: 1355px;
-}
-blockquote, body, dd, div, dl, dt, fieldset, form, h1, h2, h3, h4, h5, h6, input, li, ol, p, pre, td, textarea, th, ul {
-    margin: 0;
-    padding: 0;
-}
-body {
-    font: 12px Regular,"微软雅黑","Microsoft Yahei";
-    color: #444;
-    background-color: #f6f6f6;
-    min-width: 1355px;
 }
 .ban{
     overflow:hidden;
@@ -169,46 +164,85 @@ body {
     display:block;
     width:100%;
 }
-img{
-    border:none;
-    vertical-align:top;
-}
+
 .ul-tab{
     background-color:#fff;
     height:97px;
-    padding-top:55px;
+    padding-top:35px;
     text-align:center;
+    list-style:none;
 }
 .ul-tab li{
     display:inline-block;
     margin:0 26px;
     padding-right:11px;
 }
-.ul-tab li.on a{
-    border-bottom:2px solid #69cfc1;
-}
-ol,ul{
-    list-style:none;
-}
-.ul-tab li.on, .ul-tab li:hover {
-    background: url(../../assets/img/six/h3.png) right center no-repeat;
-}
 .ul-tab li a{
-    color:#999;
+    display:block;
     font-size:18px;
-    padding-bottom:15px;
-    line-height:1.5em;
-    font-family:Regular;
+    color:#999;
+    line-height:3.3em;
+    position:relative;
 }
-.ul-tab li img{
-    margin-top:12px;
+.ul-tab li a::before{
+    content:"";
+    width:10px;
+    height:10px;
+    background:url(../../assets/img/index/iconq10.png) center center no-repeat;
+    position:absolute;
+    right:-12px;
+    top:50%;
+    margin-top:-5px;
+    opacity:0;
+    transition:.3s;
 }
-.ul-tab li a{
-    border-bottom:2px solid #69cfc1;
+.ul-tab li a::after{
+    content:"";
+    width:71px;
+    height:2px;
+    background:#60cfc1;
+    position:absolute;
+    left:0;
+    right:0;
+    bottom:0;
+    margin:0 auto;
+    opacity:0;
+    transition:.3s;
 }
-a{
-    text-decoration:none;
+.ul-tab li a:hover{
+    color:#000;
 }
+.ul-tab li a:hover::before,
+.ul-tab li a:hover::after{
+    opacity:1;
+}
+.ul-tab li a.active{
+    color:#000;
+}
+.ul-tab li a.active::before{
+    content:"";
+    width:10px;
+    height:10px;
+    background:url(../../assets/img/index/iconq10.png) center center no-repeat;
+    position:absolute;
+    right:-12px;
+    top:50%;
+    margin-top:-5px;
+    opacity:1;
+}
+.ul-tab li a.active::after{
+    content:"";
+    width:56px;
+    height:2px;
+    background:#60cfc1;
+    position:absolute;
+    left:0;
+    right:0;
+    bottom:0;
+    margin:0 auto;
+    opacity:1;
+}
+
 .ul-hs1 li{
     overflow:hidden;
     padding:0 10px;
@@ -216,7 +250,6 @@ a{
     width:33.33%;
     margin-bottom:40px;
 }
-
 .ul-hs1 li .pic{
     overflow:hidden;
     position:relative;
@@ -230,7 +263,7 @@ a{
     width:100%;
     height:100%;
     background: url(../../assets/img/six/h11.png) no-repeat;
-    -webkit-background-size: 100% 100%;
+    background-size: 100% 100%;
     opacity: 0;
 }
 .ul-hs1 li .pic img {
@@ -250,13 +283,6 @@ a{
     width: 68px;
     height: 68px;
     background: url(../../assets/img/six/h12_1.png) no-repeat;
-}
-a {
-    text-decoration: none;
-}
-ol, ul {
-    margin: 0;
-    padding: 0;
 }
 .m-hs2 .tabh1{
     padding-top:144px;
@@ -304,21 +330,6 @@ ol, ul {
 }
 .bd-hs {
     padding-top: 100px;
-}
-
-body, dd, dl, form, h1, h2, h3, h4, h5, h6, p {
-    margin: 0;
-}
-body {
-    font: 12px Regular,"å¾®è½¯é›…é»‘","Microsoft Yahei";
-    color: #444;
-    background-color: #f6f6f6;
-    min-width: 1355px;
-}
-* {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    -o-box-sizing: border-box;
 }
 .m-hs2.hs .pages{
     margin-bottom:228px;
