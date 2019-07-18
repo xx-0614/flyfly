@@ -16,6 +16,10 @@ import Fourtab1 from './views/Four/Fourtab1'
 import Five from  './views/Five/Five'
 import Fivetab from  './views/Five/Fivetab'
 
+import Six from './views/Six/Six'
+
+import Seven from './views/Seven/Seven'
+
 
 Vue.use(Router)
 
@@ -28,6 +32,7 @@ export default new Router({
     {path:'/Threetab3',component:Threetab3},
 
 
+
     {path:'/Four',component:Four},
     {path:'/Fourtabbar',component:Fourtabbar},
     {path:'/Fourtab1',component:Fourtab1},
@@ -35,5 +40,9 @@ export default new Router({
 
     {path:'/Five',component:Five},
     {path:'/Fivetab',component:Fivetab},
+
+    {path:'/Six',component:Six},
+
+    {path:'/Seven',component:Seven},
   ]
 })
