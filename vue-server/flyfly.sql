@@ -109,6 +109,8 @@ INSERT INTO fly_travel VALUES(NULL,'青海','img/index/131139002772.jpg',"ins田
 INSERT INTO fly_travel VALUES(NULL,'青海','img/index/131415571695.jpg',"情人湖边",'2019-06-13');
 INSERT INTO fly_travel VALUES(NULL,'青海','img/index/131513554850.jpg',"ins晴朗",'2019-06-27');
 INSERT INTO fly_travel VALUES(NULL,'青海','img/index/131507219575.jpg',"ins遇见",'2019-06-29');
+INSERT INTO fly_travel VALUES(NULL,'青海','img/index/131236069909.jpg',"ins世外桃源",'2019-06-27');
+
 
 
 INSERT INTO fly_travel VALUES(NULL,'三亚','img/index/131513554850.jpg',"ins晴朗",'2019-06-27');
