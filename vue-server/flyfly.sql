@@ -109,6 +109,8 @@ INSERT INTO fly_travel VALUES(NULL,'青海','img/index/131139002772.jpg',"ins田
 INSERT INTO fly_travel VALUES(NULL,'青海','img/index/131415571695.jpg',"情人湖边",'2019-06-13');
 INSERT INTO fly_travel VALUES(NULL,'青海','img/index/131513554850.jpg',"ins晴朗",'2019-06-27');
 INSERT INTO fly_travel VALUES(NULL,'青海','img/index/131507219575.jpg',"ins遇见",'2019-06-29');
+INSERT INTO fly_travel VALUES(NULL,'青海','img/index/131236069909.jpg',"ins世外桃源",'2019-06-27');
+
 
 
 INSERT INTO fly_travel VALUES(NULL,'三亚','img/index/131513554850.jpg',"ins晴朗",'2019-06-27');
@@ -362,7 +364,7 @@ INSERT INTO fly_six_film VALUES(NULL,'img/six/191019387036.png',"微电影",'img
 INSERT INTO fly_six_film VALUES(NULL,'img/six/191102169762.png',"影像花絮",'img/six/NK0jHFkl5zh6ShetHng_220618214063_sd_hq.mp4',"【遇见菲林】遇见青海湖","青海 青海湖",NULL);
 INSERT INTO fly_six_film VALUES(NULL,'img/six/191053278354.png',"影像花絮",'img/six/70fPZSOYJMeI9BlPqHc_215174456820_hd_hq.mp4',"【遇见菲林】巅峰之恋","丽江 雪山山顶",NULL);
 INSERT INTO fly_six_film VALUES(NULL,'img/six/191046443177.jpg',"影像花絮",'img/six/PDaTWpHsHjSchLmY3DU@@hd_hq.mp4',"【遇见菲林】遇见ins风","丽江 玉湖 新基地",NULL);
-INSERT INTO fly_six_film VALUES(NULL,'img/six/191035198613.png',"影像花絮",'img/six/IclbTIa0i5DvwqdDBzu@@hd_hq.mp4',"【遇见菲林】爱在雪山","丽江 雪山山顶",NULL);
+INSERT INTO fly_six_film VALUES(NULL,'img/six/191035198613.jpg',"影像花絮",'img/six/IclbTIa0i5DvwqdDBzu@@hd_hq.mp4',"【遇见菲林】爱在雪山","丽江 雪山山顶",NULL);
 INSERT INTO fly_six_film VALUES(NULL,'img/six/191038166293.png',"影像花絮",'img/six/PeHAdi21vjqd1QJys6j@@hdregop.mp4',"【遇见菲林】论婚纱照拍摄过程","三亚 三亚湾",NULL);
 INSERT INTO fly_six_film VALUES(NULL,'img/six/191042099134.jpg',"影像花絮",'img/six/SL142P45XTvmWU9Hurc_216475101645_sd_hq.mp4',"【遇见菲林】爱要有你才完美","三亚 呆呆岛",NULL);
 INSERT INTO fly_six_film VALUES(NULL,'img/six/191049388324.png',"影像花絮",'img/six/laVu70ZYji8H5ya8vwY@@hd_hq.mp4',"【遇见菲林】浪花一朵朵","三亚 天涯海角",NULL);
@@ -389,6 +391,7 @@ INSERT INTO fly_seven_brand VALUES(NULL,'img/seven/h47.jpg',NULL,NULL,NULL);
 INSERT INTO fly_seven_brand VALUES(NULL,'img/seven/h46.jpg',NULL,NULL,NULL);
 INSERT INTO fly_seven_brand VALUES(NULL,'img/seven/h45.jpg',NULL,NULL,NULL);
 INSERT INTO fly_seven_brand VALUES(NULL,'img/seven/h44.jpg',NULL,NULL,NULL);
+
 
 
 
