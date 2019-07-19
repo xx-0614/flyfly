@@ -7,13 +7,13 @@
                     <div class="slick-track">
                         <div class="slick-item" v-for="(item,i) of activity" :key="i">
                             <p>{{item.title}}</p>
-                            <a href="javascript:;" @mouseover="enter" @mouseout="leave">查看更多
+                            <a href="javascript:;" @mouseover="enter" @mouseout="leave" @click="toFive">查看更多
                                 <i :class="{active:isActive}" ></i>
                             </a>
                         </div>
                         <div class="slick-item">
                             <p>六周年店庆活动5866</p>
-                            <a href="javascript:;" @mouseover="enter" @mouseout="leave">查看更多
+                            <a href="javascript:;" @mouseover="enter" @mouseout="leave"  @click="toFive">查看更多
                                 <i :class="{active:isActive}"></i>
                             </a>
                         </div>
@@ -25,7 +25,7 @@
         </div>
         <ul class="imgcontent" >
             <li v-for="(item,i) of activity" :key="i">
-                <a href="javascript:;">
+                <router-link to="/Five" @click.native="toFive"> 
                     <div class="pic">
                         <img :src="require(`../../assets/${item.img}`)">
                     </div>
@@ -33,7 +33,7 @@
                         <h3>{{item.title}}</h3>
                         <p>{{item.details}}</p>
                     </div>
-                </a>
+                </router-link>
             </li>
         </ul>
         
@@ -75,6 +75,11 @@ export default {
         },
         leave(){
             this.isActive=false;
+        },
+        //点击跳转页面
+        toFive(){
+            this.$router.push("/Five");
+            scrollTo(0,0);
         }
     },
     mounted(){

@@ -101,6 +101,8 @@ export default {
 }
 </script>
 <style scoped>
+@import "../../assets/common.css";
+
 .bd-hs{
     padding-top:100px;
 }

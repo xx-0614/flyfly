@@ -7,7 +7,7 @@
         </div>
         <div class="carousel"> 
             <el-carousel	:interval="4000"	type="card"	height="400px">
-                <el-carousel-item	v-for="item	in	6"	:key="item">
+                <el-carousel-item	v-for="item	in	6"	:key="item" @click.native="toFilm">
                 </el-carousel-item>
             </el-carousel>
         </div>
@@ -18,7 +18,16 @@
 </template>
 <script>
 export default {
-    
+    data(){
+        return{}
+    },
+    methods:{
+        //点击跳转页面
+        toFilm(){
+            this.$router.push("/Six");
+            scrollTo(0,0);
+        }
+    }
 }
 </script>
 <style scoped>

@@ -157,6 +157,7 @@ export default {
 }
 </script>
 <style scoped>
+@import "../../assets/common.css";
 .ban{
     overflow:hidden;
 }

@@ -8,7 +8,7 @@
                   :subtitle="item.subtitle"
                   :dates="item.dates"
                  ></threetab2> 
-                 <threetab3></threetab3>    
+                 <el-pagination 	:page-size="16" :pager-count="5" layout="prev,	pager,	next" 	:total="cityAll.length" @click.native="page_change"></el-pagination>
               </div>
             </el-tab-pane>
             <el-tab-pane label="三亚" name="second">
@@ -17,7 +17,8 @@
                   :imgurl="require(`../../assets/${item.img}`)"
                   :subtitle="item.subtitle"
                   :dates="item.dates"
-                ></threetab1>          
+                ></threetab1>   
+                 <el-pagination 	:page-size="16" :pager-count="5" layout="prev,	pager,	next" 	:total="sanyaAll.length" @click.native="page_change_sanya"></el-pagination>      
               </div>
             </el-tab-pane>
             <el-tab-pane label="丽江" name="third">
@@ -27,6 +28,7 @@
                   :subtitle="item.subtitle"
                   :dates="item.dates"
                  ></threetab2>
+                  <el-pagination 	:page-size="16" :pager-count="5" layout="prev,	pager,	next" 	:total="lijiangAll.length" @click.native="page_change_lijiang"></el-pagination>
                </div>  
             </el-tab-pane>
             <el-tab-pane label="大理" name="fourth">
@@ -35,7 +37,8 @@
                   :imgurl="require(`../../assets/${item.img}`)"
                   :subtitle="item.subtitle"
                   :dates="item.dates"
-                ></threetab1>             
+                ></threetab1>    
+                 <el-pagination 	:page-size="16" :pager-count="5" layout="prev,	pager,	next" 	:total="sanyaAll.length" @click.native="page_change_sanya"></el-pagination>    
               </div>
             </el-tab-pane>
             <el-tab-pane label="青海" name="five">
@@ -45,6 +48,7 @@
                   :subtitle="item.subtitle"
                   :dates="item.dates"
                  ></threetab2>
+                <el-pagination 	:page-size="16" :pager-count="5" layout="prev,	pager,	next" 	:total="lijiangAll.length" @click.native="page_change_lijiang"></el-pagination>
                </div>  
             </el-tab-pane>
             <el-tab-pane label="香格里拉" name="six">
@@ -53,8 +57,11 @@
                   :imgurl="require(`../../assets/${item.img}`)"
                   :subtitle="item.subtitle"
                   :dates="item.dates"
-                ></threetab1>             
+                ></threetab1>  
+                 <el-pagination 	:page-size="16" :pager-count="5" layout="prev,	pager,	next" 	:total="sanyaAll.length" @click.native="page_change_sanya"></el-pagination> 
+
               </div>
+
             </el-tab-pane>
             <el-tab-pane label="塞班岛" name="seven">
                 <div class="threetabbar-div">
@@ -63,6 +70,7 @@
                   :subtitle="item.subtitle"
                   :dates="item.dates"
                  ></threetab2>
+                   <el-pagination 	:page-size="16" :pager-count="5" layout="prev,	pager,	next" 	:total="lijiangAll.length" @click.native="page_change_lijiang"></el-pagination>
                </div>  
             </el-tab-pane>
             <el-tab-pane label="巴厘岛" name="eight">
@@ -71,7 +79,8 @@
                   :imgurl="require(`../../assets/${item.img}`)"
                   :subtitle="item.subtitle"
                   :dates="item.dates"
-                ></threetab1>             
+                ></threetab1> 
+                  <el-pagination 	:page-size="16" :pager-count="5" layout="prev,	pager,	next" 	:total="sanyaAll.length" @click.native="page_change_sanya"></el-pagination> 
               </div>
             </el-tab-pane>
             <el-tab-pane label="法国" name="nine">
@@ -81,6 +90,7 @@
                   :subtitle="item.subtitle"
                   :dates="item.dates"
                  ></threetab2>
+                   <el-pagination 	:page-size="16" :pager-count="5" layout="prev,	pager,	next" 	:total="lijiangAll.length" @click.native="page_change_lijiang"></el-pagination>
                </div>  
             </el-tab-pane>
             <el-tab-pane label="土耳其" name="ten">
@@ -89,7 +99,8 @@
                   :imgurl="require(`../../assets/${item.img}`)"
                   :subtitle="item.subtitle"
                   :dates="item.dates"
-                ></threetab1>             
+                ></threetab1>    
+                 <el-pagination 	:page-size="16" :pager-count="5" layout="prev,	pager,	next" 	:total="sanyaAll.length" @click.native="page_change_sanya"></el-pagination>   
               </div>
             </el-tab-pane>
         </el-tabs>
@@ -99,16 +110,17 @@
 <script>
 import Threetab1 from './Threetab1.vue';
 import Threetab2 from './Threetab2.vue';
-import Threetab3 from './Threetab3.vue';
   export default {
     data() {
       return {
         activeName: 'first',
+        cityAll:[],
         city:[],
+        page:1,
+        sanyaAll:[],
         sanya:[],
-        // sanya1:[],
-        // sanya2:[],
-        lijiang:[]
+        lijiangAll:[],
+        lijiang:[],
       };
     },
     components:{
@@ -117,32 +129,50 @@ import Threetab3 from './Threetab3.vue';
         "threetab3":Threetab3
     },
     methods: {
-       
+       page_change(e){
+         if(e.target.nodeName=="LI"){
+           this.page=e.target.innerHTML;
+           this.city=this.cityAll.slice((this.page-1)*16,this.page*16);
+         }
+       },
+       page_change_sanya(e){
+         if(e.target.nodeName=="LI"){
+           this.page=e.target.innerHTML;
+           this.sanya=this.sanyaAll.slice((this.page-1)*16,this.page*16);
+         }
+       },
+        page_change_lijiang(e){
+         if(e.target.nodeName=="LI"){
+           this.page=e.target.innerHTML;
+           this.lijiang=this.lijiangAll.slice((this.page-1)*16,this.page*16);
+         }
+       },
         load(){
              this.axios.get("http://127.0.0.1:3000/three").then(result=>{
                    console.log(result);
-                   this.city=result.data.slice(0,16);
-                   console.log(this.city)
+                   this.cityAll=result.data;
                    var n=0;
                    var m=0;
                    for(var i=0 ;i<result.data.length;i++){                    
                           if(result.data[i].title=="三亚"){
-                                 this.sanya[n]=result.data[i];
-                                //  this.sanya1=this.sanya.slice(0,16);
-                                //  this.sanya2=this.sanya.slice(16,32);
-                                 n++;
-                        }else 
-                          if(result.data[i].title=="丽江"){
-                                 this.lijiang[m]=result.data[i];
-                                  m++;
-                        }                                           
-                     }
+                            this.sanyaAll[n]=result.data[i];
+                            n++;
+                        }else if(result.data[i].title=="丽江"){
+                            this.lijiangAll[m]=result.data[i];
+                            m++;
+                        }   
+                    }
+                    this.city=this.cityAll.slice(0,16);
+                    this.sanya=this.sanyaAll.slice(0,16);
+                    this.lijiang=this.lijiangAll.slice(0,16)
                  })
               } ,
     },
+    
     created(){
-         this.load();
-          },
+         this.load(); 
+    },
+         
   };
 </script>
 <style>
@@ -194,6 +224,5 @@ import Threetab3 from './Threetab3.vue';
     .threetabbar-div{
         display:flex;
         flex-wrap:wrap;
-        height:2636px;      
     }
 </style>
