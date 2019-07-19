@@ -8,7 +8,9 @@
                   :subtitle="item.subtitle"
                   :dates="item.dates"
                  ></threetab2> 
-                 <el-pagination 	:page-size="16" :pager-count="5" layout="prev,	pager,	next" 	:total="cityAll.length" @click.native="page_change"></el-pagination>
+                 <div class="page-div">
+                    <el-pagination 	:page-size="16" :pager-count="5" layout="pager" 	:total="cityAll.length" @click.native="page_change"></el-pagination>
+                 </div>
               </div>
             </el-tab-pane>
             <el-tab-pane label="三亚" name="second">
@@ -18,7 +20,9 @@
                   :subtitle="item.subtitle"
                   :dates="item.dates"
                 ></threetab1>   
-                 <el-pagination 	:page-size="16" :pager-count="5" layout="prev,	pager,	next" 	:total="sanyaAll.length" @click.native="page_change_sanya"></el-pagination>      
+                <div class="page-div">               
+                     <el-pagination 	:page-size="16" :pager-count="5" layout="pager" 	:total="sanyaAll.length" @click.native="page_change_sanya"></el-pagination>      
+                </div>
               </div>
             </el-tab-pane>
             <el-tab-pane label="丽江" name="third">
@@ -28,7 +32,9 @@
                   :subtitle="item.subtitle"
                   :dates="item.dates"
                  ></threetab2>
-                  <el-pagination 	:page-size="16" :pager-count="5" layout="prev,	pager,	next" 	:total="lijiangAll.length" @click.native="page_change_lijiang"></el-pagination>
+                  <div class="page-div">                  
+                      <el-pagination 	:page-size="16" :pager-count="5" layout="pager" 	:total="lijiangAll.length" @click.native="page_change_lijiang"></el-pagination>
+                  </div>
                </div>  
             </el-tab-pane>
             <el-tab-pane label="大理" name="fourth">
@@ -37,8 +43,10 @@
                   :imgurl="require(`../../assets/${item.img}`)"
                   :subtitle="item.subtitle"
                   :dates="item.dates"
-                ></threetab1>    
-                 <el-pagination 	:page-size="16" :pager-count="5" layout="prev,	pager,	next" 	:total="sanyaAll.length" @click.native="page_change_sanya"></el-pagination>    
+                ></threetab1>  
+                 <div class="page-div">
+                     <el-pagination 	:page-size="16" :pager-count="5" layout="pager" 	:total="sanyaAll.length" @click.native="page_change_sanya"></el-pagination>    
+                 </div>  
               </div>
             </el-tab-pane>
             <el-tab-pane label="青海" name="five">
@@ -48,7 +56,9 @@
                   :subtitle="item.subtitle"
                   :dates="item.dates"
                  ></threetab2>
-                <el-pagination 	:page-size="16" :pager-count="5" layout="prev,	pager,	next" 	:total="lijiangAll.length" @click.native="page_change_lijiang"></el-pagination>
+                  <div class="page-div">               
+                      <el-pagination 	:page-size="16" :pager-count="5" layout="pager" 	:total="lijiangAll.length" @click.native="page_change_lijiang"></el-pagination>
+                  </div>
                </div>  
             </el-tab-pane>
             <el-tab-pane label="香格里拉" name="six">
@@ -58,10 +68,10 @@
                   :subtitle="item.subtitle"
                   :dates="item.dates"
                 ></threetab1>  
-                 <el-pagination 	:page-size="16" :pager-count="5" layout="prev,	pager,	next" 	:total="sanyaAll.length" @click.native="page_change_sanya"></el-pagination> 
-
+                 <div class="page-div">             
+                       <el-pagination 	:page-size="16" :pager-count="5" layout="pager" 	:total="sanyaAll.length" @click.native="page_change_sanya"></el-pagination> 
+                 </div>
               </div>
-
             </el-tab-pane>
             <el-tab-pane label="塞班岛" name="seven">
                 <div class="threetabbar-div">
@@ -70,7 +80,9 @@
                   :subtitle="item.subtitle"
                   :dates="item.dates"
                  ></threetab2>
-                   <el-pagination 	:page-size="16" :pager-count="5" layout="prev,	pager,	next" 	:total="lijiangAll.length" @click.native="page_change_lijiang"></el-pagination>
+                  <div class="page-div">               
+                      <el-pagination 	:page-size="16" :pager-count="5" layout="pager" 	:total="lijiangAll.length" @click.native="page_change_lijiang"></el-pagination>
+                  </div>
                </div>  
             </el-tab-pane>
             <el-tab-pane label="巴厘岛" name="eight">
@@ -79,8 +91,10 @@
                   :imgurl="require(`../../assets/${item.img}`)"
                   :subtitle="item.subtitle"
                   :dates="item.dates"
-                ></threetab1> 
-                  <el-pagination 	:page-size="16" :pager-count="5" layout="prev,	pager,	next" 	:total="sanyaAll.length" @click.native="page_change_sanya"></el-pagination> 
+                ></threetab1>
+                 <div class="page-div">             
+                     <el-pagination 	:page-size="16" :pager-count="5" layout="pager" 	:total="sanyaAll.length" @click.native="page_change_sanya"></el-pagination> 
+                 </div>
               </div>
             </el-tab-pane>
             <el-tab-pane label="法国" name="nine">
@@ -90,7 +104,9 @@
                   :subtitle="item.subtitle"
                   :dates="item.dates"
                  ></threetab2>
-                   <el-pagination 	:page-size="16" :pager-count="5" layout="prev,	pager,	next" 	:total="lijiangAll.length" @click.native="page_change_lijiang"></el-pagination>
+                  <div class="page-div">    
+                      <el-pagination 	:page-size="16" :pager-count="5" layout="pager" 	:total="lijiangAll.length" @click.native="page_change_lijiang"></el-pagination>
+                  </div>
                </div>  
             </el-tab-pane>
             <el-tab-pane label="土耳其" name="ten">
@@ -99,8 +115,10 @@
                   :imgurl="require(`../../assets/${item.img}`)"
                   :subtitle="item.subtitle"
                   :dates="item.dates"
-                ></threetab1>    
-                 <el-pagination 	:page-size="16" :pager-count="5" layout="prev,	pager,	next" 	:total="sanyaAll.length" @click.native="page_change_sanya"></el-pagination>   
+                ></threetab1>  
+                 <div class="page-div">
+                    <el-pagination 	:page-size="16" :pager-count="5" layout="pager" 	:total="sanyaAll.length" @click.native="page_change_sanya"></el-pagination>   
+                 </div>  
               </div>
             </el-tab-pane>
         </el-tabs>
@@ -241,5 +259,9 @@ import Threetab2 from './Threetab2.vue';
     }
     .el-pager li.active{
        background-color: #69cfc1 !important;
+    }
+    .page-div{
+      width:100%;
+      margin:50px auto;
     }
 </style>
