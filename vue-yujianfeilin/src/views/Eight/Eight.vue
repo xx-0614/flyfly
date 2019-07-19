@@ -7,10 +7,10 @@
         <div class="m-hs2">
             <ul class="ul-tab">
                 <li class="on">
-                    <a href="http://www.yjfl.net/index.php?c=article&a=type&tid=62">最新评价</a>
+                    <a href="javascript:;">最新评价</a>
                 </li>
                 <li>
-                    <a href="http://www.yjfl.net/index.php?c=article&a=type&tid=62&all=1">全部评价</a>
+                    <a href="javascript:;">全部评价</a>
                 </li>
             </ul>
             <div class="wp2">
