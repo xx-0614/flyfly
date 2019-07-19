@@ -33,7 +33,7 @@
                        <router-link to="/Six">微电影</router-link>
                         <ul>
                             <li>
-                                <router-link to="/Three">微电影</router-link>
+                                <router-link to="/Six">微电影</router-link>
                             </li>
                             <li>
                                 <router-link to="/Three">影像花絮</router-link>

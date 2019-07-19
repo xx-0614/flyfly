@@ -16,113 +16,43 @@
             <div class="wp2">
             <div class="tabh1">
                 <div class="box">
-                    <ul class="ul-hs1">
-                            <li class="videom_item" data-index="0" data-href="../../assets/img/six/VOiicslHUEelf65S0m2@@hd.mp4">
+                    <ul class="ul-hs1" v-if="isFilm">
+                            <li class="video_item" v-for="(item,i) of film" :key="i">
                                 <div class="pic">
-                                    <img src="../../assets/img/six/211441329168.jpg" alt="">
+                                    <img :src="require(`../../assets/${item.img}`)">
                                     <div class="bg">
-                                        <div class="video">
-                                            <a href="../../assets/img/six/VOiicslHUEelf65S0m2@@hd.mp4" class="item_link"></a>
+                                        <div class="video" >
+                                            <router-link  to="" class="item_link"></router-link>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="txt">
-                                    <h3><a href="">【遇见菲林】就是你想要的feel</a></h3>
-                                    <p>三亚 三亚湾 康年酒店</p>
+                                    <h3><router-link to="">{{item.subtitle}}</router-link></h3>
+                                    <p>{{item.details}}</p>
                                 </div>
                                 <div class="item_info">
-                                    <p class="title ellipsis">【遇见菲林】就是你想要的feel</p>
-                                    <p class="subtitle ellipsis">三亚 三亚湾 康年酒店</p>
+                                    <p class="title ellipsis">{{item.subtitle}}</p>
+                                    <p class="subtitle ellipsis">{{item.details}}</p>
                                 </div>
                             </li>
-                            <li class="videom_item" data-index="1" data-href="../../assets/img/six/sxGRQxvSnyEkpp539xb_223508580702_hd_hq.mp4">
+                    </ul>
+                    <ul class="ul-hs1" v-else>
+                            <li class="video_item" v-for="(item,i) of film2" :key="i">
                                 <div class="pic">
-                                    <img src="../../assets/img/six/211445067653.jpg" alt="">
+                                    <img :src="require(`../../assets/${item.img}`)">
                                     <div class="bg">
-                                        <div class="video">
-                                            <a href="../../assets/img/six/sxGRQxvSnyEkpp539xb_223508580702_hd_hq.mp4" class="item_link"></a>
+                                        <div class="video" >
+                                            <router-link  to="" class="item_link"></router-link>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="txt">
-                                    <h3><a href="">【遇见菲林】遇见香格里拉</a></h3>
-                                    <p>香格里拉 白水台 帐篷酒店</p>
+                                    <h3><router-link to="">{{item.subtitle}}</router-link></h3>
+                                    <p>{{item.details}}</p>
                                 </div>
                                 <div class="item_info">
-                                    <p class="title ellipsis">【遇见菲林】遇见香格里拉</p>
-                                    <p class="subtitle ellipsis">香格里拉 白水台 帐篷酒店</p>
-                                </div>
-                            </li>
-                            <li class="videom_item" data-index="2" data-href="../../assets/img/six/PeHAdi21vjqd1QJys6j@@hdregop.mp4">
-                                <div class="pic">
-                                    <img src="../../assets/img/six/062018312127.jpg" alt="">
-                                    <div class="bg">
-                                        <div class="video">
-                                            <a href="../../assets/img/six/PeHAdi21vjqd1QJys6j@@hdregop.mp4" class="item_link"></a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="txt">
-                                    <h3><a href="">【遇见菲林】设计部</a></h3>
-                                    <p>武汉 设计部</p>
-                                </div>
-                                <div class="item_info">
-                                    <p class="title ellipsis">【遇见菲林】设计部</p>
-                                    <p class="subtitle ellipsis">武汉 设计部</p>
-                                </div>
-                            </li>
-                            <li class="videom_item" data-index="3" data-href="../../assets/img/six/NK0jHFkl5zh6ShetHng_220618214063_sd_hq.mp4">
-                                <div class="pic">
-                                    <img src="../../assets/img/six/062007083212.png" alt="">
-                                    <div class="bg">
-                                        <div class="video">
-                                            <a href="../../assets/img/six/NK0jHFkl5zh6ShetHng_220618214063_sd_hq.mp4" class="item_link"></a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="txt">
-                                    <h3><a href="">【遇见菲林】独特的你</a></h3>
-                                    <p>丽江 喜洲 古镇</p>
-                                </div>
-                                <div class="item_info">
-                                    <p class="title ellipsis">【遇见菲林】独特的你</p>
-                                    <p class="subtitle ellipsis">丽江 喜洲 古镇</p>
-                                </div>
-                            </li>
-                            <li class="videom_item" data-index="4" data-href="../../assets/img/six/laVu70ZYji8H5ya8vwY@@hd_hq.mp4">
-                                <div class="pic">
-                                    <img src="../../assets/img/six/061913428585.jpg" alt="">
-                                    <div class="bg">
-                                        <div class="video">
-                                            <a href="../../assets/img/six/laVu70ZYji8H5ya8vwY@@hd_hq.mp4" class="item_link"></a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="txt">
-                                    <h3><a href="">【遇见菲林】草原牧歌</a></h3>
-                                    <p>青海 草原</p>
-                                </div>
-                                <div class="item_info">
-                                    <p class="title ellipsis">【遇见菲林】草原牧歌</p>
-                                    <p class="subtitle ellipsis">青海 草原</p>
-                                </div>
-                            </li>
-                            <li class="videom_item" data-index="5" data-href="../../assets/img/six/xona68DfpWQ0FwjsEMb_217926654951_hd_hq.mp4">
-                                <div class="pic">
-                                    <img src="../../assets/img/six/191019387036.png" alt="">
-                                    <div class="bg">
-                                        <div class="video">
-                                            <a href="../../assets/img/six/xona68DfpWQ0FwjsEMb_217926654951_hd_hq.mp4" class="item_link"></a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="txt">
-                                    <h3><a href="">【遇见菲林】遇见三亚</a></h3>
-                                    <p>三亚 遇见菲林三亚店</p>
-                                </div>
-                                <div class="item_info">
-                                    <p class="title ellipsis">【遇见菲林】遇见三亚</p>
-                                    <p class="subtitle ellipsis">三亚 遇见菲林三亚店</p>
+                                    <p class="title ellipsis">{{item.subtitle}}</p>
+                                    <p class="subtitle ellipsis">{{item.details}}</p>
                                 </div>
                             </li>
                     </ul>
@@ -141,16 +71,33 @@ export default {
     data(){
         return{
             isActive1:true,
-            isActive2:false
+            isActive2:false,
+            isFilm:true,
+            film:[],
+            film2:[],
         }
     },
     methods:{
         //切换按钮
         toggle(){
-            this.isActive1=!this.isActive1;
+            this.isFilm=this.isActive1=!this.isActive1;
             this.isActive2=!this.isActive2;
+            this.axios.get("/six").then(result=>{
+              this.film2=result.data.slice(6);
+              console.log(this.film2);
+            })
+        },
+        loadMore(){
+            this.axios.get("/six").then(result=>{
+              console.log(result.data)
+              this.film=result.data.slice(0,6);
+              console.log(this.film);
+            })
         }
     },
+    created(){
+        this.loadMore();
+    }
 }
 </script>
 <style scoped>
@@ -167,7 +114,7 @@ export default {
 
 .ul-tab{
     background-color:#fff;
-    height:97px;
+    height:94px;
     padding-top:35px;
     text-align:center;
     list-style:none;
@@ -198,7 +145,6 @@ export default {
 }
 .ul-tab li a::after{
     content:"";
-    width:71px;
     height:2px;
     background:#60cfc1;
     position:absolute;
@@ -232,7 +178,6 @@ export default {
 }
 .ul-tab li a.active::after{
     content:"";
-    width:56px;
     height:2px;
     background:#60cfc1;
     position:absolute;
@@ -266,6 +211,9 @@ export default {
     background-size: 100% 100%;
     opacity: 0;
 }
+.ul-hs1 li .pic .bg:hover{
+    opacity:1;
+}
 .ul-hs1 li .pic img {
     position: absolute;
     top: 0;
@@ -283,6 +231,9 @@ export default {
     width: 68px;
     height: 68px;
     background: url(../../assets/img/six/h12_1.png) no-repeat;
+}
+.video_item:hover .txt h3>a{
+    color:#60cfc1;
 }
 .m-hs2 .tabh1{
     padding-top:144px;
