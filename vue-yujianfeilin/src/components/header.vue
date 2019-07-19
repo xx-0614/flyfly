@@ -2,7 +2,7 @@
     <div class="header">
         <div class="nav">
             <div class="logo">
-                <router-link to="/#" class="active">
+                <router-link to="" class="active">
                     <img src="../assets/img/index/logo.png" alt="">
                 </router-link>
             </div>
@@ -36,7 +36,7 @@
                                 <router-link to="/Six">微电影</router-link>
                             </li>
                             <li>
-                                <router-link to="/Three">影像花絮</router-link>
+                                <router-link to="/Six">影像花絮</router-link>
                             </li>
                         </ul>
                     </li>
@@ -44,13 +44,13 @@
                         <router-link to="/Seven">品牌服务</router-link>
                         <ul>
                             <li>
-                                <router-link to="/Three">品牌介绍</router-link>
+                                <router-link to="/Seven">品牌介绍</router-link>
                             </li>
                             <li>
-                                <router-link to="/Three">服务保障</router-link>
+                                <router-link to="/Seven">服务保障</router-link>
                             </li>
                             <li>
-                                <router-link to="/Three">360°VR全景</router-link>
+                                <router-link to="/Seven">360°VR全景</router-link>
                             </li>
                         </ul>
                     </li>

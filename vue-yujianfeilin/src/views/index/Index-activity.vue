@@ -55,7 +55,6 @@ export default {
             setInterval(function(){
                 i++;
                 var div=document.querySelector(".slick-track");
-                console.log(i);
                 if(i>2){
                     setTimeout(function(){
                         i=0;

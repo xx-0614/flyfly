@@ -82,13 +82,13 @@ export default {
         toggle(){
             this.isFilm=this.isActive1=!this.isActive1;
             this.isActive2=!this.isActive2;
-            this.axios.get("/six").then(result=>{
+            this.axios.get("six").then(result=>{
               this.film2=result.data.slice(6);
               console.log(this.film2);
             })
         },
         loadMore(){
-            this.axios.get("/six").then(result=>{
+            this.axios.get("six").then(result=>{
               console.log(result.data)
               this.film=result.data.slice(0,6);
               console.log(this.film);
