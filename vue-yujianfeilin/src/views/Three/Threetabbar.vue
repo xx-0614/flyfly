@@ -126,7 +126,6 @@ import Threetab2 from './Threetab2.vue';
     components:{
         "threetab1":Threetab1,
         "threetab2":Threetab2,
-        "threetab3":Threetab3
     },
     methods: {
        page_change(e){
