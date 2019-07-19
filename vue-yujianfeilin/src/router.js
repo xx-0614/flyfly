@@ -2,6 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 
 import index from './views/index/index'
+import Two from './views/Two/Two'
 
 import Three from  './views/Three/Three'
 import Threetabbar from './views/Three/Threetabbar'
@@ -31,6 +32,7 @@ Vue.use(Router)
 export default new Router({
   routes: [
     {path:'/',component:index},  
+    {path:'/Two',component:Two},  
     {path:'/Three',component:Three},
     {path:'/Threetabbar',component:Threetabbar} ,
     {path:'/Threetab1',component:Threetab1} ,
@@ -41,7 +43,7 @@ export default new Router({
     // {path:'/Fourtab1',component:Fourtab1},
    
     {path:'/Five',component:Five},
-    {path:'/Fivetab',component:Fivetab},
+    // {path:'/Fivetab',component:Fivetab},
 
     {path:'/Six',component:Six},
 
