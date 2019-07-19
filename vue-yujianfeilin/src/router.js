@@ -41,7 +41,7 @@ export default new Router({
     // {path:'/Fourtab1',component:Fourtab1},
    
     {path:'/Five',component:Five},
-    {path:'/Fivetab',component:Fivetab},
+    // {path:'/Fivetab',component:Fivetab},
 
     {path:'/Six',component:Six},
 
