@@ -224,4 +224,22 @@ import Threetab2 from './Threetab2.vue';
         display:flex;
         flex-wrap:wrap;
     }
+    .el-pager li {
+      width:30px !important;
+      height:30px  !important;
+      min-width:30px !important;
+      line-height:30px !important;
+      background-color:#797979 !important;
+      border-radius:50%;
+      margin-left:20px !important;;
+      color:#fff !important;
+      padding:0 !important;
+      font-family: Arial;
+    }
+    .el-pager li:hover{
+      background-color: #69cfc1 !important;
+    }
+    .el-pager li.active{
+       background-color: #69cfc1 !important;
+    }
 </style>
