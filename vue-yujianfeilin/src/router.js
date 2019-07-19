@@ -20,6 +20,10 @@ import Six from './views/Six/Six'
 import Seven from './views/Seven/Seven'
 
 
+
+
+
+
 Vue.use(Router)
 
 export default new Router({

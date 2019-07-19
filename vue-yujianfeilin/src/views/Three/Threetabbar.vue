@@ -17,7 +17,8 @@
                   :imgurl="require(`../../assets/${item.img}`)"
                   :subtitle="item.subtitle"
                   :dates="item.dates"
-                ></threetab1>      
+                ></threetab1>   
+                 <el-pagination 	:page-size="16" :pager-count="5" layout="prev,	pager,	next" 	:total="sanyaAll.length" @click.native="page_change_sanya"></el-pagination>      
               </div>
             </el-tab-pane>
             <el-tab-pane label="丽江" name="third">
@@ -125,8 +126,6 @@ import Threetab2 from './Threetab2.vue';
     components:{
         "threetab1":Threetab1,
         "threetab2":Threetab2,
-        "threetab3":Threetab3,
-        
     },
     methods: {
        page_change(e){
