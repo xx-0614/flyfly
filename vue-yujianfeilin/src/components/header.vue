@@ -10,10 +10,10 @@
                 <ul class="nav-item" @click="fontWhite">
                     <li><router-link to="/" class="active">首页</router-link></li>
                     <li>
-                        <router-link to="/Three">风格系列</router-link>
+                        <router-link to="/Second">风格系列</router-link>
                         <ul>
                             <li>
-                                <router-link to="/Three">INS系列</router-link>
+                                <router-link to="/Second">INS系列</router-link>
                             </li>
                             <li>
                                 <router-link to="/Three">小清新系列</router-link>
