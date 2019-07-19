@@ -17,7 +17,7 @@
                   :imgurl="require(`../../assets/${item.img}`)"
                   :subtitle="item.subtitle"
                   :dates="item.dates"
-                ></threetab1>          
+                ></threetab1>      
               </div>
             </el-tab-pane>
             <el-tab-pane label="丽江" name="third">
@@ -100,6 +100,7 @@
 import Threetab1 from './Threetab1.vue';
 import Threetab2 from './Threetab2.vue';
 import Threetab3 from './Threetab3.vue';
+import Threetab4 from './Threetab4.vue';
   export default {
     data() {
       return {
@@ -114,7 +115,8 @@ import Threetab3 from './Threetab3.vue';
     components:{
         "threetab1":Threetab1,
         "threetab2":Threetab2,
-        "threetab3":Threetab3
+        "threetab3":Threetab3,
+        "threetab4":Threetab4
     },
     methods: {
        

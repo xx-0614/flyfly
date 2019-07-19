@@ -60,6 +60,7 @@ export default {
 <style scoped>
    .threetab3-content{
        margin-top:120px;
+       width:100%;
    }
    .threetab3-ul{
        list-style:none;
