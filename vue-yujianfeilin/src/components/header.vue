@@ -2,7 +2,7 @@
     <div class="header">
         <div class="nav">
             <div class="logo">
-                <router-link to="/#" class="active">
+                <router-link to="" class="active">
                     <img src="../assets/img/index/logo.png" alt="">
                 </router-link>
             </div>
@@ -10,10 +10,10 @@
                 <ul class="nav-item" @click="fontWhite">
                     <li><router-link to="/" class="active">首页</router-link></li>
                     <li>
-                        <router-link to="/Three">风格系列</router-link>
+                        <router-link to="/Second">风格系列</router-link>
                         <ul>
                             <li>
-                                <router-link to="/Three">INS系列</router-link>
+                                <router-link to="/Second">INS系列</router-link>
                             </li>
                             <li>
                                 <router-link to="/Three">小清新系列</router-link>
@@ -33,10 +33,10 @@
                        <router-link to="/Six">微电影</router-link>
                         <ul>
                             <li>
-                                <router-link to="/Three">微电影</router-link>
+                                <router-link to="/Six">微电影</router-link>
                             </li>
                             <li>
-                                <router-link to="/Three">影像花絮</router-link>
+                                <router-link to="/Six">影像花絮</router-link>
                             </li>
                         </ul>
                     </li>
@@ -44,17 +44,17 @@
                         <router-link to="/Seven">品牌服务</router-link>
                         <ul>
                             <li>
-                                <router-link to="/Three">品牌介绍</router-link>
+                                <router-link to="/Seven">品牌介绍</router-link>
                             </li>
                             <li>
-                                <router-link to="/Three">服务保障</router-link>
+                                <router-link to="/Seven">服务保障</router-link>
                             </li>
                             <li>
-                                <router-link to="/Three">360°VR全景</router-link>
+                                <router-link to="/Seven">360°VR全景</router-link>
                             </li>
                         </ul>
                     </li>
-                    <li><router-link to="/Three">真实好评</router-link></li>
+                    <li><router-link to="/Eight">真实好评</router-link></li>
                 </ul>
                 <div class="search">
                     <span  @click.stop="d_block"></span>

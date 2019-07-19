@@ -6,14 +6,14 @@
                    <router-link to="/" :class="{active:isActive1}" @click.native="toggle">热拍地区</router-link>
                </li>
                <li>
-                   <router-link to="/" :class="{active:isActive2}" @click.native="toggle">全部地区</router-link>
+                   <router-link to="Three" :class="{active:isActive2}" @click.native="toThree">全部地区</router-link>
                </li>
            </ul>
        </div>
        <div class="city-content">
            <div class="content-img">
                <div v-for="(item,i) of city" :key="i"> 
-                   <router-link to="/Three" class="img_hover">
+                   <router-link to="" class="img_hover"   @click.native="toThree">
                         <div class="pic">
                             <img :src="require(`../../assets/${item.img}`)">
                             <div class="cover">
@@ -46,6 +46,14 @@ export default {
         toggle(){
             this.isActive1=!this.isActive1;
             this.isActive2=!this.isActive2;
+        },
+
+        //点击跳转页面
+         toThree(){
+            this.isActive1=!this.isActive1;
+            this.isActive2=!this.isActive2;
+            this.$router.push("/Three");
+            scrollTo(0,0);
         }
     },
 }

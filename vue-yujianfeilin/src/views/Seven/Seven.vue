@@ -9,10 +9,10 @@
                 <div class="wp2">
                     <div class="h20"></div>
                     <div class="m-video01">
-                        <div class="top">
-                            <a href="javascript:;" class="a-play"></a>
+                        <div class="top" :class="{click:isClick}">
+                            <a href="javascript:;" id="a-play" @click="play"></a>
                         </div>
-                        <video src="../../assets/img/seven/223508580702.mp4" id="video" controls></video>
+                        <video src="../../assets/img/seven/223508580702.mp4" id="video" controls :class="{click:isClick}"></video>
                     </div>
                 </div>
                 <div class="txt1">
@@ -113,22 +113,22 @@
                 </div>
                 <ul class="ul-hs7">
                     <li>
-                        <div class="pic"><a href="javascript:;"><img src="../../assets/img/seven/h49.jpg" alt=""></a></div>
+                        <div class="pic"><a href="javascript:;"><img src="../../assets/img/seven/h49.jpg"></a></div>
                     </li>
                     <li>
-                        <div class="pic"><a href="javascript:;"><img src="../../assets/img/seven/h48.jpg" alt=""></a></div>
+                        <div class="pic"><a href="javascript:;"><img src="../../assets/img/seven/h48.jpg"></a></div>
                     </li>
                     <li>
-                        <div class="pic"><a href="javascript:;"><img src="../../assets/img/seven/h47.jpg" alt=""></a></div>
+                        <div class="pic"><a href="javascript:;"><img src="../../assets/img/seven/h47.jpg"></a></div>
                     </li>
                     <li>
-                        <div class="pic"><a href="javascript:;"><img src="../../assets/img/seven/h46.jpg" alt=""></a></div>
+                        <div class="pic"><a href="javascript:;"><img src="../../assets/img/seven/h46.jpg"></a></div>
                     </li>
                     <li>
-                        <div class="pic"><a href="javascript:;"><img src="../../assets/img/seven/h45.jpg" alt=""></a></div>
+                        <div class="pic"><a href="javascript:;"><img src="../../assets/img/seven/h45.jpg"></a></div>
                     </li>
                     <li>
-                        <div class="pic"><a href="javascript:;"><img src="../../assets/img/seven/h44.jpg" alt=""></a></div>
+                        <div class="pic"><a href="javascript:;"><img src="../../assets/img/seven/h44.jpg"></a></div>
                     </li>
                 </ul>
                 <a href="javascript:;" class="h-more">MORE STYLE</a>
@@ -142,10 +142,22 @@
 </template>
 <script>
 export default {
-    
+    data(){
+        return{
+            isClick:false,
+        }
+    },
+    methods:{
+        play(){
+            this.isClick=!this.isClick;
+            var video=document.getElementById("video");
+            video.play();
+        }
+    }
 }
 </script>
 <style scoped>
+@import "../../assets/common.css";
 .ban{
     overflow:hidden;
 }
@@ -157,7 +169,9 @@ export default {
     background-position: center center;
     background-repeat: no-repeat;
 }
-
+.top.click{
+    display:none;
+}
 .m-h3.hs .wp2{
     width:1244px;
 }
@@ -354,7 +368,7 @@ export default {
 .h20{
     height:20px;
 }
-.m-video01 .top .a-play {
+.m-video01 .top #a-play {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -389,5 +403,8 @@ export default {
     width: 100%;
     margin-bottom: 64px;
     background-color: #000;
+}
+#video.click{
+    display:block;
 }
 </style>
