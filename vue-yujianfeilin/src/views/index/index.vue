@@ -5,14 +5,16 @@
             <el-carousel-item v-for="(item) in 3" :key="item"></el-carousel-item>
         </el-carousel>
         <div class="main">
-            <indexcity :city="city"></indexcity>
-            <indexactivity :activity="activity"></indexactivity>   
+            <index-city :city="city"></index-city>
+            <index-activity :activity="activity"></index-activity> 
+            <index-microfilm ></index-microfilm>
         </div>
     </div>
 </template>
 <script>
-import Indexcity from "./Indexcity.vue"
-import Indexactivity from "./Indexactivity.vue"
+import Indexcity from "./Index-city.vue"
+import Indexactivity from "./Index-activity.vue"
+import Indexmicrofilm from "./Index-microfilm.vue"
 export default {
     data(){
         return {
@@ -25,8 +27,9 @@ export default {
         }
     },
     components:{
-        "indexcity":Indexcity,
-        "indexactivity":Indexactivity,
+        "index-city":Indexcity,
+        "index-activity":Indexactivity,
+        "index-microfilm":Indexmicrofilm,
     },
     created(){
         this.axios.get("index").then(result=>{
@@ -50,17 +53,16 @@ export default {
     margin: 0;
   }
   .el-carousel__item{
-    background:url(../../assets/img/index/banner1.jpg);
+    background:url(../../assets/img/index/banner1.jpg)  center center no-repeat;
   }
   
   div.el-carousel__item:nth-child(4){
-    background:url(../../assets/img/index/271736095684.jpg);
+    background:url(../../assets/img/index/271736095684.jpg) center center no-repeat;
   }
   div.el-carousel__item:nth-child(5){
-    background:url(../../assets/img/index/091400381481.jpg);
+    background:url(../../assets/img/index/091400381481.jpg) center center no-repeat;
   }
   .main{
-      max-width:1540px;
       margin:0 auto;
   }
 </style>
