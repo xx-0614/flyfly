@@ -202,10 +202,10 @@
                         <a href="on">1</a>
                     </li>
                     <li class="page-sum">
-                        <a href="?c=article&amp;a=type&amp;tid=62&amp;page_1_page=2">2</a>
+                        <a href="javascript:;">2</a>
                     </li>
                     <li class="page-sum">
-                        <a href="?c=article&amp;a=type&amp;tid=62&amp;page_1_page=3">3</a>
+                        <a href="javascript:;">3</a>
                     </li>
                 </ul>
             </div>    
@@ -220,6 +220,10 @@ export default {
 }
 </script>
 <style scoped>
+@import "../../assets/common.css";
+a{
+    text-decoration:none;
+}
 .ban img{
     display:block;
     width:100%;
@@ -233,9 +237,6 @@ export default {
     padding-top:55px;
     text-align:center;
 }
-ul{
-    list-style:none;
-}
 ul, menu, dir {
     display: block;
     list-style-type: disc;
@@ -253,15 +254,6 @@ ul, menu, dir {
 }
 ol, ul {
     list-style: none;
-}
-ul, menu, dir {
-    display: block;
-    list-style-type: disc;
-    -webkit-margin-before: 1em;
-    -webkit-margin-after: 1em;
-    -webkit-margin-start: 0px;
-    -webkit-margin-end: 0px;
-    -webkit-padding-start: 40px;
 }
 .ul-tab li.on, .ul-tab li:hover {
     background: url(../../assets/img/eight/h3.png) right center no-repeat;
@@ -274,15 +266,6 @@ ul, menu, dir {
 li {
     display: list-item;
     text-align: -webkit-match-parent;
-}
-.ul-tab {
-    background-color: #fff;
-    height: 97px;
-    padding-top: 55px;
-    text-align: center;
-}
-ol, ul {
-    list-style: none;
 }
 .ul-tab li.on a {
     border-bottom: 2px solid #69cfc1;
@@ -301,30 +284,6 @@ a {
 a:-webkit-any-link {
     color: -webkit-link;
     cursor: pointer;
-    text-decoration: underline;
-}
-li {
-    display: list-item;
-    text-align: -webkit-match-parent;
-}
-.ul-tab {
-    background-color: #fff;
-    height: 97px;
-    padding-top: 55px;
-    text-align: center;
-}
-ol, ul {
-    list-style: none;
-}
-user agent stylesheet
-ul, menu, dir {
-    display: block;
-    list-style-type: disc;
-    -webkit-margin-before: 1em;
-    -webkit-margin-after: 1em;
-    -webkit-margin-start: 0px;
-    -webkit-margin-end: 0px;
-    -webkit-padding-start: 40px;
 }
 .m-hs2 .tabh1 {
     padding-top: 144px;
@@ -337,10 +296,6 @@ ul, menu, dir {
     /* border-radius: 50%; */
     overflow: hidden;
     margin-right: 22px;
-}
-li {
-    display: list-item;
-    text-align: -webkit-match-parent;
 }
 ul, menu, dir {
     display: block;
@@ -356,9 +311,7 @@ ul, menu, dir {
     width: 100%;
     height: 100%;
 }
-a {
-    text-decoration: none;
-}
+
 .ul-h3 li{
     float:left;
     width:25%;
@@ -376,25 +329,6 @@ a {
 ol,ul{
     list-style:none;
 }
-.pages ul li.on a, .pages ul li:hover a {
-    background-color: #69cfc1;
-    color: #fff;
-}
-.pages ul li a {
-    display: block;
-    width: 30px;
-    height: 30px;
-    font-family: Arial;
-    color: #fff;
-    font-size: 16px;
-    border-radius: 50%;
-    line-height: 30px;
-    background: #797979;
-}
-a {
-    text-decoration: none;
-}
-user agent stylesheet
 li {
     display: list-item;
     text-align: -webkit-match-parent;
@@ -402,9 +336,6 @@ li {
 .pages ul {
     display: inline-block;
     text-align: center;
-}
-ol, ul {
-    list-style: none;
 }
 .pages {
     overflow: hidden;
@@ -465,14 +396,26 @@ ol, ul {
 .m-hs2 .pages{
     margin-bottom:137px;
 }
-.m-hs2 .ul-h3{
-    margin-bottom:21px;
-}
 .m-hs2 .tabh1{
     padding-top:144px;
     overflow:hidden;
 }
 .m-hs2 .ul-h3{
     margin-bottom:76px;
+}
+.pages ul li.on a, .pages ul li:hover a {
+    background-color: #69cfc1;
+    color: #fff;
+}
+.pages ul li a {
+    display: block;
+    width: 30px;
+    height: 30px;
+    font-family: Arial;
+    color: #fff;
+    font-size: 16px;
+    border-radius: 50%;
+    line-height: 30px;
+    background: #797979;
 }
 </style>
