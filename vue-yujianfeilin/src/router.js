@@ -19,6 +19,8 @@ import Six from './views/Six/Six'
 
 import Seven from './views/Seven/Seven'
 
+import Eight from './views/Eight/Eight'
+
 
 
 
@@ -44,5 +46,7 @@ export default new Router({
     {path:'/Six',component:Six},
 
     {path:'/Seven',component:Seven},
+
+    {path:'/Eight',component:Eight},
   ]
 })
