@@ -220,7 +220,7 @@ export default {
 }
 </script>
 <style scoped>
-.ban ing{
+.ban img{
     display:block;
     width:100%;
 }
