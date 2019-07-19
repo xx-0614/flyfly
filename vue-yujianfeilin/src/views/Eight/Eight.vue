@@ -298,11 +298,7 @@ a {
     text-decoration: none;
     color: #444;
 }
-a:-webkit-any-link {
-    color: -webkit-link;
-    cursor: pointer;
-    text-decoration: underline;
-}
+
 li {
     display: list-item;
     text-align: -webkit-match-parent;
