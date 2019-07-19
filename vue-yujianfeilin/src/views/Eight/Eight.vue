@@ -199,7 +199,7 @@
             <div class="pages">
                 <ul>
                     <li class="page-sum on">
-                        <a href="on">1</a>
+                        <a href="javascript:;">1</a>
                     </li>
                     <li class="page-sum">
                         <a href="javascript:;">2</a>
@@ -221,9 +221,7 @@ export default {
 </script>
 <style scoped>
 @import "../../assets/common.css";
-a{
-    text-decoration:none;
-}
+
 .ban img{
     display:block;
     width:100%;
@@ -237,15 +235,7 @@ a{
     padding-top:55px;
     text-align:center;
 }
-ul, menu, dir {
-    display: block;
-    list-style-type: disc;
-    -webkit-margin-before: 1em;
-    -webkit-margin-after: 1em;
-    -webkit-margin-start: 0px;
-    -webkit-margin-end: 0px;
-    -webkit-padding-start: 40px;
-}
+
 .ul-tab {
     background-color: #fff;
     height: 97px;
@@ -265,7 +255,6 @@ ol, ul {
 }
 li {
     display: list-item;
-    text-align: -webkit-match-parent;
 }
 .ul-tab li.on a {
     border-bottom: 2px solid #69cfc1;
@@ -277,39 +266,11 @@ li {
     line-height: 1.5em;
     font-family: Regular;
 }
-a {
-    text-decoration: none;
-    color: #444;
-}
-<<<<<<< HEAD
-
-li {
-    display: list-item;
-    text-align: -webkit-match-parent;
-}
 .ul-tab {
     background-color: #fff;
     height: 97px;
     padding-top: 55px;
     text-align: center;
-}
-ol, ul {
-    list-style: none;
-}
-user agent stylesheet
-ul, menu, dir {
-    display: block;
-    list-style-type: disc;
-    -webkit-margin-before: 1em;
-    -webkit-margin-after: 1em;
-    -webkit-margin-start: 0px;
-    -webkit-margin-end: 0px;
-    -webkit-padding-start: 40px;
-=======
-a:-webkit-any-link {
-    color: -webkit-link;
-    cursor: pointer;
->>>>>>> 024589e06ac1a651211c294ce9e81ddeff523fc9
 }
 .m-hs2 .tabh1 {
     padding-top: 144px;
@@ -319,19 +280,11 @@ a:-webkit-any-link {
     float: left;
     width: 95px;
     height: 95px;
-    /* border-radius: 50%; */
+    border-radius: 50%;
     overflow: hidden;
     margin-right: 22px;
 }
-ul, menu, dir {
-    display: block;
-    list-style-type: disc;
-    -webkit-margin-before: 1em;
-    -webkit-margin-after: 1em;
-    -webkit-margin-start: 0px;
-    -webkit-margin-end: 0px;
-    -webkit-padding-start: 40px;
-}
+
 .ul-h3 li .pic img {
     display: block;
     width: 100%;
@@ -351,13 +304,6 @@ ul, menu, dir {
 .ul-h3{
     overflow:hidden;
     margin:0 16px;
-}
-ol,ul{
-    list-style:none;
-}
-li {
-    display: list-item;
-    text-align: -webkit-match-parent;
 }
 .pages ul {
     display: inline-block;
