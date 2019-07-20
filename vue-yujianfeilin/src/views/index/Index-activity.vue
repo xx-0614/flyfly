@@ -84,9 +84,7 @@ export default {
     mounted(){
         window.addEventListener('load', this.scrollUp)
     },
-    destroyed(){
-        window.removeEventListener('load', this.scrollUp);
-    },
+  
 
 }
 </script>

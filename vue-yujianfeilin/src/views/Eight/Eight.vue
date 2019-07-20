@@ -222,12 +222,18 @@ export default {
 <style scoped>
 @import "../../assets/common.css";
 
+.ban{
+    overflow:hidden;
+}
 .ban img{
     display:block;
     width:100%;
 }
-.ban{
-    overflow:hidden;
+ul {
+    list-style: none;
+}
+li {
+    display: list-item;
 }
 .ul-tab{
     background-color:#fff;
@@ -235,30 +241,15 @@ export default {
     padding-top:55px;
     text-align:center;
 }
-
-.ul-tab {
-    background-color: #fff;
-    height: 97px;
-    padding-top: 55px;
-    text-align: center;
-}
-ol, ul {
-    list-style: none;
-}
-.ul-tab li.on, .ul-tab li:hover {
-    background: url(../../assets/img/eight/h3.png) right center no-repeat;
-}
 .ul-tab li {
     display: inline-block;
     margin: 0 26px;
     padding-right: 11px;
 }
-li {
-    display: list-item;
+.ul-tab li.on, .ul-tab li:hover {
+    background: url(../../assets/img/eight/h3.png) right center no-repeat;
 }
-.ul-tab li.on a {
-    border-bottom: 2px solid #69cfc1;
-}
+
 .ul-tab li a {
     color: #999;
     font-size: 18px;
@@ -266,25 +257,20 @@ li {
     line-height: 1.5em;
     font-family: Regular;
 }
-<<<<<<< HEAD
-a {
-    text-decoration: none;
-    color: #444;
+.ul-tab li.on a {
+    border-bottom: 2px solid #69cfc1;
 }
-a:-webkit-any-link {
-    color: -webkit-link;
-    cursor: pointer;
-=======
-.ul-tab {
-    background-color: #fff;
-    height: 97px;
-    padding-top: 55px;
-    text-align: center;
->>>>>>> 2455a89077f5fa3ca6155b375923d57f95cbd5e6
-}
+
 .m-hs2 .tabh1 {
     padding-top: 144px;
     overflow: hidden;
+}
+.ul-h3 li{
+    float:left;
+    width:25%;
+    padding-bottom:39px;
+    bottom:50px;
+    border-bottom:1px solid #dedede;
 }
 .ul-h3 li .pic {
     float: left;
@@ -301,13 +287,6 @@ a:-webkit-any-link {
     height: 100%;
 }
 
-.ul-h3 li{
-    float:left;
-    width:25%;
-    padding-bottom:39px;
-    bottom:50px;
-    border-bottom:1px solid #dedede;
-}
 .m-hs2  .ul-h3{
     margin-bottom:21px;
 }
