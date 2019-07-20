@@ -281,35 +281,9 @@ a {
     text-decoration: none;
     color: #444;
 }
-<<<<<<< HEAD
-
-li {
-    display: list-item;
-    text-align: -webkit-match-parent;
-}
-.ul-tab {
-    background-color: #fff;
-    height: 97px;
-    padding-top: 55px;
-    text-align: center;
-}
-ol, ul {
-    list-style: none;
-}
-user agent stylesheet
-ul, menu, dir {
-    display: block;
-    list-style-type: disc;
-    -webkit-margin-before: 1em;
-    -webkit-margin-after: 1em;
-    -webkit-margin-start: 0px;
-    -webkit-margin-end: 0px;
-    -webkit-padding-start: 40px;
-=======
 a:-webkit-any-link {
     color: -webkit-link;
     cursor: pointer;
->>>>>>> 024589e06ac1a651211c294ce9e81ddeff523fc9
 }
 .m-hs2 .tabh1 {
     padding-top: 144px;
