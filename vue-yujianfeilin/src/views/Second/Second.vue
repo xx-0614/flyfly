@@ -92,6 +92,7 @@ export default {
                 {isActive:false},
                 {isActive:false},
             ],
+            className:""
         }
     },
     methods:{
@@ -115,7 +116,10 @@ export default {
     },
     mounted(){
         window.addEventListener('scroll', this.scrollFixed)
-    }
+    },
+    destroyed() {
+         window.removeEventListener('scroll', this.scrollFixed)
+    },
 }
 </script>
 <style scoped>

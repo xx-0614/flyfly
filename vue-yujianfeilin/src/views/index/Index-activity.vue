@@ -44,7 +44,8 @@ export default {
     data(){
         return {
             isActive:false,
-            active:false
+            active:false,
+            style:""
         }
     },
     props:["activity"],
@@ -81,9 +82,10 @@ export default {
             scrollTo(0,0);
         }
     },
-    mounted(){
-        window.addEventListener('load', this.scrollUp)
+    created(){
+        this.scrollUp();
     },
+    
   
 
 }
