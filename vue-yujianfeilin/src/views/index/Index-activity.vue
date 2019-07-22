@@ -45,7 +45,6 @@ export default {
         return {
             isActive:false,
             active:false,
-            style:""
         }
     },
     props:["activity"],
@@ -82,12 +81,10 @@ export default {
             scrollTo(0,0);
         }
     },
+    
     created(){
         this.scrollUp();
     },
-    
-  
-
 }
 </script>
 <style scoped>
