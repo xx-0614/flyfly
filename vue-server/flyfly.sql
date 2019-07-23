@@ -60,174 +60,451 @@ INSERT INTO fly_microfilm VALUES(NULL,'img/index/211445188656.jpg');
 INSERT INTO fly_microfilm VALUES(NULL,'img/index/062014229804.png');
 
 
+ 
 
-#创建环游表
-DROP  DATABASE IF EXISTS fly_travel;
-CREATE TABLE fly_travel(
-    tid INT PRIMARY KEY AUTO_INCREMENT,
+#three
+#城市所在对应样式表
+CREATE TABLE fly_city_style(
+    style_id INT PRIMARY KEY AUTO_INCREMENT,    #样式风格的id
+    city_id INT,                                #城市id
+    img VARCHAR(128),
     title VARCHAR(64),
-    img VARCHAR(128),
-    subtitle VARCHAR(64),
-    dates VARCHAR(64)
+    dates VARCHAR(128),
+    href VARCHAR(128)
 );
-INSERT INTO fly_travel VALUES(NULL,'青海','img/index/131802449133.jpg',"ins晴朗",'2019-06-27');
-INSERT INTO fly_travel VALUES(NULL,'丽江','img/index/131513554850.jpg',"ins晴朗",'2019-06-27');
-INSERT INTO fly_travel VALUES(NULL,'丽江','img/index/131507219575.jpg',"ins遇见",'2019-06-29');
-INSERT INTO fly_travel VALUES(NULL,'丽江','img/index/131139002772.jpg',"ins田园牧马",'2019-06-27');
-INSERT INTO fly_travel VALUES(NULL,'丽江','img/index/131249261223.jpg',"ins婚礼",'2019-06-27');
-INSERT INTO fly_travel VALUES(NULL,'三亚','img/index/291348483756.jpg',"游艇旅行",'2019-06-29');
-INSERT INTO fly_travel VALUES(NULL,'三亚','img/index/131727072108.jpg',"洱海边",'2019-06-13');
-INSERT INTO fly_travel VALUES(NULL,'丽江','img/index/131710184314.jpg',"环海公路",'2019-06-27');
-INSERT INTO fly_travel VALUES(NULL,'三亚','img/index/131614392445.jpg',"ins雪山探险",'2019-06-27');
-INSERT INTO fly_travel VALUES(NULL,'三亚','img/index/291336153264.jpg',"告白气球",'2019-06-29');
-INSERT INTO fly_travel VALUES(NULL,'丽江','img/index/131716414304.jpg',"山顶露营",'2019-06-29');
-INSERT INTO fly_travel VALUES(NULL,'三亚','img/index/141224357613.jpg',"边走边爱",'2019-06-27');
-INSERT INTO fly_travel VALUES(NULL,'三亚','img/index/291324127446.jpg',"海上冲浪",'2019-06-29');
-INSERT INTO fly_travel VALUES(NULL,'三亚','img/index/131607014483.jpg',"ins牧马",'2019-06-27');
-INSERT INTO fly_travel VALUES(NULL,'三亚','img/index/141217534146.jpg',"邂逅茶卡",'2019-06-27');
-INSERT INTO fly_travel VALUES(NULL,'三亚','img/index/131808183003.jpg',"晴云山",'2019-06-27');
-INSERT INTO fly_travel VALUES(NULL,'三亚','img/index/131802449133.jpg',"西伯利亚海鸥",'2019-06-27');
-INSERT INTO fly_travel VALUES(NULL,'三亚','img/index/141201146851.jpg',"情定大草原",'2019-06-27');
-INSERT INTO fly_travel VALUES(NULL,'三亚','img/index/131756346475.jpg',"羊驼",'2019-06-27');
-INSERT INTO fly_travel VALUES(NULL,'三亚','img/index/131526432303.jpg',"ins陪你到丽江",'2019-06-13');
-INSERT INTO fly_travel VALUES(NULL,'三亚','img/index/131738131832.jpg',"小岛日记",'2019-06-27');
-INSERT INTO fly_travel VALUES(NULL,'三亚','img/index/131249261223.jpg',"海上冲浪",'2019-06-29');
-INSERT INTO fly_travel VALUES(NULL,'三亚','img/index/131507219575.jpg',"ins牧马",'2019-06-27');
-INSERT INTO fly_travel VALUES(NULL,'丽江','img/index/131727072108.jpg',"ins清晨",'2019-06-27');
-INSERT INTO fly_travel VALUES(NULL,'丽江','img/index/131710184314.jpg',"环海公路",'2019-06-27');
-INSERT INTO fly_travel VALUES(NULL,'丽江','img/index/111312466853.jpg',"余生",'2019-06-13');
-INSERT INTO fly_travel VALUES(NULL,'丽江','img/index/131534308947.jpg',"ins绚烂",'2019-06-27');
-INSERT INTO fly_travel VALUES(NULL,'丽江','img/index/131521103820.jpg',"ins简单爱",'2019-06-29');
-INSERT INTO fly_travel VALUES(NULL,'丽江','img/index/131513554850.jpg',"ins晴朗",'2019-06-27');
-INSERT INTO fly_travel VALUES(NULL,'丽江','img/index/131507219575.jpg',"ins遇见",'2019-06-29');
-INSERT INTO fly_travel VALUES(NULL,'丽江','img/index/131249261223.jpg',"ins婚礼",'2019-06-27');
-INSERT INTO fly_travel VALUES(NULL,'丽江','img/index/131242582882.jpg',"ins世界纪元",'2019-06-27');
-INSERT INTO fly_travel VALUES(NULL,'丽江','img/index/131236069909.jpg',"ins世外桃源",'2019-06-27');
-INSERT INTO fly_travel VALUES(NULL,'青海','img/index/131229425045.jpg',"ins清晨",'2019-06-27');
-INSERT INTO fly_travel VALUES(NULL,'青海','img/index/131201161212.jpg',"ins旅行",'2019-06-27');
-INSERT INTO fly_travel VALUES(NULL,'青海','img/index/131139002772.jpg',"ins田园牧马",'2019-06-27');
-INSERT INTO fly_travel VALUES(NULL,'青海','img/index/131415571695.jpg',"情人湖边",'2019-06-13');
-INSERT INTO fly_travel VALUES(NULL,'青海','img/index/131513554850.jpg',"ins晴朗",'2019-06-27');
-INSERT INTO fly_travel VALUES(NULL,'青海','img/index/131507219575.jpg',"ins遇见",'2019-06-29');
-INSERT INTO fly_travel VALUES(NULL,'青海','img/index/131236069909.jpg',"ins世外桃源",'2019-06-27');
+#三亚
+INSERT INTO fly_city_style VALUES(NULL,1,'img/three/sanya/style/291348483756.jpg',"游艇旅行",'2019-06-29','details?pid=1');
+INSERT INTO fly_city_style VALUES(NULL,1,'img/three/sanya/style/291336153264.jpg',"告白气球",'2019-06-29','details?pid=2');
+INSERT INTO fly_city_style VALUES(NULL,1,'img/three/sanya/style/291324127446.jpg',"海上冲浪",'2019-06-29',NULL);
+INSERT INTO fly_city_style VALUES(NULL,1,'img/three/sanya/style/291312293072.jpg',"华丽休假",'2019-06-29',NULL);
+INSERT INTO fly_city_style VALUES(NULL,1,'img/three/sanya/style/291302356216.jpg',"浪漫满屋",'2019-06-29',NULL);
+INSERT INTO fly_city_style VALUES(NULL,1,'img/three/sanya/style/122210101010.jpg',"爱情沙滩",'2019-06-27',NULL);
+INSERT INTO fly_city_style VALUES(NULL,1,'img/three/sanya/style/122246248590.jpg',"海边欢乐颂",'2019-06-27',NULL);
+INSERT INTO fly_city_style VALUES(NULL,1,'img/three/sanya/style/122203459850.jpg',"老城时光",'2019-06-12',NULL);
+INSERT INTO fly_city_style VALUES(NULL,1,'img/three/sanya/style/122239402355.jpg',"日光泳池",'2019-06-27',NULL);
+INSERT INTO fly_city_style VALUES(NULL,1,'img/three/sanya/style/122230226443.jpg',"倾心",'2019-06-27',NULL);
+INSERT INTO fly_city_style VALUES(NULL,1,'img/three/sanya/style/122223272543.jpg',"夏花",'2019-06-27',NULL);
+INSERT INTO fly_city_style VALUES(NULL,1,'img/three/sanya/style/122154489940.jpg',"听海",'2019-06-27',NULL);
+INSERT INTO fly_city_style VALUES(NULL,1,'img/three/sanya/style/122216128514.jpg',"鸟巢絮语",'2019-06-27',NULL);
+INSERT INTO fly_city_style VALUES(NULL,1,'img/three/sanya/style/122141548356.jpg',"等风来",'2019-06-27',NULL);
+INSERT INTO fly_city_style VALUES(NULL,1,'img/three/sanya/style/121728365797.jpg',"屋顶无边际泳池",'2019-06-27',NULL);
+INSERT INTO fly_city_style VALUES(NULL,1,'img/three/sanya/style/121710234962.jpg',"假日华尔兹",'2019-06-27',NULL);
+INSERT INTO fly_city_style VALUES(NULL,1,'img/three/sanya/style/121632209840.jpg',"树屋酒店",'2019-06-27',NULL);
+INSERT INTO fly_city_style VALUES(NULL,1,'img/three/sanya/style/121617211906.jpg',"ins向往",'2019-06-27',NULL);
+INSERT INTO fly_city_style VALUES(NULL,1,'img/three/sanya/style/121603382644.jpg',"ins露营沙滩",'2019-06-27',NULL);
+INSERT INTO fly_city_style VALUES(NULL,1,'img/three/sanya/style/121556253524.jpg',"ins夏日里的么么茶",'2019-06-27',NULL);
+INSERT INTO fly_city_style VALUES(NULL,1,'img/three/sanya/style/121541089513.jpg',"ins呆呆岛蜜月日记",'2019-06-27',NULL);
+INSERT INTO fly_city_style VALUES(NULL,1,'img/three/sanya/style/121144219681.jpg',"ins泡泡酒店",'2019-06-27',NULL);
+INSERT INTO fly_city_style VALUES(NULL,1,'img/three/sanya/style/131808183003.jpg',"晴云山",'2019-06-27',NULL);
+INSERT INTO fly_city_style VALUES(NULL,1,'img/three/sanya/style/131802449133.jpg',"西伯利亚海鸥",'2019-06-27',NULL);
+INSERT INTO fly_city_style VALUES(NULL,1,'img/three/sanya/style/131756346475.jpg',"羊驼",'2019-06-27',NULL);
+INSERT INTO fly_city_style VALUES(NULL,1,'img/three/sanya/style/131750445500.jpg',"大风车",'2019-06-27',NULL);
+INSERT INTO fly_city_style VALUES(NULL,1,'img/three/sanya/style/131744518352.jpg',"旅行日记",'2019-06-27',NULL);
+INSERT INTO fly_city_style VALUES(NULL,1,'img/three/sanya/style/131738131832.jpg',"小岛日记",'2019-06-27',NULL);
+INSERT INTO fly_city_style VALUES(NULL,1,'img/three/sanya/style/131727072108.jpg',"洱海边",'2019-06-27',NULL);
+INSERT INTO fly_city_style VALUES(NULL,1,'img/three/sanya/style/131716414304.jpg',"山顶露营",'2019-06-27',NULL);
+INSERT INTO fly_city_style VALUES(NULL,1,'img/three/sanya/style/131710184314.jpg',"环海公路",'2019-06-27',NULL);
+INSERT INTO fly_city_style VALUES(NULL,1,'img/three/sanya/style/131702461496.jpg',"喜洲古镇",'2019-06-27',NULL);
+INSERT INTO fly_city_style VALUES(NULL,1,'img/three/sanya/style/111312466853.jpg',"余生",'2019-06-11',NULL);
+INSERT INTO fly_city_style VALUES(NULL,1,'img/three/sanya/style/141540479200.jpg',"浮世集",'2019-06-25',NULL);
+INSERT INTO fly_city_style VALUES(NULL,1,'img/three/sanya/style/141533206692.jpg',"柏拉图蔓延",'2019-06-25',NULL);
+INSERT INTO fly_city_style VALUES(NULL,1,'img/three/sanya/style/141530275295.jpg',"旅行的意义",'2019-06-25',NULL);
+INSERT INTO fly_city_style VALUES(NULL,1,'img/three/sanya/style/141457231794.jpg',"畅想",'2019-06-25',NULL);
+INSERT INTO fly_city_style VALUES(NULL,1,'img/three/sanya/style/141450524553.jpg',"扶苏",'2019-06-25',NULL);
+INSERT INTO fly_city_style VALUES(NULL,1,'img/three/sanya/style/141434459203.jpg',"起风了",'2019-06-25',NULL);
+INSERT INTO fly_city_style VALUES(NULL,1,'img/three/sanya/style/141418534087.jpg',"微风的气息",'2019-06-25',NULL);
+INSERT INTO fly_city_style VALUES(NULL,1,'img/three/sanya/style/141409133990.jpg',"遇见菲林",'2019-06-25',NULL);
+INSERT INTO fly_city_style VALUES(NULL,1,'img/three/sanya/style/141402096088.jpg',"棉花堡",'2019-06-25',NULL);
+INSERT INTO fly_city_style VALUES(NULL,1,'img/three/sanya/style/141355188289.jpg',"梦想中的生活",'2019-06-25',NULL);
+INSERT INTO fly_city_style VALUES(NULL,1,'img/three/sanya/style/141348363946.jpg',"篝火",'2019-06-25',NULL);
+#44
+#丽江
+INSERT INTO fly_city_style VALUES(NULL,2,'img/three/lijiang/style/121430406066.jpg',"漫步古镇",'2019-07-12','details?pid=3');
+INSERT INTO fly_city_style VALUES(NULL,2,'img/three/lijiang/style/121424543646.jpg',"向往的生活",'2019-07-12','details?pid=4');
+INSERT INTO fly_city_style VALUES(NULL,2,'img/three/lijiang/style/121420147044.jpg',"为爱痴狂",'',NULL);
+INSERT INTO fly_city_style VALUES(NULL,2,'img/three/lijiang/style/121413529958.jpg',"一米阳光",'2019-07-12',NULL);
+INSERT INTO fly_city_style VALUES(NULL,2,'img/three/lijiang/style/121407499810.jpg',"炊烟",'2019-07-12',NULL);
+INSERT INTO fly_city_style VALUES(NULL,2,'img/three/lijiang/style/131552552182.jpg',"ins林中美眷",'2019-06-27',NULL);
+INSERT INTO fly_city_style VALUES(NULL,2,'img/three/lijiang/style/131534308947.jpg',"ins绚烂",'2019-06-27',NULL);
+INSERT INTO fly_city_style VALUES(NULL,2,'img/three/lijiang/style/131607014483.jpg',"ins牧马",'2019-06-27',NULL);
+INSERT INTO fly_city_style VALUES(NULL,2,'img/three/lijiang/style/131600069445.jpg',"ins春雪",'2019-06-27',NULL);
+INSERT INTO fly_city_style VALUES(NULL,2,'img/three/lijiang/style/131526432303.jpg',"ins陪你到丽江",'2019-06-13',NULL);
+INSERT INTO fly_city_style VALUES(NULL,2,'img/three/lijiang/style/131614392445.jpg',"ins雪山探险",'2019-06-27',NULL);
+INSERT INTO fly_city_style VALUES(NULL,2,'img/three/lijiang/style/131521103820.jpg',"ins简单爱",'2019-06-27',NULL);
+INSERT INTO fly_city_style VALUES(NULL,2,'img/three/lijiang/style/131513554850.jpg',"ins晴朗",'2019-06-27',NULL);
+INSERT INTO fly_city_style VALUES(NULL,2,'img/three/lijiang/style/131507219575.jpg',"ins遇见",'2019-06-27',NULL);
+INSERT INTO fly_city_style VALUES(NULL,2,'img/three/lijiang/style/131249261223.jpg',"ins婚礼",'2019-06-13',NULL);
+INSERT INTO fly_city_style VALUES(NULL,2,'img/three/lijiang/style/131242582882.jpg',"ins世界纪元",'2019-06-27',NULL);
+INSERT INTO fly_city_style VALUES(NULL,2,'img/three/lijiang/style/131236069909.jpg',"ins世外桃源",'2019-06-13',NULL);
+INSERT INTO fly_city_style VALUES(NULL,2,'img/three/lijiang/style/131229425045.jpg',"ins清晨",'2019-06-13',NULL);
+INSERT INTO fly_city_style VALUES(NULL,2,'img/three/lijiang/style/131201161212.jpg',"ins旅行",'2019-06-27',NULL);
+INSERT INTO fly_city_style VALUES(NULL,2,'img/three/lijiang/style/131154007407.jpg',"ins速度与激情",'2019-06-27',NULL);
+INSERT INTO fly_city_style VALUES(NULL,2,'img/three/lijiang/style/131147342482.jpg',"ins红石榴",'2019-06-27',NULL);
+INSERT INTO fly_city_style VALUES(NULL,2,'img/three/lijiang/style/131139002772.jpg',"ins田园牧马",'2019-06-27',NULL);
+INSERT INTO fly_city_style VALUES(NULL,2,'img/three/lijiang/style/131430065159.jpg',"雪山下嫁纱",'2019-06-13',NULL);
+INSERT INTO fly_city_style VALUES(NULL,2,'img/three/lijiang/style/131422446928.jpg',"远行",'2019-06-27',NULL);
+INSERT INTO fly_city_style VALUES(NULL,2,'img/three/lijiang/style/131415571695.jpg',"情人湖边",'2019-06-27',NULL);
+INSERT INTO fly_city_style VALUES(NULL,2,'img/three/lijiang/style/131409241285.jpg',"绿野仙踪",'2019-06-27',NULL);
+INSERT INTO fly_city_style VALUES(NULL,2,'img/three/lijiang/style/131404056344.jpg',"公路旅行",'2019-06-13',NULL);
+INSERT INTO fly_city_style VALUES(NULL,2,'img/three/lijiang/style/131355321182.jpg',"房车旅行",'2019-06-27',NULL);
+INSERT INTO fly_city_style VALUES(NULL,2,'img/three/lijiang/style/141217534146.jpg',"邂逅茶卡",'2019-06-27',NULL);
+INSERT INTO fly_city_style VALUES(NULL,2,'img/three/lijiang/style/141224357613.jpg',"边走边爱",'2019-06-27',NULL);
+INSERT INTO fly_city_style VALUES(NULL,2,'img/three/lijiang/style/141207069261.jpg',"青海湖畔",'2019-06-27',NULL);
+INSERT INTO fly_city_style VALUES(NULL,2,'img/three/lijiang/style/141212405279.jpg',"西北狂想曲",'2019-06-14',NULL);
+INSERT INTO fly_city_style VALUES(NULL,2,'img/three/lijiang/style/141201146851.jpg',"情定大草原",'2019-06-27',NULL);
+INSERT INTO fly_city_style VALUES(NULL,2,'img/three/lijiang/style/141140225747.jpg',"公路旅行",'2019-06-27',NULL);
+INSERT INTO fly_city_style VALUES(NULL,2,'img/three/lijiang/style/141129474622.jpg',"冰湖",'2019-06-27',NULL);
+INSERT INTO fly_city_style VALUES(NULL,2,'img/three/lijiang/style/141111481496.jpg',"湖边日落",'2019-06-27',NULL);
+INSERT INTO fly_city_style VALUES(NULL,2,'img/three/lijiang/style/141104431004.jpg',"两人沙海",'2019-06-27',NULL);
+INSERT INTO fly_city_style VALUES(NULL,2,'img/three/lijiang/style/141057449129.jpg',"圣洁之湖",'2019-06-27',NULL);
+INSERT INTO fly_city_style VALUES(NULL,2,'img/three/lijiang/style/141045545016.jpg',"沙洲",'2019-06-27',NULL);
+INSERT INTO fly_city_style VALUES(NULL,2,'img/three/lijiang/style/091813354358.jpg',"小阳&巧巧",'2019-07-09',NULL);
+#44
 
 
 
-INSERT INTO fly_travel VALUES(NULL,'三亚','img/index/131513554850.jpg',"ins晴朗",'2019-06-27');
-INSERT INTO fly_travel VALUES(NULL,'三亚','img/index/131507219575.jpg',"ins遇见",'2019-06-29');
-INSERT INTO fly_travel VALUES(NULL,'三亚','img/index/131139002772.jpg',"ins田园牧马",'2019-06-27');
-INSERT INTO fly_travel VALUES(NULL,'三亚','img/index/131249261223.jpg',"ins婚礼",'2019-06-27');
-INSERT INTO fly_travel VALUES(NULL,'丽江','img/index/291348483756.jpg',"游艇旅行",'2019-06-29');
-INSERT INTO fly_travel VALUES(NULL,'丽江','img/index/131727072108.jpg',"洱海边",'2019-06-13');
-INSERT INTO fly_travel VALUES(NULL,'三亚','img/index/131710184314.jpg',"环海公路",'2019-06-27');
-INSERT INTO fly_travel VALUES(NULL,'丽江','img/index/131614392445.jpg',"ins雪山探险",'2019-06-27');
-INSERT INTO fly_travel VALUES(NULL,'丽江','img/index/291336153264.jpg',"告白气球",'2019-06-29');
-INSERT INTO fly_travel VALUES(NULL,'三亚','img/index/131716414304.jpg',"山顶露营",'2019-06-29');
-INSERT INTO fly_travel VALUES(NULL,'丽江','img/index/141224357613.jpg',"边走边爱",'2019-06-27');
-INSERT INTO fly_travel VALUES(NULL,'丽江','img/index/291324127446.jpg',"海上冲浪",'2019-06-29');
-INSERT INTO fly_travel VALUES(NULL,'丽江','img/index/131607014483.jpg',"ins牧马",'2019-06-27');
-INSERT INTO fly_travel VALUES(NULL,'丽江','img/index/141217534146.jpg',"邂逅茶卡",'2019-06-27');
-INSERT INTO fly_travel VALUES(NULL,'丽江','img/index/131808183003.jpg',"晴云山",'2019-06-27');
-INSERT INTO fly_travel VALUES(NULL,'丽江','img/index/131802449133.jpg',"西伯利亚海鸥",'2019-06-27');
-INSERT INTO fly_travel VALUES(NULL,'丽江','img/index/141201146851.jpg',"情定大草原",'2019-06-27');
-INSERT INTO fly_travel VALUES(NULL,'丽江','img/index/131756346475.jpg',"羊驼",'2019-06-27');
-INSERT INTO fly_travel VALUES(NULL,'丽江','img/index/131526432303.jpg',"ins陪你到丽江",'2019-06-13');
-INSERT INTO fly_travel VALUES(NULL,'丽江','img/index/131738131832.jpg',"小岛日记",'2019-06-27');
-INSERT INTO fly_travel VALUES(NULL,'丽江','img/index/131249261223.jpg',"海上冲浪",'2019-06-29');
-INSERT INTO fly_travel VALUES(NULL,'丽江','img/index/131507219575.jpg',"ins牧马",'2019-06-27');
-INSERT INTO fly_travel VALUES(NULL,'三亚','img/index/131727072108.jpg',"ins清晨",'2019-06-27');
-INSERT INTO fly_travel VALUES(NULL,'三亚','img/index/131710184314.jpg',"环海公路",'2019-06-27');
-INSERT INTO fly_travel VALUES(NULL,'三亚','img/index/111312466853.jpg',"余生",'2019-06-13');
-INSERT INTO fly_travel VALUES(NULL,'三亚','img/index/131534308947.jpg',"ins绚烂",'2019-06-27');
-INSERT INTO fly_travel VALUES(NULL,'三亚','img/index/131521103820.jpg',"ins简单爱",'2019-06-29');
-INSERT INTO fly_travel VALUES(NULL,'三亚','img/index/131513554850.jpg',"ins晴朗",'2019-06-27');
-INSERT INTO fly_travel VALUES(NULL,'三亚','img/index/131507219575.jpg',"ins遇见",'2019-06-29');
-INSERT INTO fly_travel VALUES(NULL,'三亚','img/index/131249261223.jpg',"ins婚礼",'2019-06-27');
-INSERT INTO fly_travel VALUES(NULL,'三亚','img/index/131242582882.jpg',"ins世界纪元",'2019-06-27');
-INSERT INTO fly_travel VALUES(NULL,'三亚','img/index/131236069909.jpg',"ins世外桃源",'2019-06-27');
-
-
-
-
-#创建纪爱时光表
-DROP  DATABASE IF EXISTS fly_love_times;
-CREATE TABLE fly_love_times(
-    vid INT PRIMARY KEY AUTO_INCREMENT, 
-    title VARCHAR(64),         
+#four
+#创建人员图片表
+CREATE TABLE fly_city_people(
+    people_id INT PRIMARY KEY AUTO_INCREMENT,   #人员图片id
+    city_id INT,                                #城市id
     img VARCHAR(128),
-    subtitle VARCHAR(64),
-    dates  VARCHAR(64)
- );
+    title VARCHAR(64),
+    dates VARCHAR(128),
+    href VARCHAR(128)
+);
+#三亚
+INSERT INTO fly_city_people VALUES(NULL,1,'img/four/sanya/people/191551057570.jpg',"阿豪&花花",'2019-07-19','details?pid=5');
+INSERT INTO fly_city_people VALUES(NULL,1,'img/four/sanya/people/191541305015.jpg',"小超&思琪",'2019-07-19','details?pid=6');
+INSERT INTO fly_city_people VALUES(NULL,1,'img/four/sanya/people/162103159711.jpg',"小伟&晓妍",'2019-07-16',NULL);
+INSERT INTO fly_city_people VALUES(NULL,1,'img/four/sanya/people/151045059650.jpg',"小帆&瀚天",'2019-07-15',NULL);
+INSERT INTO fly_city_people VALUES(NULL,1,'img/four/sanya/people/151030268521.jpg',"蒙蒙&家谕",'2019-07-15',NULL);
+INSERT INTO fly_city_people VALUES(NULL,1,'img/four/sanya/people/111330062511.jpg',"凡凡&欣欣",'2019-07-11',NULL);
+INSERT INTO fly_city_people VALUES(NULL,1,'img/four/sanya/people/091823021994.jpg',"娟娟&柄江",'2019-07-09',NULL);
+INSERT INTO fly_city_people VALUES(NULL,1,'img/four/sanya/people/082243425866.jpg',"小罗&小琼",'2019-07-08',NULL);
+INSERT INTO fly_city_people VALUES(NULL,1,'img/four/sanya/people/081316048067.jpg',"温柔的时光",'2019-07-08',NULL);
+INSERT INTO fly_city_people VALUES(NULL,1,'img/four/sanya/people/071027028426.jpg',"明慧&小霞",'2019-07-07',NULL);
+INSERT INTO fly_city_people VALUES(NULL,1,'img/four/sanya/people/071008402536.jpg',"泽彬&瑞瑞",'2019-07-07',NULL);
+INSERT INTO fly_city_people VALUES(NULL,1,'img/four/sanya/people/070951364310.jpg',"小徐&鹏鹏",'2019-07-07',NULL);
+INSERT INTO fly_city_people VALUES(NULL,1,'img/four/sanya/people/292237073536.jpg',"雷雷&丽丽",'2019-06-29',NULL);
+INSERT INTO fly_city_people VALUES(NULL,1,'img/four/sanya/people/292204348433.jpg',"志亭&小亚",'2019-06-29',NULL);
+INSERT INTO fly_city_people VALUES(NULL,1,'img/four/sanya/people/171315122195.jpg',"东东&蕾蕾",'2019-06-27',NULL);
+INSERT INTO fly_city_people VALUES(NULL,1,'img/four/sanya/people/171621301319.jpg',"粉红",'2019-06-27',NULL);
+INSERT INTO fly_city_people VALUES(NULL,1,'img/four/sanya/people/171729441517.jpg',"红色甲壳虫",'2019-06-27',NULL);
+INSERT INTO fly_city_people VALUES(NULL,1,'img/four/sanya/people/171604157748.jpg',"元辉&红红",'2019-06-27',NULL);
+INSERT INTO fly_city_people VALUES(NULL,1,'img/four/sanya/people/171531485056.jpg',"小鑫&星觐",'2019-06-27',NULL);
+INSERT INTO fly_city_people VALUES(NULL,1,'img/four/sanya/people/171509431899.jpg',"小柯&玲玲",'2019-06-27',NULL);
+INSERT INTO fly_city_people VALUES(NULL,1,'img/four/sanya/people/181004261885.jpg',"方方&佳琦",'2019-06-27',NULL);
+INSERT INTO fly_city_people VALUES(NULL,1,'img/four/sanya/people/180946036550.jpg',"小樊&芳芳",'2019-06-27',NULL);
+INSERT INTO fly_city_people VALUES(NULL,1,'img/four/sanya/people/180920013360.jpg',"坤坤&鱼鱼",'2019-06-27',NULL);
+INSERT INTO fly_city_people VALUES(NULL,1,'img/four/sanya/people/171719383350.jpg',"玉成&芬芬",'2019-06-25',NULL);
+INSERT INTO fly_city_people VALUES(NULL,1,'img/four/sanya/people/171701114402.jpg',"小马&明明",'2019-06-17',NULL);
+INSERT INTO fly_city_people VALUES(NULL,1,'img/four/sanya/people/161613128956.jpg',"阿宇&媚儿",'2019-06-16',NULL);
+INSERT INTO fly_city_people VALUES(NULL,1,'img/four/sanya/people/161545003147.jpg',"小伊&小颖",'2019-06-16',NULL);
+INSERT INTO fly_city_people VALUES(NULL,1,'img/four/sanya/people/161531195051.jpg',"祥浦&冲冲",'2019-06-16',NULL);
+INSERT INTO fly_city_people VALUES(NULL,1,'img/four/sanya/people/161516063834.jpg',"嘉嘉&小赓",'2019-06-16',NULL);
+INSERT INTO fly_city_people VALUES(NULL,1,'img/four/sanya/people/161120505514.jpg',"忠义&娟娟",'2019-06-16',NULL);
+INSERT INTO fly_city_people VALUES(NULL,1,'img/four/sanya/people/160956176567.jpg',"小易&小岚",'2019-06-16',NULL);
+INSERT INTO fly_city_people VALUES(NULL,1,'img/four/sanya/people/160929468415.jpg',"Emily&郎朗",'2019-06-16',NULL);
+INSERT INTO fly_city_people VALUES(NULL,1,'img/four/sanya/people/151556553442.jpg',"小荣&越越",'2019-06-15',NULL);
+INSERT INTO fly_city_people VALUES(NULL,1,'img/four/sanya/people/151238531672.jpg',"新诺&雯雯",'2019-06-15',NULL);
+INSERT INTO fly_city_people VALUES(NULL,1,'img/four/sanya/people/162107304767.jpg',"学良&婉君",'2019-07-16',NULL);
+INSERT INTO fly_city_people VALUES(NULL,1,'img/four/sanya/people/151053015747.jpg',"洱海的夏",'2019-07-15',NULL);
+INSERT INTO fly_city_people VALUES(NULL,1,'img/four/sanya/people/151040097990.jpg',"阿华&婷婷",'2019-07-15',NULL);
+INSERT INTO fly_city_people VALUES(NULL,1,'img/four/sanya/people/131440335405.jpg',"小杰&小颖",'2019-07-13',NULL);
+INSERT INTO fly_city_people VALUES(NULL,1,'img/four/sanya/people/131432421393.jpg',"家俊&秀秀",'2019-07-11',NULL);
+INSERT INTO fly_city_people VALUES(NULL,1,'img/four/sanya/people/292252289182.jpg',"甜蜜蜜",'2019-06-29',NULL);
+INSERT INTO fly_city_people VALUES(NULL,1,'img/four/sanya/people/082233545272.jpg',"田野",'2019-07-08',NULL);
+INSERT INTO fly_city_people VALUES(NULL,1,'img/four/sanya/people/180954084922.jpg',"我眼中的你",'2019-06-27',NULL);
+INSERT INTO fly_city_people VALUES(NULL,1,'img/four/sanya/people/180914102382.jpg',"彩色的梦",'2019-06-27',NULL);
+INSERT INTO fly_city_people VALUES(NULL,1,'img/four/sanya/people/171724338403.jpg',"静谧的海",'2019-06-27',NULL);
+INSERT INTO fly_city_people VALUES(NULL,1,'img/four/sanya/people/171706514705.jpg',"花季之约",'2019-06-27',NULL);
+INSERT INTO fly_city_people VALUES(NULL,1,'img/four/sanya/people/171538045616.jpg',"洱海的夜",'2019-06-27',NULL);
+INSERT INTO fly_city_people VALUES(NULL,1,'img/four/sanya/people/171412394300.jpg',"爱的进行时",'2019-06-27',NULL);
+INSERT INTO fly_city_people VALUES(NULL,1,'img/four/sanya/people/171456057704.jpg',"洱海边",'2019-06-27',NULL);
+INSERT INTO fly_city_people VALUES(NULL,1,'img/four/sanya/people/151329538797.jpg',"雨晴&小邓",'2019-06-27',NULL);
+INSERT INTO fly_city_people VALUES(NULL,1,'img/four/sanya/people/151649384577.jpg',"小亮&佳佳",'2019-06-27',NULL);
+INSERT INTO fly_city_people VALUES(NULL,1,'img/four/sanya/people/151659152595.jpg',"海的吟唱",'2019-06-27',NULL);
+INSERT INTO fly_city_people VALUES(NULL,1,'img/four/sanya/people/151707191550.jpg',"爱情童话",'2019-06-17',NULL);
+#52
+#丽江
+INSERT INTO fly_city_people VALUES(NULL,2,'img/four/lijiang/people/151048579074.jpg',"甜甜&天予",'2019-07-15','details?pid=7');
+INSERT INTO fly_city_people VALUES(NULL,2,'img/four/lijiang/people/151034482578.jpg',"仰望蓝月谷",'2019-07-15','details?pid=8');
+INSERT INTO fly_city_people VALUES(NULL,2,'img/four/lijiang/people/131444541169.jpg',"明明&小鹤",'2019-07-13',NULL);
+INSERT INTO fly_city_people VALUES(NULL,2,'img/four/lijiang/people/131437026993.jpg',"小戴&庆庆",'2019-07-13',NULL);
+INSERT INTO fly_city_people VALUES(NULL,2,'img/four/lijiang/people/111324144265.jpg',"小伍&源源",'2019-07-11',NULL);
+INSERT INTO fly_city_people VALUES(NULL,2,'img/four/lijiang/people/071013259792.jpg',"文文&小明",'2019-06-29',NULL);
+INSERT INTO fly_city_people VALUES(NULL,2,'img/four/lijiang/people/292243548289.jpg',"志文&美怡",'2019-06-29',NULL);
+INSERT INTO fly_city_people VALUES(NULL,2,'img/four/lijiang/people/292213486619.jpg',"小然&千蕊",'2019-06-29',NULL);
+INSERT INTO fly_city_people VALUES(NULL,2,'img/four/lijiang/people/161538028432.jpg',"琪琪&小雨",'2019-06-27',NULL);
+INSERT INTO fly_city_people VALUES(NULL,2,'img/four/lijiang/people/171714015524.jpg',"锐锐&书书",'2019-06-27',NULL);
+INSERT INTO fly_city_people VALUES(NULL,2,'img/four/lijiang/people/171644128797.jpg',"媛媛&小金",'2019-06-27',NULL);
+INSERT INTO fly_city_people VALUES(NULL,2,'img/four/lijiang/people/171613559438.jpg',"然然&一鸣",'2019-06-27',NULL);
+INSERT INTO fly_city_people VALUES(NULL,2,'img/four/lijiang/people/171550565977.jpg',"小李&大伟",'2019-06-27',NULL);
+INSERT INTO fly_city_people VALUES(NULL,2,'img/four/lijiang/people/171516448687.jpg',"阿徐&玄玄",'2019-06-27',NULL);
+INSERT INTO fly_city_people VALUES(NULL,2,'img/four/lijiang/people/171443311830.jpg',"志尚&希希",'2019-06-27',NULL);
+INSERT INTO fly_city_people VALUES(NULL,2,'img/four/lijiang/people/171402573693.jpg',"白色恋歌",'2019-06-27',NULL);
+INSERT INTO fly_city_people VALUES(NULL,2,'img/four/lijiang/people/171337279454.jpg',"文郑&欣欣",'2019-06-27',NULL);
+INSERT INTO fly_city_people VALUES(NULL,2,'img/four/lijiang/people/171255189249.jpg',"宁宁&小柳",'2019-06-27',NULL);
+INSERT INTO fly_city_people VALUES(NULL,2,'img/four/lijiang/people/161709474417.jpg',"志樵&欣然",'2019-06-27',NULL);
+INSERT INTO fly_city_people VALUES(NULL,2,'img/four/lijiang/people/161635198766.jpg',"小令&丽丽",'2019-06-27',NULL);
+INSERT INTO fly_city_people VALUES(NULL,2,'img/four/lijiang/people/161606038623.jpg',"冬冬&小金",'2019-06-27',NULL);
+INSERT INTO fly_city_people VALUES(NULL,2,'img/four/lijiang/people/180959483260.jpg',"去露营吧",'2019-06-27',NULL);
+INSERT INTO fly_city_people VALUES(NULL,2,'img/four/lijiang/people/180939395516.jpg',"夏日情歌",'2019-06-27',NULL);
+INSERT INTO fly_city_people VALUES(NULL,2,'img/four/lijiang/people/161522587138.jpg',"阿良&琦琦",'2019-06-16',NULL);
+INSERT INTO fly_city_people VALUES(NULL,2,'img/four/lijiang/people/161133398738.jpg',"小宇&小双",'2019-06-16',NULL);
+INSERT INTO fly_city_people VALUES(NULL,2,'img/four/lijiang/people/161126598537.jpg',"晶晶&小斌",'2019-06-16',NULL);
+INSERT INTO fly_city_people VALUES(NULL,2,'img/four/lijiang/people/160941471545.jpg',"小敏&乐乐",'2019-06-16',NULL);
+INSERT INTO fly_city_people VALUES(NULL,2,'img/four/lijiang/people/151636149287.jpg',"新溪&晶晶",'2019-06-15',NULL);
+INSERT INTO fly_city_people VALUES(NULL,2,'img/four/lijiang/people/151320441231.jpg',"雪华&兰兰",'2019-06-15',NULL);
+INSERT INTO fly_city_people VALUES(NULL,2,'img/four/lijiang/people/162113298158.jpg',"正博&莉琼",'2019-07-16',NULL);
+INSERT INTO fly_city_people VALUES(NULL,2,'img/four/lijiang/people/071021029987.jpg',"丽丽&小美",'2019-07-07',NULL);
+INSERT INTO fly_city_people VALUES(NULL,2,'img/four/lijiang/people/292258357155.jpg',"冰上旋律",'2019-06-29',NULL);
+INSERT INTO fly_city_people VALUES(NULL,2,'img/four/lijiang/people/292231216904.jpg',"最好的我们",'2019-06-29',NULL);
+INSERT INTO fly_city_people VALUES(NULL,2,'img/four/lijiang/people/292218567085.jpg',"小伴",'2019-06-29',NULL);
+INSERT INTO fly_city_people VALUES(NULL,2,'img/four/lijiang/people/292133054021.jpg',"专属骑士",'2019-06-29',NULL);
+INSERT INTO fly_city_people VALUES(NULL,2,'img/four/lijiang/people/180932461612.jpg',"露营大草原",'2019-06-27',NULL);
+INSERT INTO fly_city_people VALUES(NULL,2,'img/four/lijiang/people/180908214986.jpg',"两人野餐",'2019-06-27',NULL);
+INSERT INTO fly_city_people VALUES(NULL,2,'img/four/lijiang/people/171557109894.jpg',"凯凯&晨曦",'2019-06-27',NULL);
+INSERT INTO fly_city_people VALUES(NULL,2,'img/four/lijiang/people/171524469044.jpg',"爱之源",'2019-06-27',NULL);
+INSERT INTO fly_city_people VALUES(NULL,2,'img/four/lijiang/people/171502486719.jpg',"冰川时代",'2019-06-27',NULL);
+INSERT INTO fly_city_people VALUES(NULL,2,'img/four/lijiang/people/171431538925.jpg',"情书",'2019-06-27',NULL);
+INSERT INTO fly_city_people VALUES(NULL,2,'img/four/lijiang/people/171420059689.jpg',"冰雪奇缘",'2019-06-27',NULL);
+INSERT INTO fly_city_people VALUES(NULL,2,'img/four/lijiang/people/151719328356.jpg',"小梦&强强",'2019-06-27',NULL);
+INSERT INTO fly_city_people VALUES(NULL,2,'img/four/lijiang/people/171227129002.jpg',"小晴&小楚",'2019-06-26',NULL);
+INSERT INTO fly_city_people VALUES(NULL,2,'img/four/lijiang/people/161007179460.jpg',"志鹏&佳楠",'2019-06-26',NULL);
+INSERT INTO fly_city_people VALUES(NULL,2,'img/four/lijiang/people/151343053925.jpg',"小易&莹莹",'2019-06-26',NULL);
+INSERT INTO fly_city_people VALUES(NULL,2,'img/four/lijiang/people/151412388354.jpg',"小乾&小鹏",'2019-06-25',NULL);
+INSERT INTO fly_city_people VALUES(NULL,2,'img/four/lijiang/people/151431503822.jpg',"SOPHIA&JOY",'2019-06-25',NULL);
+INSERT INTO fly_city_people VALUES(NULL,2,'img/four/lijiang/people/151438299766.jpg',"小凤&爽爽",'2019-06-25',NULL);
+INSERT INTO fly_city_people VALUES(NULL,2,'img/four/lijiang/people/151452311265.jpg',"浩文&曼颖",'2019-06-25',NULL);
+INSERT INTO fly_city_people VALUES(NULL,2,'img/four/lijiang/people/151659152595.jpg',"爱情面包车",'2019-06-15',NULL);
+INSERT INTO fly_city_people VALUES(NULL,2,'img/four/lijiang/people/151649384577.jpg',"小森林",'2019-06-15',NULL);
+#52
 
-INSERT INTO fly_love_times VALUES(NULL,'三亚','img/four/292252289182.jpg',"甜蜜蜜",'2019-06-29');
-INSERT INTO fly_love_times VALUES(NULL,'三亚','img/four/081214279553.jpg',"蓝色畅想",'2019-07-08');
-INSERT INTO fly_love_times VALUES(NULL,'三亚','img/four/071027028426.jpg',"明慧&小霞",'2019-07-07');
-INSERT INTO fly_love_times VALUES(NULL,'三亚','img/four/071021029987.jpg',"丽丽&小美",'2019-07-07');
-INSERT INTO fly_love_times VALUES(NULL,'三亚','img/four/071013259792.jpg',"文文&小明",'2019-07-07');
-INSERT INTO fly_love_times VALUES(NULL,'三亚','img/four/292258357155.jpg',"冰上旋律",'2019-06-29');
-INSERT INTO fly_love_times VALUES(NULL,'三亚','img/four/292243548289.jpg',"志文&美怡",'2019-06-29');
-INSERT INTO fly_love_times VALUES(NULL,'三亚','img/four/292231216904.jpg',"最好的我们",'2019-06-29');
-INSERT INTO fly_love_times VALUES(NULL,'三亚','img/four/292151227904.jpg',"靠近你",'2019-06-29');
-INSERT INTO fly_love_times VALUES(NULL,'三亚','img/four/171729441517.jpg',"红色甲壳虫",'2019-06-27');
-INSERT INTO fly_love_times VALUES(NULL,'三亚','img/four/171714015524.jpg',"锐锐&书书",'2019-06-27');
-INSERT INTO fly_love_times VALUES(NULL,'三亚','img/four/171604157748.jpg',"元辉&红红",'2019-06-27');
-INSERT INTO fly_love_times VALUES(NULL,'三亚','img/four/091823021994.jpg',"娟娟&柄江",'2019-07-09');
-INSERT INTO fly_love_times VALUES(NULL,'三亚','img/four/091813354358.jpg',"小阳&巧巧",'2019-07-09');
-INSERT INTO fly_love_times VALUES(NULL,'三亚','img/four/082243425866.jpg',"小罗&小琼",'2019-07-08');
-INSERT INTO fly_love_times VALUES(NULL,'三亚','img/four/082233545272.jpg',"田野",'2019-07-08');
-INSERT INTO fly_love_times VALUES(NULL,'三亚','img/four/081316048067.jpg',"温柔的时光",'2019-07-08');
-INSERT INTO fly_love_times VALUES(NULL,'三亚','img/four/071027028426.jpg',"明慧&小霞",'2019-07-07');
-INSERT INTO fly_love_times VALUES(NULL,'三亚','img/four/071008402536.jpg',"泽彬&瑞瑞",'2019-07-07');
-INSERT INTO fly_love_times VALUES(NULL,'三亚','img/four/071001241311.jpg',"晋衔&蕾蕾",'2019-07-07');
-INSERT INTO fly_love_times VALUES(NULL,'三亚','img/four/070951364310.jpg',"小徐&鹏鹏",'2019-06-29');
-INSERT INTO fly_love_times VALUES(NULL,'三亚','img/four/292237073536.jpg',"雷雷&丽丽",'2019-06-29');
-INSERT INTO fly_love_times VALUES(NULL,'三亚','img/four/292225484000.jpg',"小确幸",'2019-06-29');
-INSERT INTO fly_love_times VALUES(NULL,'三亚','img/four/292218567085.jpg',"小伴",'2019-06-29');
-INSERT INTO fly_love_times VALUES(NULL,'三亚','img/four/292213486619.jpg',"小然&千蕊",'2019-06-29');
-INSERT INTO fly_love_times VALUES(NULL,'三亚','img/four/171516448687.jpg',"阿徐&玄玄",'2019-07-07');
-INSERT INTO fly_love_times VALUES(NULL,'三亚','img/four/171443311830.jpg',"志尚&希希",'2019-07-07');
-INSERT INTO fly_love_times VALUES(NULL,'三亚','img/four/171402573693.jpg',"白色恋歌",'2019-06-29');
-INSERT INTO fly_love_times VALUES(NULL,'三亚','img/four/171255189249.jpg',"宁宁&小柳",'2019-06-29');
-INSERT INTO fly_love_times VALUES(NULL,'三亚','img/four/180939395516.jpg',"夏日情歌",'2019-06-29');
-INSERT INTO fly_love_times VALUES(NULL,'三亚','img/four/161606038623.jpg',"冬冬&小金",'2019-06-29');
-INSERT INTO fly_love_times VALUES(NULL,'三亚','img/four/180959483260.jpg',"去露营吧",'2019-06-29');
 
-INSERT INTO fly_love_times VALUES(NULL,'丽江','img/four/292252289182.jpg',"甜蜜蜜",'2019-06-29');
-INSERT INTO fly_love_times VALUES(NULL,'丽江','img/four/081214279553.jpg',"蓝色畅想",'2019-07-08');
-INSERT INTO fly_love_times VALUES(NULL,'丽江','img/four/071027028426.jpg',"明慧&小霞",'2019-07-07');
-INSERT INTO fly_love_times VALUES(NULL,'丽江','img/four/071021029987.jpg',"丽丽&小美",'2019-07-07');
-INSERT INTO fly_love_times VALUES(NULL,'丽江','img/four/071013259792.jpg',"文文&小明",'2019-07-07');
-INSERT INTO fly_love_times VALUES(NULL,'丽江','img/four/292258357155.jpg',"冰上旋律",'2019-06-29');
-INSERT INTO fly_love_times VALUES(NULL,'丽江','img/four/292243548289.jpg',"志文&美怡",'2019-06-29');
-INSERT INTO fly_love_times VALUES(NULL,'丽江','img/four/292231216904.jpg',"最好的我们",'2019-06-29');
-INSERT INTO fly_love_times VALUES(NULL,'丽江','img/four/292151227904.jpg',"靠近你",'2019-06-29');
-INSERT INTO fly_love_times VALUES(NULL,'丽江','img/four/171729441517.jpg',"红色甲壳虫",'2019-06-27');
-INSERT INTO fly_love_times VALUES(NULL,'丽江','img/four/171714015524.jpg',"锐锐&书书",'2019-06-27');
-INSERT INTO fly_love_times VALUES(NULL,'丽江','img/four/171604157748.jpg',"元辉&红红",'2019-06-27');
-INSERT INTO fly_love_times VALUES(NULL,'丽江','img/four/091823021994.jpg',"娟娟&柄江",'2019-07-09');
-INSERT INTO fly_love_times VALUES(NULL,'丽江','img/four/091813354358.jpg',"小阳&巧巧",'2019-07-09');
-INSERT INTO fly_love_times VALUES(NULL,'丽江','img/four/082243425866.jpg',"小罗&小琼",'2019-07-08');
-INSERT INTO fly_love_times VALUES(NULL,'丽江','img/four/082233545272.jpg',"田野",'2019-07-08');
-INSERT INTO fly_love_times VALUES(NULL,'丽江','img/four/081316048067.jpg',"温柔的时光",'2019-07-08');
-INSERT INTO fly_love_times VALUES(NULL,'丽江','img/four/071027028426.jpg',"明慧&小霞",'2019-07-07');
-INSERT INTO fly_love_times VALUES(NULL,'丽江','img/four/071008402536.jpg',"泽彬&瑞瑞",'2019-07-07');
-INSERT INTO fly_love_times VALUES(NULL,'丽江','img/four/071001241311.jpg',"晋衔&蕾蕾",'2019-07-07');
-INSERT INTO fly_love_times VALUES(NULL,'丽江','img/four/070951364310.jpg',"小徐&鹏鹏",'2019-06-29');
-INSERT INTO fly_love_times VALUES(NULL,'丽江','img/four/292237073536.jpg',"雷雷&丽丽",'2019-06-29');
-INSERT INTO fly_love_times VALUES(NULL,'丽江','img/four/292225484000.jpg',"小确幸",'2019-06-29');
-INSERT INTO fly_love_times VALUES(NULL,'丽江','img/four/292218567085.jpg',"小伴",'2019-06-29');
-INSERT INTO fly_love_times VALUES(NULL,'丽江','img/four/292213486619.jpg',"小然&千蕊",'2019-06-29');
-INSERT INTO fly_love_times VALUES(NULL,'丽江','img/four/171516448687.jpg',"阿徐&玄玄",'2019-07-07');
-INSERT INTO fly_love_times VALUES(NULL,'丽江','img/four/171443311830.jpg',"志尚&希希",'2019-07-07');
-INSERT INTO fly_love_times VALUES(NULL,'丽江','img/four/171402573693.jpg',"白色恋歌",'2019-06-29');
-INSERT INTO fly_love_times VALUES(NULL,'丽江','img/four/171255189249.jpg',"宁宁&小柳",'2019-06-29');
-INSERT INTO fly_love_times VALUES(NULL,'丽江','img/four/180939395516.jpg',"夏日情歌",'2019-06-29');
-INSERT INTO fly_love_times VALUES(NULL,'丽江','img/four/161606038623.jpg',"冬冬&小金",'2019-06-29');
-INSERT INTO fly_love_times VALUES(NULL,'丽江','img/four/180959483260.jpg',"去露营吧",'2019-06-29');
+#three four
+#样式详情表
+CREATE TABLE details(
+    pid INT,     #样式详情id
+    img VARCHAR(128),
+    href VARCHAR(128)
+);
+#三亚
+#游艇旅行 详情
+INSERT INTO details VALUES(1,'img/three/sanya/details/291350353653.jpg',NULL);
+INSERT INTO details VALUES(1,'img/three/sanya/details/291350354780.jpg',NULL);
+INSERT INTO details VALUES(1,'img/three/sanya/details/291350359621.jpg',NULL);
+INSERT INTO details VALUES(1,'img/three/sanya/details/1561787854888573.jpg',NULL);
+INSERT INTO details VALUES(1,'img/three/sanya/details/1561787855122997.jpg',NULL);
+INSERT INTO details VALUES(1,'img/three/sanya/details/1561787855307011.jpg',NULL);
+INSERT INTO details VALUES(1,'img/three/sanya/details/1561787855470719.jpg',NULL);
+INSERT INTO details VALUES(1,'img/three/sanya/details/1561787855974684.jpg',NULL);
+INSERT INTO details VALUES(1,'img/three/sanya/details/1561787856121143.jpg',NULL);
+INSERT INTO details VALUES(1,'img/three/sanya/details/1561787856457976.jpg',NULL);
+INSERT INTO details VALUES(1,'img/three/sanya/details/1561787856512117.jpg',NULL);
+INSERT INTO details VALUES(1,'img/three/sanya/details/1561787856530287.jpg',NULL);
+INSERT INTO details VALUES(1,'img/three/sanya/details/1561787856620440.jpg',NULL);
+INSERT INTO details VALUES(1,'img/three/sanya/details/1561787856689202.jpg',NULL);
+INSERT INTO details VALUES(1,'img/three/sanya/details/1561787857277799.jpg',NULL);
+INSERT INTO details VALUES(1,'img/three/sanya/details/1561787857485440.jpg',NULL);
+INSERT INTO details VALUES(1,'img/three/sanya/details/1561787857681485.jpg',NULL);
+INSERT INTO details VALUES(1,'img/three/sanya/details/1561787858192273.jpg',NULL);
+INSERT INTO details VALUES(1,'img/three/sanya/details/1561787858428247.jpg',NULL);
+INSERT INTO details VALUES(1,'img/three/sanya/details/1561787858494553.jpg',NULL);
+INSERT INTO details VALUES(1,'img/three/sanya/details/1561787858561399.jpg',NULL);
+INSERT INTO details VALUES(1,'img/three/sanya/details/1561787858752459.jpg',NULL);
+INSERT INTO details VALUES(1,'img/three/sanya/details/1561787858929200.jpg',NULL);
+#告白气球 详情
+INSERT INTO details VALUES(2,'img/three/sanya/details/291336153264.jpg',NULL);
+INSERT INTO details VALUES(2,'img/three/sanya/details/291337324255.jpg',NULL);
+INSERT INTO details VALUES(2,'img/three/sanya/details/291337337532.jpg',NULL);
+INSERT INTO details VALUES(2,'img/three/sanya/details/1562467737106336.jpg',NULL);
+INSERT INTO details VALUES(2,'img/three/sanya/details/1562467737250231.jpg',NULL);
+INSERT INTO details VALUES(2,'img/three/sanya/details/1562467737292790.jpg',NULL);
+INSERT INTO details VALUES(2,'img/three/sanya/details/1562467737498417.jpg',NULL);
+INSERT INTO details VALUES(2,'img/three/sanya/details/1562467737823652.jpg',NULL);
+INSERT INTO details VALUES(2,'img/three/sanya/details/1562467737841233.jpg',NULL);
+INSERT INTO details VALUES(2,'img/three/sanya/details/1562467737864512.jpg',NULL);
+INSERT INTO details VALUES(2,'img/three/sanya/details/1562467737869192.jpg',NULL);
+INSERT INTO details VALUES(2,'img/three/sanya/details/1562467738126766.jpg',NULL);
+INSERT INTO details VALUES(2,'img/three/sanya/details/1562467738281359.jpg',NULL);
+INSERT INTO details VALUES(2,'img/three/sanya/details/1562467738335538.jpg',NULL);
+INSERT INTO details VALUES(2,'img/three/sanya/details/1562467738386064.jpg',NULL);
+INSERT INTO details VALUES(2,'img/three/sanya/details/1562467738473465.jpg',NULL);
+INSERT INTO details VALUES(2,'img/three/sanya/details/1562467738830075.jpg',NULL);
+INSERT INTO details VALUES(2,'img/three/sanya/details/1562467738850527.jpg',NULL);
+#丽江
+#漫步古镇 详情
+INSERT INTO details VALUES(3,'img/three/lijiang/details/121432063820.jpg',NULL);
+INSERT INTO details VALUES(3,'img/three/lijiang/details/121432065155.jpg',NULL);
+INSERT INTO details VALUES(3,'img/three/lijiang/details/1562913220111817.jpg',NULL);
+INSERT INTO details VALUES(3,'img/three/lijiang/details/1562913220389147.jpg',NULL);
+INSERT INTO details VALUES(3,'img/three/lijiang/details/1562913220440993.jpg',NULL);
+INSERT INTO details VALUES(3,'img/three/lijiang/details/1562913220753808.jpg',NULL);
+INSERT INTO details VALUES(3,'img/three/lijiang/details/1562913220766010.jpg',NULL);
+INSERT INTO details VALUES(3,'img/three/lijiang/details/1562913220848756.jpg',NULL);
+INSERT INTO details VALUES(3,'img/three/lijiang/details/1562913220862209.jpg',NULL);
+INSERT INTO details VALUES(3,'img/three/lijiang/details/1562913221317029.jpg',NULL);
+INSERT INTO details VALUES(3,'img/three/lijiang/details/1562913221362446.jpg',NULL);
+INSERT INTO details VALUES(3,'img/three/lijiang/details/1562913221587046.jpg',NULL);
+INSERT INTO details VALUES(3,'img/three/lijiang/details/1562913222520756.jpg',NULL);
+INSERT INTO details VALUES(3,'img/three/lijiang/details/1562913222527465.jpg',NULL);
+INSERT INTO details VALUES(3,'img/three/lijiang/details/1562913222547494.jpg',NULL);
+INSERT INTO details VALUES(3,'img/three/lijiang/details/1562913222551198.jpg',NULL);
+INSERT INTO details VALUES(3,'img/three/lijiang/details/1562913222778138.jpg',NULL);
+INSERT INTO details VALUES(3,'img/three/lijiang/details/1562913222783595.jpg',NULL);
+INSERT INTO details VALUES(3,'img/three/lijiang/details/1562913223214538.jpg',NULL);
+INSERT INTO details VALUES(3,'img/three/lijiang/details/1562913223346833.jpg',NULL);
+INSERT INTO details VALUES(3,'img/three/lijiang/details/1562913223550713.jpg',NULL);
+INSERT INTO details VALUES(3,'img/three/lijiang/details/1562913223562877.jpg',NULL);
+INSERT INTO details VALUES(3,'img/three/lijiang/details/1562913223664817.jpg',NULL);
+INSERT INTO details VALUES(3,'img/three/lijiang/details/1562913224113556.jpg',NULL);
+INSERT INTO details VALUES(3,'img/three/lijiang/details/1562913224406297.jpg',NULL);
+INSERT INTO details VALUES(3,'img/three/lijiang/details/1562913224462711.jpg',NULL);
+INSERT INTO details VALUES(3,'img/three/lijiang/details/1562913224569841.jpg',NULL);
+INSERT INTO details VALUES(3,'img/three/lijiang/details/1562913224644361.jpg',NULL);
+INSERT INTO details VALUES(3,'img/three/lijiang/details/1562913224706662.jpg',NULL);
+INSERT INTO details VALUES(3,'img/three/lijiang/details/1562913225136832.jpg',NULL);
+#向往的生活 详情
+INSERT INTO details VALUES(4,'img/three/lijiang/details/121426182250.jpg',NULL);
+INSERT INTO details VALUES(4,'img/three/lijiang/details/121426182898.jpg',NULL);
+INSERT INTO details VALUES(4,'img/three/lijiang/details/1562912874209469.jpg',NULL);
+INSERT INTO details VALUES(4,'img/three/lijiang/details/1562912875154457.jpg',NULL);
+INSERT INTO details VALUES(4,'img/three/lijiang/details/1562912875264803.jpg',NULL);
+INSERT INTO details VALUES(4,'img/three/lijiang/details/1562912875514428.jpg',NULL);
+INSERT INTO details VALUES(4,'img/three/lijiang/details/1562912875529348.jpg',NULL);
+INSERT INTO details VALUES(4,'img/three/lijiang/details/1562912875559417.jpg',NULL);
+INSERT INTO details VALUES(4,'img/three/lijiang/details/1562912875607305.jpg',NULL);
+INSERT INTO details VALUES(4,'img/three/lijiang/details/1562912875639587.jpg',NULL);
+INSERT INTO details VALUES(4,'img/three/lijiang/details/1562912875828013.jpg',NULL);
+INSERT INTO details VALUES(4,'img/three/lijiang/details/1562912876285126.jpg',NULL);
+INSERT INTO details VALUES(4,'img/three/lijiang/details/1562912876291346.jpg',NULL);
+INSERT INTO details VALUES(4,'img/three/lijiang/details/1562912876389046.jpg',NULL);
+INSERT INTO details VALUES(4,'img/three/lijiang/details/1562912876578354.jpg',NULL);
+INSERT INTO details VALUES(4,'img/three/lijiang/details/1562912876814890.jpg',NULL);
+INSERT INTO details VALUES(4,'img/three/lijiang/details/1562912883253265.jpg',NULL);
+INSERT INTO details VALUES(4,'img/three/lijiang/details/1562912883635254.jpg',NULL);
+INSERT INTO details VALUES(4,'img/three/lijiang/details/1562912883644592.jpg',NULL);
+INSERT INTO details VALUES(4,'img/three/lijiang/details/1562912884195720.jpg',NULL);
+INSERT INTO details VALUES(4,'img/three/lijiang/details/1562912884289554.jpg',NULL);
+INSERT INTO details VALUES(4,'img/three/lijiang/details/1562912884596303.jpg',NULL);
+INSERT INTO details VALUES(4,'img/three/lijiang/details/1562912884610317.jpg',NULL);
+#four
+#三亚
+#阿豪&花花 详情
+INSERT INTO details VALUES(5,'img/four/sanya/details/191551205326.jpg',NULL);
+INSERT INTO details VALUES(5,'img/four/sanya/details/191551205856.jpg',NULL);
+INSERT INTO details VALUES(5,'img/four/sanya/details/191551206325.jpg',NULL);
+INSERT INTO details VALUES(5,'img/four/sanya/details/1563522841157214.jpg',NULL);
+INSERT INTO details VALUES(5,'img/four/sanya/details/1563522841225189.jpg',NULL);
+INSERT INTO details VALUES(5,'img/four/sanya/details/1563522841393809.jpg',NULL);
+INSERT INTO details VALUES(5,'img/four/sanya/details/1563522841570182.jpg',NULL);
+INSERT INTO details VALUES(5,'img/four/sanya/details/1563522841722486.jpg',NULL);
+INSERT INTO details VALUES(5,'img/four/sanya/details/1563522841773837.jpg',NULL);
+INSERT INTO details VALUES(5,'img/four/sanya/details/1563522841880649.jpg',NULL);
+INSERT INTO details VALUES(5,'img/four/sanya/details/1563522841954425.jpg',NULL);
+INSERT INTO details VALUES(5,'img/four/sanya/details/1563522842180508.jpg',NULL);
+INSERT INTO details VALUES(5,'img/four/sanya/details/1563522842231166.jpg',NULL);
+INSERT INTO details VALUES(5,'img/four/sanya/details/1563522842311740.jpg',NULL);
+INSERT INTO details VALUES(5,'img/four/sanya/details/1563522842318905.jpg',NULL);
+INSERT INTO details VALUES(5,'img/four/sanya/details/1563522842725476.jpg',NULL);
+INSERT INTO details VALUES(5,'img/four/sanya/details/1563522842845389.jpg',NULL);
+INSERT INTO details VALUES(5,'img/four/sanya/details/1563522842926340.jpg',NULL);
+INSERT INTO details VALUES(5,'img/four/sanya/details/1563522843634987.jpg',NULL);
+#小超&思琪  详情
+INSERT INTO details VALUES(6,'img/four/sanya/details/191542471792.jpg',NULL);
+INSERT INTO details VALUES(6,'img/four/sanya/details/191542477824.jpg',NULL);
+INSERT INTO details VALUES(6,'img/four/sanya/details/1563522265329214.jpg',NULL);
+INSERT INTO details VALUES(6,'img/four/sanya/details/1563522265524796.jpg',NULL);
+INSERT INTO details VALUES(6,'img/four/sanya/details/1563522265530262.jpg',NULL);
+INSERT INTO details VALUES(6,'img/four/sanya/details/1563522265556956.jpg',NULL);
+INSERT INTO details VALUES(6,'img/four/sanya/details/1563522265767013.jpg',NULL);
+INSERT INTO details VALUES(6,'img/four/sanya/details/1563522266159724.jpg',NULL);
+INSERT INTO details VALUES(6,'img/four/sanya/details/1563522266420792.jpg',NULL);
+INSERT INTO details VALUES(6,'img/four/sanya/details/1563522266848104.jpg',NULL);
+INSERT INTO details VALUES(6,'img/four/sanya/details/1563522266954369.jpg',NULL);
+#丽江
+ #甜甜&天予 详情
+INSERT INTO details VALUES(7,'img/four/lijiang/details/151050195278.jpg',NULL);
+INSERT INTO details VALUES(7,'img/four/lijiang/details/151050196435.jpg',NULL);
+INSERT INTO details VALUES(7,'img/four/lijiang/details/1563159110126547.jpg',NULL);
+INSERT INTO details VALUES(7,'img/four/lijiang/details/1563159110250127.jpg',NULL);
+INSERT INTO details VALUES(7,'img/four/lijiang/details/1563159110273609.jpg',NULL);
+INSERT INTO details VALUES(7,'img/four/lijiang/details/1563159110421106.jpg',NULL);
+INSERT INTO details VALUES(7,'img/four/lijiang/details/1563159110516665.jpg',NULL);
+INSERT INTO details VALUES(7,'img/four/lijiang/details/1563159110588025.jpg',NULL);
+INSERT INTO details VALUES(7,'img/four/lijiang/details/1563159111475394.jpg',NULL);
+INSERT INTO details VALUES(7,'img/four/lijiang/details/1563159111565674.jpg',NULL);
+INSERT INTO details VALUES(7,'img/four/lijiang/details/1563159111986283.jpg',NULL);
+#明明&小鹤 详情
+INSERT INTO details VALUES(8,'img/four/lijiang/details/131445372667.jpg',NULL);
+INSERT INTO details VALUES(8,'img/four/lijiang/details/1563000407174335.jpg',NULL);
+INSERT INTO details VALUES(8,'img/four/lijiang/details/1563000407411860.jpg',NULL);
+INSERT INTO details VALUES(8,'img/four/lijiang/details/1563000407439609.jpg',NULL);
+INSERT INTO details VALUES(8,'img/four/lijiang/details/1563000407622851.jpg',NULL);
+INSERT INTO details VALUES(8,'img/four/lijiang/details/1563000407783086.jpg',NULL);
+INSERT INTO details VALUES(8,'img/four/lijiang/details/1563000407793659.jpg',NULL);
+INSERT INTO details VALUES(8,'img/four/lijiang/details/1563000407814152.jpg',NULL);
+INSERT INTO details VALUES(8,'img/four/lijiang/details/1563000408883397.jpg',NULL);
+INSERT INTO details VALUES(8,'img/four/lijiang/details/1563000408958637.jpg',NULL);
 
 
 
 
+
+#three
+#详情文本表
+CREATE TABLE fly_details_text(
+    text_id INT PRIMARY KEY AUTO_INCREMENT,    #详情文本id
+    style_id INT,                              #样式风格的id
+    title VARCHAR(64),
+    palce  VARCHAR(64),
+    details VARCHAR(128)
+);
+#三亚
+INSERT INTO fly_details_text VALUES(NULL,1,"游艇旅行","三亚 三亚湾","我见过春花秋月夏蝉冬雪，也写过晨光熹微斜阳暮色， 可这河山万里岁月寸缕，皆不及你浅笑一问。");
+INSERT INTO fly_details_text VALUES(NULL,2,"告白气球","三亚 三亚湾","只愿和你一起晒冬日暖阳，聊未来理想，喝香浓咖啡，尝妙厨美味，读红楼西厢，诵唐诗宋词，有你，幸福异常！");
+INSERT INTO fly_details_text VALUES(NULL,3,"海上冲浪","三亚 三亚湾","我的吻很长，用了整个夏天，穿越你的脸庞。");
+INSERT INTO fly_details_text VALUES(NULL,4,"华丽的休假","三亚 三亚湾","我的世界乱七八糟烟尘纷杂，而你干干净净，那么温柔，那么明朗，正适合我放心上。");
+INSERT INTO fly_details_text VALUES(NULL,5,"浪漫满屋","三亚 三亚湾","我就喜欢写一点普通的小句子，我就想要把我对你的感情，一点一点写到这里，哪怕在你眼里我只是千万灯芯中的一个，我对你的感情也是只增不减。");
+-- INSERT INTO fly_details_text VALUES(NULL,6,"","","");
+-- INSERT INTO fly_details_text VALUES(NULL,7,"","","");
+-- INSERT INTO fly_details_text VALUES(NULL,8,"","","");
+
+#丽江
+INSERT INTO fly_details_text VALUES(NULL,45,"漫步古镇","丽江 束河","从前的日子很慢，车，马，邮件都慢，一生只够爱一个人。");
+INSERT INTO fly_details_text VALUES(NULL,46,"向往的生活","丽江 雪山马场","我看什么都像你，我看月亮，像你，看星星，也像你。那些白亮透澈、温柔冷清的光，它们都让我想起你。");
+INSERT INTO fly_details_text VALUES(NULL,47,"为爱痴狂","丽江 新基地","我一直爱你，偶尔喜欢别人，在他们像你的时候。");
+INSERT INTO fly_details_text VALUES(NULL,48,"一米阳光","丽江  新基地","春天的糖葫芦， 夏天的冰淇淋，秋天的桂花糕，冬天的热米酒，都甜不过你的笑容。");
+INSERT INTO fly_details_text VALUES(NULL,49,"炊烟","丽江 雪山马场","一百个夏天的句子，都不及你可爱的样子。");
+-- INSERT INTO fly_details_text VALUES(NULL,6,"","","");
+-- INSERT INTO fly_details_text VALUES(NULL,7,"","","");
+-- INSERT INTO fly_details_text VALUES(NULL,8,"","","");
+
+
+
+
+#four
+#创建详情文本表
+CREATE TABLE fly_people_text(
+    text_id INT PRIMARY KEY AUTO_INCREMENT,         #人员图片详情文本id
+    people_id INT,                                  #人员图片id
+    title VARCHAR(64),
+    palce  VARCHAR(64),
+    details VARCHAR(128)
+);
+#三亚
+INSERT INTO fly_people_text VALUES(NULL,1,"阿豪&花花","三亚 幸福湾","在这个不动声色的日子里，遇见美好的你真好，所以我实在忍不住，想陪你到老。");
+INSERT INTO fly_people_text VALUES(NULL,2,"小超&思琪","三亚 呆呆岛","我有没有告诉过你，那么多花草树木、河流高山、繁星宇宙、小猫小狗、蝴蝶蜜蜂我只喜欢你一个。");
+INSERT INTO fly_people_text VALUES(NULL,4,"小帆&瀚天","三亚 呆呆岛","他望了她一眼， 她对他回眸一笑， 生命突然复苏。");
+-- INSERT INTO fly_people_text VALUES(NULL,5,"","","");
+-- INSERT INTO fly_people_text VALUES(NULL,6,"","","");
+#丽江
+INSERT INTO fly_people_text VALUES(NULL,53,"甜甜&天予","丽江 蓝月谷","海底月是天上月，眼前人是心上人。");
+INSERT INTO fly_people_text VALUES(NULL,55,"明明&小鹤","丽江 新基地","我见过春日夏风秋叶冬雪，也踏遍南水北山东麓西岭，可这四季春秋，苍山泱水，都不及你冲我，展眉一笑。");
+-- INSERT INTO fly_people_text VALUES(NULL,4,"","","");
+-- INSERT INTO fly_people_text VALUES(NULL,5,"","","");
 
 
 
