@@ -6,7 +6,7 @@ var three=require('./routes/three.js');
 var four=require('./routes/four.js');
 var five=require('./routes/five.js');
 var six=require('./routes/six.js');
-var six=require('./routes/eight.js');
+var eight=require('./routes/eight.js');
 
 
 const cors=require("cors");
