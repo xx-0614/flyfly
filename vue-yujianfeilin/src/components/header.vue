@@ -2,63 +2,63 @@
     <div class="header">
         <div class="nav">
             <div class="logo">
-                <router-link to="" class="active">
+                <router-link to="" class="active" @click.native="toTop">
                     <img src="../assets/img/index/logo.png" alt="">
                 </router-link>
             </div>
             <div class="nav-bar">
                 <ul class="nav-item" @click="fontWhite">
-                    <li><router-link to="/" class="active">首页</router-link></li>
+                    <li><router-link to="" class="active" @click.native="toIndex">首页</router-link></li>
                     <li>
-                        <router-link to="/Second">风格系列</router-link>
+                        <router-link to="" @click.native="toSecond">风格系列</router-link>
                         <ul>
                             <li>
-                                <router-link to="/Second">INS系列</router-link>
+                                <router-link to=""  @click.native="toSecond">INS系列</router-link>
                             </li>
                             <li>
-                                <router-link to="/Three">小清新系列</router-link>
+                                <router-link to="" @click.native="toSecond">小清新系列</router-link>
                             </li>
                             <li>
-                                <router-link to="/Three">国潮系列</router-link>
+                                <router-link to="" @click.native="toSecond">国潮系列</router-link>
                             </li>
                             <li>
-                                <router-link to="/Three">造型系列</router-link>
+                                <router-link to="" @click.native="toSecond">造型系列</router-link>
                             </li>
                         </ul>
                     </li>
-                    <li><router-link to="/Three" >最新客片</router-link></li>
-                    <li><router-link to="/Four">100%客片</router-link></li>
-                    <li><router-link to="/Five">当季特惠</router-link></li>
+                    <li><router-link to="" @click.native="toThree">最新客片</router-link></li>
+                    <li><router-link to="" @click.native="toFour">100%客片</router-link></li>
+                    <li><router-link to="" @click.native="toFive">当季特惠</router-link></li>
                     <li>
-                       <router-link to="/Six">微电影</router-link>
+                       <router-link to="" @click.native="toSix">微电影</router-link>
                         <ul>
                             <li>
-                                <router-link to="/Six">微电影</router-link>
+                                <router-link to="" @click.native="toSix">微电影</router-link>
                             </li>
                             <li>
-                                <router-link to="/Six">影像花絮</router-link>
+                                <router-link to="" @click.native="toSix">影像花絮</router-link>
                             </li>
                         </ul>
                     </li>
                     <li>
-                        <router-link to="/Seven">品牌服务</router-link>
+                        <router-link to=""  @click.native="toSeven">品牌服务</router-link>
                         <ul>
                             <li>
-                                <router-link to="/Seven">品牌介绍</router-link>
+                                <router-link to=""  @click.native="toSeven">品牌介绍</router-link>
                             </li>
                             <li>
-                                <router-link to="/Seven">服务保障</router-link>
+                                <router-link to=""  @click.native="toSeven">服务保障</router-link>
                             </li>
                             <li>
-                                <router-link to="/Seven">360°VR全景</router-link>
+                                <router-link to="" @click.native="toSeven">360°VR全景</router-link>
                             </li>
                         </ul>
                     </li>
-                    <li><router-link to="/Eight">真实好评</router-link></li>
+                    <li><router-link to="" @click.native="toEight">真实好评</router-link></li>
                 </ul>
                 <div class="search">
                     <span  @click.stop="d_block"></span>
-                    <div class="search-input">
+                    <div class="search-input" v-show="dblock">
                         <input class="search-text" type="text">
                         <input class="search-submit" type="submit" value="">
                     </div>
@@ -70,9 +70,47 @@
 <script>
 export default {
     data(){
-        return {}
+        return {
+            dblock:false
+        }
     },
     methods:{
+        //返回顶部
+        toTop(){
+            scrollTo(0,0)
+        },
+        toIndex(){
+            this.$router.push("/");
+            scrollTo(0,0)
+        },
+        toSecond(){
+            this.$router.push("/Second");
+            scrollTo(0,0)
+        },
+        toThree(){
+            this.$router.push("/Three");
+            scrollTo(0,0)
+        },
+        toFour(){
+            this.$router.push("/Four");
+            scrollTo(0,0)
+        },
+        toFive(){
+            this.$router.push("/Five");
+            scrollTo(0,0)
+        },
+        toSix(){
+            this.$router.push("/Six");
+            scrollTo(0,0)
+        },
+        toSeven(){
+            this.$router.push("/Seven");
+            scrollTo(0,0)
+        },
+        toEight(){
+            this.$router.push("/Eight");
+            scrollTo(0,0)
+        },
         //切换导航栏按钮
         fontWhite(e){
             var ul=document.querySelector(".nav-item");
@@ -86,15 +124,10 @@ export default {
         },
         //输入框的显示与隐藏
         d_block(){
-            var input=document.querySelector(".search-input");
-            if(input.style.opacity==0){
-                input.style.opacity=1
-            }else{
-                input.style.opacity=0
-            }
-           
+           this.dblock=!this.dblock;
         }
     },
+   
 }
 </script>
 <style scoped>
@@ -253,8 +286,6 @@ export default {
     background-color:#fff;
     padding-right:30px;
     border-radius:15px;
-    opacity:0;
-    transition:.5s;
 }
 .header .search .search-text{
     display:block;

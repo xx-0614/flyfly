@@ -563,7 +563,7 @@ CREATE TABLE fly_in(
  INSERT INTO fly_in VALUES(7,'ins生活','img/second/j-i11.jpg',NULL,NULL);
  INSERT INTO fly_in VALUES(8,'ins生活','img/second/j-i12.jpg',NULL,NULL);
  INSERT INTO fly_in VALUES(9,'ins生活','img/second/j-i13.jpg',NULL,NULL);
- INSERT INTO fly_in VALUES(10,'ins生活','img/second/j-i14.jpg',NULL,NULL);
+ INSERT INTO fly_in VALUES(10,'ins生活','img/second/j-i14.png',NULL,NULL);
  INSERT INTO fly_in VALUES(11,'ins生活','img/second/j-i15.jpg',NULL,NULL);
  INSERT INTO fly_in VALUES(12,'ins生活','img/second/j-i16.jpg',NULL,NULL);
  INSERT INTO fly_in VALUES(13,'ins生活','img/second/j-i17.jpg',NULL,NULL);

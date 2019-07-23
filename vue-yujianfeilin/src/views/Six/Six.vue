@@ -84,14 +84,14 @@ export default {
             this.isActive2=!this.isActive2;
             this.axios.get("six").then(result=>{
               this.film2=result.data.slice(6);
-              console.log(this.film2);
+            //   console.log(this.film2);
             })
         },
         loadMore(){
             this.axios.get("six").then(result=>{
-              console.log(result.data)
+            //   console.log(result.data)
               this.film=result.data.slice(0,6);
-              console.log(this.film);
+            //   console.log(this.film);
             })
         }
     },

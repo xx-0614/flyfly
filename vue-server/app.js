@@ -2,6 +2,7 @@ const express=require('express');
 const bodyParser = require('body-parser');
 //引入路由器
 var index=require('./routes/index.js');
+var second=require('./routes/second.js');
 var three=require('./routes/three.js');
 var four=require('./routes/four.js');
 var five=require('./routes/five.js');
@@ -25,6 +26,7 @@ server.use(bodyParser.urlencoded({
 server.use(express.static('public'));
 //使用路由器(挂载)
 server.use('/index',index);
+server.use('/second',second);
 server.use('/three',three);
 server.use('/four',four);
 server.use('/five',five);

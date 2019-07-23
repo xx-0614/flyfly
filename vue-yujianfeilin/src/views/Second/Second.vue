@@ -14,39 +14,39 @@
                         <ul>
                             <li>
                                 <h4 @click="change(0)" :class="{active:currentIndex[0].isActive}">INS系列</h4>
-                                <dl :class="{active:currentIndex[0].isActive}" >
+                                <dl :class="{active:currentIndex[0].isActive}"  @click="changeOn">
                                     <dd>
-                                        <a href="javascript:;">ins生活</a>
+                                        <router-link to="" @click.native="changeSelected(0)" class="active">ins生活</router-link>
                                     </dd>
                                     <dd>
-                                        <a href="javascript:;">ins时尚</a>
+                                        <router-link to="" @click.native="changeSelected(1)">ins时尚</router-link>
                                     </dd>
                                     <dd>
-                                        <a href="javascript:;">ins优雅</a>
+                                        <router-link to="" @click.native="changeSelected(2)">ins优雅</router-link>
                                     </dd>
                                 </dl>
                             </li>
                             <li>
                                 <h4 @click="change(1)" :class="{active:currentIndex[1].isActive}">小情新系列</h4>
-                                <dl :class="{active:currentIndex[1].isActive}">
+                                <dl :class="{active:currentIndex[1].isActive}" @click="changeOn">
                                     <dd>
-                                        <a href="javascript:;">文艺清新</a>
+                                        <router-link to="" @click.native="changeSelected(1)">文艺清新</router-link>
                                     </dd>
                                 </dl>
                             </li>
                             <li>
                                 <h4 @click="change(2)" :class="{active:currentIndex[2].isActive}">国潮系列</h4>
-                                <dl :class="{active:currentIndex[2].isActive}">
+                                <dl :class="{active:currentIndex[2].isActive}" @click="changeOn">
                                     <dd>
-                                        <a href="javascript:;">国潮客片</a>
+                                        <router-link to="" @click.native="changeSelected(0)">国潮客片</router-link>
                                     </dd>
                                 </dl>
                             </li>
                             <li>
                                 <h4 @click="change(3)" :class="{active:currentIndex[3].isActive}">造星系列</h4>
-                                <dl :class="{active:currentIndex[3].isActive}">
+                                <dl :class="{active:currentIndex[3].isActive}" @click="changeOn">
                                     <dd>
-                                        <a href="javascript:;">素人打造</a>
+                                        <router-link to="" @click.native="changeSelected(2)">素人打造</router-link>
                                     </dd>
                                 </dl>
                             </li>
@@ -54,28 +54,17 @@
                     </div>
                 </div>
                 <div class="content-right">
-                    <div class="img1">
-                        <img src="../../assets/img/second/j-i5.jpg" alt="">
+                    <div class="img" v-if="indexList[0].isSelected">
+                        <img :src="require(`../../assets/${item.img}`)" alt="" v-for="(item,i) of listLife" :key="i">
                     </div>
-                    <div class="text">
-                        <h4>ins STYLE生活系列作品</h4>
-                        <p>旅拍的意义就是与你的亲密爱人来一场意料之外的婚礼，在旅途上，你不知道会发生什么，也许上一秒的阴雨，下一秒就会变成波澜壮阔的美景。寻找旅途上最美的风景，把两人美好的时光紧紧封存在简单而平凡的相册里。</p>
+                    <div class="img" v-else-if="indexList[1].isSelected">
+                        <img :src="require(`../../assets/${item.img}`)" alt="" v-for="(item,i) of listFashion" :key="i">
                     </div>
-                    <div class="img2">
-                        <img src="../../assets/img/second/j-i6.jpg" alt="">
-                        <img src="../../assets/img/second/j-i7.jpg" alt="">
-                        <img src="../../assets/img/second/j-i8.jpg" alt="" >
-                        <img src="../../assets/img/second/j-i9.jpg" alt="">
-                        <img src="../../assets/img/second/j-i10.jpg" alt="">
-                        <img src="../../assets/img/second/j-i11.jpg" alt="">
-                        <img src="../../assets/img/second/j-i12.jpg" alt="">
-                        <img src="../../assets/img/second/j-i13.jpg" alt="">
-                        <img src="../../assets/img/second/j-i14.png" alt="">
-                        <img src="../../assets/img/second/j-i15.jpg" alt="">
-                        <img src="../../assets/img/second/j-i16.jpg" alt="">
-                        <img src="../../assets/img/second/j-i17.jpg" alt="">
-                        <img src="../../assets/img/second/j-i18.jpg" alt="">
+                    <div class="img" v-else>
+                        <img :src="require(`../../assets/${item.img}`)" alt="" v-for="(item,i) of listGraceful" :key="i">
                     </div>
+
+                    <router-link to="/three" @click.native="toThree">MORE</router-link>
                 </div>
             </div>
         </div>
@@ -92,9 +81,21 @@ export default {
                 {isActive:false},
                 {isActive:false},
             ],
+            className:"",
+            list:[],
+            listLife:[],
+            listFashion:[],
+            listGraceful:[],
+            indexList:[
+                {isSelected:true},
+                {isSelected:false},
+                {isSelected:false}
+            ],
+          
         }
     },
     methods:{
+        //手风琴
        change(n){
            for(var i=0;i<this.currentIndex.length;i++){
                if(i==n){
@@ -104,6 +105,7 @@ export default {
                }
            }
        },
+       //鼠标滚动控制左侧是否悬浮
        scrollFixed(){
            var fixed=document.querySelector(".content-left>div");
            if(window.scrollY>680&& window.scrollY<document.body.scrollHeight-1500){
@@ -111,51 +113,59 @@ export default {
            }else{
                fixed.className="nav-fix"
            }
+       },
+       //发送请求获取数据
+       loadMore(){
+           this.axios.get("second").then(result=>{
+               for(var item of result.data){
+                   if(item.title=="ins生活"){
+                       this.listLife.push(item);
+                   }else if(item.title=="ins时尚"){
+                       this.listFashion.push(item);
+                   }else{
+                       this.listGraceful.push(item);
+                   }
+               }
+           })
+       },
+       //动态获取图片内容
+       changeSelected(n){
+           for(var i=0;i<this.indexList.length;i++){
+               if(i==n){
+                   this.indexList[i].isSelected=true;
+               }else{
+                   this.indexList[i].isSelected=false;
+               }
+           }
+       },
+       //字体样式切换
+       changeOn(e){
+           var as=document.querySelectorAll(".nav-fix dd a")
+            if(e.target.nodeName=="A"){
+                for(var a of as){
+                   a.className=""
+               }
+            e.target.className="active"
+           }
+       },
+       toThree(){
+           scrollTo(0,0);
        }
+    },
+    created(){
+        this.loadMore();
     },
     mounted(){
         window.addEventListener('scroll', this.scrollFixed)
-    }
+    },
+    destroyed() {
+         window.removeEventListener('scroll', this.scrollFixed)
+    },
 }
 </script>
 <style scoped>
 @import "../../assets/common.css";
-.content-right{
-    width:60%;
-    float:right;
-    overflow:hidden;
-    margin-left:30px;
-    margin-right:130px;
-    
-}
-.content-right .img1{
-    max-width:100%;
-}
-.content .text{
-    margin-top:58px;
-    margin-bottom:153px;
-}
-.content .text h4{
-    color:#c1c1c1;
-    font-size:40px;
-    height:40px;
-    line-height:40px;
-    border-left:6px solid #69cfc1;
-    padding-left:31px;
-    font-weight:400;
-    margin-bottom:90px;
-}
-.content .text p{
-    text-indent:2em;
-    font-size:30px;
-    color:#c1c1c1;
-    line-height:1.6em;
-}
-.content .img2 img{
-    width:100%;
-    margin:10px;
-    display:inline-block;
-}
+
 .style{
     width:100%;
     height:100%;
@@ -167,7 +177,6 @@ export default {
 }
 .main{
     margin:0 auto;
-    min-width:1540px;
 }
 .content{
     overflow:hidden;
@@ -205,6 +214,7 @@ export default {
     color:#616161;
     line-height:1.1em;
     font-family:Light;
+    text-transform: uppercase;
 }
 
 .nav-fix ul{
@@ -239,8 +249,9 @@ export default {
     font-size:16px;
     display:inline-block;
     padding-left:19px;
+    transition:all .3s;
 }
-.nav-fix dl dd.active a{
+.nav-fix dl dd a.active{
     color:#fff;
     background-image:url(../../assets/img/second/j-p3h.png)
 }
@@ -253,5 +264,39 @@ export default {
 .nav-fix dl.active{
     display:block;
 }
+.content-right{
+    width:60%;
+    float:right;
+    overflow:hidden;
+    margin-left:30px;
+    margin-right:80px;
+    
+}
+
+.content-right .img img{
+    width:100%;
+    margin:10px;
+    display:inline-block;
+}
+.content-right a{
+    display:block;
+    margin:30px auto;
+    width:213px;
+    height:50px;
+    line-height:46px;
+    border:2px solid #fff;
+    text-align:center;
+    background:#1d1d1d;
+    font-size:16px;
+    font-weight:400;
+    color:#fff;
+    transition:all .5s;
+}
+.content-right a:hover{
+    color:#000;
+    background:#fff;
+    border:2px solid #000;
+}
+
 </style>
 
