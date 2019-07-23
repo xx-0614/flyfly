@@ -16,7 +16,7 @@
             <div class="wp2">
             <div class="tabh1">
                 <div class="box">
-                    <ul class="ul-hs1" v-if="isFilm">
+                    <ul class="ul-hs1" v-if="isActive1">
                             <li class="video_item" v-for="(item,i) of film" :key="i">
                                 <div class="pic">
                                     <img :src="require(`../../assets/${item.img}`)">
@@ -72,7 +72,6 @@ export default {
         return{
             isActive1:true,
             isActive2:false,
-            isFilm:true,
             film:[],
             film2:[],
         }
@@ -80,18 +79,15 @@ export default {
     methods:{
         //切换按钮
         toggle(){
-            this.isFilm=this.isActive1=!this.isActive1;
+            this.isActive1=!this.isActive1;
             this.isActive2=!this.isActive2;
             this.axios.get("six").then(result=>{
               this.film2=result.data.slice(6);
-            //   console.log(this.film2);
             })
         },
         loadMore(){
             this.axios.get("six").then(result=>{
-            //   console.log(result.data)
               this.film=result.data.slice(0,6);
-            //   console.log(this.film);
             })
         }
     },
