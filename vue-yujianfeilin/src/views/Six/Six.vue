@@ -67,7 +67,7 @@
             </div>
         </div>
     </div>
-    <div class="six-none" id="dv" @click="close()">
+    <div class="six-none" id="dv" @click.self="close()">
          <div class="six-video">
              <video  src="../../assets/img/six/PeHAdi21vjqd1QJys6j@@hdregop.mp4" id="v3" controls></video>
              <div></div>
