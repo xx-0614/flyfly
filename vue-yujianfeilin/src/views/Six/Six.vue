@@ -1,70 +1,81 @@
 <template>
+   <div>
     <div>
         <div class="ban">
-        <img src="../../assets/img/six/ban-h4.jpg" alt="">
-    </div>
-    <div class="main">
-        <div class="m-hs2 hs">
-            <ul class="ul-tab">
-                <li>
-                    <router-link to="" :class="{active:isActive1}" @click.native="toggle">微电影</router-link>
-                </li>
-                 <li>
-                    <router-link to="" :class="{active:isActive2}" @click.native="toggle">影像花絮</router-link>
-                </li>
-            </ul>
-            <div class="wp2">
-            <div class="tabh1">
-                <div class="box">
-                    <ul class="ul-hs1" v-if="isActive1">
-                            <li class="video_item" v-for="(item,i) of film" :key="i">
-                                <div class="pic">
-                                    <img :src="require(`../../assets/${item.img}`)">
-                                    <div class="bg">
-                                        <div class="video" >
-                                            <router-link  to="" class="item_link"></router-link>
+           <img src="../../assets/img/six/ban-h4.jpg" alt="">
+        </div>
+        <div class="main">
+            <div class="m-hs2 hs">
+                <ul class="ul-tab">
+                    <li>
+                        <router-link to="" :class="{active:isActive1}" @click.native="toggle">微电影</router-link>
+                    </li>
+                    <li>
+                        <router-link to="" :class="{active:isActive2}" @click.native="toggle">影像花絮</router-link>
+                    </li>
+                </ul>
+                <div class="wp2">
+                    <div class="tabh1">
+                        <div class="box">
+                            <ul class="ul-hs1" v-if="isActive1">
+                                <li class="video_item" v-for="(item,i) of film" :key="i">
+                                    <div class="pic">
+                                        <img :src="require(`../../assets/${item.img}`)">
+                                        <div class="bg" @click="open()">
+                                            <div class="video" >
+                                                <router-link  to="" class="item_link"></router-link>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="txt">
-                                    <h3><router-link to="">{{item.subtitle}}</router-link></h3>
-                                    <p>{{item.details}}</p>
-                                </div>
-                                <div class="item_info">
-                                    <p class="title ellipsis">{{item.subtitle}}</p>
-                                    <p class="subtitle ellipsis">{{item.details}}</p>
-                                </div>
-                            </li>
-                    </ul>
-                    <ul class="ul-hs1" v-else>
-                            <li class="video_item" v-for="(item,i) of film2" :key="i">
-                                <div class="pic">
-                                    <img :src="require(`../../assets/${item.img}`)">
-                                    <div class="bg">
-                                        <div class="video" >
-                                            <router-link  to="" class="item_link"></router-link>
-                                        </div>
+                                    <div class="txt">
+                                        <h3><router-link to="">{{item.subtitle}}</router-link></h3>
+                                        <p>{{item.details}}</p>
                                     </div>
-                                </div>
-                                <div class="txt">
-                                    <h3><router-link to="">{{item.subtitle}}</router-link></h3>
-                                    <p>{{item.details}}</p>
-                                </div>
-                                <div class="item_info">
-                                    <p class="title ellipsis">{{item.subtitle}}</p>
-                                    <p class="subtitle ellipsis">{{item.details}}</p>
-                                </div>
-                            </li>
-                    </ul>
+                                    <div class="item_info">
+                                       <p class="title ellipsis">{{item.subtitle}}</p>
+                                       <p class="subtitle ellipsis">{{item.details}}</p>
+                                    </div>
+                                </li>
+                            </ul>
+                    
+                            <ul class="ul-hs1" v-else>
+                                <li class="video_item" v-for="(item,i) of film2" :key="i">
+                                    <div class="pic">
+                                       <img :src="require(`../../assets/${item.img}`)">
+                                       <div class="bg">
+                                           <div class="video" >
+                                               <router-link  to="" class="item_link"></router-link>
+                                           </div>
+                                       </div>
+                                    </div>
+                                    <div class="txt">
+                                       <h3><router-link to="">{{item.subtitle}}</router-link></h3>
+                                        <p>{{item.details}}</p>
+                                    </div>
+                                    <div class="item_info">
+                                       <p class="title ellipsis">{{item.subtitle}}</p>
+                                       <p class="subtitle ellipsis">{{item.details}}</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="pages">
+                       <ul></ul>
+                    </div>
                 </div>
-            </div>
-            <div class="pages">
-                <ul></ul>
             </div>
         </div>
     </div>
+    <div class="six-none" id="dv" @click="close()">
+      <div class="six-zhe">
+         <div class="six-video">
+             <video  src="../../assets/img/six/PeHAdi21vjqd1QJys6j@@hdregop.mp4" id="v3" controls></video>
+             <div></div>
+         </div>
+      </div>
     </div>
-    </div>
+   </div>
 </template>
 <script>
 export default {
@@ -77,6 +88,19 @@ export default {
         }
     },
     methods:{
+        open(){
+            var  dv=document.getElementById("dv");
+            var  v3=document.getElementById("v3");
+            dv.className="";
+            v3.play();
+
+        },
+        close(e){
+            //e.preventDefault();
+            var  dv=document.getElementById("dv");
+            var  v3=document.getElementById("v3");
+            dv.className="six-none";       
+        },
         //切换按钮
         toggle(){
             this.isActive1=!this.isActive1;
@@ -98,6 +122,29 @@ export default {
 </script>
 <style scoped>
 @import "../../assets/common.css";
+.six-zhe{
+    position:fixed;
+    top:0;
+    width:100%;
+    height:2200px;
+    background-color:rgba(68, 68, 68,0.6);
+    opacity:1;
+}
+.six-video{
+    width:980px;
+    height:640px;
+    margin:160px auto;
+    background-color:rgb(68, 68, 68);
+     padding:13px 13px;
+}
+.six-video>video{
+    width:954px;
+    height:541px;
+}
+.six-none{
+    display:none;
+}
+
 
 .bd-hs{
     padding-top:100px;
