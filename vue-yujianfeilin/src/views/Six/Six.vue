@@ -95,8 +95,8 @@ export default {
             v3.play();
 
         },
-        close(e){
-            //e.preventDefault();
+        close(){
+            e.preventDefault();
             var  dv=document.getElementById("dv");
             var  v3=document.getElementById("v3");
             dv.className="six-none";       
@@ -126,7 +126,7 @@ export default {
     position:fixed;
     top:0;
     width:100%;
-    height:2200px;
+    height:1000px;
     background-color:rgba(68, 68, 68,0.6);
     opacity:1;
 }
