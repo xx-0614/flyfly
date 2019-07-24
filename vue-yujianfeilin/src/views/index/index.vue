@@ -2,12 +2,18 @@
     <div>   
         <!--轮播图-->
         <el-carousel :interval="3000" height="750px">
-            <el-carousel-item v-for="(item) in 3" :key="item"></el-carousel-item>
+            <el-carousel-item v-for="(item) in carousel" :key="item">
+                <img :src="require(`../../assets/${item.img}`)">
+            </el-carousel-item>
         </el-carousel>
         <div class="main">
             <index-city :city="city"></index-city>
             <index-activity :activity="activity"></index-activity> 
-            <index-microfilm ></index-microfilm>
+            <index-microfilm :microfilm="microfilm"></index-microfilm>
+            <div class="bg"></div>
+            <index-travel :travel="travel"></index-travel>    
+            <div class="bg2"></div>
+            <index-lovetime :lovetime="lovetime"></index-lovetime>
         </div>
     </div>
 </template>
@@ -15,14 +21,17 @@
 import Indexcity from "./Index-city.vue"
 import Indexactivity from "./Index-activity.vue"
 import Indexmicrofilm from "./Index-microfilm.vue"
+import Indextravel from "./Index-travel.vue"
+import Indexlovetime from "./Index-lovetime.vue"
 export default {
     data(){
         return {
+            carousel:[],
             city:[],
             activity:[],
             microfilm:[],
             travel:[],
-            love_times:[],
+            lovetime:[],
             comment:[]
         }
     },
@@ -30,14 +39,17 @@ export default {
         "index-city":Indexcity,
         "index-activity":Indexactivity,
         "index-microfilm":Indexmicrofilm,
+        "index-travel":Indextravel,
+        "index-lovetime":Indexlovetime,
     },
     created(){
         this.axios.get("index").then(result=>{
+            this.carousel=result.data.carousel;
             this.city=result.data.city;
             this.activity=result.data.activity;
             this.microfilm=result.data.microfilm;
             this.travel=result.data.travel;
-            this.love_times=result.data.love_times;
+            this.lovetime=result.data.love_times;
             this.comment=result.data.comment;
         })
     },
@@ -52,17 +64,21 @@ export default {
     line-height: 300px;
     margin: 0;
   }
-  .el-carousel__item{
-    background:url(../../assets/img/index/banner1.jpg)  center center no-repeat;
-  }
-  
-  div.el-carousel__item:nth-child(4){
-    background:url(../../assets/img/index/271736095684.jpg) center center no-repeat;
-  }
-  div.el-carousel__item:nth-child(5){
-    background:url(../../assets/img/index/091400381481.jpg) center center no-repeat;
-  }
   .main{
       margin:0 auto;
   }
+  .main div.bg,.main div.bg2{
+      width:100%;
+      height:600px;
+      background:url("../../assets/img/index/bg.jpg") center center no-repeat;
+      background-size:cover;
+      background-attachment: fixed;
+      opacity:0.5;
+  }
+.main div.bg2{
+      background:url("../../assets/img/index/bg2.jpg") center center no-repeat;
+      background-size:cover;
+      background-attachment: fixed;
+      opacity:0.8;
+}
 </style>

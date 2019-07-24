@@ -6,8 +6,9 @@
             <p>情绪微电影</p>
         </div>
         <div class="carousel"> 
-            <el-carousel	:interval="4000"	type="card"	height="400px">
-                <el-carousel-item	v-for="item	in	6"	:key="item" @click.native="toFilm">
+            <el-carousel	:interval="3000"	type="card"	height="500px">
+                <el-carousel-item	v-for="item	in	microfilm"	:key="item" @click.native="toFilm">
+                    <img :src="require(`../../assets/${item.img}`)">
                 </el-carousel-item>
             </el-carousel>
         </div>
@@ -21,6 +22,7 @@ export default {
     data(){
         return{}
     },
+    props:["microfilm"],
     methods:{
         //点击跳转页面
         toFilm(){
@@ -62,10 +64,11 @@ export default {
     .m-title:hover{
         top:-10px;
     }
-    .el-carousel__item{
-        background:url(../../assets/img/index/211435017512.jpg) center center no-repeat;
+    .el-carousel__item img{
+        width:100%;
+        /* background:url(../../assets/img/index/211435017512.jpg) center center no-repeat; */
     }
-    
+/*     
     div.el-carousel__item:nth-child(4){
         background:url(../../assets/img/index/211445188656.jpg) center center no-repeat;
     }
@@ -81,7 +84,7 @@ export default {
     div.el-carousel__item:nth-child(8){
         background:url(../../assets/img/index/1561438552808543.jpg) center center no-repeat;
     }
-    
+     */
 
     .carousel{
         margin:50px;
