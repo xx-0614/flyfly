@@ -95,8 +95,8 @@ export default {
             v3.play();
 
         },
-        close(){
-            e.preventDefault();
+        close(e){
+            // e.preventDefault();
             var  dv=document.getElementById("dv");
             var  v3=document.getElementById("v3");
             dv.className="six-none";       
