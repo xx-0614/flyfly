@@ -3,7 +3,7 @@ const router=express.Router();
 const pool=require("../pool");
 
 router.get('/',(req,res)=>{
-    pool.query("SELECT * FROM fly_travel",(err,result)=>{
+    pool.query("SELECT * FROM fly_city_style",(err,result)=>{
         if(err) throw err;            
              console.log(result);
              res.send(result)

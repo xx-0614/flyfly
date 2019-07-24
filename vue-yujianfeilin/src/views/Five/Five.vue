@@ -75,7 +75,7 @@ export default {
     .five-text-bg{
         width:1410px;
         height:3.98px;
-        background:url("../../assets/img/three/h2.png") no-repeat;
+        background:url("../../assets/img/three/sanya/style/h2.png") no-repeat;
         margin:28px auto;
     }
     .fivetab{

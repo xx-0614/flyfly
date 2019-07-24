@@ -5,7 +5,7 @@
                <div class="threetabbar-div">
                  <threetab2  v-for="(item,i) of city" :key="i"
                   :imgurl="require(`../../assets/${item.img}`)"
-                  :subtitle="item.subtitle"
+                  :subtitle="item.title"
                   :dates="item.dates"
                  ></threetab2> 
                  <div class="page-div">
@@ -17,7 +17,7 @@
               <div class="threetabbar-div">
                 <threetab1  v-for="(item,i) of sanya" :key="i"
                   :imgurl="require(`../../assets/${item.img}`)"
-                  :subtitle="item.subtitle"
+                  :subtitle="item.title"
                   :dates="item.dates"
                 ></threetab1>   
                 <div class="page-div">               
@@ -29,7 +29,7 @@
                <div class="threetabbar-div">
                  <threetab2  v-for="(item,i) of lijiang" :key="i"
                   :imgurl="require(`../../assets/${item.img}`)"
-                  :subtitle="item.subtitle"
+                  :subtitle="item.title"
                   :dates="item.dates"
                  ></threetab2>
                   <div class="page-div">                  
@@ -41,7 +41,7 @@
               <div class="threetabbar-div">
                 <threetab1  v-for="(item,i) of sanya" :key="i"
                   :imgurl="require(`../../assets/${item.img}`)"
-                  :subtitle="item.subtitle"
+                  :subtitle="item.title"
                   :dates="item.dates"
                 ></threetab1>  
                  <div class="page-div">
@@ -53,7 +53,7 @@
                 <div class="threetabbar-div">
                  <threetab2  v-for="(item,i) of lijiang" :key="i"
                   :imgurl="require(`../../assets/${item.img}`)"
-                  :subtitle="item.subtitle"
+                  :subtitle="item.title"
                   :dates="item.dates"
                  ></threetab2>
                   <div class="page-div">               
@@ -65,7 +65,7 @@
               <div class="threetabbar-div">
                 <threetab1  v-for="(item,i) of sanya" :key="i"
                   :imgurl="require(`../../assets/${item.img}`)"
-                  :subtitle="item.subtitle"
+                  :subtitle="item.title"
                   :dates="item.dates"
                 ></threetab1>  
                  <div class="page-div">             
@@ -77,7 +77,7 @@
                 <div class="threetabbar-div">
                  <threetab2  v-for="(item,i) of lijiang" :key="i"
                   :imgurl="require(`../../assets/${item.img}`)"
-                  :subtitle="item.subtitle"
+                  :subtitle="item.title"
                   :dates="item.dates"
                  ></threetab2>
                   <div class="page-div">               
@@ -89,7 +89,7 @@
               <div class="threetabbar-div">
                 <threetab1  v-for="(item,i) of sanya" :key="i"
                   :imgurl="require(`../../assets/${item.img}`)"
-                  :subtitle="item.subtitle"
+                  :subtitle="item.title"
                   :dates="item.dates"
                 ></threetab1>
                  <div class="page-div">             
@@ -101,7 +101,7 @@
                 <div class="threetabbar-div">
                  <threetab2  v-for="(item,i) of lijiang" :key="i"
                   :imgurl="require(`../../assets/${item.img}`)"
-                  :subtitle="item.subtitle"
+                  :subtitle="item.title"
                   :dates="item.dates"
                  ></threetab2>
                   <div class="page-div">    
@@ -113,7 +113,7 @@
                <div class="threetabbar-div">
                 <threetab1  v-for="(item,i) of sanya" :key="i"
                   :imgurl="require(`../../assets/${item.img}`)"
-                  :subtitle="item.subtitle"
+                  :subtitle="item.title"
                   :dates="item.dates"
                 ></threetab1>  
                  <div class="page-div">
@@ -168,13 +168,14 @@ import Threetab2 from './Threetab2.vue';
              this.axios.get("http://127.0.0.1:3000/three").then(result=>{
                    console.log(result);
                    this.cityAll=result.data;
+                   console.log(result.data)
                    var n=0;
                    var m=0;
                    for(var i=0 ;i<result.data.length;i++){                    
-                          if(result.data[i].title=="三亚"){
+                          if(result.data[i].city_id=="1"){
                             this.sanyaAll[n]=result.data[i];
                             n++;
-                        }else if(result.data[i].title=="丽江"){
+                        }else if(result.data[i].city_id=="2"){
                             this.lijiangAll[m]=result.data[i];
                             m++;
                         }   

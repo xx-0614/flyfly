@@ -24,10 +24,10 @@ router.get('/',(req,res)=>{
                 pool.query("SELECT * FROM fly_microfilm",(err,result)=>{
                     if(err) throw err;
                     output.microfilm=result;
-                    pool.query("SELECT * FROM fly_travel",(err,result)=>{
+                    pool.query("SELECT * FROM fly_city_style",(err,result)=>{
                         if(err) throw err;
                         output.travel=result;
-                        pool.query("SELECT * FROM fly_love_times",(err,result)=>{
+                        pool.query("SELECT * FROM fly_city_people",(err,result)=>{
                             if(err) throw err;
                             output.love_times=result;
                             pool.query("SELECT * FROM fly_comment",(err,result)=>{

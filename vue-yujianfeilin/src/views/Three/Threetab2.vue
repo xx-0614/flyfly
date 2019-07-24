@@ -88,7 +88,7 @@ export default {
         top:50%;
         width:311.25px;
         height:473.09px;
-        background:url(../../assets/img/three/h1.png) no-repeat;
+        background:url(../../assets/img/three/sanya/style/h1.png) no-repeat;
         opacity:0;
        transition:all 0.3s linear;
     }    

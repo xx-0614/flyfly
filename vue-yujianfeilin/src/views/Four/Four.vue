@@ -2,7 +2,7 @@
     <div>
         <div class="four-content">
             <div class="four-header">
-               <img src="../../assets/img/four/ban-h3.jpg">
+               <img src="../../assets/img/four/sanya/people/ban-h3.jpg">
             </div>
             <div class="four-text">
                <h3>BEAUTIFUL GUEST PHOTO</h3>
@@ -55,7 +55,7 @@ export default {
     .four-text-bg{
         width:1410px;
         height:3.98px;
-        background:url("../../assets/img/three/h2.png") no-repeat;
+        background:url("../../assets/img/four/sanya/people/h2.png") no-repeat;
         margin:28px auto;
     }
     

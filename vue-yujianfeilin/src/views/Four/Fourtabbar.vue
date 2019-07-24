@@ -5,7 +5,7 @@
                 <div class="fourtabbar-div">
                     <fourtab1 v-for="(item ,i) of city" :key="i"
                         :imgurl="require(`../../assets/${item.img}`)"
-                        :subtitle="item.subtitle"
+                        :subtitle="item.title"
                         :dates="item.dates"
                     ></fourtab1>
                 </div>
@@ -14,7 +14,7 @@
                 <div class="fourtabbar-div">          
                     <fourtab2 v-for="(item,i) of sanya" :key="i"
                         :imgurl="require(`../../assets/${item.img}`)"
-                        :subtitle="item.subtitle"
+                        :subtitle="item.title"
                         :dates="item.dates"
                     ></fourtab2>
                </div>
@@ -23,7 +23,7 @@
                 <div class="fourtabbar-div">          
                     <fourtab1 v-for="(item,i) of lijiang" :key="i"
                         :imgurl="require(`../../assets/${item.img}`)"
-                        :subtitle="item.subtitle"
+                        :subtitle="item.title"
                         :dates="item.dates"
                     ></fourtab1>
                </div>
@@ -32,7 +32,7 @@
                  <div class="fourtabbar-div">          
                     <fourtab2 v-for="(item,i) of sanya" :key="i"
                         :imgurl="require(`../../assets/${item.img}`)"
-                        :subtitle="item.subtitle"
+                        :subtitle="item.title"
                         :dates="item.dates"
                     ></fourtab2>
                </div>
@@ -41,7 +41,7 @@
                  <div class="fourtabbar-div">          
                     <fourtab1 v-for="(item,i) of lijiang" :key="i"
                         :imgurl="require(`../../assets/${item.img}`)"
-                        :subtitle="item.subtitle"
+                        :subtitle="item.title"
                         :dates="item.dates"
                     ></fourtab1>
                </div>
@@ -50,7 +50,7 @@
                  <div class="fourtabbar-div">          
                     <fourtab2 v-for="(item,i) of sanya" :key="i"
                         :imgurl="require(`../../assets/${item.img}`)"
-                        :subtitle="item.subtitle"
+                        :subtitle="item.title"
                         :dates="item.dates"
                     ></fourtab2>
                </div>
@@ -59,7 +59,7 @@
                   <div class="fourtabbar-div">          
                     <fourtab1 v-for="(item,i) of lijiang" :key="i"
                         :imgurl="require(`../../assets/${item.img}`)"
-                        :subtitle="item.subtitle"
+                        :subtitle="item.title"
                         :dates="item.dates"
                     ></fourtab1>
                </div>
@@ -68,7 +68,7 @@
                 <div class="fourtabbar-div">          
                     <fourtab2 v-for="(item,i) of sanya" :key="i"
                         :imgurl="require(`../../assets/${item.img}`)"
-                        :subtitle="item.subtitle"
+                        :subtitle="item.title"
                         :dates="item.dates"
                     ></fourtab2>
                </div>
@@ -77,7 +77,7 @@
                  <div class="fourtabbar-div">          
                     <fourtab1 v-for="(item,i) of lijiang" :key="i"
                         :imgurl="require(`../../assets/${item.img}`)"
-                        :subtitle="item.subtitle"
+                        :subtitle="item.title"
                         :dates="item.dates"
                     ></fourtab1>
                </div>
@@ -86,7 +86,7 @@
                 <div class="fourtabbar-div">          
                     <fourtab2 v-for="(item,i) of sanya" :key="i"
                         :imgurl="require(`../../assets/${item.img}`)"
-                        :subtitle="item.subtitle"
+                        :subtitle="item.title"
                         :dates="item.dates"
                     ></fourtab2>
                </div>
@@ -119,12 +119,12 @@ import Fourtab2 from './Fourtab2.vue';
                    var n=0;
                    var m=0;
                    for(var i=0 ;i<result.data.length;i++){                    
-                          if(result.data[i].title=="三亚"){
+                          if(result.data[i].city_id=="1"){
                                  this.sanya[n]=result.data[i];
                                  n++;
                         }else 
                           if(result.data[i]
-                          .title=="丽江"){
+                          .city_id=="2"){
                                  this.lijiang[m]=result.data[i];
                                   m++;
                         }                                           

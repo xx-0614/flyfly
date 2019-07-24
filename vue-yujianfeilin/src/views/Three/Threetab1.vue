@@ -81,14 +81,14 @@ export default {
     .threetab1-ul>.threetab1-li>a>.threetab1-div3>p{
         font-size:12px;
         color:#7a7a7a;
-        padding-left:20px;  
+        padding-left:22px;  
     }
     .threetab1-div2{
        position:absolute;
        top:50%;
         width:311.25px;
         height:473.09px;
-        background:url(../../assets/img/three/h1.png) no-repeat;
+        background:url(../../assets/img/three/sanya/style/h1.png) no-repeat;
         opacity:0;
        transition:all 0.3s linear;
     }    

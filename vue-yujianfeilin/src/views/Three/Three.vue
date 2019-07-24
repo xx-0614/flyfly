@@ -2,7 +2,7 @@
     <div>
         <div class="three-content">
             <div class="three-header">
-               <img src="../../assets/img/three/ban-h1.jpg">
+               <img src="../../assets/img/three/sanya/style/ban-h1.jpg">
             </div>
             <div class="three-text">
                <h3> RECORD LOVE TOUR AROUND</h3>
@@ -59,7 +59,7 @@ export default {
     .three-text-bg{
         width:1410px;
         height:3.98px;
-        background:url("../../assets/img/three/h2.png") no-repeat;
+        background:url("../../assets/img/three/sanya/style/h2.png") no-repeat;
         margin:28px auto;
     }
     

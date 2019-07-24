@@ -121,7 +121,7 @@ INSERT INTO fly_city_style VALUES(NULL,1,'img/three/sanya/style/141348363946.jpg
 #丽江
 INSERT INTO fly_city_style VALUES(NULL,2,'img/three/lijiang/style/121430406066.jpg',"漫步古镇",'2019-07-12','details?pid=3');
 INSERT INTO fly_city_style VALUES(NULL,2,'img/three/lijiang/style/121424543646.jpg',"向往的生活",'2019-07-12','details?pid=4');
-INSERT INTO fly_city_style VALUES(NULL,2,'img/three/lijiang/style/121420147044.jpg',"为爱痴狂",'',NULL);
+INSERT INTO fly_city_style VALUES(NULL,2,'img/three/lijiang/style/121420147044.jpg',"为爱痴狂",'2019-06-27',NULL);
 INSERT INTO fly_city_style VALUES(NULL,2,'img/three/lijiang/style/121413529958.jpg',"一米阳光",'2019-07-12',NULL);
 INSERT INTO fly_city_style VALUES(NULL,2,'img/three/lijiang/style/121407499810.jpg',"炊烟",'2019-07-12',NULL);
 INSERT INTO fly_city_style VALUES(NULL,2,'img/three/lijiang/style/131552552182.jpg',"ins林中美眷",'2019-06-27',NULL);
