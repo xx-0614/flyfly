@@ -68,12 +68,10 @@
         </div>
     </div>
     <div class="six-none" id="dv" @click="close()">
-      <div class="six-zhe">
          <div class="six-video">
              <video  src="../../assets/img/six/PeHAdi21vjqd1QJys6j@@hdregop.mp4" id="v3" controls></video>
              <div></div>
          </div>
-      </div>
     </div>
    </div>
 </template>
@@ -92,14 +90,16 @@ export default {
             var  dv=document.getElementById("dv");
             var  v3=document.getElementById("v3");
             dv.className="";
-            v3.play();
+            if(dv.className==""){
+               dv.className="six-zhe"
+             }
+              v3.play();
 
         },
         close(){
-            e.preventDefault();
             var  dv=document.getElementById("dv");
             var  v3=document.getElementById("v3");
-            dv.className="six-none";       
+            dv.className="six-none";          
         },
         //切换按钮
         toggle(){
