@@ -16,6 +16,7 @@ INSERT INTO fly_index_carousel VALUES(NULL,'img/index/091400381481.jpg');
 
 
 
+
  #创建城市数据的表
  CREATE TABLE fly_index_city(
     cid INT PRIMARY KEY AUTO_INCREMENT,
@@ -57,7 +58,11 @@ CREATE TABLE fly_microfilm(
 );
 INSERT INTO fly_microfilm VALUES(NULL,'img/index/211435017512.jpg');
 INSERT INTO fly_microfilm VALUES(NULL,'img/index/211445188656.jpg');
-INSERT INTO fly_microfilm VALUES(NULL,'img/index/062014229804.png');
+INSERT INTO fly_microfilm VALUES(NULL,'img/index/j-i18.jpg');
+INSERT INTO fly_microfilm VALUES(NULL,'img/index/1562033758195958.jpg');
+INSERT INTO fly_microfilm VALUES(NULL,'img/index/1561438545370178.jpg');
+INSERT INTO fly_microfilm VALUES(NULL,'img/index/1561438552808543.jpg');
+
 
 
  
