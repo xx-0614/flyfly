@@ -5,7 +5,6 @@ const pool=require("../pool");
 router.get('/',(req,res)=>{
     pool.query("SELECT * FROM fly_city_style",(err,result)=>{
         if(err) throw err;            
-             console.log(result);
              res.send(result)
             })
     })

@@ -96,12 +96,7 @@ export default {
               v3.play();
 
         },
-<<<<<<< HEAD
-        close(e){
-            // e.preventDefault();
-=======
         close(){
->>>>>>> 4b3f99991852537bd9eecb6b01c10cdecc0a3ef0
             var  dv=document.getElementById("dv");
             var  v3=document.getElementById("v3");
             dv.className="six-none";          
