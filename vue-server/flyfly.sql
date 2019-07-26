@@ -36,7 +36,6 @@ INSERT INTO fly_index_city VALUES(NULL,'img/index/picq8.jpg',"塞班岛/Saipan",
 
 
 #创建六周年活动表
-DROP  DATABASE IF EXISTS fly_week_year;
 CREATE TABLE fly_week_year(
     yid INT PRIMARY KEY AUTO_INCREMENT,
     img VARCHAR(128),
@@ -51,7 +50,6 @@ INSERT INTO fly_week_year VALUES(NULL,'img/index/091413422549.jpg','六周年店
 
 #轮播2
 #创建情绪微电影表
-DROP  DATABASE IF EXISTS fly_microfilm;
 CREATE TABLE fly_microfilm(
     mid INT PRIMARY KEY AUTO_INCREMENT,
     img VARCHAR(128)
@@ -290,226 +288,205 @@ INSERT INTO fly_city_people VALUES(NULL,2,'img/four/lijiang/people/151649384577.
 
 #three four
 #样式详情表
-CREATE TABLE details(
+CREATE TABLE fly_details_img(
     pid INT,     #样式详情id
     img VARCHAR(128),
     href VARCHAR(128)
 );
 #三亚
 #游艇旅行 详情
-INSERT INTO details VALUES(1,'img/three/sanya/details/291350353653.jpg',NULL);
-INSERT INTO details VALUES(1,'img/three/sanya/details/291350354780.jpg',NULL);
-INSERT INTO details VALUES(1,'img/three/sanya/details/291350359621.jpg',NULL);
-INSERT INTO details VALUES(1,'img/three/sanya/details/1561787854888573.jpg',NULL);
-INSERT INTO details VALUES(1,'img/three/sanya/details/1561787855122997.jpg',NULL);
-INSERT INTO details VALUES(1,'img/three/sanya/details/1561787855307011.jpg',NULL);
-INSERT INTO details VALUES(1,'img/three/sanya/details/1561787855470719.jpg',NULL);
-INSERT INTO details VALUES(1,'img/three/sanya/details/1561787855974684.jpg',NULL);
-INSERT INTO details VALUES(1,'img/three/sanya/details/1561787856121143.jpg',NULL);
-INSERT INTO details VALUES(1,'img/three/sanya/details/1561787856457976.jpg',NULL);
-INSERT INTO details VALUES(1,'img/three/sanya/details/1561787856512117.jpg',NULL);
-INSERT INTO details VALUES(1,'img/three/sanya/details/1561787856530287.jpg',NULL);
-INSERT INTO details VALUES(1,'img/three/sanya/details/1561787856620440.jpg',NULL);
-INSERT INTO details VALUES(1,'img/three/sanya/details/1561787856689202.jpg',NULL);
-INSERT INTO details VALUES(1,'img/three/sanya/details/1561787857277799.jpg',NULL);
-INSERT INTO details VALUES(1,'img/three/sanya/details/1561787857485440.jpg',NULL);
-INSERT INTO details VALUES(1,'img/three/sanya/details/1561787857681485.jpg',NULL);
-INSERT INTO details VALUES(1,'img/three/sanya/details/1561787858192273.jpg',NULL);
-INSERT INTO details VALUES(1,'img/three/sanya/details/1561787858428247.jpg',NULL);
-INSERT INTO details VALUES(1,'img/three/sanya/details/1561787858494553.jpg',NULL);
-INSERT INTO details VALUES(1,'img/three/sanya/details/1561787858561399.jpg',NULL);
-INSERT INTO details VALUES(1,'img/three/sanya/details/1561787858752459.jpg',NULL);
-INSERT INTO details VALUES(1,'img/three/sanya/details/1561787858929200.jpg',NULL);
+INSERT INTO fly_details_img VALUES(1,'img/three/sanya/details/291350353653.jpg',NULL);
+INSERT INTO fly_details_img VALUES(1,'img/three/sanya/details/291350354780.jpg',NULL);
+INSERT INTO fly_details_img VALUES(1,'img/three/sanya/details/291350359621.jpg',NULL);
+INSERT INTO fly_details_img VALUES(1,'img/three/sanya/details/1561787854888573.jpg',NULL);
+INSERT INTO fly_details_img VALUES(1,'img/three/sanya/details/1561787855122997.jpg',NULL);
+INSERT INTO fly_details_img VALUES(1,'img/three/sanya/details/1561787855307011.jpg',NULL);
+INSERT INTO fly_details_img VALUES(1,'img/three/sanya/details/1561787855470719.jpg',NULL);
+INSERT INTO fly_details_img VALUES(1,'img/three/sanya/details/1561787855974684.jpg',NULL);
+INSERT INTO fly_details_img VALUES(1,'img/three/sanya/details/1561787856121143.jpg',NULL);
+INSERT INTO fly_details_img VALUES(1,'img/three/sanya/details/1561787856457976.jpg',NULL);
+INSERT INTO fly_details_img VALUES(1,'img/three/sanya/details/1561787856512117.jpg',NULL);
+INSERT INTO fly_details_img VALUES(1,'img/three/sanya/details/1561787856530287.jpg',NULL);
+INSERT INTO fly_details_img VALUES(1,'img/three/sanya/details/1561787856620440.jpg',NULL);
+INSERT INTO fly_details_img VALUES(1,'img/three/sanya/details/1561787856689202.jpg',NULL);
+INSERT INTO fly_details_img VALUES(1,'img/three/sanya/details/1561787857277799.jpg',NULL);
+INSERT INTO fly_details_img VALUES(1,'img/three/sanya/details/1561787857485440.jpg',NULL);
+INSERT INTO fly_details_img VALUES(1,'img/three/sanya/details/1561787857681485.jpg',NULL);
+INSERT INTO fly_details_img VALUES(1,'img/three/sanya/details/1561787858192273.jpg',NULL);
+INSERT INTO fly_details_img VALUES(1,'img/three/sanya/details/1561787858428247.jpg',NULL);
+INSERT INTO fly_details_img VALUES(1,'img/three/sanya/details/1561787858494553.jpg',NULL);
+INSERT INTO fly_details_img VALUES(1,'img/three/sanya/details/1561787858561399.jpg',NULL);
+INSERT INTO fly_details_img VALUES(1,'img/three/sanya/details/1561787858752459.jpg',NULL);
+INSERT INTO fly_details_img VALUES(1,'img/three/sanya/details/1561787858929200.jpg',NULL);
 #告白气球 详情
-INSERT INTO details VALUES(2,'img/three/sanya/details/291336153264.jpg',NULL);
-INSERT INTO details VALUES(2,'img/three/sanya/details/291337324255.jpg',NULL);
-INSERT INTO details VALUES(2,'img/three/sanya/details/291337337532.jpg',NULL);
-INSERT INTO details VALUES(2,'img/three/sanya/details/1562467737106336.jpg',NULL);
-INSERT INTO details VALUES(2,'img/three/sanya/details/1562467737250231.jpg',NULL);
-INSERT INTO details VALUES(2,'img/three/sanya/details/1562467737292790.jpg',NULL);
-INSERT INTO details VALUES(2,'img/three/sanya/details/1562467737498417.jpg',NULL);
-INSERT INTO details VALUES(2,'img/three/sanya/details/1562467737823652.jpg',NULL);
-INSERT INTO details VALUES(2,'img/three/sanya/details/1562467737841233.jpg',NULL);
-INSERT INTO details VALUES(2,'img/three/sanya/details/1562467737864512.jpg',NULL);
-INSERT INTO details VALUES(2,'img/three/sanya/details/1562467737869192.jpg',NULL);
-INSERT INTO details VALUES(2,'img/three/sanya/details/1562467738126766.jpg',NULL);
-INSERT INTO details VALUES(2,'img/three/sanya/details/1562467738281359.jpg',NULL);
-INSERT INTO details VALUES(2,'img/three/sanya/details/1562467738335538.jpg',NULL);
-INSERT INTO details VALUES(2,'img/three/sanya/details/1562467738386064.jpg',NULL);
-INSERT INTO details VALUES(2,'img/three/sanya/details/1562467738473465.jpg',NULL);
-INSERT INTO details VALUES(2,'img/three/sanya/details/1562467738830075.jpg',NULL);
-INSERT INTO details VALUES(2,'img/three/sanya/details/1562467738850527.jpg',NULL);
+INSERT INTO fly_details_img VALUES(2,'img/three/sanya/details/291336153264.jpg',NULL);
+INSERT INTO fly_details_img VALUES(2,'img/three/sanya/details/291337324255.jpg',NULL);
+INSERT INTO fly_details_img VALUES(2,'img/three/sanya/details/291337337532.jpg',NULL);
+INSERT INTO fly_details_img VALUES(2,'img/three/sanya/details/1562467737106336.jpg',NULL);
+INSERT INTO fly_details_img VALUES(2,'img/three/sanya/details/1562467737250231.jpg',NULL);
+INSERT INTO fly_details_img VALUES(2,'img/three/sanya/details/1562467737292790.jpg',NULL);
+INSERT INTO fly_details_img VALUES(2,'img/three/sanya/details/1562467737498417.jpg',NULL);
+INSERT INTO fly_details_img VALUES(2,'img/three/sanya/details/1562467737823652.jpg',NULL);
+INSERT INTO fly_details_img VALUES(2,'img/three/sanya/details/1562467737841233.jpg',NULL);
+INSERT INTO fly_details_img VALUES(2,'img/three/sanya/details/1562467737864512.jpg',NULL);
+INSERT INTO fly_details_img VALUES(2,'img/three/sanya/details/1562467737869192.jpg',NULL);
+INSERT INTO fly_details_img VALUES(2,'img/three/sanya/details/1562467738126766.jpg',NULL);
+INSERT INTO fly_details_img VALUES(2,'img/three/sanya/details/1562467738281359.jpg',NULL);
+INSERT INTO fly_details_img VALUES(2,'img/three/sanya/details/1562467738335538.jpg',NULL);
+INSERT INTO fly_details_img VALUES(2,'img/three/sanya/details/1562467738386064.jpg',NULL);
+INSERT INTO fly_details_img VALUES(2,'img/three/sanya/details/1562467738473465.jpg',NULL);
+INSERT INTO fly_details_img VALUES(2,'img/three/sanya/details/1562467738830075.jpg',NULL);
+INSERT INTO fly_details_img VALUES(2,'img/three/sanya/details/1562467738850527.jpg',NULL);
 #丽江
 #漫步古镇 详情
-INSERT INTO details VALUES(3,'img/three/lijiang/details/121432063820.jpg',NULL);
-INSERT INTO details VALUES(3,'img/three/lijiang/details/121432065155.jpg',NULL);
-INSERT INTO details VALUES(3,'img/three/lijiang/details/1562913220111817.jpg',NULL);
-INSERT INTO details VALUES(3,'img/three/lijiang/details/1562913220389147.jpg',NULL);
-INSERT INTO details VALUES(3,'img/three/lijiang/details/1562913220440993.jpg',NULL);
-INSERT INTO details VALUES(3,'img/three/lijiang/details/1562913220753808.jpg',NULL);
-INSERT INTO details VALUES(3,'img/three/lijiang/details/1562913220766010.jpg',NULL);
-INSERT INTO details VALUES(3,'img/three/lijiang/details/1562913220848756.jpg',NULL);
-INSERT INTO details VALUES(3,'img/three/lijiang/details/1562913220862209.jpg',NULL);
-INSERT INTO details VALUES(3,'img/three/lijiang/details/1562913221317029.jpg',NULL);
-INSERT INTO details VALUES(3,'img/three/lijiang/details/1562913221362446.jpg',NULL);
-INSERT INTO details VALUES(3,'img/three/lijiang/details/1562913221587046.jpg',NULL);
-INSERT INTO details VALUES(3,'img/three/lijiang/details/1562913222520756.jpg',NULL);
-INSERT INTO details VALUES(3,'img/three/lijiang/details/1562913222527465.jpg',NULL);
-INSERT INTO details VALUES(3,'img/three/lijiang/details/1562913222547494.jpg',NULL);
-INSERT INTO details VALUES(3,'img/three/lijiang/details/1562913222551198.jpg',NULL);
-INSERT INTO details VALUES(3,'img/three/lijiang/details/1562913222778138.jpg',NULL);
-INSERT INTO details VALUES(3,'img/three/lijiang/details/1562913222783595.jpg',NULL);
-INSERT INTO details VALUES(3,'img/three/lijiang/details/1562913223214538.jpg',NULL);
-INSERT INTO details VALUES(3,'img/three/lijiang/details/1562913223346833.jpg',NULL);
-INSERT INTO details VALUES(3,'img/three/lijiang/details/1562913223550713.jpg',NULL);
-INSERT INTO details VALUES(3,'img/three/lijiang/details/1562913223562877.jpg',NULL);
-INSERT INTO details VALUES(3,'img/three/lijiang/details/1562913223664817.jpg',NULL);
-INSERT INTO details VALUES(3,'img/three/lijiang/details/1562913224113556.jpg',NULL);
-INSERT INTO details VALUES(3,'img/three/lijiang/details/1562913224406297.jpg',NULL);
-INSERT INTO details VALUES(3,'img/three/lijiang/details/1562913224462711.jpg',NULL);
-INSERT INTO details VALUES(3,'img/three/lijiang/details/1562913224569841.jpg',NULL);
-INSERT INTO details VALUES(3,'img/three/lijiang/details/1562913224644361.jpg',NULL);
-INSERT INTO details VALUES(3,'img/three/lijiang/details/1562913224706662.jpg',NULL);
-INSERT INTO details VALUES(3,'img/three/lijiang/details/1562913225136832.jpg',NULL);
+INSERT INTO fly_details_img VALUES(6,'img/three/lijiang/details/121432063820.jpg',NULL);
+INSERT INTO fly_details_img VALUES(6,'img/three/lijiang/details/121432065155.jpg',NULL);
+INSERT INTO fly_details_img VALUES(6,'img/three/lijiang/details/1562913220111817.jpg',NULL);
+INSERT INTO fly_details_img VALUES(6,'img/three/lijiang/details/1562913220389147.jpg',NULL);
+INSERT INTO fly_details_img VALUES(6,'img/three/lijiang/details/1562913220440993.jpg',NULL);
+INSERT INTO fly_details_img VALUES(6,'img/three/lijiang/details/1562913220753808.jpg',NULL);
+INSERT INTO fly_details_img VALUES(6,'img/three/lijiang/details/1562913220766010.jpg',NULL);
+INSERT INTO fly_details_img VALUES(6,'img/three/lijiang/details/1562913220848756.jpg',NULL);
+INSERT INTO fly_details_img VALUES(6,'img/three/lijiang/details/1562913220862209.jpg',NULL);
+INSERT INTO fly_details_img VALUES(6,'img/three/lijiang/details/1562913221317029.jpg',NULL);
+INSERT INTO fly_details_img VALUES(6,'img/three/lijiang/details/1562913221362446.jpg',NULL);
+INSERT INTO fly_details_img VALUES(6,'img/three/lijiang/details/1562913221587046.jpg',NULL);
+INSERT INTO fly_details_img VALUES(6,'img/three/lijiang/details/1562913222520756.jpg',NULL);
+INSERT INTO fly_details_img VALUES(6,'img/three/lijiang/details/1562913222527465.jpg',NULL);
+INSERT INTO fly_details_img VALUES(6,'img/three/lijiang/details/1562913222547494.jpg',NULL);
+INSERT INTO fly_details_img VALUES(6,'img/three/lijiang/details/1562913222551198.jpg',NULL);
+INSERT INTO fly_details_img VALUES(6,'img/three/lijiang/details/1562913222778138.jpg',NULL);
+INSERT INTO fly_details_img VALUES(6,'img/three/lijiang/details/1562913222783595.jpg',NULL);
+INSERT INTO fly_details_img VALUES(6,'img/three/lijiang/details/1562913223214538.jpg',NULL);
+INSERT INTO fly_details_img VALUES(6,'img/three/lijiang/details/1562913223346833.jpg',NULL);
+INSERT INTO fly_details_img VALUES(6,'img/three/lijiang/details/1562913223550713.jpg',NULL);
+INSERT INTO fly_details_img VALUES(6,'img/three/lijiang/details/1562913223562877.jpg',NULL);
+INSERT INTO fly_details_img VALUES(6,'img/three/lijiang/details/1562913223664817.jpg',NULL);
+INSERT INTO fly_details_img VALUES(6,'img/three/lijiang/details/1562913224113556.jpg',NULL);
+INSERT INTO fly_details_img VALUES(6,'img/three/lijiang/details/1562913224406297.jpg',NULL);
+INSERT INTO fly_details_img VALUES(6,'img/three/lijiang/details/1562913224462711.jpg',NULL);
+INSERT INTO fly_details_img VALUES(6,'img/three/lijiang/details/1562913224569841.jpg',NULL);
+INSERT INTO fly_details_img VALUES(6,'img/three/lijiang/details/1562913224644361.jpg',NULL);
+INSERT INTO fly_details_img VALUES(6,'img/three/lijiang/details/1562913224706662.jpg',NULL);
+INSERT INTO fly_details_img VALUES(6,'img/three/lijiang/details/1562913225136832.jpg',NULL);
 #向往的生活 详情
-INSERT INTO details VALUES(4,'img/three/lijiang/details/121426182250.jpg',NULL);
-INSERT INTO details VALUES(4,'img/three/lijiang/details/121426182898.jpg',NULL);
-INSERT INTO details VALUES(4,'img/three/lijiang/details/1562912874209469.jpg',NULL);
-INSERT INTO details VALUES(4,'img/three/lijiang/details/1562912875154457.jpg',NULL);
-INSERT INTO details VALUES(4,'img/three/lijiang/details/1562912875264803.jpg',NULL);
-INSERT INTO details VALUES(4,'img/three/lijiang/details/1562912875514428.jpg',NULL);
-INSERT INTO details VALUES(4,'img/three/lijiang/details/1562912875529348.jpg',NULL);
-INSERT INTO details VALUES(4,'img/three/lijiang/details/1562912875559417.jpg',NULL);
-INSERT INTO details VALUES(4,'img/three/lijiang/details/1562912875607305.jpg',NULL);
-INSERT INTO details VALUES(4,'img/three/lijiang/details/1562912875639587.jpg',NULL);
-INSERT INTO details VALUES(4,'img/three/lijiang/details/1562912875828013.jpg',NULL);
-INSERT INTO details VALUES(4,'img/three/lijiang/details/1562912876285126.jpg',NULL);
-INSERT INTO details VALUES(4,'img/three/lijiang/details/1562912876291346.jpg',NULL);
-INSERT INTO details VALUES(4,'img/three/lijiang/details/1562912876389046.jpg',NULL);
-INSERT INTO details VALUES(4,'img/three/lijiang/details/1562912876578354.jpg',NULL);
-INSERT INTO details VALUES(4,'img/three/lijiang/details/1562912876814890.jpg',NULL);
-INSERT INTO details VALUES(4,'img/three/lijiang/details/1562912883253265.jpg',NULL);
-INSERT INTO details VALUES(4,'img/three/lijiang/details/1562912883635254.jpg',NULL);
-INSERT INTO details VALUES(4,'img/three/lijiang/details/1562912883644592.jpg',NULL);
-INSERT INTO details VALUES(4,'img/three/lijiang/details/1562912884195720.jpg',NULL);
-INSERT INTO details VALUES(4,'img/three/lijiang/details/1562912884289554.jpg',NULL);
-INSERT INTO details VALUES(4,'img/three/lijiang/details/1562912884596303.jpg',NULL);
-INSERT INTO details VALUES(4,'img/three/lijiang/details/1562912884610317.jpg',NULL);
+INSERT INTO fly_details_img VALUES(7,'img/three/lijiang/details/121426182250.jpg',NULL);
+INSERT INTO fly_details_img VALUES(7,'img/three/lijiang/details/121426182898.jpg',NULL);
+INSERT INTO fly_details_img VALUES(7,'img/three/lijiang/details/1562912874209469.jpg',NULL);
+INSERT INTO fly_details_img VALUES(7,'img/three/lijiang/details/1562912875154457.jpg',NULL);
+INSERT INTO fly_details_img VALUES(7,'img/three/lijiang/details/1562912875264803.jpg',NULL);
+INSERT INTO fly_details_img VALUES(7,'img/three/lijiang/details/1562912875514428.jpg',NULL);
+INSERT INTO fly_details_img VALUES(7,'img/three/lijiang/details/1562912875529348.jpg',NULL);
+INSERT INTO fly_details_img VALUES(7,'img/three/lijiang/details/1562912875559417.jpg',NULL);
+INSERT INTO fly_details_img VALUES(7,'img/three/lijiang/details/1562912875607305.jpg',NULL);
+INSERT INTO fly_details_img VALUES(7,'img/three/lijiang/details/1562912875639587.jpg',NULL);
+INSERT INTO fly_details_img VALUES(7,'img/three/lijiang/details/1562912875828013.jpg',NULL);
+INSERT INTO fly_details_img VALUES(7,'img/three/lijiang/details/1562912876285126.jpg',NULL);
+INSERT INTO fly_details_img VALUES(7,'img/three/lijiang/details/1562912876291346.jpg',NULL);
+INSERT INTO fly_details_img VALUES(7,'img/three/lijiang/details/1562912876389046.jpg',NULL);
+INSERT INTO fly_details_img VALUES(7,'img/three/lijiang/details/1562912876578354.jpg',NULL);
+INSERT INTO fly_details_img VALUES(7,'img/three/lijiang/details/1562912876814890.jpg',NULL);
+INSERT INTO fly_details_img VALUES(7,'img/three/lijiang/details/1562912883253265.jpg',NULL);
+INSERT INTO fly_details_img VALUES(7,'img/three/lijiang/details/1562912883635254.jpg',NULL);
+INSERT INTO fly_details_img VALUES(7,'img/three/lijiang/details/1562912883644592.jpg',NULL);
+INSERT INTO fly_details_img VALUES(7,'img/three/lijiang/details/1562912884195720.jpg',NULL);
+INSERT INTO fly_details_img VALUES(7,'img/three/lijiang/details/1562912884289554.jpg',NULL);
+INSERT INTO fly_details_img VALUES(7,'img/three/lijiang/details/1562912884596303.jpg',NULL);
+INSERT INTO fly_details_img VALUES(7,'img/three/lijiang/details/1562912884610317.jpg',NULL);
 #four
 #三亚
 #阿豪&花花 详情
-INSERT INTO details VALUES(5,'img/four/sanya/details/191551205326.jpg',NULL);
-INSERT INTO details VALUES(5,'img/four/sanya/details/191551205856.jpg',NULL);
-INSERT INTO details VALUES(5,'img/four/sanya/details/191551206325.jpg',NULL);
-INSERT INTO details VALUES(5,'img/four/sanya/details/1563522841157214.jpg',NULL);
-INSERT INTO details VALUES(5,'img/four/sanya/details/1563522841225189.jpg',NULL);
-INSERT INTO details VALUES(5,'img/four/sanya/details/1563522841393809.jpg',NULL);
-INSERT INTO details VALUES(5,'img/four/sanya/details/1563522841570182.jpg',NULL);
-INSERT INTO details VALUES(5,'img/four/sanya/details/1563522841722486.jpg',NULL);
-INSERT INTO details VALUES(5,'img/four/sanya/details/1563522841773837.jpg',NULL);
-INSERT INTO details VALUES(5,'img/four/sanya/details/1563522841880649.jpg',NULL);
-INSERT INTO details VALUES(5,'img/four/sanya/details/1563522841954425.jpg',NULL);
-INSERT INTO details VALUES(5,'img/four/sanya/details/1563522842180508.jpg',NULL);
-INSERT INTO details VALUES(5,'img/four/sanya/details/1563522842231166.jpg',NULL);
-INSERT INTO details VALUES(5,'img/four/sanya/details/1563522842311740.jpg',NULL);
-INSERT INTO details VALUES(5,'img/four/sanya/details/1563522842318905.jpg',NULL);
-INSERT INTO details VALUES(5,'img/four/sanya/details/1563522842725476.jpg',NULL);
-INSERT INTO details VALUES(5,'img/four/sanya/details/1563522842845389.jpg',NULL);
-INSERT INTO details VALUES(5,'img/four/sanya/details/1563522842926340.jpg',NULL);
-INSERT INTO details VALUES(5,'img/four/sanya/details/1563522843634987.jpg',NULL);
+INSERT INTO fly_details_img VALUES(11,'img/four/sanya/details/191551205326.jpg',NULL);
+INSERT INTO fly_details_img VALUES(11,'img/four/sanya/details/191551205856.jpg',NULL);
+INSERT INTO fly_details_img VALUES(11,'img/four/sanya/details/191551206325.jpg',NULL);
+INSERT INTO fly_details_img VALUES(11,'img/four/sanya/details/1563522841157214.jpg',NULL);
+INSERT INTO fly_details_img VALUES(11,'img/four/sanya/details/1563522841225189.jpg',NULL);
+INSERT INTO fly_details_img VALUES(11,'img/four/sanya/details/1563522841393809.jpg',NULL);
+INSERT INTO fly_details_img VALUES(11,'img/four/sanya/details/1563522841570182.jpg',NULL);
+INSERT INTO fly_details_img VALUES(11,'img/four/sanya/details/1563522841722486.jpg',NULL);
+INSERT INTO fly_details_img VALUES(11,'img/four/sanya/details/1563522841773837.jpg',NULL);
+INSERT INTO fly_details_img VALUES(11,'img/four/sanya/details/1563522841880649.jpg',NULL);
+INSERT INTO fly_details_img VALUES(11,'img/four/sanya/details/1563522841954425.jpg',NULL);
+INSERT INTO fly_details_img VALUES(11,'img/four/sanya/details/1563522842180508.jpg',NULL);
+INSERT INTO fly_details_img VALUES(11,'img/four/sanya/details/1563522842231166.jpg',NULL);
+INSERT INTO fly_details_img VALUES(11,'img/four/sanya/details/1563522842311740.jpg',NULL);
+INSERT INTO fly_details_img VALUES(11,'img/four/sanya/details/1563522842318905.jpg',NULL);
+INSERT INTO fly_details_img VALUES(11,'img/four/sanya/details/1563522842725476.jpg',NULL);
+INSERT INTO fly_details_img VALUES(11,'img/four/sanya/details/1563522842845389.jpg',NULL);
+INSERT INTO fly_details_img VALUES(11,'img/four/sanya/details/1563522842926340.jpg',NULL);
+INSERT INTO fly_details_img VALUES(11,'img/four/sanya/details/1563522843634987.jpg',NULL);
 #小超&思琪  详情
-INSERT INTO details VALUES(6,'img/four/sanya/details/191542471792.jpg',NULL);
-INSERT INTO details VALUES(6,'img/four/sanya/details/191542477824.jpg',NULL);
-INSERT INTO details VALUES(6,'img/four/sanya/details/1563522265329214.jpg',NULL);
-INSERT INTO details VALUES(6,'img/four/sanya/details/1563522265524796.jpg',NULL);
-INSERT INTO details VALUES(6,'img/four/sanya/details/1563522265530262.jpg',NULL);
-INSERT INTO details VALUES(6,'img/four/sanya/details/1563522265556956.jpg',NULL);
-INSERT INTO details VALUES(6,'img/four/sanya/details/1563522265767013.jpg',NULL);
-INSERT INTO details VALUES(6,'img/four/sanya/details/1563522266159724.jpg',NULL);
-INSERT INTO details VALUES(6,'img/four/sanya/details/1563522266420792.jpg',NULL);
-INSERT INTO details VALUES(6,'img/four/sanya/details/1563522266848104.jpg',NULL);
-INSERT INTO details VALUES(6,'img/four/sanya/details/1563522266954369.jpg',NULL);
+INSERT INTO fly_details_img VALUES(12,'img/four/sanya/details/191542471792.jpg',NULL);
+INSERT INTO fly_details_img VALUES(12,'img/four/sanya/details/191542477824.jpg',NULL);
+INSERT INTO fly_details_img VALUES(12,'img/four/sanya/details/1563522265329214.jpg',NULL);
+INSERT INTO fly_details_img VALUES(12,'img/four/sanya/details/1563522265524796.jpg',NULL);
+INSERT INTO fly_details_img VALUES(12,'img/four/sanya/details/1563522265530262.jpg',NULL);
+INSERT INTO fly_details_img VALUES(12,'img/four/sanya/details/1563522265556956.jpg',NULL);
+INSERT INTO fly_details_img VALUES(12,'img/four/sanya/details/1563522265767013.jpg',NULL);
+INSERT INTO fly_details_img VALUES(12,'img/four/sanya/details/1563522266159724.jpg',NULL);
+INSERT INTO fly_details_img VALUES(12,'img/four/sanya/details/1563522266420792.jpg',NULL);
+INSERT INTO fly_details_img VALUES(12,'img/four/sanya/details/1563522266848104.jpg',NULL);
+INSERT INTO fly_details_img VALUES(12,'img/four/sanya/details/1563522266954369.jpg',NULL);
 #丽江
  #甜甜&天予 详情
-INSERT INTO details VALUES(7,'img/four/lijiang/details/151050195278.jpg',NULL);
-INSERT INTO details VALUES(7,'img/four/lijiang/details/151050196435.jpg',NULL);
-INSERT INTO details VALUES(7,'img/four/lijiang/details/1563159110126547.jpg',NULL);
-INSERT INTO details VALUES(7,'img/four/lijiang/details/1563159110250127.jpg',NULL);
-INSERT INTO details VALUES(7,'img/four/lijiang/details/1563159110273609.jpg',NULL);
-INSERT INTO details VALUES(7,'img/four/lijiang/details/1563159110421106.jpg',NULL);
-INSERT INTO details VALUES(7,'img/four/lijiang/details/1563159110516665.jpg',NULL);
-INSERT INTO details VALUES(7,'img/four/lijiang/details/1563159110588025.jpg',NULL);
-INSERT INTO details VALUES(7,'img/four/lijiang/details/1563159111475394.jpg',NULL);
-INSERT INTO details VALUES(7,'img/four/lijiang/details/1563159111565674.jpg',NULL);
-INSERT INTO details VALUES(7,'img/four/lijiang/details/1563159111986283.jpg',NULL);
+INSERT INTO fly_details_img VALUES(14,'img/four/lijiang/details/151050195278.jpg',NULL);
+INSERT INTO fly_details_img VALUES(14,'img/four/lijiang/details/151050196435.jpg',NULL);
+INSERT INTO fly_details_img VALUES(14,'img/four/lijiang/details/1563159110126547.jpg',NULL);
+INSERT INTO fly_details_img VALUES(14,'img/four/lijiang/details/1563159110250127.jpg',NULL);
+INSERT INTO fly_details_img VALUES(14,'img/four/lijiang/details/1563159110273609.jpg',NULL);
+INSERT INTO fly_details_img VALUES(14,'img/four/lijiang/details/1563159110421106.jpg',NULL);
+INSERT INTO fly_details_img VALUES(14,'img/four/lijiang/details/1563159110516665.jpg',NULL);
+INSERT INTO fly_details_img VALUES(14,'img/four/lijiang/details/1563159110588025.jpg',NULL);
+INSERT INTO fly_details_img VALUES(14,'img/four/lijiang/details/1563159111475394.jpg',NULL);
+INSERT INTO fly_details_img VALUES(14,'img/four/lijiang/details/1563159111565674.jpg',NULL);
+INSERT INTO fly_details_img VALUES(14,'img/four/lijiang/details/1563159111986283.jpg',NULL);
 #明明&小鹤 详情
-INSERT INTO details VALUES(8,'img/four/lijiang/details/131445372667.jpg',NULL);
-INSERT INTO details VALUES(8,'img/four/lijiang/details/1563000407174335.jpg',NULL);
-INSERT INTO details VALUES(8,'img/four/lijiang/details/1563000407411860.jpg',NULL);
-INSERT INTO details VALUES(8,'img/four/lijiang/details/1563000407439609.jpg',NULL);
-INSERT INTO details VALUES(8,'img/four/lijiang/details/1563000407622851.jpg',NULL);
-INSERT INTO details VALUES(8,'img/four/lijiang/details/1563000407783086.jpg',NULL);
-INSERT INTO details VALUES(8,'img/four/lijiang/details/1563000407793659.jpg',NULL);
-INSERT INTO details VALUES(8,'img/four/lijiang/details/1563000407814152.jpg',NULL);
-INSERT INTO details VALUES(8,'img/four/lijiang/details/1563000408883397.jpg',NULL);
-INSERT INTO details VALUES(8,'img/four/lijiang/details/1563000408958637.jpg',NULL);
+INSERT INTO fly_details_img VALUES(15,'img/four/lijiang/details/131445372667.jpg',NULL);
+INSERT INTO fly_details_img VALUES(15,'img/four/lijiang/details/1563000407174335.jpg',NULL);
+INSERT INTO fly_details_img VALUES(15,'img/four/lijiang/details/1563000407411860.jpg',NULL);
+INSERT INTO fly_details_img VALUES(15,'img/four/lijiang/details/1563000407439609.jpg',NULL);
+INSERT INTO fly_details_img VALUES(15,'img/four/lijiang/details/1563000407622851.jpg',NULL);
+INSERT INTO fly_details_img VALUES(15,'img/four/lijiang/details/1563000407783086.jpg',NULL);
+INSERT INTO fly_details_img VALUES(15,'img/four/lijiang/details/1563000407793659.jpg',NULL);
+INSERT INTO fly_details_img VALUES(15,'img/four/lijiang/details/1563000407814152.jpg',NULL);
+INSERT INTO fly_details_img VALUES(15,'img/four/lijiang/details/1563000408883397.jpg',NULL);
+INSERT INTO fly_details_img VALUES(15,'img/four/lijiang/details/1563000408958637.jpg',NULL);
 
 
 
 
 
-#three
+
 #详情文本表
 CREATE TABLE fly_details_text(
-    text_id INT PRIMARY KEY AUTO_INCREMENT,    #详情文本id
-    style_id INT,                              #样式风格的id
+    tid INT PRIMARY KEY AUTO_INCREMENT,    #详情文本id
     title VARCHAR(64),
     palce  VARCHAR(64),
     details VARCHAR(128)
 );
+#three
 #三亚
-INSERT INTO fly_details_text VALUES(NULL,1,"游艇旅行","三亚 三亚湾","我见过春花秋月夏蝉冬雪，也写过晨光熹微斜阳暮色， 可这河山万里岁月寸缕，皆不及你浅笑一问。");
-INSERT INTO fly_details_text VALUES(NULL,2,"告白气球","三亚 三亚湾","只愿和你一起晒冬日暖阳，聊未来理想，喝香浓咖啡，尝妙厨美味，读红楼西厢，诵唐诗宋词，有你，幸福异常！");
-INSERT INTO fly_details_text VALUES(NULL,3,"海上冲浪","三亚 三亚湾","我的吻很长，用了整个夏天，穿越你的脸庞。");
-INSERT INTO fly_details_text VALUES(NULL,4,"华丽的休假","三亚 三亚湾","我的世界乱七八糟烟尘纷杂，而你干干净净，那么温柔，那么明朗，正适合我放心上。");
-INSERT INTO fly_details_text VALUES(NULL,5,"浪漫满屋","三亚 三亚湾","我就喜欢写一点普通的小句子，我就想要把我对你的感情，一点一点写到这里，哪怕在你眼里我只是千万灯芯中的一个，我对你的感情也是只增不减。");
--- INSERT INTO fly_details_text VALUES(NULL,6,"","","");
--- INSERT INTO fly_details_text VALUES(NULL,7,"","","");
--- INSERT INTO fly_details_text VALUES(NULL,8,"","","");
+INSERT INTO fly_details_text VALUES(NULL,"游艇旅行","三亚 三亚湾","我见过春花秋月夏蝉冬雪，也写过晨光熹微斜阳暮色， 可这河山万里岁月寸缕，皆不及你浅笑一问。");
+INSERT INTO fly_details_text VALUES(NULL,"告白气球","三亚 三亚湾","只愿和你一起晒冬日暖阳，聊未来理想，喝香浓咖啡，尝妙厨美味，读红楼西厢，诵唐诗宋词，有你，幸福异常！");
+INSERT INTO fly_details_text VALUES(NULL,"海上冲浪","三亚 三亚湾","我的吻很长，用了整个夏天，穿越你的脸庞。");
+INSERT INTO fly_details_text VALUES(NULL,"华丽的休假","三亚 三亚湾","我的世界乱七八糟烟尘纷杂，而你干干净净，那么温柔，那么明朗，正适合我放心上。");
+INSERT INTO fly_details_text VALUES(NULL,"浪漫满屋","三亚 三亚湾","我就喜欢写一点普通的小句子，我就想要把我对你的感情，一点一点写到这里，哪怕在你眼里我只是千万灯芯中的一个，我对你的感情也是只增不减。");
 
 #丽江
-INSERT INTO fly_details_text VALUES(NULL,45,"漫步古镇","丽江 束河","从前的日子很慢，车，马，邮件都慢，一生只够爱一个人。");
-INSERT INTO fly_details_text VALUES(NULL,46,"向往的生活","丽江 雪山马场","我看什么都像你，我看月亮，像你，看星星，也像你。那些白亮透澈、温柔冷清的光，它们都让我想起你。");
-INSERT INTO fly_details_text VALUES(NULL,47,"为爱痴狂","丽江 新基地","我一直爱你，偶尔喜欢别人，在他们像你的时候。");
-INSERT INTO fly_details_text VALUES(NULL,48,"一米阳光","丽江  新基地","春天的糖葫芦， 夏天的冰淇淋，秋天的桂花糕，冬天的热米酒，都甜不过你的笑容。");
-INSERT INTO fly_details_text VALUES(NULL,49,"炊烟","丽江 雪山马场","一百个夏天的句子，都不及你可爱的样子。");
--- INSERT INTO fly_details_text VALUES(NULL,6,"","","");
--- INSERT INTO fly_details_text VALUES(NULL,7,"","","");
--- INSERT INTO fly_details_text VALUES(NULL,8,"","","");
-
-
-
+INSERT INTO fly_details_text VALUES(NULL,"漫步古镇","丽江 束河","从前的日子很慢，车，马，邮件都慢，一生只够爱一个人。");
+INSERT INTO fly_details_text VALUES(NULL,"向往的生活","丽江 雪山马场","我看什么都像你，我看月亮，像你，看星星，也像你。那些白亮透澈、温柔冷清的光，它们都让我想起你。");
+INSERT INTO fly_details_text VALUES(NULL,"为爱痴狂","丽江 新基地","我一直爱你，偶尔喜欢别人，在他们像你的时候。");
+INSERT INTO fly_details_text VALUES(NULL,"一米阳光","丽江  新基地","春天的糖葫芦， 夏天的冰淇淋，秋天的桂花糕，冬天的热米酒，都甜不过你的笑容。");
+INSERT INTO fly_details_text VALUES(NULL,"炊烟","丽江 雪山马场","一百个夏天的句子，都不及你可爱的样子。");
 
 #four
-#创建详情文本表
-CREATE TABLE fly_people_text(
-    text_id INT PRIMARY KEY AUTO_INCREMENT,         #人员图片详情文本id
-    people_id INT,                                  #人员图片id
-    title VARCHAR(64),
-    palce  VARCHAR(64),
-    details VARCHAR(128)
-);
 #三亚
-INSERT INTO fly_people_text VALUES(NULL,1,"阿豪&花花","三亚 幸福湾","在这个不动声色的日子里，遇见美好的你真好，所以我实在忍不住，想陪你到老。");
-INSERT INTO fly_people_text VALUES(NULL,2,"小超&思琪","三亚 呆呆岛","我有没有告诉过你，那么多花草树木、河流高山、繁星宇宙、小猫小狗、蝴蝶蜜蜂我只喜欢你一个。");
-INSERT INTO fly_people_text VALUES(NULL,4,"小帆&瀚天","三亚 呆呆岛","他望了她一眼， 她对他回眸一笑， 生命突然复苏。");
--- INSERT INTO fly_people_text VALUES(NULL,5,"","","");
--- INSERT INTO fly_people_text VALUES(NULL,6,"","","");
+INSERT INTO fly_details_text VALUES(NULL,"阿豪&花花","三亚 幸福湾","在这个不动声色的日子里，遇见美好的你真好，所以我实在忍不住，想陪你到老。");
+INSERT INTO fly_details_text VALUES(NULL,"小超&思琪","三亚 呆呆岛","我有没有告诉过你，那么多花草树木、河流高山、繁星宇宙、小猫小狗、蝴蝶蜜蜂我只喜欢你一个。");
+INSERT INTO fly_details_text VALUES(NULL,"小帆&瀚天","三亚 呆呆岛","他望了她一眼， 她对他回眸一笑， 生命突然复苏。");
 #丽江
-INSERT INTO fly_people_text VALUES(NULL,53,"甜甜&天予","丽江 蓝月谷","海底月是天上月，眼前人是心上人。");
-INSERT INTO fly_people_text VALUES(NULL,55,"明明&小鹤","丽江 新基地","我见过春日夏风秋叶冬雪，也踏遍南水北山东麓西岭，可这四季春秋，苍山泱水，都不及你冲我，展眉一笑。");
--- INSERT INTO fly_people_text VALUES(NULL,4,"","","");
--- INSERT INTO fly_people_text VALUES(NULL,5,"","","");
+INSERT INTO fly_details_text VALUES(NULL,"甜甜&天予","丽江 蓝月谷","海底月是天上月，眼前人是心上人。");
+INSERT INTO fly_details_text VALUES(NULL,"明明&小鹤","丽江 新基地","我见过春日夏风秋叶冬雪，也踏遍南水北山东麓西岭，可这四季春秋，苍山泱水，都不及你冲我，展眉一笑。");
 
 
 
@@ -518,7 +495,6 @@ INSERT INTO fly_people_text VALUES(NULL,55,"明明&小鹤","丽江 新基地","�
 
 
 #创建评论表
-DROP  DATABASE IF EXISTS fly_comment;
 CREATE TABLE fly_comment(
     clove_id INT PRIMARY KEY AUTO_INCREMENT,
     img VARCHAR(128),
@@ -550,7 +526,6 @@ INSERT INTO fly_comment VALUES(NULL,'img/index/211502041246.jpeg',"那种兴奋�
 
 #second
  #所属ins系列表
-DROP  DATABASE IF EXISTS fly_in;
 CREATE TABLE fly_in(
     iid INT PRIMARY KEY AUTO_INCREMENT,         #标题的id 
     title VARCHAR(64),                          #标题
@@ -607,7 +582,6 @@ CREATE TABLE fly_in(
 
 #five
 #创建六周年活动表
-DROP  DATABASE IF EXISTS fly_six_year;
 CREATE TABLE fly_six_year(
     xid INT PRIMARY KEY AUTO_INCREMENT,
     img VARCHAR(128),
@@ -627,7 +601,6 @@ INSERT INTO fly_six_year VALUES(NULL,'img/five/091414007703.jpg','六周年店�
 
 #six
 #创建微电影表fly_six_film
-DROP  DATABASE IF EXISTS fly_six_film;
 CREATE TABLE fly_six_film(
     fid INT PRIMARY KEY AUTO_INCREMENT,
     img VARCHAR(128),
@@ -659,7 +632,6 @@ INSERT INTO fly_six_film VALUES(NULL,'img/six/191059005316.png',"影像花絮",'
 
 #seven
 #创建品牌表
-DROP  DATABASE IF EXISTS fly_seven_brand;
 CREATE TABLE fly_seven_brand(
     bid INT PRIMARY KEY AUTO_INCREMENT,
     img VARCHAR(128),

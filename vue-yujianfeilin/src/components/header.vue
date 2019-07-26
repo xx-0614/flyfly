@@ -7,54 +7,54 @@
                 </router-link>
             </div>
             <div class="nav-bar">
-                <ul class="nav-item" @click="fontWhite">
-                    <li><router-link to="" class="active" @click.native="toIndex">首页</router-link></li>
+                <ul class="nav-item">
+                    <li><router-link to="/"  @click.native="change(0)" :class="{active:classObj[0].active}">首页</router-link></li>
                     <li>
-                        <router-link to="" @click.native="toSecond">风格系列</router-link>
+                        <router-link to="/Second" @click.native="change(1)" :class="{active:classObj[1].active}">风格系列</router-link>
                         <ul>
                             <li>
-                                <router-link to=""  @click.native="toSecond">INS系列</router-link>
+                                <router-link to="/Second"  @click.native="change(1)" :class="{active:classObj[1].active}">INS系列</router-link>
                             </li>
                             <li>
-                                <router-link to="" @click.native="toSecond">小清新系列</router-link>
+                                <router-link to="/Second"   @click.native="change(1)" :class="{active:classObj[1].active}">小清新系列</router-link>
                             </li>
                             <li>
-                                <router-link to="" @click.native="toSecond">国潮系列</router-link>
+                                <router-link to="/Second"  @click.native="change(1)" :class="{active:classObj[1].active}">国潮系列</router-link>
                             </li>
                             <li>
-                                <router-link to="" @click.native="toSecond">造型系列</router-link>
+                                <router-link to="/Second"  @click.native="change(1)" :class="{active:classObj[1].active}">造型系列</router-link>
                             </li>
                         </ul>
                     </li>
-                    <li><router-link to="" @click.native="toThree">最新客片</router-link></li>
-                    <li><router-link to="" @click.native="toFour">100%客片</router-link></li>
-                    <li><router-link to="" @click.native="toFive">当季特惠</router-link></li>
+                    <li><router-link to="/Three"  @click.native="change(2)" :class="{active:classObj[2].active}">最新客片</router-link></li>
+                    <li><router-link to="/Four" @click.native="change(3)" :class="{active:classObj[3].active}">100%客片</router-link></li>
+                    <li><router-link to="/Five"  @click.native="change(4)" :class="{active:classObj[4].active}">当季特惠</router-link></li>
                     <li>
-                       <router-link to="" @click.native="toSix">微电影</router-link>
+                       <router-link to="/Six"  @click.native="change(5)" :class="{active:classObj[5].active}">微电影</router-link>
                         <ul>
                             <li>
-                                <router-link to="" @click.native="toSix">微电影</router-link>
+                                <router-link to="/Six"  @click.native="change(5)" :class="{active:classObj[5].active}">微电影</router-link>
                             </li>
                             <li>
-                                <router-link to="" @click.native="toSix">影像花絮</router-link>
+                                <router-link to="/Six" @click.native="change(5)" :class="{active:classObj[5].active}">影像花絮</router-link>
                             </li>
                         </ul>
                     </li>
                     <li>
-                        <router-link to=""  @click.native="toSeven">品牌服务</router-link>
+                        <router-link to="/Seven"  @click.native="change(6)" :class="{active:classObj[6].active}">品牌服务</router-link>
                         <ul>
                             <li>
-                                <router-link to=""  @click.native="toSeven">品牌介绍</router-link>
+                                <router-link to="/Seven"  @click.native="change(6)" :class="{active:classObj[6].active}">品牌介绍</router-link>
                             </li>
                             <li>
-                                <router-link to=""  @click.native="toSeven">服务保障</router-link>
+                                <router-link to="/Seven"   @click.native="change(6)" :class="{active:classObj[6].active}">服务保障</router-link>
                             </li>
                             <li>
-                                <router-link to="" @click.native="toSeven">360°VR全景</router-link>
+                                <router-link to="/Seven"  @click.native="change(6)" :class="{active:classObj[6].active}">360°VR全景</router-link>
                             </li>
                         </ul>
                     </li>
-                    <li><router-link to="" @click.native="toEight">真实好评</router-link></li>
+                    <li><router-link to="Eight" @click.native="change(7)" :class="{active:classObj[7].active}">真实好评</router-link></li>
                 </ul>
                 <div class="search">
                     <span  @click.stop="d_block"></span>
@@ -71,58 +71,32 @@
 export default {
     data(){
         return {
-            dblock:false
+            dblock:false,
+            classObj:[
+                {active:true},
+                {active:false},
+                {active:false},
+                {active:false},
+                {active:false},
+                {active:false},
+                {active:false},
+                {active:false},
+            ]
         }
     },
     methods:{
-        //返回顶部
-        toTop(){
-            scrollTo(0,0)
-        },
-        toIndex(){
-            this.$router.push("/");
-            scrollTo(0,0)
-        },
-        toSecond(){
-            this.$router.push("/Second");
-            scrollTo(0,0)
-        },
-        toThree(){
-            this.$router.push("/Three");
-            scrollTo(0,0)
-        },
-        toFour(){
-            this.$router.push("/Four");
-            scrollTo(0,0)
-        },
-        toFive(){
-            this.$router.push("/Five");
-            scrollTo(0,0)
-        },
-        toSix(){
-            this.$router.push("/Six");
-            scrollTo(0,0)
-        },
-        toSeven(){
-            this.$router.push("/Seven");
-            scrollTo(0,0)
-        },
-        toEight(){
-            this.$router.push("/Eight");
-            scrollTo(0,0)
-        },
-        //切换导航栏按钮
-        fontWhite(e){
-            var ul=document.querySelector(".nav-item");
-            var a=document.querySelectorAll(".nav-item a");
-            if(e.target.nodeName=="A"){
-                for(var i=0;i<a.length;i++){
-                    a[i].className="";
+        //导航栏按钮切换
+        change(n){
+            for(var i=0;i<this.classObj.length;i++){
+                if(n==i){
+                    this.classObj[i].active=true;
+                }else{
+                    this.classObj[i].active=false
                 }
-                e.target.className="active"
             }
+            scrollTo(0,0)
         },
-        //输入框的显示与隐藏
+        //搜索框的显示与隐藏
         d_block(){
            this.dblock=!this.dblock;
         }
@@ -143,8 +117,7 @@ export default {
     z-index:9;
 }
 .header .nav{
-    /* max-width:1540px;
-    min-width:1100px; */
+   
     margin:0 auto;
 }
 .header .nav::before{
