@@ -70,8 +70,7 @@
             </div>
         </div>
     </div>
-     <div  v-if="isActive1">
-     
+     <div  v-if="isActive1"> 
       <div  class="six-none" id="dv" @click.self="close()" :data-id="i" v-for="(item,i) of film" :key="i" >
              <div class="six-video">
                  <video  :src="require(`../../assets/${item.video}`)" id="v3" controls autoplay loop></video>
@@ -82,8 +81,7 @@
              </div>
      </div>
      </div>
-     <div v-else>
-     
+     <div v-else> 
      <div  class="six-none" id="dv" @click.self="close()" :data-id="i" v-for="(item,i) of film2" :key="i" >
              <div class="six-video">
                  <video  :src="require(`../../assets/${item.video}`)" id="v3" controls autoplay loop></video>
@@ -169,12 +167,11 @@ export default {
     position:fixed;
     top:0;
     width:100%;
-    height:1200px;
+    height:100%;
     padding-bottom:50px;
     background-color:rgba(68, 68, 68,0.6);
-    opacity:1;
     z-index:5;
-    transition:all 0.5s linear;
+    display:block;
 }
 .six-video{
     width:980px;
@@ -188,8 +185,7 @@ export default {
     height:541px;
 }
 .six-none{
-   opacity:0;
-   transition:all 1s linear;
+   display:none;
 }
 
 
