@@ -131,6 +131,8 @@ export default {
     background-size:cover;
     padding-top:105px;
     padding-bottom:32px;
+    position:relative;
+    z-index:1;
 }
 .footer-wp{
     max-width:1540px;

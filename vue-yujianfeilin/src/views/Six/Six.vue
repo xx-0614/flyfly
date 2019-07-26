@@ -19,9 +19,10 @@
                         <div class="box">
                             <ul class="ul-hs1" v-if="isActive1">
                                 <li class="video_item" v-for="(item,i) of film" :key="i">
-                                    <div class="pic">
+                                  <div>                                 
+                                    <div class="pic" >
                                         <img :src="require(`../../assets/${item.img}`)">
-                                        <div class="bg" @click="open()">
+                                        <div class="bg" @click="open(i)">
                                             <div class="video" >
                                                 <router-link  to="" class="item_link"></router-link>
                                             </div>
@@ -35,6 +36,8 @@
                                        <p class="title ellipsis">{{item.subtitle}}</p>
                                        <p class="subtitle ellipsis">{{item.details}}</p>
                                     </div>
+                                  </div>
+                                  
                                 </li>
                             </ul>
                     
@@ -42,7 +45,7 @@
                                 <li class="video_item" v-for="(item,i) of film2" :key="i">
                                     <div class="pic">
                                        <img :src="require(`../../assets/${item.img}`)">
-                                       <div class="bg">
+                                       <div class="bg" @click="open(i)">
                                            <div class="video" >
                                                <router-link  to="" class="item_link"></router-link>
                                            </div>
@@ -67,12 +70,28 @@
             </div>
         </div>
     </div>
-    <div class="six-none" id="dv" @click.self="close()">
-         <div class="six-video">
-             <video  src="../../assets/img/six/PeHAdi21vjqd1QJys6j@@hdregop.mp4" id="v3" controls></video>
-             <div></div>
-         </div>
-    </div>
+     <div  v-if="isActive1"> 
+      <div  class="six-none" id="dv" @click.self="close()" :data-id="i" v-for="(item,i) of film" :key="i" >
+             <div class="six-video">
+                 <video  :src="require(`../../assets/${item.video}`)" id="v3" controls autoplay loop></video>
+                 <div class="video-text">
+                    <p class="video-title">{{item.subtitle}}</p>
+                    <p class="video-subtitle">{{item.details}}</p>
+                 </div>
+             </div>
+     </div>
+     </div>
+     <div v-else> 
+     <div  class="six-none" id="dv" @click.self="close()" :data-id="i" v-for="(item,i) of film2" :key="i" >
+             <div class="six-video">
+                 <video  :src="require(`../../assets/${item.video}`)" id="v3" controls autoplay loop></video>
+                 <div class="video-text">
+                    <p class="video-title">{{item.subtitle}}</p>
+                    <p class="video-subtitle">{{item.details}}</p>
+                 </div>
+             </div>
+     </div>
+     </div>
    </div>
 </template>
 <script>
@@ -82,24 +101,33 @@ export default {
             isActive1:true,
             isActive2:false,
             film:[],
-            film2:[],
+            film2:[]
         }
     },
     methods:{
-        open(){
-            var  dv=document.getElementById("dv");
-            var  v3=document.getElementById("v3");
-            dv.className="";
-            if(dv.className==""){
-               dv.className="six-zhe"
-             }
-              v3.play();
-
+        open(s){console.log(s)
+            var  dv=document.querySelectorAll("#dv");
+            console.log(dv)
+            var  v3=document.querySelectorAll("#v3");
+            console.log(v3)
+            for(var i=0;i<dv.length;i++){
+                if(s==dv[i].dataset.id){           
+                   dv[i].className="six-zhe"
+                //    for(var j=0;j<v3.length;j++){
+                //        if(i==j){
+                //        v3[j].play();
+                //        }
+                //    }
+                   v3[i].play();
+                }
+            }
         },
         close(){
-            var  dv=document.getElementById("dv");
+            var  dv=document.querySelectorAll(" #dv");
             var  v3=document.getElementById("v3");
-            dv.className="six-none";          
+           for(var i=0;i<dv.length;i++){
+             dv[i].className="six-none";         
+           }
         },
         //切换按钮
         toggle(){
@@ -112,23 +140,38 @@ export default {
         loadMore(){
             this.axios.get("six").then(result=>{
               this.film=result.data.slice(0,6);
+              console.log(this.film)
             })
-        }
+        },
     },
     created(){
         this.loadMore();
-    }
+    },
 }
 </script>
 <style scoped>
 @import "../../assets/common.css";
+.video-text{
+    margin-left:20px;
+}
+  .video-title{
+      font-size:18px;
+      color:#fff;
+      margin-top:10px;
+  }
+  .video-subtitle{
+      font-size:12px;
+      color:#909090;
+  }
 .six-zhe{
     position:fixed;
     top:0;
     width:100%;
-    height:1000px;
+    height:100%;
+    padding-bottom:50px;
     background-color:rgba(68, 68, 68,0.6);
-    opacity:1;
+    z-index:5;
+    display:block;
 }
 .six-video{
     width:980px;
@@ -142,7 +185,7 @@ export default {
     height:541px;
 }
 .six-none{
-    display:none;
+   display:none;
 }
 
 
