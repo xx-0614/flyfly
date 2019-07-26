@@ -45,7 +45,7 @@
                                 <li class="video_item" v-for="(item,i) of film2" :key="i">
                                     <div class="pic">
                                        <img :src="require(`../../assets/${item.img}`)">
-                                       <div class="bg">
+                                       <div class="bg" @click="open(i)">
                                            <div class="video" >
                                                <router-link  to="" class="item_link"></router-link>
                                            </div>
