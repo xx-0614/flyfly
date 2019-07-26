@@ -124,9 +124,10 @@ export default {
         },
         close(){
             var  dv=document.querySelectorAll(" #dv");
-            var  v3=document.getElementById("v3");
+             var  v3=document.querySelectorAll("#v3");
            for(var i=0;i<dv.length;i++){
-             dv[i].className="six-none";         
+             dv[i].className="six-none"; 
+               v3[i].pause();
            }
         },
         //切换按钮
