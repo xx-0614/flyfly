@@ -19,7 +19,7 @@
                         <div class="box">
                             <ul class="ul-hs1" v-if="isActive1">
                                 <li class="video_item" v-for="(item,i) of film" :key="i">
-                                    <div class="pic">
+                                    <div class="pic" >
                                         <img :src="require(`../../assets/${item.img}`)">
                                         <div class="bg" @click="open()">
                                             <div class="video" >
@@ -67,9 +67,9 @@
             </div>
         </div>
     </div>
-    <div class="six-none" id="dv" @click.self="close()">
+    <div  class="six-none" id="dv" @click.self="close()" v-for="(item,i) of film" :key="i">
          <div class="six-video">
-             <video  src="../../assets/img/six/PeHAdi21vjqd1QJys6j@@hdregop.mp4" id="v3" controls></video>
+             <video  :src="require(`../../assets/${item.video}`)" id="v3" controls></video>
              <div></div>
          </div>
     </div>
@@ -83,6 +83,7 @@ export default {
             isActive2:false,
             film:[],
             film2:[],
+            video:[],
         }
     },
     methods:{
@@ -112,23 +113,27 @@ export default {
         loadMore(){
             this.axios.get("six").then(result=>{
               this.film=result.data.slice(0,6);
+              console.log(this.film)
             })
-        }
+        },
     },
     created(){
         this.loadMore();
-    }
+    },
 }
 </script>
 <style scoped>
 @import "../../assets/common.css";
+  
 .six-zhe{
     position:fixed;
     top:0;
     width:100%;
-    height:1000px;
+    height:1200px;
+    padding-bottom:50px;
     background-color:rgba(68, 68, 68,0.6);
     opacity:1;
+    z-index:5;
 }
 .six-video{
     width:980px;
