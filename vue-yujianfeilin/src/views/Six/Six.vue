@@ -174,6 +174,7 @@ export default {
     background-color:rgba(68, 68, 68,0.6);
     opacity:1;
     z-index:5;
+    transition:all 0.5s linear;
 }
 .six-video{
     width:980px;
@@ -187,7 +188,8 @@ export default {
     height:541px;
 }
 .six-none{
-    display:none;
+   opacity:0;
+   transition:all 1s linear;
 }
 
 
