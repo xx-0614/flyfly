@@ -178,6 +178,9 @@ li {
     font-family: Regular;
     transition: .3s;
 }
+h3:hover{
+    color:#69cfc1 !important;
+}
 .ul-h3 li .txt{
     max-width:160px;
     overflow:hidden;

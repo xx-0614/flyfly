@@ -335,12 +335,17 @@ export default {
     width: 33.33%;
     margin-bottom: 34px;
 }
+.ul-hs7 li .pic{
+    width:434px;
+    overflow:hidden;
+}
 .ul-hs7 li .pic img{
-    transition:all .3s;
-    transition-property: all;
-    transition-duration: 0.3s;
-    transition-timing-function: initial;
-    transition-delay: initial;
+    width:434px;
+    height:268px;
+    transition:all 0.3s linear;
+}
+.ul-hs7 li .pic img:hover{
+    transform:scale(1.1);
 }
 .h-more{
     display: block;

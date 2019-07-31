@@ -73,7 +73,7 @@
      <div  v-if="isActive1"> 
       <div  class="six-none" id="dv" @click.self="close()" :data-id="i" v-for="(item,i) of film" :key="i" >
              <div class="six-video">
-                 <video  :src="require(`../../assets/${item.video}`)" id="v3" controls autoplay loop></video>
+                 <video  :src="require(`../../assets/${item.video}`)" id="v3" controls loop></video>
                  <div class="video-text">
                     <p class="video-title">{{item.subtitle}}</p>
                     <p class="video-subtitle">{{item.details}}</p>
@@ -125,9 +125,10 @@ export default {
         },
         close(){
             var  dv=document.querySelectorAll(" #dv");
-            var  v3=document.getElementById("v3");
+             var  v3=document.querySelectorAll("#v3");
            for(var i=0;i<dv.length;i++){
-             dv[i].className="six-none";         
+             dv[i].className="six-none"; 
+               v3[i].pause();
            }
         },
         //切换按钮
