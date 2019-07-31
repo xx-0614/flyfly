@@ -8,7 +8,7 @@
             </div>
             <ul>
                 <li v-for="(item,i) of lovetime.slice(0,4)" :key="i">
-                    <router-link to="">
+                    <router-link :to="`/details/${item.href.split('=')[1]}`">
                         <div class="pic">
                             <img :src="require(`../../assets/${item.img}`)" alt="">
                             <div class="bg"></div>

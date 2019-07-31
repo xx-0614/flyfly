@@ -7,7 +7,8 @@ router.get('/',(req,res)=>{
     var output={
     pic:[],
     txt:[],
-    details:[]
+    details:[],
+    banner:[]
   }
   if(pid!==undefined){
     var sql1=`select * from fly_details_img where pid=?`;
@@ -23,7 +24,11 @@ router.get('/',(req,res)=>{
         var sql3=`select details from fly_details_text_content where text_id=?`;
         pool.query(sql3,[text_id],(err,result)=>{
           output.details=result;
-          res.send(output);
+          var sql4=`select img from fly_details_banner where photo_id=?`;
+          pool.query(sql4,[photo_id],(err,result)=>{
+            output.banner=result;
+            res.send(output);
+          })
         })
       })
     })

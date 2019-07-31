@@ -49,6 +49,7 @@ export default {
             this.activity=result.data.activity;
             this.microfilm=result.data.microfilm;
             this.travel=result.data.travel;
+            console.log(this.travel)
             this.lovetime=result.data.love_times;
             this.comment=result.data.comment;
         })
