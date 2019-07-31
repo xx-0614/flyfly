@@ -166,9 +166,9 @@ import Threetab2 from './Threetab2.vue';
        },
         load(){
              this.axios.get("http://127.0.0.1:3000/three").then(result=>{
-                   console.log(result);
+                  //  console.log(result);
                    this.cityAll=result.data;
-                   console.log(result.data)
+                  //  console.log(result.data)
                    var n=0;
                    var m=0;
                    for(var i=0 ;i<result.data.length;i++){                    

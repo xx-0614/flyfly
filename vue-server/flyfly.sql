@@ -298,7 +298,6 @@ CREATE TABLE fly_details_img(
 INSERT INTO fly_details_img VALUES(1,'img/three/sanya/details/291350353653.jpg',NULL);
 INSERT INTO fly_details_img VALUES(1,'img/three/sanya/details/291350354780.jpg',NULL);
 INSERT INTO fly_details_img VALUES(1,'img/three/sanya/details/291350359621.jpg',NULL);
-INSERT INTO fly_details_img VALUES(1,'img/three/sanya/details/1561787854888573.jpg',NULL);
 INSERT INTO fly_details_img VALUES(1,'img/three/sanya/details/1561787855122997.jpg',NULL);
 INSERT INTO fly_details_img VALUES(1,'img/three/sanya/details/1561787855307011.jpg',NULL);
 INSERT INTO fly_details_img VALUES(1,'img/three/sanya/details/1561787855470719.jpg',NULL);
@@ -319,7 +318,6 @@ INSERT INTO fly_details_img VALUES(1,'img/three/sanya/details/1561787858561399.j
 INSERT INTO fly_details_img VALUES(1,'img/three/sanya/details/1561787858752459.jpg',NULL);
 INSERT INTO fly_details_img VALUES(1,'img/three/sanya/details/1561787858929200.jpg',NULL);
 #告白气球 详情
-INSERT INTO fly_details_img VALUES(2,'img/three/sanya/details/291336153264.jpg',NULL);
 INSERT INTO fly_details_img VALUES(2,'img/three/sanya/details/291337324255.jpg',NULL);
 INSERT INTO fly_details_img VALUES(2,'img/three/sanya/details/291337337532.jpg',NULL);
 INSERT INTO fly_details_img VALUES(2,'img/three/sanya/details/1562467737106336.jpg',NULL);
@@ -455,40 +453,90 @@ INSERT INTO fly_details_img VALUES(15,'img/four/lijiang/details/1563000408958637
 
 
 
-
-
 #详情文本表
 CREATE TABLE fly_details_text(
-    tid INT PRIMARY KEY AUTO_INCREMENT,    #详情文本id
+    tid INT PRIMARY KEY AUTO_INCREMENT,
+    photo_id  INT,    
     title VARCHAR(64),
-    palce  VARCHAR(64),
+    place  VARCHAR(64)
+);
+#three
+#三亚
+INSERT INTO fly_details_text VALUES(NULL,1,"游艇旅行","三亚 三亚湾");
+INSERT INTO fly_details_text VALUES(NULL,2,"告白气球","三亚 三亚湾");
+
+#丽江
+INSERT INTO fly_details_text VALUES(NULL,6,"漫步古镇","丽江 束河");
+INSERT INTO fly_details_text VALUES(NULL,7,"向往的生活","丽江 雪山马场");
+
+#four
+#三亚
+INSERT INTO fly_details_text VALUES(NULL,11,"阿豪&花花","三亚 幸福湾");
+INSERT INTO fly_details_text VALUES(NULL,12,"小超&思琪","三亚 呆呆岛");
+#丽江
+INSERT INTO fly_details_text VALUES(NULL,14,"甜甜&天予","丽江 蓝月谷");
+INSERT INTO fly_details_text VALUES(NULL,15,"明明&小鹤","丽江 新基地");
+
+
+
+
+CREATE TABLE fly_details_text_content(
+    content_id INT PRIMARY KEY AUTO_INCREMENT,  
+    text_id  INT,
     details VARCHAR(128)
 );
 #three
 #三亚
-INSERT INTO fly_details_text VALUES(NULL,"游艇旅行","三亚 三亚湾","我见过春花秋月夏蝉冬雪，也写过晨光熹微斜阳暮色， 可这河山万里岁月寸缕，皆不及你浅笑一问。");
-INSERT INTO fly_details_text VALUES(NULL,"告白气球","三亚 三亚湾","只愿和你一起晒冬日暖阳，聊未来理想，喝香浓咖啡，尝妙厨美味，读红楼西厢，诵唐诗宋词，有你，幸福异常！");
-INSERT INTO fly_details_text VALUES(NULL,"海上冲浪","三亚 三亚湾","我的吻很长，用了整个夏天，穿越你的脸庞。");
-INSERT INTO fly_details_text VALUES(NULL,"华丽的休假","三亚 三亚湾","我的世界乱七八糟烟尘纷杂，而你干干净净，那么温柔，那么明朗，正适合我放心上。");
-INSERT INTO fly_details_text VALUES(NULL,"浪漫满屋","三亚 三亚湾","我就喜欢写一点普通的小句子，我就想要把我对你的感情，一点一点写到这里，哪怕在你眼里我只是千万灯芯中的一个，我对你的感情也是只增不减。");
+INSERT INTO fly_details_text_content VALUES(NULL,1,"我见过春花秋月夏蝉冬雪，");
+INSERT INTO fly_details_text_content VALUES(NULL,1,"也写过晨光熹微斜阳暮色，");
+INSERT INTO fly_details_text_content VALUES(NULL,1,"可这河山万里岁月寸缕，");
+INSERT INTO fly_details_text_content VALUES(NULL,1,"皆不及你浅笑一问。");
+INSERT INTO fly_details_text_content VALUES(NULL,2,"只愿和你一起晒冬日暖阳，");
+INSERT INTO fly_details_text_content VALUES(NULL,2,"聊未来理想，");
+INSERT INTO fly_details_text_content VALUES(NULL,2,"喝香浓咖啡，");
+INSERT INTO fly_details_text_content VALUES(NULL,2,"尝妙厨美味，");
+INSERT INTO fly_details_text_content VALUES(NULL,2,"读红楼西厢，");
+INSERT INTO fly_details_text_content VALUES(NULL,2,"诵唐诗宋词，");
+INSERT INTO fly_details_text_content VALUES(NULL,2,"有你，");
+INSERT INTO fly_details_text_content VALUES(NULL,2,"幸福异常！");
 
 #丽江
-INSERT INTO fly_details_text VALUES(NULL,"漫步古镇","丽江 束河","从前的日子很慢，车，马，邮件都慢，一生只够爱一个人。");
-INSERT INTO fly_details_text VALUES(NULL,"向往的生活","丽江 雪山马场","我看什么都像你，我看月亮，像你，看星星，也像你。那些白亮透澈、温柔冷清的光，它们都让我想起你。");
-INSERT INTO fly_details_text VALUES(NULL,"为爱痴狂","丽江 新基地","我一直爱你，偶尔喜欢别人，在他们像你的时候。");
-INSERT INTO fly_details_text VALUES(NULL,"一米阳光","丽江  新基地","春天的糖葫芦， 夏天的冰淇淋，秋天的桂花糕，冬天的热米酒，都甜不过你的笑容。");
-INSERT INTO fly_details_text VALUES(NULL,"炊烟","丽江 雪山马场","一百个夏天的句子，都不及你可爱的样子。");
+INSERT INTO fly_details_text_content VALUES(NULL,6,"从前的日子很慢，");
+INSERT INTO fly_details_text_content VALUES(NULL,6,"车，");
+INSERT INTO fly_details_text_content VALUES(NULL,6,"马，");
+INSERT INTO fly_details_text_content VALUES(NULL,6,"邮件都慢，");
+INSERT INTO fly_details_text_content VALUES(NULL,6,"一生只够爱一个人。");
+INSERT INTO fly_details_text_content VALUES(NULL,7,"我看什么都像你");
+INSERT INTO fly_details_text_content VALUES(NULL,7,"我看月亮，");
+INSERT INTO fly_details_text_content VALUES(NULL,7,"像你，");
+INSERT INTO fly_details_text_content VALUES(NULL,7,"看星星，");
+INSERT INTO fly_details_text_content VALUES(NULL,7,"也像你。");
+INSERT INTO fly_details_text_content VALUES(NULL,7,"那些白亮透澈、");
+INSERT INTO fly_details_text_content VALUES(NULL,7,"温柔冷清的光，");
+INSERT INTO fly_details_text_content VALUES(NULL,7,"它们都让我想起你。");
 
 #four
 #三亚
-INSERT INTO fly_details_text VALUES(NULL,"阿豪&花花","三亚 幸福湾","在这个不动声色的日子里，遇见美好的你真好，所以我实在忍不住，想陪你到老。");
-INSERT INTO fly_details_text VALUES(NULL,"小超&思琪","三亚 呆呆岛","我有没有告诉过你，那么多花草树木、河流高山、繁星宇宙、小猫小狗、蝴蝶蜜蜂我只喜欢你一个。");
-INSERT INTO fly_details_text VALUES(NULL,"小帆&瀚天","三亚 呆呆岛","他望了她一眼， 她对他回眸一笑， 生命突然复苏。");
+INSERT INTO fly_details_text_content VALUES(NULL,11,"在这个不动声色的日子里，");
+INSERT INTO fly_details_text_content VALUES(NULL,11,"遇见美好的你真好，");
+INSERT INTO fly_details_text_content VALUES(NULL,11,"所以我实在忍不住，。");
+INSERT INTO fly_details_text_content VALUES(NULL,11,"想陪你到老。");
+INSERT INTO fly_details_text_content VALUES(NULL,12,"我有没有告诉过你，");
+INSERT INTO fly_details_text_content VALUES(NULL,12,"那么多花草树木、");
+INSERT INTO fly_details_text_content VALUES(NULL,12,"河流高山、");
+INSERT INTO fly_details_text_content VALUES(NULL,12,"繁星宇宙、");
+INSERT INTO fly_details_text_content VALUES(NULL,12,"小猫小狗、");
+INSERT INTO fly_details_text_content VALUES(NULL,12,"蝴蝶蜜蜂，");
+INSERT INTO fly_details_text_content VALUES(NULL,12,"我只喜欢你一个。");
 #丽江
-INSERT INTO fly_details_text VALUES(NULL,"甜甜&天予","丽江 蓝月谷","海底月是天上月，眼前人是心上人。");
-INSERT INTO fly_details_text VALUES(NULL,"明明&小鹤","丽江 新基地","我见过春日夏风秋叶冬雪，也踏遍南水北山东麓西岭，可这四季春秋，苍山泱水，都不及你冲我，展眉一笑。");
-
-
+INSERT INTO fly_details_text_content VALUES(NULL,14,"海底月是天上月，");
+INSERT INTO fly_details_text_content VALUES(NULL,14,"眼前人是心上人。");
+INSERT INTO fly_details_text_content VALUES(NULL,15,"我见过春日夏风秋叶冬雪，");
+INSERT INTO fly_details_text_content VALUES(NULL,15,"也踏遍南水北山东麓西岭，");
+INSERT INTO fly_details_text_content VALUES(NULL,15,"可这四季春秋，");
+INSERT INTO fly_details_text_content VALUES(NULL,15,"苍山泱水，");
+INSERT INTO fly_details_text_content VALUES(NULL,15,"都不及你冲我，");
+INSERT INTO fly_details_text_content VALUES(NULL,15,"展眉一笑。");
 
 
 
@@ -626,25 +674,6 @@ INSERT INTO fly_six_film VALUES(NULL,'img/six/191049388324.png',"影像花絮",'
 INSERT INTO fly_six_film VALUES(NULL,'img/six/191059005316.png',"影像花絮",'img/six/IpodNtGK0YAnoMbQ9vO@@hd.mp4',"【遇见菲林】为你写诗","三亚 天涯海角",NULL);
 
 
-
-
-
-
-#seven
-#创建品牌表
-CREATE TABLE fly_seven_brand(
-    bid INT PRIMARY KEY AUTO_INCREMENT,
-    img VARCHAR(128),
-    title VARCHAR(64),
-    details VARCHAR(128),
-    href VARCHAR(128)
-);
-INSERT INTO fly_seven_brand VALUES(NULL,'img/seven/h49.jpg',NULL,NULL,NULL);
-INSERT INTO fly_seven_brand VALUES(NULL,'img/seven/h48.jpg',NULL,NULL,NULL);
-INSERT INTO fly_seven_brand VALUES(NULL,'img/seven/h47.jpg',NULL,NULL,NULL);
-INSERT INTO fly_seven_brand VALUES(NULL,'img/seven/h46.jpg',NULL,NULL,NULL);
-INSERT INTO fly_seven_brand VALUES(NULL,'img/seven/h45.jpg',NULL,NULL,NULL);
-INSERT INTO fly_seven_brand VALUES(NULL,'img/seven/h44.jpg',NULL,NULL,NULL);
 
 
 

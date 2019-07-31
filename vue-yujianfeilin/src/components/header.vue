@@ -2,59 +2,59 @@
     <div class="header">
         <div class="nav">
             <div class="logo">
-                <router-link to="" class="active" @click.native="toTop">
+                <router-link to=""  @click.native="toTop">
                     <img src="../assets/img/index/logo.png" alt="">
                 </router-link>
             </div>
             <div class="nav-bar">
-                <ul class="nav-item">
-                    <li><router-link to="/"  @click.native="change(0)" :class="{active:classObj[0].active}">首页</router-link></li>
+                <ul class="nav-item" @click="toTop">
+                    <li><router-link to="/" active-class="active" exact>首页</router-link></li>
                     <li>
-                        <router-link to="/Second" @click.native="change(1)" :class="{active:classObj[1].active}">风格系列</router-link>
+                        <router-link to="/Second" active-class="active" exact>风格系列</router-link>
                         <ul>
                             <li>
-                                <router-link to="/Second"  @click.native="change(1)" :class="{active:classObj[1].active}">INS系列</router-link>
+                                <router-link to="/Second" active-class="active" exact>INS系列</router-link>
                             </li>
                             <li>
-                                <router-link to="/Second"   @click.native="change(1)" :class="{active:classObj[1].active}">小清新系列</router-link>
+                                <router-link to="/Second"   active-class="active" exact>小清新系列</router-link>
                             </li>
                             <li>
-                                <router-link to="/Second"  @click.native="change(1)" :class="{active:classObj[1].active}">国潮系列</router-link>
+                                <router-link to="/Second"  active-class="active" exact>国潮系列</router-link>
                             </li>
                             <li>
-                                <router-link to="/Second"  @click.native="change(1)" :class="{active:classObj[1].active}">造型系列</router-link>
+                                <router-link to="/Second"  active-class="active" exact>造型系列</router-link>
                             </li>
                         </ul>
                     </li>
-                    <li><router-link to="/Three"  @click.native="change(2)" :class="{active:classObj[2].active}">最新客片</router-link></li>
-                    <li><router-link to="/Four" @click.native="change(3)" :class="{active:classObj[3].active}">100%客片</router-link></li>
-                    <li><router-link to="/Five"  @click.native="change(4)" :class="{active:classObj[4].active}">当季特惠</router-link></li>
+                    <li><router-link to="/Three"  active-class="active" exact>最新客片</router-link></li>
+                    <li><router-link to="/Four" active-class="active" exact>100%客片</router-link></li>
+                    <li><router-link to="/Five"  active-class="active" exact>当季特惠</router-link></li>
                     <li>
-                       <router-link to="/Six"  @click.native="change(5)" :class="{active:classObj[5].active}">微电影</router-link>
+                       <router-link to="/Six"  active-class="active" exact>微电影</router-link>
                         <ul>
                             <li>
-                                <router-link to="/Six"  @click.native="change(5)" :class="{active:classObj[5].active}">微电影</router-link>
+                                <router-link to="/Six" active-class="active" exact>微电影</router-link>
                             </li>
                             <li>
-                                <router-link to="/Six" @click.native="change(5)" :class="{active:classObj[5].active}">影像花絮</router-link>
+                                <router-link to="/Six" active-class="active" exact>影像花絮</router-link>
                             </li>
                         </ul>
                     </li>
                     <li>
-                        <router-link to="/Seven"  @click.native="change(6)" :class="{active:classObj[6].active}">品牌服务</router-link>
+                        <router-link to="/Seven"  active-class="active" exact>品牌服务</router-link>
                         <ul>
                             <li>
-                                <router-link to="/Seven"  @click.native="change(6)" :class="{active:classObj[6].active}">品牌介绍</router-link>
+                                <router-link to="/Seven"  active-class="active" exact>品牌介绍</router-link>
                             </li>
                             <li>
-                                <router-link to="/Seven"   @click.native="change(6)" :class="{active:classObj[6].active}">服务保障</router-link>
+                                <router-link to="/Seven"  active-class="active" exact>服务保障</router-link>
                             </li>
                             <li>
-                                <router-link to="/Seven"  @click.native="change(6)" :class="{active:classObj[6].active}">360°VR全景</router-link>
+                                <router-link to="/Seven"  active-class="active" exact>360°VR全景</router-link>
                             </li>
                         </ul>
                     </li>
-                    <li><router-link to="Eight" @click.native="change(7)" :class="{active:classObj[7].active}">真实好评</router-link></li>
+                    <li><router-link to="Eight" active-class="active" exact>真实好评</router-link></li>
                 </ul>
                 <div class="search">
                     <span  @click.stop="d_block"></span>
@@ -72,29 +72,13 @@ export default {
     data(){
         return {
             dblock:false,
-            classObj:[
-                {active:true},
-                {active:false},
-                {active:false},
-                {active:false},
-                {active:false},
-                {active:false},
-                {active:false},
-                {active:false},
-            ]
         }
     },
     methods:{
-        //导航栏按钮切换
-        change(n){
-            for(var i=0;i<this.classObj.length;i++){
-                if(n==i){
-                    this.classObj[i].active=true;
-                }else{
-                    this.classObj[i].active=false
-                }
+        toTop(e){
+            if(e.target.nodeName=="A"){
+                scrollTo(0,0)
             }
-            scrollTo(0,0)
         },
         //搜索框的显示与隐藏
         d_block(){

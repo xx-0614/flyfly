@@ -36,9 +36,9 @@ export default {
     methods: {
          load(){
           this.axios.get("http://127.0.0.1:3000/five").then(result=>{
-             console.log(result.data) 
+            //  console.log(result.data) 
              this.weekyear=result.data;
-             console.log(this.weekyear)
+            //  console.log(this.weekyear)
             })
          }
     },

@@ -45,6 +45,7 @@ export default {
         return {
             isActive:false,
             active:false,
+            t:"",
         }
     },
     props:["activity"],
@@ -52,7 +53,7 @@ export default {
         // 字幕滚动
         scrollUp(){
             var i=0;
-            setInterval(function(){
+            this.t=setInterval(function(){
                 i++;
                 var div=document.querySelector(".slick-track");
                 if(i>2){
@@ -82,8 +83,11 @@ export default {
         }
     },
     
-    created(){
+    mounted(){
         this.scrollUp();
+    },
+    destroyed() {
+        clearInterval(this.t);
     },
 }
 </script>

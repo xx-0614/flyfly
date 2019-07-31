@@ -7,7 +7,7 @@
         </div>
         <div class="carousel"> 
             <el-carousel	:interval="3000"	type="card"	height="500px">
-                <el-carousel-item	v-for="item	in	microfilm"	:key="item" @click.native="toFilm">
+                <el-carousel-item	 v-for="(item,index) in microfilm" :key="index" @click.native="toFilm">
                     <img :src="require(`../../assets/${item.img}`)">
                 </el-carousel-item>
             </el-carousel>

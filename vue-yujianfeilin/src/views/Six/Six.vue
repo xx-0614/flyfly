@@ -105,11 +105,12 @@ export default {
         }
     },
     methods:{
-        open(s){console.log(s)
+        open(s){
+            // console.log(s)
             var  dv=document.querySelectorAll("#dv");
-            console.log(dv)
+            // console.log(dv)
             var  v3=document.querySelectorAll("#v3");
-            console.log(v3)
+            // console.log(v3)
             for(var i=0;i<dv.length;i++){
                 if(s==dv[i].dataset.id){           
                    dv[i].className="six-zhe"
@@ -140,7 +141,7 @@ export default {
         loadMore(){
             this.axios.get("six").then(result=>{
               this.film=result.data.slice(0,6);
-              console.log(this.film)
+            //   console.log(this.film)
             })
         },
     },

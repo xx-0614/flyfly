@@ -2,8 +2,8 @@
     <div>   
         <!--轮播图-->
         <el-carousel :interval="3000" height="750px">
-            <el-carousel-item v-for="(item) in carousel" :key="item">
-                <img :src="require(`../../assets/${item.img}`)">
+            <el-carousel-item v-for="(mitem,index) in carousel" :key="index">
+                <img :src="require(`../../assets/${mitem.img}`)">
             </el-carousel-item>
         </el-carousel>
         <div class="main">

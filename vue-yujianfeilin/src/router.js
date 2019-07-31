@@ -52,5 +52,8 @@ export default new Router({
     {path:'/Seven',component:Seven},
 
     {path:'/Eight',component:Eight},
+    
   ]
-})
+},
+  {linkExactActiveClass: 'active'},
+)
