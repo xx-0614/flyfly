@@ -81,7 +81,7 @@ export default {
                 {isActive:false},
                 {isActive:false},
             ],
-            className:"",
+            className:{},
             list:[],
             listLife:[],
             listFashion:[],
