@@ -59,8 +59,19 @@
                 <div class="search">
                     <span  @click.stop="d_block"></span>
                     <div class="search-input" v-show="dblock">
-                        <input class="search-text" type="text">
-                        <input class="search-submit" type="submit" value="">
+                         <input class="search-text" type="text" v-model="keywords" @keyup.13="search" list="list3">
+                        <input class="search-submit" type="submit" value="" @click="search">
+                        <datalist id="list3">
+                            <option value="三亚">三亚</option>
+                            <option value="丽江">丽江</option>
+                            <option value="青海">青海</option>
+                            <option value="大理">大理</option>
+                            <option value="香格里拉">香格里拉</option>
+                            <option value="塞班岛">塞班岛</option>
+                            <option value="巴厘岛">巴厘岛</option>
+                            <option value="法国">法国</option>
+                            <option value="土耳其">土耳其</option>
+                        </datalist>
                     </div>
                 </div>
             </div>
@@ -72,6 +83,7 @@ export default {
     data(){
         return {
             dblock:false,
+            keywords:'',
         }
     },
     methods:{
@@ -83,6 +95,9 @@ export default {
         //搜索框的显示与隐藏
         d_block(){
            this.dblock=!this.dblock;
+        },
+        search(){
+            this.$router.push("/Search")
         }
     },
    
