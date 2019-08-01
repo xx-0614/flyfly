@@ -106,7 +106,7 @@ export default {
     width:30%;
     float:left;
     position:absolute;
-    
+    padding-left:30px;
 }
 .scroll-fix.fixed{
     position:fixed;
