@@ -7,6 +7,7 @@
                         :imgurl="require(`../../assets/${item.img}`)"
                         :subtitle="item.title"
                         :dates="item.dates"
+                        :pid="ids[i]"
                     ></fourtab1>
                     <div class="page-div">
                        <el-pagination 	:page-size="16" :pager-count="5" layout="pager" 	:total="cityAll.length" @click.native="page_change"></el-pagination>
@@ -19,6 +20,7 @@
                         :imgurl="require(`../../assets/${item.img}`)"
                         :subtitle="item.title"
                         :dates="item.dates"
+                        :pid="ids[i]"
                     ></fourtab2>
                     <div class="page-div">               
                         <el-pagination 	:page-size="16" :pager-count="5" layout="pager" 	:total="sanyaAll.length" @click.native="page_change_sanya"></el-pagination>      
@@ -31,6 +33,7 @@
                         :imgurl="require(`../../assets/${item.img}`)"
                         :subtitle="item.title"
                         :dates="item.dates"
+                        :pid="idl[i]"
                     ></fourtab1>
                      <div class="page-div">                  
                       <el-pagination 	:page-size="16" :pager-count="5" layout="pager" 	:total="lijiangAll.length" @click.native="page_change_lijiang"></el-pagination>
@@ -43,6 +46,7 @@
                         :imgurl="require(`../../assets/${item.img}`)"
                         :subtitle="item.title"
                         :dates="item.dates"
+                        :pid="ids[i]"
                     ></fourtab2>
                       <div class="page-div">               
                      <el-pagination 	:page-size="16" :pager-count="5" layout="pager" 	:total="sanyaAll.length" @click.native="page_change_sanya"></el-pagination>      
@@ -55,6 +59,7 @@
                         :imgurl="require(`../../assets/${item.img}`)"
                         :subtitle="item.title"
                         :dates="item.dates"
+                        :pid="idl[i]"
                     ></fourtab1>
                      <div class="page-div">                  
                       <el-pagination 	:page-size="16" :pager-count="5" layout="pager" 	:total="lijiangAll.length" @click.native="page_change_lijiang"></el-pagination>
@@ -67,6 +72,7 @@
                         :imgurl="require(`../../assets/${item.img}`)"
                         :subtitle="item.title"
                         :dates="item.dates"
+                        :pid="ids[i]"
                     ></fourtab2>
                       <div class="page-div">               
                      <el-pagination 	:page-size="16" :pager-count="5" layout="pager" 	:total="sanyaAll.length" @click.native="page_change_sanya"></el-pagination>      
@@ -79,6 +85,7 @@
                         :imgurl="require(`../../assets/${item.img}`)"
                         :subtitle="item.title"
                         :dates="item.dates"
+                        :pid="idl[i]"
                     ></fourtab1>
                      <div class="page-div">                  
                       <el-pagination 	:page-size="16" :pager-count="5" layout="pager" 	:total="lijiangAll.length" @click.native="page_change_lijiang"></el-pagination>
@@ -91,6 +98,7 @@
                         :imgurl="require(`../../assets/${item.img}`)"
                         :subtitle="item.title"
                         :dates="item.dates"
+                        :pid="ids[i]"
                     ></fourtab2>
                       <div class="page-div">               
                      <el-pagination 	:page-size="16" :pager-count="5" layout="pager" 	:total="sanyaAll.length" @click.native="page_change_sanya"></el-pagination>      
@@ -103,6 +111,7 @@
                         :imgurl="require(`../../assets/${item.img}`)"
                         :subtitle="item.title"
                         :dates="item.dates"
+                        :pid="idl[i]"
                     ></fourtab1>
                      <div class="page-div">                  
                       <el-pagination 	:page-size="16" :pager-count="5" layout="pager" 	:total="lijiangAll.length" @click.native="page_change_lijiang"></el-pagination>
@@ -115,6 +124,7 @@
                         :imgurl="require(`../../assets/${item.img}`)"
                         :subtitle="item.title"
                         :dates="item.dates"
+                        :pid="ids[i]"
                     ></fourtab2>
                       <div class="page-div">               
                      <el-pagination 	:page-size="16" :pager-count="5" layout="pager" 	:total="sanyaAll.length" @click.native="page_change_sanya"></el-pagination>      
@@ -138,6 +148,8 @@ import Fourtab2 from './Fourtab2.vue';
         sanya:[],
         lijiangAll:[],
         lijiang:[],
+        ids:[],
+        idl:[]
       };
     },
     components:{
@@ -185,6 +197,14 @@ import Fourtab2 from './Fourtab2.vue';
                     this.city=this.cityAll.slice(0,16);
                     this.sanya=this.sanyaAll.slice(0,16);
                     this.lijiang=this.lijiangAll.slice(0,16)
+                      for(var i=0;i<this.sanya.length;i++){
+                        this.ids.push(this.sanya[i].href.split("=")[1])
+                    console.log(this.ids)
+                    }
+                     for(var i=0;i<this.lijiang.length;i++){
+                        this.idl.push(this.lijiang[i].href.split("=")[1])
+                    console.log(this.idl)
+                    }
                  })
               } ,
      },
