@@ -178,10 +178,7 @@ import Threetab2 from './Threetab2.vue';
        },
         load(){
              this.axios.get("http://127.0.0.1:3000/three").then(result=>{
-                  //  console.log(result);
                    this.cityAll=result.data;
-
-                  //console.log(this.cityAll)
                    var n=0;
                    var m=0;
                    for(var i=0 ;i<result.data.length;i++){                    
@@ -196,14 +193,11 @@ import Threetab2 from './Threetab2.vue';
                     this.city=this.cityAll.slice(0,16);
                     this.sanya=this.sanyaAll.slice(0,16);
                     this.lijiang=this.lijiangAll.slice(0,16)
-                    //console.log(this.city)
                     for(var i=0;i<this.sanya.length;i++){
                         this.ids.push(this.sanya[i].href.split("=")[1])
-                    console.log(this.ids)
                     }
                      for(var i=0;i<this.lijiang.length;i++){
                         this.idl.push(this.lijiang[i].href.split("=")[1])
-                    console.log(this.idl)
                     }
                  })
               } ,
