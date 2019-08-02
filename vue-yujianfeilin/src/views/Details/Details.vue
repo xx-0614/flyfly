@@ -38,7 +38,7 @@ export default {
             txt:[],
             details:[],
             banner:[],
-            className:""
+            className:{}
         }
     },
     props:["pid"],
@@ -49,15 +49,15 @@ export default {
                     pid:this.pid
                 }
             }).then(res=>{
-                console.log(res)
+                // console.log(res)
                 this.pic=res.data.pic;
-                console.log(this.pic);
+                // console.log(this.pic);
                 this.txt=res.data.txt;
-                console.log(this.txt);
+                // console.log(this.txt);
                 this.details=res.data.details;
-                console.log(this.details)
+                // console.log(this.details)
                 this.banner=res.data.banner;
-                console.log(this.banner)
+                // console.log(this.banner)
             }
             )
         },
@@ -106,7 +106,7 @@ export default {
     width:30%;
     float:left;
     position:absolute;
-    
+    padding-left:30px;
 }
 .scroll-fix.fixed{
     position:fixed;

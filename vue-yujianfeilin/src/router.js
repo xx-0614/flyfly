@@ -3,6 +3,7 @@ import Router from 'vue-router'
 
 import Index from './views/index/index'
 import Details from './views/Details/Details'
+import Search from './views/Search/Search'
 import Second from './views/Second/Second'
 
 import Three from  './views/Three/Three'
@@ -34,6 +35,7 @@ export default new Router({
   routes: [
     {path:'/',component:Index},  
     {path:"/Details/:pid",component: Details,props:true},  
+    {path:'/Search',component:Search},  
     {path:'/Second',component:Second},  
     {path:'/Three',component:Three},
     {path:'/Threetabbar',component:Threetabbar} ,
