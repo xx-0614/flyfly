@@ -5,9 +5,12 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-    commentList:[]
+    // 保存数据
+    commentList:[],
+    kwd:''
   },
   mutations: {
+    // 修改数据
     setList(state,kwd){
         axios.get("search",{
             params:{
@@ -17,6 +20,7 @@ export default new Vuex.Store({
           // console.log(res.data);
           state.commentList=res.data;
           // console.log(state.commentList)
+          state.kwd=kwd;
         })
     }
   },
@@ -24,8 +28,12 @@ export default new Vuex.Store({
     
   },
   getters:{
+    // 获取Vuex中全局共享的数据
     getcommentList(state){
       return state.commentList;
+    },
+    getKwd(state){
+      return state.kwd;
     }
   }
 })

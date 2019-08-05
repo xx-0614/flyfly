@@ -3,13 +3,14 @@
         <div class="main">
             <div class="content">
                 <h2>全部搜索结果</h2>
+                <!-- <p>{{this.$store.getters.getKwd}}</p> -->
                 <ul>
                     <li>
                         <h3 v-if="this.$store.getters.getcommentList.length===0">没有查询到您想要的结果。</h3>
                     </li>
                     <li v-for="(item,i) of this.$store.getters.getcommentList" :key="i">
                         <h3 >{{item.title}}</h3>
-                        <span>{{item.dates}}</span>
+                        <p>[{{item.dates}}]</p>
                     </li>
                      
                 </ul>
@@ -21,10 +22,12 @@
 export default {
     data(){
         return{
-           getcommentList:[]
+           getcommentList:[],
+           getKwd:''
         }
     },
     mounted(){
+        
     }
     
 }
@@ -51,14 +54,12 @@ export default {
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
-        margin-bottom: 10px;
         font-size: 20px;
         line-height:20px;
-        display:inline-block;
-        vertical-align: middle;
+        display:block;
         width:95%;
     }
-    li span{
+    li p{
         text-align:right;
     }
 </style>
