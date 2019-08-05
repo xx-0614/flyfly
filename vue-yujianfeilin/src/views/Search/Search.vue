@@ -5,8 +5,13 @@
                 <h2>全部搜索结果</h2>
                 <ul>
                     <li>
-                        <h3>没有查询到您想要的结果。</h3>
+                        <h3 v-if="this.$store.getters.getcommentList.length===0">没有查询到您想要的结果。</h3>
                     </li>
+                    <li v-for="(item,i) of this.$store.getters.getcommentList" :key="i">
+                        <h3 >{{item.title}}</h3>
+                        <span>{{item.dates}}</span>
+                    </li>
+                     
                 </ul>
             </div>
         </div>
@@ -14,6 +19,13 @@
 </template>
 <script>
 export default {
+    data(){
+        return{
+           getcommentList:[]
+        }
+    },
+    mounted(){
+    }
     
 }
 </script>
@@ -42,5 +54,11 @@ export default {
         margin-bottom: 10px;
         font-size: 20px;
         line-height:20px;
+        display:inline-block;
+        vertical-align: middle;
+        width:95%;
+    }
+    li span{
+        text-align:right;
     }
 </style>

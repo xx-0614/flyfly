@@ -84,6 +84,7 @@ export default {
         return {
             dblock:false,
             keywords:'',
+            commentList:[]
         }
     },
     methods:{
@@ -97,7 +98,9 @@ export default {
            this.dblock=!this.dblock;
         },
         search(){
-            this.$router.push("/Search")
+            this.$router.push(`/Search/${this.keywords}`)
+            this.$store.commit("setList",this.keywords)
+            this.keywords='';
         }
     },
    

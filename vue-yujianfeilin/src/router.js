@@ -35,7 +35,7 @@ export default new Router({
   routes: [
     {path:'/',component:Index},  
     {path:"/Details/:pid",component: Details,props:true},  
-    {path:'/Search',component:Search},  
+    {path:'/Search/:kwd',component:Search,props:true},  
     {path:'/Second',component:Second},  
     {path:'/Three',component:Three},
     {path:'/Threetabbar',component:Threetabbar} ,

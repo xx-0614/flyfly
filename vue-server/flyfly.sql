@@ -572,19 +572,19 @@ INSERT INTO fly_details_banner VALUES(NULL,15,'img/four/lijiang/details/13144537
 CREATE TABLE fly_comment(
     clove_id INT PRIMARY KEY AUTO_INCREMENT,
     img VARCHAR(128),
-    title VARCHAR(64),
+    title VARCHAR(320),
     dates  VARCHAR(64)
 );
-INSERT INTO fly_comment VALUES(NULL,'img/index/021022115589.jpg',"怎么说呢，这次的婚纱之旅还是挺满意的，首先原片很美，拍出来的效果是我们想要的，其次服务挺让人舒心的。总之先好评吧！接下来坐等相册出来哦。",'2019-07-02');
+INSERT INTO fly_comment VALUES(NULL,'img/index/021022115589.jpg',"怎么说呢，这次三亚的婚纱之旅还是挺满意的，首先原片很美，拍出来的效果是我们想要的，其次服务挺让人舒心的。总之先好评吧！接下来坐等相册出来哦。",'2019-07-02');
 INSERT INTO fly_comment VALUES(NULL,'img/index/021023375836.jpg',"摄影师人很好，拍照的时候海给我们很多的指导，还有我的化妆师技术很棒，化的很自然，不是失真，朋友们看到都很觉得很棒，以后他们也会去你们家拍照的哈，记得给她们安排跟我一样优秀的，专业的摄影师哦。",'2019-07-02');
 INSERT INTO fly_comment VALUES(NULL,'img/index/021027013000.jpg',"最喜欢的夕阳最后终于拍上了，我们的运气还是不错的，当然也要感谢你们，陪我们等夕阳，你们真的很好哦。",'2019-07-02');
 INSERT INTO fly_comment VALUES(NULL,'img/index/201741275763.jpg',"拍完看原片的时候就觉的很不错，后来后期修的时候是按我们要的样片的风格修的，本人还比较满意，坐等产品。",'2019-06-27');
 INSERT INTO fly_comment VALUES(NULL,'img/index/201743406974.jpg',"我觉的拍照服装很重要啊，就像丽江这边有点民族特色就很好看了，我们就选了一套民族的服饰，摄影师拍出了我们想要的感觉，很感谢的。",'2019-06-27');
 INSERT INTO fly_comment VALUES(NULL,'img/index/201745156042.png',"我今年做的最正确的事情就是坚持来旅拍婚纱，觉的运气真的是很好，一路碰到的人都很好，菲林也是一家非常敬业的工作室，拍的照片我们都很满意，景美，人也很漂亮。",'2019-06-27');
 INSERT INTO fly_comment VALUES(NULL,'img/index/211503576486.jpeg',"拍的确实非常好，看最后的出片就看到了。。。很满意。",'2019-06-23');
-INSERT INTO fly_comment VALUES(NULL,'img/index/211506084187.jpeg',"拍摄的过程很顺利，天气虽然很热很晒，我们也做了防中暑的准备，不过好在拍摄的过程很欢乐，晒就晒吧，反正很快也就白回来了，这次拍摄还是很值的。",'2019-06-23');
-INSERT INTO fly_comment VALUES(NULL,'img/index/211508296846.jpeg',"服装很多很新的，化妆师化的妆挺好的，有些不满意的，都修改了，水晶教堂那很有特色，摄影师听了我们的一件，拍的片片符合我的要求，很好的一家工作室。",'2019-06-23');
-INSERT INTO fly_comment VALUES(NULL,'img/index/230859077455.jpg',"从接机说起，接机师傅称职，住宿酒店也还不错，拍摄当天太阳很大，很热很晒，摄影师，化妆师和助理都挺辛苦的，从早上7点化妆后出发到海边一直拍摄到晚上的夜景，有水和免费午餐，整体拍摄比较满意，当天晚上还会收。",'2019-06-21');
+INSERT INTO fly_comment VALUES(NULL,'img/index/211506084187.jpeg',"拍摄的过程很顺利，天气虽然很热很晒，我们也做了防中暑的准备，不过好在拍摄的过程很欢乐，三亚晒就晒吧，反正很快也就白回来了，这次拍摄还是很值的。",'2019-06-23');
+INSERT INTO fly_comment VALUES(NULL,'img/index/211508296846.jpeg',"服装很多很新的，化妆师化的妆挺好的，有些不满意的，都修改了，三亚的水晶教堂那很有特色，摄影师听了我们的一件，拍的片片符合我的要求，很好的一家工作室。",'2019-06-23');
+INSERT INTO fly_comment VALUES(NULL,'img/index/230859077455.jpg',"从接机说起，接机师傅称职，三亚的住宿酒店也还不错，拍摄当天青海太阳很大，很热很晒，摄影师，化妆师和助理都挺辛苦的，从早上7点化妆后出发到海边一直拍摄到晚上的夜景，有水和免费午餐，整体拍摄比较满意，当天晚上还会收。",'2019-06-21');
 INSERT INTO fly_comment VALUES(NULL,'img/index/230900595673.jpg',"这次拍摄总体来说还是不错的 服务态度超级好 从接机到最后的拍摄都是热心服务的 摄影师拍摄的超级赞哦 来拍摄所以的费用感觉还是比较透明的。",'2019-06-21');
 INSERT INTO fly_comment VALUES(NULL,'img/index/230901475809.jpg',"由于时间紧急，没怎么考虑就选了一个套餐，没想到效果这么好，服务好，人也好。大热天的，全程跟随贴心服务，细心周到，辛苦摄影师大鹏，助理小杨，化妆师海新了，老婆说化妆品都不错。",'2019-06-21');
 INSERT INTO fly_comment VALUES(NULL,'img/index/271205398376.jpeg',"性价比真的超级高，住的地方也挺好的，在这里我的感觉就是这家店真的超有心，客服小美女给我发注意事项，还有拍照的前一天就建群与我们沟通了解我们对拍照的一些想法，化妆老师特别的贴心很专业，还有就是摄影老师特。",'2019-06-21');

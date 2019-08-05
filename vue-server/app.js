@@ -9,7 +9,7 @@ var five=require('./routes/five.js');
 var six=require('./routes/six.js');
 var eight=require('./routes/eight.js');
 var details=require('./routes/details.js');
-
+var search=require('./routes/search.js');
 
 
 const cors=require("cors");
@@ -35,6 +35,7 @@ server.use('/five',five);
 server.use('/six',six);
 server.use('/eight',eight);
 server.use('/details',details);
+server.use('/search',search);
 
 
 
