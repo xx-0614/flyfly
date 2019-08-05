@@ -8,8 +8,8 @@
                     <li>
                         <h3 v-if="this.$store.getters.getcommentList.length===0">没有查询到您想要的结果。</h3>
                     </li>
-                    <li v-for="(item,i) of this.$store.getters.getcommentList" :key="i">
-                        <h3 >{{item.title}}</h3>
+                    <li v-for="(item,i) of this.$store.getters.getcommentList" :key="i" >
+                        <h3 v-html="brightenKeyword">{{item.title}}</h3>
                         <p>[{{item.dates}}]</p>
                     </li>
                      
@@ -26,9 +26,23 @@ export default {
            getKwd:''
         }
     },
-    mounted(){
-        
-    }
+    computed:{
+        brightenKeyword() {
+            for(var item of this.$store.getters.getcommentList){
+                var str= item.title;
+                var reg = new RegExp(this.$store.getters.getKwd, 'ig');
+                console.log(reg)
+                
+                var str2='<span style="color:red">' + this.$store.getters.getKwd+ '</span>'
+                str=str.replace(reg,str2)
+                console.log(str)
+            }
+            return str;
+           
+                
+}
+    },
+    
     
 }
 </script>
