@@ -3,7 +3,7 @@
         <div class="fourtab1-bodyer">
             <ul class="fourtab1-ul">
               <li class="fourtab1-li">
-                   <a href="#">
+                   <router-link :to="`/details/`+pid">
                        <div class="fourtab1-div1">
                           <img :src="imgurl">
                           <div class="fourtab1-div2"></div>
@@ -12,7 +12,7 @@
                            <span>{{subtitle}}</span>
                            <p>{{dates}}</p>
                        </div>
-                   </a> 
+                   </router-link> 
               </li>
             </ul>
         </div>
@@ -24,6 +24,7 @@ export default {
         imgurl:{default:""},
         subtitle:{default:""},
         dates:{default:""},
+        pid:{default:""}
     },
     data(){
         return {}

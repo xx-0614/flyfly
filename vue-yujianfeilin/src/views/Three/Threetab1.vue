@@ -3,7 +3,7 @@
         <div class="threetab1-bodyer">
             <ul class="threetab1-ul">
               <li class="threetab1-li" >
-                   <a href="#">
+                   <router-link :to="`/details/`+pid">
                        <div class="threetab1-div1">
                           <img :src="imgurl">
                           <div class="threetab1-div2"></div>
@@ -12,7 +12,7 @@
                            <span>{{subtitle}}</span>
                            <p>{{dates}}</p>
                        </div>
-                   </a> 
+                   </router-link> 
               </li>
             </ul>
         </div>
@@ -24,10 +24,11 @@ export default {
         imgurl:{default:""},
         subtitle:{default:""},
         dates:{default:""},
+        pid:{default:""}
     },
     data(){
         return {}
-    }
+    },
 }
 </script>
 <style scoped>

@@ -3,11 +3,12 @@
         <el-tabs v-model="activeName" >
             <el-tab-pane label="全部" name="first">
                <div class="threetabbar-div">
-                 <threetab2  v-for="(item,i) of city" :key="i"
+                 <threetab1  v-for="(item,i) of city" :key="i"
                   :imgurl="require(`../../assets/${item.img}`)"
                   :subtitle="item.title"
                   :dates="item.dates"
-                 ></threetab2> 
+                  :pid="ids[i]"
+                 ></threetab1> 
                  <div class="page-div">
                     <el-pagination 	:page-size="16" :pager-count="5" layout="pager" 	:total="cityAll.length" @click.native="page_change"></el-pagination>
                  </div>
@@ -19,6 +20,7 @@
                   :imgurl="require(`../../assets/${item.img}`)"
                   :subtitle="item.title"
                   :dates="item.dates"
+                  :pid="ids[i]"
                 ></threetab1>   
                 <div class="page-div">               
                      <el-pagination 	:page-size="16" :pager-count="5" layout="pager" 	:total="sanyaAll.length" @click.native="page_change_sanya"></el-pagination>      
@@ -31,6 +33,7 @@
                   :imgurl="require(`../../assets/${item.img}`)"
                   :subtitle="item.title"
                   :dates="item.dates"
+                  :pid="idl[i]"
                  ></threetab2>
                   <div class="page-div">                  
                       <el-pagination 	:page-size="16" :pager-count="5" layout="pager" 	:total="lijiangAll.length" @click.native="page_change_lijiang"></el-pagination>
@@ -43,6 +46,7 @@
                   :imgurl="require(`../../assets/${item.img}`)"
                   :subtitle="item.title"
                   :dates="item.dates"
+                  :pid="ids[i]"
                 ></threetab1>  
                  <div class="page-div">
                      <el-pagination 	:page-size="16" :pager-count="5" layout="pager" 	:total="sanyaAll.length" @click.native="page_change_sanya"></el-pagination>    
@@ -55,6 +59,7 @@
                   :imgurl="require(`../../assets/${item.img}`)"
                   :subtitle="item.title"
                   :dates="item.dates"
+                  :pid="idl[i]"
                  ></threetab2>
                   <div class="page-div">               
                       <el-pagination 	:page-size="16" :pager-count="5" layout="pager" 	:total="lijiangAll.length" @click.native="page_change_lijiang"></el-pagination>
@@ -67,6 +72,7 @@
                   :imgurl="require(`../../assets/${item.img}`)"
                   :subtitle="item.title"
                   :dates="item.dates"
+                  :pid="ids[i]"
                 ></threetab1>  
                  <div class="page-div">             
                        <el-pagination 	:page-size="16" :pager-count="5" layout="pager" 	:total="sanyaAll.length" @click.native="page_change_sanya"></el-pagination> 
@@ -79,6 +85,7 @@
                   :imgurl="require(`../../assets/${item.img}`)"
                   :subtitle="item.title"
                   :dates="item.dates"
+                  :pid="idl[i]"
                  ></threetab2>
                   <div class="page-div">               
                       <el-pagination 	:page-size="16" :pager-count="5" layout="pager" 	:total="lijiangAll.length" @click.native="page_change_lijiang"></el-pagination>
@@ -91,6 +98,7 @@
                   :imgurl="require(`../../assets/${item.img}`)"
                   :subtitle="item.title"
                   :dates="item.dates"
+                  :pid="ids[i]"
                 ></threetab1>
                  <div class="page-div">             
                      <el-pagination 	:page-size="16" :pager-count="5" layout="pager" 	:total="sanyaAll.length" @click.native="page_change_sanya"></el-pagination> 
@@ -103,6 +111,7 @@
                   :imgurl="require(`../../assets/${item.img}`)"
                   :subtitle="item.title"
                   :dates="item.dates"
+                  :pid="idl[i]"
                  ></threetab2>
                   <div class="page-div">    
                       <el-pagination 	:page-size="16" :pager-count="5" layout="pager" 	:total="lijiangAll.length" @click.native="page_change_lijiang"></el-pagination>
@@ -115,6 +124,7 @@
                   :imgurl="require(`../../assets/${item.img}`)"
                   :subtitle="item.title"
                   :dates="item.dates"
+                  :pid="ids[i]"
                 ></threetab1>  
                  <div class="page-div">
                     <el-pagination 	:page-size="16" :pager-count="5" layout="pager" 	:total="sanyaAll.length" @click.native="page_change_sanya"></el-pagination>   
@@ -139,6 +149,8 @@ import Threetab2 from './Threetab2.vue';
         sanya:[],
         lijiangAll:[],
         lijiang:[],
+        ids:[],
+        idl:[]
       };
     },
     components:{
@@ -166,9 +178,7 @@ import Threetab2 from './Threetab2.vue';
        },
         load(){
              this.axios.get("http://127.0.0.1:3000/three").then(result=>{
-                  //  console.log(result);
                    this.cityAll=result.data;
-                  //  console.log(result.data)
                    var n=0;
                    var m=0;
                    for(var i=0 ;i<result.data.length;i++){                    
@@ -183,6 +193,12 @@ import Threetab2 from './Threetab2.vue';
                     this.city=this.cityAll.slice(0,16);
                     this.sanya=this.sanyaAll.slice(0,16);
                     this.lijiang=this.lijiangAll.slice(0,16)
+                    for(var i=0;i<this.sanya.length;i++){
+                        this.ids.push(this.sanya[i].href.split("=")[1])
+                    }
+                     for(var i=0;i<this.lijiang.length;i++){
+                        this.idl.push(this.lijiang[i].href.split("=")[1])
+                    }
                  })
               } ,
     },
