@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 
-import Index from './views/index/index'
+import Index from './views/Index/Index'
 import Details from './views/Details/Details'
 import Search from './views/Search/Search'
 import Second from './views/Second/Second'
@@ -38,12 +38,12 @@ export default new Router({
     {path:'/Search/:kwd',component:Search,props:true},  
     {path:'/Second',component:Second},  
     {path:'/Three',component:Three},
-    {path:'/Threetabbar',component:Threetabbar} ,
-    {path:'/Threetab1',component:Threetab1} ,
+    // {path:'/Threetabbar',component:Threetabbar} ,
+    // {path:'/Threetab1',component:Threetab1} ,
 
 
     {path:'/Four',component:Four},
-   {path:'/Fourtabbar',component:Fourtabbar},
+  //  {path:'/Fourtabbar',component:Fourtabbar},
     // {path:'/Fourtab1',component:Fourtab1},
    
     {path:'/Five',component:Five},
