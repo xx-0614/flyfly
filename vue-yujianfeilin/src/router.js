@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 
-import Index from './views/Index/Index'
+import Index from './views/index/index'
 import Details from './views/Details/Details'
 import Search from './views/Search/Search'
 import Second from './views/Second/Second'
