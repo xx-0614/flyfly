@@ -8,7 +8,7 @@
             </el-carousel>  
         </div>
         <div class="detail_main">
-            <div class="scroll-fix" v-for="(t,i) of txt" :key="'txt-'+i">
+            <div class="scroll-fix" :class={fixed:isFixed} v-for="(t,i) of txt" :key="'txt-'+i">
             <div class="detail_title" >
                 <p>
                     <i></i>
@@ -38,7 +38,7 @@ export default {
             txt:[],
             details:[],
             banner:[],
-            className:{}
+            isFixed:false
         }
     },
     props:["pid"],
@@ -65,9 +65,9 @@ export default {
        scrollFixed(){
            var fixed=document.querySelector(".detail_main>div:first-child");
            if(window.scrollY>680&& window.scrollY<document.body.scrollHeight-1500){
-               fixed.className="scroll-fix fixed"
+               this.isFixed=true
            }else{
-               fixed.className="scroll-fix"
+               this.isFixed=false
            }
        },
     },
